@@ -3,6 +3,14 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'confirmWithin' => 21600,
+            'cost' => 12,
+            'admins' => ['milic178']
+        ],
+    ],
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -14,19 +22,25 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+       /*
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'dektrium\user\models\User',
         ],
+        */
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'viewPath' => '@app/mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.mailtrap.io',
+                'username' => 'abf86958b8ae08',
+                'password' => '8735220d2e757e',
+                'port' => '465',
+                'encryption' => 'tls',],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
