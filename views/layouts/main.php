@@ -39,8 +39,8 @@ AppAsset::register($this);
 */
        if (Yii::$app->user->isGuest) {
            $navItems=[
-               ['label' => 'Sign In', 'url' => ['/user/login']],
-               ['label' => 'Sign Up', 'url' => ['/user/register']]
+               ['label' => 'Register', 'url' => ['/user/register']],
+               ['label' => 'Login', 'url' => ['/user/login']]
            ];
        }
        else {
@@ -59,29 +59,24 @@ AppAsset::register($this);
 
            ];
        }
+
+       array_push($navItems,['label' => ' Help ',
+           'items' =>
+               [
+                   ['label' => 'Questions?', 'url' => '/site/contact'],
+                   ['label' => 'How does it work?', 'url' => '/site/howDoesItWork'],
+                   ['label' => 'About', 'url' => '/site/about'],
+               ]
+       ]);
+
 /**
-* Right top menu
+* Top right menu
 */
        echo Nav::widget([
            'options' => ['class' => 'navbar-nav navbar-right'],
-           'items' =>$navItems,
+           'items' =>$navItems
        ]);
-/**
-* Left top menu
-*/
-       echo Nav::widget([
-           'options' => ['class' => 'navbar-nav navbar-left'],
-           'items' =>[
-               ['label' => 'About', 'url' => ['/site/about']],
-               ['label' => 'Contact', 'url' => ['/site/contact']]
-           ]
-       ]);
-
        NavBar::end();
-
-
-
-
        ?>
 
 
