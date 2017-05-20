@@ -6,15 +6,31 @@ $config = [
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
+            'modelMap' => [
+                 'RegistrationForm' =>'app\models\RegistrationForm',
+           //      'Profile' => 'app\models\Profile',
+            ],
             'confirmWithin' => 21600,
             'cost' => 12,
             'admins' => ['milic178']
         ],
     ],
+
+
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+
+
+
     'components' => [
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@dektrium/user/views' => '@app/views/user'
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'iCY3G4nFVAzgO9kuYsWw6dJvbiSlE7-D',
@@ -22,11 +38,6 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-       /*
-        'user' => [
-            'identityClass' => 'dektrium\user\models\User',
-        ],
-        */
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
