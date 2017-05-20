@@ -122,4 +122,16 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+
+
+    /**
+     * Displays How does it work page.
+     *
+     * @return string
+     */
+    public function actionHow()
+    {
+        return $this->render('howDoesItWork');
+    }
 }

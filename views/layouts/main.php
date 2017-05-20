@@ -64,7 +64,7 @@ AppAsset::register($this);
            'items' =>
                [
                    ['label' => 'Questions?', 'url' => '/site/contact'],
-                   ['label' => 'How does it work?', 'url' => '/site/howDoesItWork'],
+                   ['label' => 'How does it work?', 'url' => '/site/how'],
                    ['label' => 'About', 'url' => '/site/about'],
                ]
        ]);
