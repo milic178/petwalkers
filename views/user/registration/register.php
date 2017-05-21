@@ -22,11 +22,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id' => 'registration-form',
                 ]); ?>
 
-                <?= $form->field($model, 'first_name') ?>
+                <?= $form->field($model, 'fist_name') ?>
 
                 <?= $form->field($model, 'last_name') ?>
-
-                <?= $form->field($model, 'telephone') ?>
 
                 <?= $form->field($model, 'email') ?>
 

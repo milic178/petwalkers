@@ -20,7 +20,6 @@ class RegistrationForm extends BaseRegistrationForm
 {
     public $fist_name;
     public $last_name;
-    public $telephone;
 
 
     public function rules()
@@ -30,8 +29,6 @@ class RegistrationForm extends BaseRegistrationForm
         $rules['usernameLength'] = ['username', 'string', 'min' => 5, 'max' => 255];
         $rules[] = ['fist_name', 'required'];
         $rules[] = ['last_name', 'required'];
-        $rules[] = ['telephone', 'required'];
-
 
         return $rules;
     }
@@ -41,7 +38,6 @@ class RegistrationForm extends BaseRegistrationForm
         $labels = parent::attributeLabels();
         $labels['fist_name'] = \Yii::t('user', 'First Name');
         $labels['last_name'] = \Yii::t('user', 'Last Name');
-        $labels['telephone'] = \Yii::t('user', 'Telephone');
         return $labels;
     }
 
@@ -54,8 +50,7 @@ class RegistrationForm extends BaseRegistrationForm
         $profile = \Yii::createObject(Profile::className());
         $profile->setAttributes([
             'fist_name' => $this->fist_name,
-            'last_name' => $this->last_name,
-            'telephone' => $this->telephone,
+            'last_name' => $this->last_name
         ]);
         $user->setProfile($profile);
     }

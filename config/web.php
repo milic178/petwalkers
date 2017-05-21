@@ -8,7 +8,7 @@ $config = [
             'class' => 'dektrium\user\Module',
             'modelMap' => [
                  'RegistrationForm' =>'app\models\RegistrationForm',
-           //      'Profile' => 'app\models\Profile',
+                 'Profile' => 'app\models\Profile',
             ],
             'confirmWithin' => 21600,
             'cost' => 12,
