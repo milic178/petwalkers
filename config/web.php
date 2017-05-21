@@ -10,6 +10,14 @@ $config = [
                  'RegistrationForm' =>'app\models\RegistrationForm',
                  'Profile' => 'app\models\Profile',
             ],
+            'controllerMap' => [
+                'registration' => [
+                    'class' => \dektrium\user\controllers\RegistrationController::className(),
+                    'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_CONFIRM => function () {
+                        Yii::$app->response->redirect(array('/user/settings/profile'))->send();
+                    }
+                ],
+            ],
             'confirmWithin' => 21600,
             'cost' => 12,
             'admins' => ['milic178']

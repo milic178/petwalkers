@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
  * @var dektrium\user\models\User $user
  */
 
-$this->title = Yii::t('user', 'Sign up');
+$this->title = Yii::t('user', 'Register');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -22,9 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id' => 'registration-form',
                 ]); ?>
 
-                <?= $form->field($model, 'fist_name') ?>
+                <?= $form->field($model, 'first_name') ?>
 
                 <?= $form->field($model, 'last_name') ?>
+
+                <?= $form->field($model, 'telephone') ?>
 
                 <?= $form->field($model, 'email') ?>
 
