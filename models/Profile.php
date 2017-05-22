@@ -24,7 +24,11 @@ class Profile extends BaseProfile
             [['age'], 'integer', 'min' => 16, 'max'=>85, 'message' => 'Enter a valid age'],
             [['first_name', 'last_name','telephone','avatar_photo'], 'string', 'max' => 150],
 
-            [['first_name', 'last_name','telephone','about_me'], 'required'],
+            [['avatar_photo'],'safe'],
+            [['avatar_photo'], 'file', 'extensions'=>'jpg, gif, png'],
+            [['avatar_photo'], 'file', 'maxSize'=>'100000'],
+
+            [['first_name', 'last_name','telephone','about_me','age'], 'required'],
             [['avatar_photo','about_me','social_link'], 'string', 'max' => 200 ],
         ];
     }
