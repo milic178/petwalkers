@@ -25,8 +25,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php
 if($model->first_time == 0):
-    Yii::$app->session->setFlash('info','<h2>Your account is active!
-    Finish setting up your profile to attract more customers!</h2>');
+    \Yii::$app->getSession()->setFlash('info',[
+        'type' => 'info',
+        'duration' => 5500,
+        'icon' => 'glyphicon glyphicon-info-sign',
+        'message' => 'Finish setting up your profile to attract more customers!',
+        'title' => 'Your account is active!',
+        'positonY' => 'top',
+        'positonX' => 'right'
+    ]);
 endif;
 
  ?>
@@ -77,9 +84,9 @@ endif;
 
                 <?= $form->field($model, 'smoker')->radioList(array('1'=>'Yes',0=>'No')); ?>
 
-                <?= $form->field($model, 'my_animals') ?>
+                <?= $form->field($model, 'my_animals')->textInput(['placeholder' => 'Do you have any pets at home?']) ?>
 
-                <?= $form->field($model, 'social_link') ?>
+                <?= $form->field($model, 'social_link') ->textInput(['placeholder' => 'Url to your social profile (Optional)']) ?>
 
                 <?=$form->field($model, 'first_time')->hiddenInput(['value'=> 1])->label(false)?>
 

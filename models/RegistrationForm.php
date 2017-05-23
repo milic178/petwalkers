@@ -61,4 +61,38 @@ class RegistrationForm extends BaseRegistrationForm
         ]);
         $user->setProfile($profile);
     }
+
+
+    /**
+     * Registers a new user account. If registration was successful it will set flash message.
+     *
+     * @return bool
+     */
+    public function register()
+    {
+        if (!$this->validate()) {
+            return false;
+        }
+
+        /** @var User $user */
+        $user = \Yii::createObject(User::className());
+        $user->setScenario('register');
+        $this->loadAttributes($user);
+
+        if (!$user->register()) {
+            return false;
+        }
+
+        \Yii::$app->getSession()->setFlash('info',[
+            'type' => 'info',
+            'duration' => 5500,
+            'icon' => 'glyphicon glyphicon-info-sign',
+            'message' => 'Message with further instructions has been sent to your e-mail',
+            'title' => 'Your account has been created!',
+            'positonY' => 'top',
+            'positonX' => 'right'
+        ]);
+        return true;
+
+    }
 }

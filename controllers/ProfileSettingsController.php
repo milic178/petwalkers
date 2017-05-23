@@ -32,21 +32,27 @@ class ProfileSettingsController extends SettingsController
         $current_image = $model->avatar_photo;
 
         if ($model->load(\Yii::$app->request->post())) {
-
             $image = $model->uploadImage();
-//print_r($image);die();
+
             if(!empty($image) && $image->size !== 0) :
                 $image->saveAs('uploads/'.$model->avatar_photo);
-
-
             else:
                 $model->avatar_photo=$current_image;
-
             endif;
-            $model->save();
 
-            \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'Your profile has been updated'));
-            $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
+        $model->save();
+
+        \Yii::$app->getSession()->setFlash('success',[
+                'type' => 'success',
+                'duration' => 4500,
+                'icon' => 'glyphicon glyphicon-ok-sign',
+                'message' => 'Your profile has been updated successfully',
+                'title' => 'Profile updated',
+                'positonY' => 'top',
+                'positonX' => 'right'
+        ]);
+
+        $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
             return $this->render('profile', [
                 'model' => $model,
             ]);

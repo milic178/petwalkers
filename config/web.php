@@ -9,6 +9,7 @@ $config = [
             'modelMap' => [
                  'RegistrationForm' =>'app\models\RegistrationForm',
                  'Profile' => 'app\models\Profile',
+                 'User' => 'app\models\User'
             ],
             'controllerMap' => [
                 'registration' => [
@@ -17,6 +18,15 @@ $config = [
                         Yii::$app->response->redirect(array('/user/settings/profile'))->send();
                     }
                      ],
+                'register' => [
+                    'class' => \dektrium\user\controllers\RegistrationController::className(),
+                    'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function () {
+                        Yii::$app->response->redirect(array('/user/security/login'))->send();
+                        Yii::$app->end();
+                    }
+                ],
+
+
                 'settings' => 'app\controllers\ProfileSettingsController',
             ],
             'confirmWithin' => 21600,
