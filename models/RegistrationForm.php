@@ -21,6 +21,7 @@ class RegistrationForm extends BaseRegistrationForm
     public $first_name;
     public $last_name;
     public $telephone;
+    public $avatar_photo;
 
 
     public function rules()
@@ -40,6 +41,8 @@ class RegistrationForm extends BaseRegistrationForm
         $labels['first_name'] = \Yii::t('user', 'First Name');
         $labels['last_name'] = \Yii::t('user', 'Last Name');
         $labels['telephone'] = \Yii::t('user', 'Phone number');
+        $labels['avatar_photo'] = \Yii::t('user', 'Avatar Photo');
+
         return $labels;
     }
 
@@ -53,7 +56,8 @@ class RegistrationForm extends BaseRegistrationForm
         $profile->setAttributes([
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
-            'telephone' => $this->telephone
+            'telephone' => $this->telephone,
+            'avatar_photo' => $this->avatar_photo,
         ]);
         $user->setProfile($profile);
     }

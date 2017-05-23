@@ -34,6 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'password')->passwordInput() ?>
 
+                <?=  $form->field($model, 'avatar_photo')
+                ->hiddenInput(['value' => 'default_user.jpg'])
+                ->label(false) ?>
+
                 <?= Html::submitButton(Yii::t('user', 'Sign up'), ['class' => 'btn btn-success btn-block']) ?>
 
                 <?php ActiveForm::end(); ?>

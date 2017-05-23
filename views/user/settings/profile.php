@@ -10,10 +10,8 @@
 
 
 use yii\helpers\Html;
-use dektrium\user\helpers\Timezone;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
-use kartik\date\DatePicker;
+use kartik\file\FileInput;
 
 /**
  * @var yii\web\View $this
@@ -39,8 +37,10 @@ endif;
 
 <div class="row">
     <div class="col-md-3">
+
         <?= $this->render('_menu') ?>
     </div>
+
     <div class="col-md-9">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -49,7 +49,7 @@ endif;
             <div class="panel-body">
                 <?php $form = ActiveForm::begin([
                     'id' => 'profile-form',
-                    'options' => ['class' => 'form-horizontal'],
+                    'options' => ['class' => 'form-horizontal','enctype'=>'multipart/form-data'],
                     'fieldConfig' => [
                         'template' => "{label}\n<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-sm-offset-3 col-lg-9\">{error}\n{hint}</div>",
                         'labelOptions' => ['class' => 'col-lg-3 control-label'],
@@ -67,8 +67,10 @@ endif;
 
                 <?= $form->field($model, 'age')->textInput(['maxlength'=>2]) ?>
 
-                <?= $form->field($model, 'avatar_photo')->fileInput()
-                    ->hint(Yii::t('user', 'Upoload your photo')) ?>
+
+                <?= $form->field($model, 'avatar_photo')->widget(FileInput::classname(), [
+                'options' => ['accept' => 'image/*'],
+                ]);  ?>
 
 
                 <?= $form->field($model, 'about_me')->textarea(['rows' => '6','placeholder' =>'Write something about yourself in few words']) ?>

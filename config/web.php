@@ -16,7 +16,8 @@ $config = [
                     'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_CONFIRM => function () {
                         Yii::$app->response->redirect(array('/user/settings/profile'))->send();
                     }
-                ],
+                     ],
+                'settings' => 'app\controllers\ProfileSettingsController',
             ],
             'confirmWithin' => 21600,
             'cost' => 12,

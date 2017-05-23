@@ -8,9 +8,18 @@
 
 namespace app\models;
 use dektrium\user\models\Profile as BaseProfile;
+use yii\web\UploadedFile;
 
 class Profile extends BaseProfile
 {
+    /**
+     * @var mixed image the attribute for rendering the file input
+     * widget for upload on the form
+     */
+
+
+
+
 
     public static function tableName()
     {
@@ -24,9 +33,9 @@ class Profile extends BaseProfile
             [['age'], 'integer', 'min' => 16, 'max'=>85, 'message' => 'Enter a valid age'],
             [['first_name', 'last_name','telephone','avatar_photo'], 'string', 'max' => 150],
 
-            [['avatar_photo'],'safe'],
+            [['avatar_photo','filename'],'safe'],
             [['avatar_photo'], 'file', 'extensions'=>'jpg, gif, png'],
-            [['avatar_photo'], 'file', 'maxSize'=>'100000'],
+          //  [['avatar_photo'], 'default', 'value'=> 'default_user.jpg'],
 
             [['first_name', 'last_name','telephone','about_me','age'], 'required'],
             [['avatar_photo','about_me','social_link'], 'string', 'max' => 200 ],
@@ -47,7 +56,8 @@ class Profile extends BaseProfile
             'smoker' => 'Smoker',
             'my_animals' => 'My animals',
             'social_link' => 'Social networks',
-            'first_time'=>'First login'
+            'first_time'=>'First login',
+
 
         ];
 
@@ -69,6 +79,49 @@ class Profile extends BaseProfile
      */
 
 
+    /**
+     * fetch stored image file name with complete path
+     * @return string
+     */
+    public function getImageFile()
+    {
+        return isset($this->avatar_photo) ? \Yii::$app->params['uploadPath'] . $this->avatar_photo : null;
+    }
+
+    /**
+     * fetch stored image url
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        // return a default image placeholder if your source avatar is not found
+        $avatar_photo = isset($this->avatar_photo) ? $this->avatar_photo : 'default_user.jpg';
+        return \Yii::$app->params['uploadUrl'] . $avatar_photo;
+    }
+
+    /**
+     * Process upload of image
+     *
+     * @return mixed the uploaded image instance
+     */
+    public function uploadImage() {
+        // get the uploaded file instance. for multiple file uploads
+        // the following data will return an array (you may need to use
+        // getInstances method)
+        $image=UploadedFile::getInstance($this,'avatar_photo');
+
+
+        // if no image was uploaded abort the upload
+        if (empty($image)) {
+            return false;
+        }
+        $this->avatar_photo = \Yii::$app->security->generateRandomString().'.'.$image->extension;
+        // the uploaded image instance
+        return $image;
+    }
+
+
 
 
 }
+
