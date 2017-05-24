@@ -17,6 +17,8 @@
 namespace app\controllers;
 
 use dektrium\user\controllers\RegistrationController;
+use dektrium\user\models\RegistrationForm;
+use yii\web\NotFoundHttpException;
 
 
 class RegisterController extends RegistrationController
@@ -59,16 +61,13 @@ class RegisterController extends RegistrationController
         if ($model->load(\Yii::$app->request->post()) && $model->register()) {
             $this->trigger(self::EVENT_AFTER_REGISTER, $event);
 
-            return $this->render('/message', [
-                'title'  => \Yii::t('user', 'Your account has been created'),
-                'module' => $this->module,
-            ]);
+            return $this->redirect('/user/security/login');
         }
-
         return $this->render('register', [
             'model'  => $model,
             'module' => $this->module,
         ]);
+
     }
 
 
