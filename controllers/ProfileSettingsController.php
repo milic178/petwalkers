@@ -7,7 +7,7 @@
 namespace app\controllers;
 
 use dektrium\user\controllers\SettingsController;
-use yii\web\UploadedFile;
+
 
 class ProfileSettingsController extends SettingsController
 {

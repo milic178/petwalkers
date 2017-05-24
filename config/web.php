@@ -12,22 +12,23 @@ $config = [
                  'User' => 'app\models\User'
             ],
             'controllerMap' => [
-                'registration' => [
+       /*         'registration' => [
                     'class' => \dektrium\user\controllers\RegistrationController::className(),
-                    'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_CONFIRM => function () {
+                    'on afterConfirm' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_CONFIRM => function () {
                         Yii::$app->response->redirect(array('/user/settings/profile'))->send();
                     }
-                     ],
-                'register' => [
+                ],
+                'registration' => [
                     'class' => \dektrium\user\controllers\RegistrationController::className(),
                     'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function () {
                         Yii::$app->response->redirect(array('/user/security/login'))->send();
                         Yii::$app->end();
                     }
                 ],
-
+*/
 
                 'settings' => 'app\controllers\ProfileSettingsController',
+                'registration' => 'app\controllers\RegisterController',
             ],
             'confirmWithin' => 21600,
             'cost' => 12,
