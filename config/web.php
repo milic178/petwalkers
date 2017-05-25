@@ -26,10 +26,25 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 
-    'language'=>'en',
+    'language'=> 'en',
     'sourceLanguage'=>'en',
 
     'components' => [
+
+        //multi lang component
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                    ],
+                ],
+
+            ],
+        ],
+
         'view' => [
             'theme' => [
                 'pathMap' => [
