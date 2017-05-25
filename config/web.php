@@ -28,10 +28,12 @@ $config = [
 
     'language'=> 'en',
     'sourceLanguage'=>'en',
+// required for langselector to  work with Ajax
+    'bootstrap' => ['languagepicker'],
+
 
     'components' => [
-
-        //multi lang component
+ //multi lang component
         'i18n' => [
             'translations' => [
                 'app*' => [
@@ -40,9 +42,15 @@ $config = [
                     'fileMap' => [
                         'app' => 'app.php',
                     ],
+                    'on missingTranslation' => ['app\components\TranslationEventHandler', 'handleMissingTranslation']
                 ],
 
             ],
+        ],
+
+        'languagepicker' => [
+            'class' => 'lajax\languagepicker\Component',        // List of available languages (icons and text)
+            'languages' => ['en' => 'English', 'sl' => 'Slovenian', 'fr' => 'Français']
         ],
 
         'view' => [

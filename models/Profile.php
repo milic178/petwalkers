@@ -49,7 +49,7 @@ class Profile extends BaseProfile
             'user_id' => 'User_id',
             'first_name' => 'First Name',
             'last_name' => 'Last Name',
-            'telephone' => 'Phone number +',
+            'telephone' => \Yii::t('app','Phone number +'),
             'age' => 'Age',
             'avatar_photo' => 'Profile picture',
             'about_me' => 'About me',

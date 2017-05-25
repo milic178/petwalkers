@@ -26,6 +26,7 @@ AppAsset::register($this);
 
 <div class="wrap">
        <?php
+
        NavBar::begin([
            'brandLabel' => 'Petwalkers',
            'brandUrl' => Yii::$app->homeUrl,
@@ -33,6 +34,7 @@ AppAsset::register($this);
                'class' => 'navbar-inverse navbar-fixed-top',
            ],
        ]);
+
 
 /**
 * Constructing menu array if
@@ -45,7 +47,7 @@ AppAsset::register($this);
        }
        else {
            $navItems=[
-               ['label' => 'Home', 'url' => ''.Yii::$app->homeUrl.''],
+               ['label' => Yii::t('app','Phone number +'), 'url' => ''.Yii::$app->homeUrl.''],
                ['label' => 'Manage Adds', ''.Yii::$app->homeUrl.'' => ['#'],'visible' => Yii::$app->user->identity->isAdmin],
                ['label' => 'Manage Users', 'url' => ['/user/admin/index'],'visible' => Yii::$app->user->identity->isAdmin],
                ['label' => ' '. Yii::$app->user->identity->username .' ',
@@ -76,9 +78,9 @@ AppAsset::register($this);
            'options' => ['class' => 'navbar-nav navbar-right'],
            'items' =>$navItems
        ]);
-       NavBar::end();
-       ?>
 
+    NavBar::end();
+?>
 
     <div class="container">
         <?= Breadcrumbs::widget([

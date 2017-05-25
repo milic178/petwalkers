@@ -21,7 +21,8 @@
         "dektrium/yii2-user": "^0.9.12",
         "kartik-v/yii2-widget-datepicker": "@dev",
         "kartik-v/yii2-widget-fileinput": "@dev",
-        "kartik-v/yii2-widget-growl": "*"
+        "kartik-v/yii2-widget-growl": "*",
+        "lajax/yii2-language-picker": "1.*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

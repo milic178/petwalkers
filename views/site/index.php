@@ -5,7 +5,10 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
+    <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
+        'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_DROPDOWN,
+        'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_LARGE
+    ]); ?>
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
 
@@ -18,7 +21,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2><?= \Yii::t('app', 'Heading');?></h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

@@ -9,5 +9,7 @@
  */
 
 return [
-    'Welcome' => 'Dobrodošli'
+    'Welcome' => 'Dobrodošli',
+    'Heading'=>'Glava',
+    'Phone number +' =>'Mobilna št'
 ];

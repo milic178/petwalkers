@@ -9,5 +9,7 @@
  */
 
 return [
-    'Welcome' => 'Bienvaniue'
+    'Welcome' => 'Bienvenue',
+    'Heading' =>'Tette',
+    'Phone number +' =>'Numero tel'
 ];
