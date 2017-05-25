@@ -12,21 +12,6 @@ $config = [
                  'User' => 'app\models\User'
             ],
             'controllerMap' => [
-       /*         'registration' => [
-                    'class' => \dektrium\user\controllers\RegistrationController::className(),
-                    'on afterConfirm' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_CONFIRM => function () {
-                        Yii::$app->response->redirect(array('/user/settings/profile'))->send();
-                    }
-                ],
-                'registration' => [
-                    'class' => \dektrium\user\controllers\RegistrationController::className(),
-                    'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function () {
-                        Yii::$app->response->redirect(array('/user/security/login'))->send();
-                        Yii::$app->end();
-                    }
-                ],
-*/
-
                 'settings' => 'app\controllers\ProfileSettingsController',
                 'registration' => 'app\controllers\RegisterController',
             ],
@@ -41,7 +26,8 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 
-
+    'language'=>'en',
+    'sourceLanguage'=>'en',
 
     'components' => [
         'view' => [
