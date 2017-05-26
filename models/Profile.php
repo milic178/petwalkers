@@ -47,15 +47,15 @@ class Profile extends BaseProfile
     {
       return [
             'user_id' => 'User_id',
-            'first_name' => 'First Name',
-            'last_name' => 'Last Name',
+            'first_name' => \Yii::t('app','First Name'),
+            'last_name' => \Yii::t('app','Last Name'),
             'telephone' => \Yii::t('app','Phone number +'),
-            'age' => 'Age',
-            'avatar_photo' => 'Profile picture',
-            'about_me' => 'About me',
-            'smoker' => 'Smoker',
-            'my_animals' => 'My animals',
-            'social_link' => 'Social networks',
+            'age' => \Yii::t('app','Age'),
+            'avatar_photo' => \Yii::t('app','Profile picture'),
+            'about_me' => \Yii::t('app','About me'),
+            'smoker' => \Yii::t('app','Smoker'),
+            'my_animals' => \Yii::t('app','My animals'),
+            'social_link' => \Yii::t('app','Social networks'),
             'first_time'=>'First login',
 
 

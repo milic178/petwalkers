@@ -43,9 +43,9 @@ class Animal extends \yii\db\ActiveRecord
     {
         return [
             'id_animal' => 'Id Animal',
-            'species' => 'Species',
-            'weight' => 'Weight',
-            'age' => 'Age',
+            'species' => \Yii::t('app','Species'),
+            'weight' => \Yii::t('app','Weight'),
+            'age' => \Yii::t('app','Animal age'),
         ];
     }
 

@@ -41,7 +41,7 @@ class Region extends \yii\db\ActiveRecord
     {
         return [
             'id_region' => 'Id Region',
-            'name' => 'Name',
+            'name' => \Yii::t('app','Region name'),
         ];
     }
 

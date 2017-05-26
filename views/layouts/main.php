@@ -41,33 +41,33 @@ AppAsset::register($this);
 */
        if (Yii::$app->user->isGuest) {
            $navItems=[
-               ['label' => 'Register', 'url' => ['/user/register']],
-               ['label' => 'Login', 'url' => ['/user/login']]
+               ['label' => Yii::t('app','Register'), 'url' => ['/user/register']],
+               ['label' => Yii::t('app','Login'), 'url' => ['/user/login']]
            ];
        }
        else {
            $navItems=[
-               ['label' => Yii::t('app','Phone number +'), 'url' => ''.Yii::$app->homeUrl.''],
-               ['label' => 'Manage Adds', ''.Yii::$app->homeUrl.'' => ['#'],'visible' => Yii::$app->user->identity->isAdmin],
-               ['label' => 'Manage Users', 'url' => ['/user/admin/index'],'visible' => Yii::$app->user->identity->isAdmin],
+               ['label' => Yii::t('app','Home'), 'url' => ''.Yii::$app->homeUrl.''],
+               ['label' => Yii::t('app','Manage Adds'), ''.Yii::$app->homeUrl.'' => ['#'],'visible' => Yii::$app->user->identity->isAdmin],
+               ['label' => Yii::t('app','Manage Users'), 'url' => ['/user/admin/index'],'visible' => Yii::$app->user->identity->isAdmin],
                ['label' => ' '. Yii::$app->user->identity->username .' ',
                    'items' =>
                    [
-                        ['label' => 'My Profile', 'url' => '/user/settings/profile'],
-                        ['label' => 'My adds', 'url' => '#'],
-                        ['label' => 'Logout', 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
+                        ['label' => Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
+                        ['label' => Yii::t('app','My Adds'), 'url' => '#'],
+                        ['label' => Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
                    ]
                ]
 
            ];
        }
 
-       array_push($navItems,['label' => ' Help ',
+       array_push($navItems,['label' => Yii::t('app','Help'),
            'items' =>
                [
-                   ['label' => 'Questions?', 'url' => '/site/contact'],
-                   ['label' => 'How does it work?', 'url' => '/site/how'],
-                   ['label' => 'About', 'url' => '/site/about'],
+                   ['label' => Yii::t('app','Questions'), 'url' => '/site/contact'],
+                   ['label' => Yii::t('app','How does it work?'), 'url' => '/site/how'],
+                   ['label' => Yii::t('app','About'), 'url' => '/site/about'],
                ]
        ]);
 

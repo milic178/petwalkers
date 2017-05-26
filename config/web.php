@@ -33,14 +33,26 @@ $config = [
 
 
     'components' => [
- //multi lang component
+
+//multi lang component
         'i18n' => [
             'translations' => [
+
+// Writing  translations to sl/fr
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'app' => 'app.php',
+                    ],
+                    'on missingTranslation' => ['app\components\TranslationEventHandler', 'handleMissingTranslation']
+                ],
+// Overriding user translations to sl/fr
+                'user' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'user' => 'user.php',
                     ],
                     'on missingTranslation' => ['app\components\TranslationEventHandler', 'handleMissingTranslation']
                 ],

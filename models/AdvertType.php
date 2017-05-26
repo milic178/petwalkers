@@ -42,8 +42,8 @@ class AdvertType extends \yii\db\ActiveRecord
     {
         return [
             'id_type' => 'Id Type',
-            'name' => 'Name',
-            'description' => 'Description',
+            'name' => \Yii::t('app','Advert type'),
+            'description' => \Yii::t('app','Description'),
         ];
     }
 
