@@ -34,6 +34,9 @@ return [
     'Smoker'=>'Kadim',
     'My animals'=>'Moje živali',
     'Social networks'=>'Socijalna omrežja',
+    'Yes'=>'Da',
+    'No'=>'Ne',
+    'Url to your social profile (Optional)' =>'Povezava do profila na socijalnem omrežju',
 
     //Advert type
     'Advert type'=>'Tip oglasa',

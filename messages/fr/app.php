@@ -35,6 +35,9 @@ return [
     'Smoker'=>'Fumeur',
     'My animals'=>'Mes animaux',
     'Social networks'=>'Réseaux sociaux',
+    'Yes'=>'Oui',
+    'No'=>'Non',
+    'Url to your social profile (Optional)'=>'Url à votre profil social (facultatif)',
 
     //Advert type
     'Advert type'=>'Type de publicité',

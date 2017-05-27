@@ -6,6 +6,7 @@
 
 namespace app\controllers;
 
+use app\models\Profile;
 use dektrium\user\controllers\SettingsController;
 
 
@@ -40,22 +41,22 @@ class ProfileSettingsController extends SettingsController
                 $model->avatar_photo=$current_image;
             endif;
 
-        $model->save();
+            if ($model->save()):
 
-        \Yii::$app->getSession()->setFlash('success',[
-                'type' => 'success',
-                'duration' => 4500,
-                'icon' => 'glyphicon glyphicon-ok-sign',
-                'message' => 'Your profile has been updated successfully',
-                'title' => 'Profile updated',
-                'positonY' => 'top',
-                'positonX' => 'right'
-        ]);
+                \Yii::$app->getSession()->setFlash('success',[
+                        'type' => 'success',
+                        'duration' => 4500,
+                        'icon' => 'glyphicon glyphicon-ok-sign',
+                        'message' => 'Your profile has been updated successfully',
+                        'title' => 'Profile updated',
+                        'positonY' => 'top',
+                        'positonX' => 'right'
+                ]);
 
-        $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
-            return $this->render('profile', [
-                'model' => $model,
-            ]);
+                $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
+                 return $this->refresh();
+            endif;
+
         }
 
         return $this->render('profile', [

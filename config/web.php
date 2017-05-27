@@ -56,6 +56,14 @@ $config = [
                     ],
                     'on missingTranslation' => ['app\components\TranslationEventHandler', 'handleMissingTranslation']
                 ],
+                'kvdialog' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'user' => 'user.php',
+                    ],
+                    'on missingTranslation' => ['app\components\TranslationEventHandler', 'handleMissingTranslation']
+                ],
 
             ],
         ],

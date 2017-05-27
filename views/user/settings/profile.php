@@ -12,6 +12,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
+use kartik\dialog\Dialog;
 
 /**
  * @var yii\web\View $this
@@ -45,8 +46,15 @@ endif;
 <div class="row">
     <div class="col-md-3">
 
-        <?= $this->render('_menu') ?>
+        <?= $this->render('_menu');
+        echo
+        Dialog::widget([
+            'options' => ['type' => Dialog::TYPE_SUCCESS ],
+        ]);
+        ?>
+
     </div>
+
 
     <div class="col-md-9">
         <div class="panel panel-default">
@@ -82,21 +90,22 @@ endif;
 
                 <?= $form->field($model, 'about_me')->textarea(['rows' => '6','placeholder' =>'Write something about yourself in few words']) ?>
 
-                <?= $form->field($model, 'smoker')->radioList(array('1'=>'Yes',0=>'No')); ?>
+                <?= $form->field($model, 'smoker')->radioList(array('1'=>Yii::t('app','Yes'),0=>Yii::t('app','No'))); ?>
 
                 <?= $form->field($model, 'my_animals')->textInput(['placeholder' => 'Do you have any pets at home?']) ?>
 
-                <?= $form->field($model, 'social_link') ->textInput(['placeholder' => 'Url to your social profile (Optional)']) ?>
+                <?= $form->field($model, 'social_link') ->textInput(['placeholder' => Yii::t('app','Url to your social profile (Optional)')]) ?>
 
                 <?=$form->field($model, 'first_time')->hiddenInput(['value'=> 1])->label(false)?>
 
                 <div class="form-group">
                     <div class="col-lg-offset-3 col-lg-9">
-                        <?= Html::submitButton(Yii::t('user', 'Save'),
+                        <?= Html::button(Yii::t('user','Save'),
                             [
-                            'class' => 'btn btn-block btn-success',
-                            'data-confirm' => Yii::t('yii', 'Are you sure you want to update profile'),
+                                'id'=>'btn-custom',
+                                'class' => 'btn btn-block btn-success',
                             ]) ?>
+
                         <br>
                     </div>
                 </div>
@@ -106,3 +115,20 @@ endif;
         </div>
     </div>
 </div>
+
+<?php
+$text = Yii::t('kvdialog','Update profile?');
+
+$js = <<< JS
+$("#btn-custom").on("click", function() {
+    krajeeDialog.confirm("$text", function (result) {
+        if (result) {
+           $('#profile-form').yiiActiveForm('submitForm');  
+        } else {
+            event.preventDefault();
+              }
+    });
+});
+JS;
+$this->registerJs($js);
+?>
