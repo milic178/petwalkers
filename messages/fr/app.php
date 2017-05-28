@@ -51,5 +51,18 @@ return [
     //Region
     'Region name'=>'Région',
 
+    //City
+    'Cities' =>'Villes',
+    'Create City' =>'Ajouter une ville',
+    'Id City' =>'Id ville',
+    'Name' =>'Nom',
+    'Zip Code' =>'Code postal',
+    'Region' =>'Région',
+    'Update City' =>'Mettre à jour la ville',
+    'Select Region' =>'Sélectionnez une région',
 
+    //Crud
+    'Create' => 'Ajouter',
+    'Update' => 'Mettre à jour',
+    'Delete' => 'Effacer',
 ];

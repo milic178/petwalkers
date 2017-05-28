@@ -50,6 +50,7 @@ AppAsset::register($this);
                ['label' => Yii::t('app','Home'), 'url' => ''.Yii::$app->homeUrl.''],
                ['label' => Yii::t('app','Manage Adds'), ''.Yii::$app->homeUrl.'' => ['#'],'visible' => Yii::$app->user->identity->isAdmin],
                ['label' => Yii::t('app','Manage Users'), 'url' => ['/user/admin/index'],'visible' => Yii::$app->user->identity->isAdmin],
+               ['label' => Yii::t('app','Cities'), 'url' => ['/city/index'],'visible' => Yii::$app->user->identity->isAdmin],
                ['label' => ' '. Yii::$app->user->identity->username .' ',
                    'items' =>
                    [

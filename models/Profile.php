@@ -39,6 +39,8 @@ class Profile extends BaseProfile
 
             [['first_name', 'last_name','telephone','about_me','age'], 'required'],
             [['avatar_photo','about_me','social_link'], 'string', 'max' => 200 ],
+
+            [['social_link'], 'url', 'defaultScheme' => 'http'],
         ];
     }
 

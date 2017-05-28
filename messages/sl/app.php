@@ -49,4 +49,19 @@ return [
 
     //Region
     'Region name'=>'Regija',
+
+    //City
+    'Cities' =>'Mesta',
+    'Create City' =>'Dodaj mesto',
+    'Id City' =>'Id',
+    'Name' =>'Ime',
+    'Zip Code' =>'Poštna št.',
+    'Region' =>'Regija',
+    'Update City' =>'Posodobi mesto',
+    'Select Region' =>'Izberi regijo',
+
+    //Crud
+    'Create' => 'Vnesi',
+    'Update' => 'Posodobi',
+    'Delete' => 'Izbriši',
 ];
