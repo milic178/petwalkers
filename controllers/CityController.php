@@ -66,9 +66,9 @@ class CityController extends Controller
         $model = new City();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_city]);
+            return $this->redirect('index');
         } else {
-            return $this->render('create', [
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }

@@ -51,7 +51,7 @@ return [
     'Region name'=>'Regija',
 
     //City
-    'Cities' =>'Mesta',
+    'List of cities' =>'Seznam mest',
     'Create City' =>'Dodaj mesto',
     'Id City' =>'Id',
     'Name' =>'Ime',

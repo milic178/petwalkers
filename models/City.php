@@ -31,7 +31,7 @@ class City extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'zip_code', 'id_region'], 'required'],
-            [['id_region'], 'integer'],
+            [['id_region','zip_code'], 'integer'],
             [['name'], 'string', 'max' => 80],
             [['zip_code'], 'string', 'max' => 10],
             [['id_region'], 'exist', 'skipOnError' => true, 'targetClass' => Region::className(), 'targetAttribute' => ['id_region' => 'id_region']],

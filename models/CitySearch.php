@@ -42,7 +42,7 @@ class CitySearch extends City
     public function search($params)
     {
         $query = City::find();
-   
+
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([

@@ -52,7 +52,7 @@ return [
     'Region name'=>'Région',
 
     //City
-    'Cities' =>'Villes',
+    'List of cities' =>'Liste des villes',
     'Create City' =>'Ajouter une ville',
     'Id City' =>'Id ville',
     'Name' =>'Nom',
