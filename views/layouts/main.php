@@ -48,9 +48,14 @@ AppAsset::register($this);
        else {
            $navItems=[
                ['label' => Yii::t('app','Home'), 'url' => ''.Yii::$app->homeUrl.''],
-               ['label' => Yii::t('app','Manage Adds'), ''.Yii::$app->homeUrl.'' => ['#'],'visible' => Yii::$app->user->identity->isAdmin],
-               ['label' => Yii::t('app','Manage Users'), 'url' => ['/user/admin/index'],'visible' => Yii::$app->user->identity->isAdmin],
-               ['label' => Yii::t('app','List of cities'), 'url' => ['/city/index'],'visible' => Yii::$app->user->identity->isAdmin],
+               ['label'=> 'Administrator','visible' => Yii::$app->user->identity->isAdmin,
+                   'items' =>
+                   [
+                       ['label' => Yii::t('app','Manage Adds'), ''.Yii::$app->homeUrl.'' => ['#']],
+                       ['label' => Yii::t('app','Manage Users'), 'url' => ['/user/admin/index']],
+                       ['label' => Yii::t('app','List of cities'), 'url' => ['/city/index']],
+                   ]
+               ],
                ['label' => ' '. Yii::$app->user->identity->username .' ',
                    'items' =>
                    [

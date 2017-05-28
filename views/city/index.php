@@ -48,7 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter'=>\yii\helpers\ArrayHelper::map(\app\models\Region::find()->all(), 'id_region', 'name'),
 
             ],
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' =>'Actions',
+                'template' => '{view} {update} {delete}',
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>
