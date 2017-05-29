@@ -6,7 +6,18 @@ use dektrium\user\models\Token;
 
 class User extends BaseProfile
 {
+/*    const ROLE_USER = 10;
+    const ROLE_ADMIN = 30;
 
+
+    public function attributeLabels()
+    {
+        $labels = parent::attributeLabels();
+        $labels['role'] = 'role';
+        return $labels;
+
+    }
+*/
     /**
      * Attempts user confirmation.
      *
@@ -47,7 +58,7 @@ class User extends BaseProfile
             }
         } else {
             $success = false;
-           $message = \Yii::$app->getSession()->setFlash('danger',[
+                \Yii::$app->getSession()->setFlash('danger',[
                 'type' => 'danger',
                 'duration' => 5500,
                 'icon' => 'glyphicon glyphicon-remove-sign',

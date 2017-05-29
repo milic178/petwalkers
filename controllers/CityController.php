@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use app\components\AccessRule;
+use app\models\User;
 
 /**
  * CityController implements the CRUD actions for City model.
@@ -23,10 +25,15 @@ class CityController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                ],
+               // 'only' => ['index','create', 'update', 'delete','view'],
                 'rules' => [
                     [
+                        'actions' => ['index','create', 'update', 'delete','view'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['admin'],
                     ],
                 ],
             ],
