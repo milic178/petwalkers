@@ -10,6 +10,7 @@
  */
 
 use yii\helpers\Html;
+use yii\widgets\DetailView;
 
 /**
  * @var \yii\web\View $this
@@ -64,3 +65,12 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+<?= DetailView::widget([
+    'model' => $profile,
+    'attributes' => [
+        'first_name',
+        'last_name',
+        'about_me',
+    
+    ],
+]) ?>

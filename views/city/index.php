@@ -45,8 +45,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' =>'id_region',
                 'value' => 'idRegion.name',
-                'filter'=>\yii\helpers\ArrayHelper::map(\app\models\Region::find()->all(), 'id_region', 'name'),
-
+                'filter'=>
+                    \yii\helpers\ArrayHelper::map(\app\models\Region::find()->all(), 'id_region', 'name')
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
