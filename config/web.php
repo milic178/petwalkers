@@ -3,6 +3,7 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
+
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
@@ -74,12 +75,19 @@ $config = [
         ],
 
         'view' => [
+            'class' => 'yii\web\View',
             'theme' => [
+                'class' => 'yii\base\Theme',
+                'baseUrl' => '@app/themes/startbootstrap',
                 'pathMap' => [
+                    '@app/views' => '@app/themes/startbootstrap',
+                    '@app/views/site' => '@app//themes/startbootstrap',
                     '@dektrium/user/views' => '@app/views/user'
                 ],
             ],
+
         ],
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'iCY3G4nFVAzgO9kuYsWw6dJvbiSlE7-D',
