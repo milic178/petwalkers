@@ -11,6 +11,7 @@
 return [
     'Welcome' => 'Bienvenue',
     'Heading' =>'Tette',
+    'Contact us' =>'Contactez nous',
     //menu
     'Register' => 'Inscription',
     'Login'=>'Connexion',
@@ -65,4 +66,7 @@ return [
     'Create' => 'Ajouter',
     'Update' => 'Mettre à jour',
     'Delete' => 'Effacer',
+
+    //Faq
+    'More questions? Dont hesitate!' =>'Plus de question? Alors tanqet pa!'
 ];

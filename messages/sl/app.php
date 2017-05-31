@@ -11,6 +11,7 @@
 return [
     'Welcome' => 'Dobrodošli',
     'Heading'=>'Glava',
+    'Contact us'=>'Pišite nam',
     //menu
     'Register' => 'Registracija',
     'Login'=>'Prijava',
@@ -64,4 +65,7 @@ return [
     'Create' => 'Vnesi',
     'Update' => 'Posodobi',
     'Delete' => 'Izbriši',
+
+    //Faq
+    'More questions? Dont hesitate!' => 'Niste našli odgovora? Potem ne oklevajte!',
 ];

@@ -42,6 +42,7 @@ AppAsset::register($this);
 */
        if (Yii::$app->user->isGuest) {
            $navItems=[
+               ['label' => Yii::t('app','About'), 'url' => '/site/about'],
                ['label' => Yii::t('app','Register'), 'url' => ['/user/register']],
                ['label' => Yii::t('app','Login'), 'url' => ['/user/login']]
            ];
@@ -72,9 +73,9 @@ AppAsset::register($this);
        array_push($navItems,['label' => Yii::t('app','Help'),
            'items' =>
                [
-                   ['label' => Yii::t('app','Questions'), 'url' => '/site/contact'],
+                   ['label' => Yii::t('app','Questions'), 'url' => '/site/faq'],
                    ['label' => Yii::t('app','How does it work?'), 'url' => '/site/how'],
-                   ['label' => Yii::t('app','About'), 'url' => '/site/about'],
+                   ['label' => Yii::t('app','Contact us'), 'url' => '/site/contact'],
                ]
        ]);
 

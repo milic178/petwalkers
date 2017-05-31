@@ -134,4 +134,14 @@ class SiteController extends Controller
     {
         return $this->render('howDoesItWork');
     }
+
+    /**
+     * Displays FAQ page.
+     *
+     * @return string
+     */
+    public function actionFaq()
+    {
+        return $this->render('faq');
+    }
 }
