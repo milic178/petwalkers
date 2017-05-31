@@ -77,11 +77,7 @@ $config = [
         'view' => [
             'class' => 'yii\web\View',
             'theme' => [
-                'class' => 'yii\base\Theme',
-                'baseUrl' => '@app/themes/startbootstrap',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/startbootstrap',
-                    '@app/views/site' => '@app//themes/startbootstrap',
                     '@dektrium/user/views' => '@app/views/user'
                 ],
             ],
