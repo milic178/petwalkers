@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <!-- Content Row -->
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-md-12">
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -135,12 +135,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
             </div>
-            <p style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></p>
-            <?= Html::button(Yii::t('app','Contact us'), [
-                'url' => 'site/contact',
-                'class' => 'btn btn-success center-block',
-                'id'=>'btnCustom']); ?>
-            </p>
+            <h3 style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></h3>
+            <div class="col-md-12 text-center">
+                <?= Html::a(Yii::t('app','Contact us'),
+                        ['/site/contact'],
+                        [
+                            'class'=>'btn btn-success btn-lg',
+                            'id'=>'contact-us'
+                        ]
+                )
+                ?>
+            </div>
             <!-- /.panel -->
         </div>
         <!-- /.panel-group -->
