@@ -20,57 +20,83 @@ use yii\widgets\DetailView;
 $this->title = empty($profile->name) ? Html::encode($profile->user->username) : Html::encode($profile->name);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
+<div>
+    <div class="text-center">
+        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
-                    'class'=>'img-thumbnail',
-                    'width'=>'100%',
-                    'height'=>'10%',
+                    'class'=>'img-circle',
+                    'width'=>'120',
+                    'height'=>'120',
                     'title'=>$profile->first_name,
                 ]); ?>
-            </div>
-            <div class="col-sm-6 col-md-8">
-                <h4><?= $this->title ?></h4>
-                <ul style="padding: 0; list-style: none outside none;">
-                    <?php if (!empty($profile->last_name)): ?>
-                        <li>
-                            <i class="glyphicon glyphicon-map-marker text-muted"></i> <?= Html::encode($profile->last_name) ?>
-                        </li>
-                    <?php endif; ?>
-                    <?php if (!empty($profile->telephone)): ?>
-                        <li>
-                            <i class="glyphicon glyphicon-globe text-muted"></i> <?= Html::a(Html::encode($profile->telephone), Html::encode($profile->telephone)) ?>
-                        </li>
-                    <?php endif; ?>
-                    <?php if (!empty($profile->about_me)): ?>
-                        <li>
-                            <i class="glyphicon glyphicon-envelope text-muted"></i> <?= Html::a(Html::encode($profile->about_me)) ?>
-                        </li>
-                    <?php endif; ?>
-                    <?php if (!$profile->user->email): ?>
-                        <li>
-                            <i class="glyphicon glyphicon-envelope text-muted"></i> <?= Html::a(Html::encode($profile->user->email)) ?>
-                        </li>
-                    <?php endif; ?>
-                    <li>
-                        <i class="glyphicon glyphicon-time text-muted"></i> <?= Yii::t('user', 'Joined on {0, date}', $profile->user->created_at) ?>
-                    </li>
-                </ul>
-                <?php if (!empty($profile->bio)): ?>
-                    <p><?= Html::encode($profile->bio) ?></p>
-                <?php endif; ?>
+            </a>
+            <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
+            <em>    <?= Yii::t('app','Click on my face for more')?> </em>
+    </div>
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        <?= Yii::t('app','More about walker')?>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <?=  Html::img($profile->getImageUrl(), [
+                            'class'=>'img-circle',
+                            'width'=>'120',
+                            'height'=>'120',
+                            'title'=>$profile->first_name,
+                        ]); ?>
+                        <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
+                    </div>
+                    <hr>
+                        <h2 class="label label-info "><?=Yii::t('app','About me')?></h2>
+                        <?php if (!empty($profile->about_me)): ?>
+                        <p><?= $profile->about_me?></p>
+                        <?php endif; ?>
+                        <br>
+
+                        <?php if (!empty($profile->my_animals)): ?>
+                        <hr>
+                            <div class=" text-center">
+                                <br>
+                                    <p><?=Yii::t('app','Walker has experence with animals at home!') ?>
+                                    </p>
+                            </div>
+                        <?php endif; ?>
+                        <br>
+
+                        <?php if (!empty($profile->social_link)): ?>
+                            <hr>
+                            <div class=" text-center">
+                                <br>
+                                    <p><?= Html::a(Yii::t('app','Social profile'),
+                                            [$profile->social_link],
+                                            [
+                                                'class'=>'btn btn-success btn-sm' ,
+                                                'id'=>'contact-us'
+                                            ]
+                                        )
+                                        ?>
+                                    </p>
+                            </div>
+                        <?php endif; ?>
+                        <br>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><?= Yii::t('app','Close');?></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<?= DetailView::widget([
-    'model' => $profile,
-    'attributes' => [
-        'first_name',
-        'last_name',
-        'about_me',
-    
-    ],
-]) ?>

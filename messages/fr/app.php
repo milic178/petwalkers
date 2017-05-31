@@ -68,5 +68,10 @@ return [
     'Delete' => 'Effacer',
 
     //Faq
-    'More questions? Dont hesitate!' =>'Plus de question? Alors tanqet pa!'
+    'More questions? Dont hesitate!' =>'Plus de question? Alors tanqet pa!',
+
+    //Show Profile
+    'More about walker'=>'Plus sur promner',
+    'Close' =>'Fermer',
+    'Click on my face for more' => 'Preser sur ma face',
 ];

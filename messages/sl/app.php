@@ -68,4 +68,12 @@ return [
 
     //Faq
     'More questions? Dont hesitate!' => 'Niste našli odgovora? Potem ne oklevajte!',
+    //Show Profile
+    'More about walker'=>'Več o sprehajalcu',
+    'Close' =>'Zapri',
+    'Click on my face for more' => 'Kliknite na sliko za več info',
+    'Walker has experence with animals at home!' => 'Sprehajalec ima izkušnje z živali na domu!',
+    'Skills' =>'Sposobnosti',
+
+
 ];
