@@ -113,7 +113,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class=" text-center">
                                 <br>
                                     <p><?= Html::a(Yii::t('app','Social Media Profile'),
-                                            [$profile->social_link],
+                                            $profile->social_link,
                                             [
                                                 'class'=>'btn btn-success btn-sm' ,
                                                 'target'=>'_blank',
@@ -121,6 +121,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         )
                                         ?>
                                     </p>
+
                             </div>
                         <?php endif; ?>
                         <br>
