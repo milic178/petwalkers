@@ -8,6 +8,7 @@
 
 
 return [
+    'Last seen'=>'Nazadnje aktiven',
     'First Name'=>'Ime',
     'Last Name'=>'Priimek',
     'Phone number'=>'Telefonska št.',
@@ -71,7 +72,7 @@ return [
     'You can now log in with the following credentials:' => 'Lahko se prijavite s sledečimi podatki.',
     'Your account details have been updated' => 'Vaš račun je posodobljen.',
     'Your account has been connected' => 'Vaš račun je povezan.',
-    'Your account on {0} has been created' => 'Vaš račun bo  narejen v {0}',
+    'Your account on {0} has been created' => 'Vaš račun bo narejen v {0}',
     'Your confirmation token is invalid or expired' => 'Potrditveni žeton je neveljaven ali potekel',
     'Your email address has been changed' => 'Vaš email je bil spremenjen',
     'Your password has been changed successfully.' => 'Vaše geslo je bilo uspešno spremenjeno',

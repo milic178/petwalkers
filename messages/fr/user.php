@@ -7,6 +7,7 @@
  */
 
 return [
+    'Last seen'=>'Vu pour la dernière fois',
     'First Name'=>'Prénom',
     'Last Name'=>'Nom de famille',
     'Phone number'=>'Numéro de téléphone',

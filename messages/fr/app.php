@@ -39,6 +39,8 @@ return [
     'Yes'=>'Oui',
     'No'=>'Non',
     'Url to your social profile (Optional)'=>'Url à votre profil social (facultatif)',
+    'How many pets do you have at home?'=>'Combien d\'animaux de compagnie avez-vous à la maison?',
+    'Write a short description about you 550 words max!' =>'',
 
     //Advert type
     'Advert type'=>'Type de publicité',
@@ -71,7 +73,12 @@ return [
     'More questions? Dont hesitate!' =>'Plus de question? Alors tanqet pa!',
 
     //Show Profile
-    'More about walker'=>'Plus sur promner',
+    'is a proud owner of'=>'est un fier propriétaire de',
+    'pets'=>'animaloux',
+    'My pets'=>'Mon animalus',
+    'More about walker'=>'Plus info sur promner',
     'Close' =>'Fermer',
     'Click on my face for more' => 'Preser sur ma face',
+    'User activity'=>'Activité de l\'utilisateur',
+    'Social Media Profile'=>'Profil sur les rétes sociaux',
 ];

@@ -88,11 +88,11 @@ endif;
                 ]);  ?>
 
 
-                <?= $form->field($model, 'about_me')->textarea(['rows' => '6','placeholder' =>'Write something about yourself in few words']) ?>
+                <?= $form->field($model, 'about_me')->textarea(['rows' => '6','placeholder' =>Yii::t('app','Write a short description about you 550 words max!')]) ?>
 
                 <?= $form->field($model, 'smoker')->radioList(array('1'=>Yii::t('app','Yes'),0=>Yii::t('app','No'))); ?>
 
-                <?= $form->field($model, 'my_animals')->textInput(['placeholder' => 'Do you have any pets at home?']) ?>
+                <?= $form->field($model, 'my_animals')->textInput(['placeholder' => Yii::t('app','How many pets do you have at home?')]) ?>
 
                 <?= $form->field($model, 'social_link') ->textInput(['placeholder' => Yii::t('app','Url to your social profile (Optional)')]) ?>
 

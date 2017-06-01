@@ -24,9 +24,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="text-center">
         <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
-                    'class'=>'img-circle',
-                    'width'=>'140',
-                    'height'=>'100',
+                    'class'=>'img-rounded',
+                    'width'=>'110px',
+                    'height'=>'100px',
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
@@ -40,29 +40,44 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <?= Yii::t('app','More about walker')?>
+                        <div class="alert alert-info"><?= Yii::t('app','More about walker')?></div>
                     </h4>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
                         <?=  Html::img($profile->getImageUrl(), [
-                            'class'=>'img-circle',
-                            'width'=>'140',
-                            'height'=>'100',
+                            'class'=>'img-rounded ',
+                            'width'=>'110px',
+                            'height'=>'100px',
                             'title'=>$profile->first_name,
                         ]); ?>
                         <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
+                        <?= Yii::t('app','Age')?>:<?=$profile->age; ?>
                     </div>
                     <hr>
-                        <h2 class="label label-info "><?=Yii::t('app','About me')?></h2>
+
+                    <span class="label label-info"><?=Yii::t('app','User activity')?></span>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <strong><?= Yii::t('user', 'Registration time') ?>:</strong>
+                            <?= Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$profile->user->created_at]) ?>
+                        </div>
+                        <div class="col-md-12">
+                            <strong><?= Yii::t('user', 'Last seen') ?>:</strong>
+                            <?= Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$profile->user->last_login_at]) ?>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <span class="label label-info"><?=Yii::t('app','About me')?></span>
                         <?php if (!empty($profile->about_me)): ?>
                         <p><?= $profile->about_me?></p>
                         <?php endif; ?>
-                        <br>
 
                         <?php if (!empty($profile->my_animals)): ?>
-                        <hr>
-                            <div >
+                    <hr>
+                            <span class="label label-info"><?=Yii::t('app','My pets')?></span>
+                            <div>
                                 <br>
                                 <div class="row">
                                         <div class="col-sm-4">
@@ -83,7 +98,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </div>
                                 <div class="col-md-12 text-center">
                                     <p>
-                                        <?=Yii::t('app','Walker has experence with animals at home!') ?>
+                                        <?=$profile->first_name;?>
+                                        <?=Yii::t('app','is a proud owner of');?>
+                                        <?=$profile->my_animals;?>
+                                        <?=Yii::t('app','pets');?>
                                     </p>
                                 </div>
                             </div>
@@ -94,11 +112,11 @@ $this->params['breadcrumbs'][] = $this->title;
                             <hr>
                             <div class=" text-center">
                                 <br>
-                                    <p><?= Html::a(Yii::t('app','Social profile'),
+                                    <p><?= Html::a(Yii::t('app','Social Media Profile'),
                                             [$profile->social_link],
                                             [
                                                 'class'=>'btn btn-success btn-sm' ,
-                                                'id'=>'contact-us'
+                                                'target'=>'_blank',
                                             ]
                                         )
                                         ?>

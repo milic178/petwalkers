@@ -25,6 +25,7 @@ return [
     'How does it work?' =>'Kako deluje?',
     'About' =>'O nas',
     'Help' =>'Pomoč',
+
     //Profile
     'First Name'=>'Ime',
     'Last Name'=>'Priimek',
@@ -38,6 +39,8 @@ return [
     'Yes'=>'Da',
     'No'=>'Ne',
     'Url to your social profile (Optional)' =>'Povezava do profila na socijalnem omrežju',
+    'How many pets do you have at home?'=>'Koliko ljubljenčkov imate doma?',
+    'Write a short description about you 550 words max!' =>'Napišite nekaj o sebi, največ 550 besed!',
 
     //Advert type
     'Advert type'=>'Tip oglasa',
@@ -68,12 +71,19 @@ return [
 
     //Faq
     'More questions? Dont hesitate!' => 'Niste našli odgovora? Potem ne oklevajte!',
+
     //Show Profile
+    'is a proud owner of'=>'je ponosen lastnik',
+    'pets'=>'ljubljenčkov',
+    'My pets'=>'Moji ljubljenčki',
     'More about walker'=>'Več o sprehajalcu',
     'Close' =>'Zapri',
     'Click on my face for more' => 'Kliknite na sliko za več info',
     'Walker has experence with animals at home!' => 'Sprehajalec ima izkušnje z živali na domu!',
     'Skills' =>'Sposobnosti',
+    'User activity'=>'Dejavnost uporbnika',
+    'Social Media Profile'=>'Profil na soc. omrežju',
+
 
 
 ];
