@@ -25,8 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
                     'class'=>'img-circle',
-                    'width'=>'120',
-                    'height'=>'120',
+                    'width'=>'140',
+                    'height'=>'100',
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
@@ -47,8 +47,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="text-center">
                         <?=  Html::img($profile->getImageUrl(), [
                             'class'=>'img-circle',
-                            'width'=>'120',
-                            'height'=>'120',
+                            'width'=>'140',
+                            'height'=>'100',
                             'title'=>$profile->first_name,
                         ]); ?>
                         <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
@@ -62,12 +62,32 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <?php if (!empty($profile->my_animals)): ?>
                         <hr>
-                            <div class=" text-center">
+                            <div >
                                 <br>
-                                    <p><?=Yii::t('app','Walker has experence with animals at home!') ?>
+                                <div class="row">
+                                        <div class="col-sm-4">
+                                                <?= Html::img(\Yii::$app->params['uploadUrl'].'dog.png',[
+                                                    'class'=>'center-block'
+                                                ]);?>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <?= Html::img(\Yii::$app->params['uploadUrl'].'turtle.png',[
+                                                'class'=>'center-block'
+                                            ]);?>
+                                        </div>
+                                        <div class="col-sm-4">
+                                                <?= Html::img(\Yii::$app->params['uploadUrl'].'cat.png',[
+                                                    'class'=>'center-block'
+                                                ]);?>
+                                        </div>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <p>
+                                        <?=Yii::t('app','Walker has experence with animals at home!') ?>
                                     </p>
+                                </div>
                             </div>
-                        <?php endif; ?>
+                                <?php endif; ?>
                         <br>
 
                         <?php if (!empty($profile->social_link)): ?>
