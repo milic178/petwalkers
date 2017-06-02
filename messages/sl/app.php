@@ -84,6 +84,22 @@ return [
     'User activity'=>'Dejavnost uporbnika',
     'Social Media Profile'=>'Profil na soc. omrežju',
 
+    //Adds
+    'Adds'=>'Oglasi',
+    'Slug'=>'Slug',
+    'Title'=>'Naslov',
+    'Created'=>'Ustvarjen',
+    'Id Advert'=>'Id oglasa',
+    'Create Advert'=>'Ustvari oglas',
+    'Adverts'=>'Oglasi',
+    'Valid until'=>'Veljaven do',
+    'Price/h'=>'Cena',
+    'Walker'=>'Sprehajalec',
+    'Type'=>'Tip oglasa',
+    'Trash Date'=>'Datum izbrisa',
+    'Écrivez une brève description à propos de vous 200 mots maximum!'=>'Povzemite oglas s nekaj besedami, 200 je maksimalno št. besed!'
+
+
 
 
 ];

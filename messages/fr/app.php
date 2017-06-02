@@ -81,4 +81,19 @@ return [
     'Click on my face for more' => 'Preser sur ma face',
     'User activity'=>'Activité de l\'utilisateur',
     'Social Media Profile'=>'Profil sur les rétes sociaux',
+
+    //Adds
+    'Adds'=>'Annonces',
+    'Slug'=>'Limace',
+    'Title'=>'Titre',
+    'Created'=>'Créé',
+    'Id Advert'=>'Id Annonces',
+    'Create Advert'=>'Créer annonce',
+    'Adverts'=>'Annonces',
+    'Valid until'=>'Valable jusqu\'à',
+    'Price/h'=>'Prix/h',
+    'Walker'=>'Marcheur',
+    'Type'=>'Type',
+    'Trash Date'=>'Date de la corbeille',
+    'Write a short description about you 200 words max!'=>'Écrivez une brève description à propos de vous 200 mots maximum!',
 ];

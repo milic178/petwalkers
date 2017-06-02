@@ -151,6 +151,8 @@ return [
     'Logout' => 'Déconnexion',
     'Manage users' => 'Gérer des utilisateurs',
     'Name' => 'Nom',
+    'Never'=>'Jamais',
+    'Last login'=>'Dernière connexion',
     'Networks' => 'Réseaux',
     'New email' => 'Nouvel e-mail',
     'New password' => 'Nouveau mot de passe',

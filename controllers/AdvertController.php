@@ -3,18 +3,18 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\City;
-use app\models\CitySearch;
+use app\models\Advert;
+use app\models\AdvertSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use app\components\AccessRule;
+use yii\filters\AccessControl;
 
 /**
- * CityController implements the CRUD actions for City model.
+ * AdvertController implements the CRUD actions for Advert model.
  */
-class CityController extends Controller
+class AdvertController extends Controller
 {
     /**
      * @inheritdoc
@@ -27,13 +27,19 @@ class CityController extends Controller
                 'ruleConfig' => [
                     'class' => AccessRule::className(),
                 ],
-               // 'only' => ['index','create', 'update', 'delete','view'],
+                // 'only' => ['index','create', 'update', 'delete','view'],
                 'rules' => [
                     [
-                        'actions' => ['index','create', 'update', 'delete','view'],
+                        'actions' => ['index', 'update', 'delete','view'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
+                    [
+                        'actions' => ['create'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
                 ],
             ],
             'verbs' => [
@@ -46,12 +52,12 @@ class CityController extends Controller
     }
 
     /**
-     * Lists all City models.
+     * Lists all Advert models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CitySearch();
+        $searchModel = new AdvertSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -61,7 +67,7 @@ class CityController extends Controller
     }
 
     /**
-     * Displays a single City model.
+     * Displays a single Advert model.
      * @param integer $id
      * @return mixed
      */
@@ -72,26 +78,35 @@ class CityController extends Controller
         ]);
     }
 
+
     /**
-     * Creates a new City model.
+     * Creates a new Advert model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new City();
+        $model = new Advert();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect('index');
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->id_user = Yii::$app->user->id;
+            if( $model->save()):
+            $this->setValidDate($model->id_advert);
+            endif;
+
+
+            return $this->redirect(['view', 'id' => $model->id_advert]);
         } else {
-            return $this->renderAjax('create', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }
     }
 
+
     /**
-     * Updates an existing City model.
+     * Updates an existing Advert model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -101,7 +116,7 @@ class CityController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_city]);
+            return $this->redirect(['view', 'id' => $model->id_advert]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -110,7 +125,7 @@ class CityController extends Controller
     }
 
     /**
-     * Deletes an existing City model.
+     * Deletes an existing Advert model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -123,18 +138,32 @@ class CityController extends Controller
     }
 
     /**
-     * Finds the City model based on its primary key value.
+     * Finds the Advert model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return City the loaded model
+     * @return Advert the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = City::findOne($id)) !== null) {
+        if (($model = Advert::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    /**
+     * @param $id
+     * Fuction made for seting default valid date for add  (+2 weeks) from creation
+     */
+    public function setValidDate($id){
+        $model =  $this->findModel($id);
+        $createdTime = $model->created;
+        $validDate = date('Y-m-d H:i:s', strtotime('+14 days', strtotime($createdTime)));
+
+        $model->valid_until = $validDate;
+        $model->save();
+
     }
 }
