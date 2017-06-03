@@ -93,7 +93,7 @@ return [
     'Create Advert'=>'Ustvari oglas',
     'Adverts'=>'Oglasi',
     'Valid until'=>'Veljaven do',
-    'Price/h'=>'Cena',
+    'Price €/h'=>'Cena',
     'Walker'=>'Sprehajalec',
     'Type'=>'Tip oglasa',
     'Trash Date'=>'Datum izbrisa',

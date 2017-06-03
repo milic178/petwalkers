@@ -52,8 +52,8 @@ class Animal extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAdvertHasAnimals()
+    public function getAdverts()
     {
-        return $this->hasMany(AdvertHasAnimal::className(), ['id_animal' => 'id_animal']);
+        return $this->hasMany(Advert::className(), ['id_animal' => 'id_animal']);
     }
 }

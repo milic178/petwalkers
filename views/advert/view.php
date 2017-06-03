@@ -10,6 +10,9 @@ $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Adverts'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
+
 <div class="advert-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -40,13 +43,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->idType->name,
             ],
             [
-                'attribute' => 'id_region',
-                'value' => $model->idRegion->name,
+                'attribute' => 'id_city',
+                'value' => $model->idCity->name,
            ],
-            [
-                'attribute' => 'city',
-                'value' => $model->idRegion->name,
-            ],
             'created',
             'valid_until',
 

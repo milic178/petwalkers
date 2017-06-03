@@ -30,7 +30,8 @@ $baseUrl        =    $asset->baseUrl;
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="/advert/create"><?= Yii::t() ?></a></p>
+
         <h3 style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></h3>
         <div class="col-md-12 text-center">
             <?= Html::a(Yii::t('app','Generate adds'),

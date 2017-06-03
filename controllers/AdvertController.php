@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\components\AccessRule;
 use yii\filters\AccessControl;
 use app\models\Profile;
+use yii\data\ActiveDataProvider;
 
 /**
  * AdvertController implements the CRUD actions for Advert model.
@@ -41,7 +42,7 @@ class AdvertController extends Controller
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['create'],
+                        'actions' => ['create','myadds'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -103,14 +104,42 @@ class AdvertController extends Controller
         if ($model->load(Yii::$app->request->post())) {
 
             $model->id_user = Yii::$app->user->id;
-            if( $model->save()):
-            $this->setValidDate($model->id_advert);
+
+
+            if ( $model->duplicateAdvert($model->id_type,$model->id_city,$model->id_animal,$model->id_user)):
+
+                \Yii::$app->getSession()->setFlash('danger',[
+                    'type' => 'danger',
+                    'duration' => 4500,
+                    'icon' => 'glyphicon glyphicon-remove-sign',
+                    'message' => 'You have already posted advert with this specifics',
+                    'title' => 'Advert not created',
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+                return $this->actionIndex();
+            else:
+
+                if( $model->save()):
+                $this->setValidDate($model->id_advert);
+                endif;
+
+                \Yii::$app->getSession()->setFlash('success',[
+                    'type' => 'success',
+                    'duration' => 4500,
+                    'icon' => 'glyphicon glyphicon-ok-sign',
+                    'message' => 'You have succesfuly posted advertisment!',
+                    'title' => 'Add created',
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+
+                return $this->redirect(['view', 'id' => $model->id_advert]);
             endif;
+        }
 
-
-            return $this->redirect(['view', 'id' => $model->id_advert]);
-        } else {
-            return $this->render('create', [
+        else {
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }
@@ -177,5 +206,17 @@ class AdvertController extends Controller
         $model->valid_until = $validDate;
         $model->save();
 
+    }
+
+    public function actionMyadds(){
+        $dataProvider = new ActiveDataProvider([
+            'query' => Advert::find()->where(['id_user' => \Yii::$app->user->identity->getId()])
+        ]);
+
+
+
+        return $this->render('myAdverts', [
+            'dataProvider' => $dataProvider,
+        ]);
     }
 }

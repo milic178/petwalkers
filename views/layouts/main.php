@@ -59,12 +59,18 @@ AppAsset::register($this);
                        ['label' => Yii::t('app','List of cities'), 'url' => ['/city/index']],
                    ]
                ],
-               ['label' => Yii::t('app','Create Advert'), 'url' => '/advert/create'],
+               ['label' => Yii::t('app','Advert').'',
+                   'items' =>[
+                       ['label' => Yii::t('app','Create Advert'), 'url' => '/advert/create'],
+                       ['label' => Yii::t('app','My Adds'), 'url' => '/advert/myadds'],
+                   ],
+               ],
+
                ['label' => ' '. Yii::$app->user->identity->username .' ',
                    'items' =>
                    [
                         ['label' => Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
-                        ['label' => Yii::t('app','My Adds'), 'url' => '#'],
+
                         ['label' => Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
                    ]
                ]

@@ -91,7 +91,7 @@ return [
     'Create Advert'=>'Créer annonce',
     'Adverts'=>'Annonces',
     'Valid until'=>'Valable jusqu\'à',
-    'Price/h'=>'Prix/h',
+    'Price €/h'=>'Prix/h',
     'Walker'=>'Marcheur',
     'Type'=>'Type',
     'Trash Date'=>'Date de la corbeille',

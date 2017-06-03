@@ -16,12 +16,13 @@ use Yii;
  * @property string $price
  * @property integer $id_user
  * @property integer $id_type
- * @property integer $id_region
+ * @property integer $id_city
+ * @property integer $id_animal
  * @property string $trash_date
  *
  * @property User $idUser
  * @property AdvertType $idType
- * @property Region $idRegion
+ * @property City $idCity
  * @property AdvertHasAnimal[] $advertHasAnimals
  */
 class Advert extends \yii\db\ActiveRecord
@@ -40,15 +41,15 @@ class Advert extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'description', 'price', 'id_user', 'id_type', 'id_region'], 'required'],
+            [['title', 'description', 'price', 'id_user', 'id_type', 'id_city'], 'required'],
             [['created', 'valid_until', 'trash_date'], 'safe'],
             [['price'], 'number'],
-            [['id_user', 'id_type', 'id_region'], 'integer'],
+            [['id_user', 'id_type', 'id_city','id_animal'], 'integer'],
             [['title', 'slug'], 'string', 'max' => 60],
             [['description'], 'string', 'max' => 220],
             [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
             [['id_type'], 'exist', 'skipOnError' => true, 'targetClass' => AdvertType::className(), 'targetAttribute' => ['id_type' => 'id_type']],
-            [['id_region'], 'exist', 'skipOnError' => true, 'targetClass' => Region::className(), 'targetAttribute' => ['id_region' => 'id_region']],
+            [['id_city'], 'exist', 'skipOnError' => true, 'targetClass' => City::className(), 'targetAttribute' => ['id_city' => 'id_city']],
         ];
     }
 
@@ -64,10 +65,11 @@ class Advert extends \yii\db\ActiveRecord
             'description' => Yii::t('app', 'Description'),
             'created' => Yii::t('app', 'Created'),
             'valid_until' => Yii::t('app', 'Valid until'),
-            'price' => Yii::t('app', 'Price/h'),
+            'price' => Yii::t('app', 'Price €/h'),
             'id_user' => Yii::t('app', 'Walker'),
             'id_type' => Yii::t('app', 'Type'),
-            'id_region' => Yii::t('app', 'Region'),
+            'id_city' => Yii::t('app', 'City'),
+            'id_animal'=>Yii::t('app','Animal'),
             'trash_date' => Yii::t('app', 'Trash Date'),
         ];
     }
@@ -91,16 +93,23 @@ class Advert extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdRegion()
+    public function getIdCity()
     {
-        return $this->hasOne(Region::className(), ['id_region' => 'id_region']);
+        return $this->hasOne(City::className(), ['id_city' => 'id_city']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAdvertHasAnimals()
+    public function getIdAnimal()
     {
-        return $this->hasMany(AdvertHasAnimal::className(), ['id_advert' => 'id_advert']);
+        return $this->hasOne(Animal::className(), ['id_animal' => 'id_animal']);
+    }
+
+    public function duplicateAdvert($type,$city,$animal,$user){
+
+        return Advert::find()
+            ->where(['id_type'=> $type,'id_city'=> $city, 'id_animal'=> $animal,'id_user'=> $user])
+            ->exists();
     }
 }

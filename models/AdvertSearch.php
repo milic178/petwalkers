@@ -18,7 +18,7 @@ class AdvertSearch extends Advert
     public function rules()
     {
         return [
-            [['id_advert',  'id_type', 'id_region'], 'integer'],
+            [['id_advert',  'id_type', 'id_city'], 'integer'],
             [['id_user','title', 'slug', 'description', 'created', 'valid_until', 'trash_date'], 'safe'],
             [['price'], 'number'],
         ];
@@ -59,6 +59,7 @@ class AdvertSearch extends Advert
         }
 
         $query->joinWith('idUser');
+        $query->joinWith('idAnimal');
 
         // grid filtering conditions
         $query->andFilterWhere([
@@ -66,16 +67,16 @@ class AdvertSearch extends Advert
             'created' => $this->created,
             'valid_until' => $this->valid_until,
             'price' => $this->price,
-
             'id_type' => $this->id_type,
-            'id_region' => $this->id_region,
+            'id_city' => $this->id_city,
             'trash_date' => $this->trash_date,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'slug', $this->slug])
             ->andFilterWhere(['like', 'user.username', $this->id_user])
-            ->andFilterWhere(['like', 'description', $this->description]);
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'animal.species', $this->id_animal]);
 
         return $dataProvider;
     }

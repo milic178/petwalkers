@@ -58,4 +58,12 @@ class City extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Region::className(), ['id_region' => 'id_region']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAdverts()
+    {
+        return $this->hasMany(Advert::className(), ['id_city' => 'id_city']);
+    }
 }
