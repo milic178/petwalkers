@@ -145,12 +145,5 @@ class SiteController extends Controller
         return $this->render('faq');
     }
 
-    /**
-     * @return string
-     *
-     * Displays adds by region/city and animal / type of add
-     */
-    public function actionShowAdds(){
-        return $this->render('showAdds');
-    }
+
 }

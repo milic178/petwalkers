@@ -8,6 +8,8 @@ $this->title = 'Petwalkers';
 <?php
 use app\assets\AppAsset;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
 
 
 /* @var $this \yii\web\View */
@@ -28,13 +30,9 @@ $baseUrl        =    $asset->baseUrl;
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="/advert/create"><?= Yii::t() ?></a></p>
-
         <h3 style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></h3>
         <div class="col-md-12 text-center">
-            <?= Html::a(Yii::t('app','Generate adds'),
+            <?= Html::a(Yii::t('app','Find walker'),
                 ['/site/showAdds'],
                 [
                     'class'=>'btn btn-success btn-lg',
@@ -43,50 +41,29 @@ $baseUrl        =    $asset->baseUrl;
             )
             ?>
         </div>
+
+        <p class="lead">You have successfully created your Yii-powered application.</p>
+
+        <p>
+            <?= Html::button(Yii::t('app', 'become walker'), ['value' => Url::to(['advert/create']),
+                'class' => 'showModalButton btn btn-success',
+                'id'=>'modalCreateAdvertButton']); ?>
+        </p>
+
+        <?php
+        Modal::begin([
+            'id'=>'createAdvert',
+            'size'=>'modal-md'
+        ]);
+        echo "<div id='modalContentCreate'></div>";
+        Modal::end();
+        ?>
     </div>
 
 </div>
 <body>
 
-<!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 1</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 2</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 3</h2>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</header>
 
 <!-- Page Content -->
 <div class="container">
@@ -200,10 +177,5 @@ $baseUrl        =    $asset->baseUrl;
     <hr>
 
 
-<script>
-    $('.carousel').carousel({
-        interval: 2000 //changes the speed
-    })
-</script>
 
 </body>

@@ -11,7 +11,7 @@ use app\models\AdvertType;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="advert-form">
+<div class="advert-form text-left">
 
     <?php $form = ActiveForm::begin(); ?>
 
