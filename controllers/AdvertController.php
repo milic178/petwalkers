@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\components\AccessRule;
 use yii\filters\AccessControl;
+use app\models\Profile;
 
 /**
  * AdvertController implements the CRUD actions for Advert model.
@@ -30,7 +31,12 @@ class AdvertController extends Controller
                 // 'only' => ['index','create', 'update', 'delete','view'],
                 'rules' => [
                     [
-                        'actions' => ['index', 'update', 'delete','view'],
+                        'actions' => ['view'],
+                        'allow' => true,
+                        'roles' => ['?','@'],
+                    ],
+                    [
+                        'actions' => ['index', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['admin'],
                     ],
@@ -39,7 +45,6 @@ class AdvertController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-
                 ],
             ],
             'verbs' => [
@@ -73,9 +78,16 @@ class AdvertController extends Controller
      */
     public function actionView($id)
     {
+
+    $model = $this->findModel($id);
+    $profile = Profile::findOne($model->id_user);
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model'  => $model,
+            'profile' => $profile,
         ]);
+
+
     }
 
 

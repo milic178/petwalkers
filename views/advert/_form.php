@@ -35,6 +35,13 @@ use app\models\AdvertType;
         )
     ?>
 
+    <?=
+    $form->field($model, 'id_region')
+        ->dropDownList(
+            ArrayHelper::map(Region::find()->asArray()->all(), 'id_region', 'name')
+        )
+    ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
