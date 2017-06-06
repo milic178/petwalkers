@@ -17,6 +17,8 @@ $this->title = Yii::t('app', 'My Adds');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
+
 <?= GridView::widget([
     'dataProvider' =>$dataProvider,
     'layout'       => "{items}\n{pager}",

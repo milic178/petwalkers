@@ -27,6 +27,7 @@ use Yii;
  */
 class Advert extends \yii\db\ActiveRecord
 {
+    public $id_region;
     /**
      * @inheritdoc
      */
@@ -71,6 +72,7 @@ class Advert extends \yii\db\ActiveRecord
             'id_city' => Yii::t('app', 'City'),
             'id_animal'=>Yii::t('app','Animal'),
             'trash_date' => Yii::t('app', 'Trash Date'),
+            'id_region'=>Yii::t('app', 'Region'),
         ];
     }
 

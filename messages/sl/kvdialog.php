@@ -21,5 +21,12 @@ return [
     'Confirmation' => 'Obvestilo',
     'Information' => 'Obvestilo',
     'Ok' => 'ok',
-    'Update profile?' =>'Posodobi profil'
+    'Update profile?' =>'Posodobi profil',
+
+    // Popup warnings
+    'You have successfully updated advertisement!'=>'Uspešno ste posodobili oglas!',
+    'Operation successful!' =>'Zahteva uspešno opravljena',
+    'You are not the owner!'=>'Vi niste lastnik!',
+    'Request denied'=>'Zahteva zavrnjena',
+    'You have successfully deleted advertisement!' =>'Uspešno ste izbrisali oglas!',
 ];

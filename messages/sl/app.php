@@ -62,7 +62,9 @@ return [
     'Zip Code' =>'Poštna št.',
     'Region' =>'Regija',
     'Update City' =>'Posodobi mesto',
-    'Select Region' =>'Izberi regijo',
+    'Select region' =>'Izberi regijo',
+    'Select city'=>'Izberi mesto',
+
 
     //Crud
     'Create' => 'Vnesi',
@@ -97,8 +99,10 @@ return [
     'Walker'=>'Sprehajalec',
     'Type'=>'Tip oglasa',
     'Trash Date'=>'Datum izbrisa',
-    'Écrivez une brève description à propos de vous 200 mots maximum!'=>'Povzemite oglas s nekaj besedami, 200 je maksimalno št. besed!'
-
+    'Écrivez une brève description à propos de vous 200 mots maximum!'=>'Povzemite oglas s nekaj besedami, 200 je maksimalno št. besed!',
+    'Animal'=>'Žival',
+    'City'=>'Mesto',
+    'Enter a number or leave empty for later disscusion'=>'Vnesite urno postavko, ali pustite prazno za kasnejši dogovor',
 
 
 

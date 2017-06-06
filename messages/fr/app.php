@@ -62,7 +62,8 @@ return [
     'Zip Code' =>'Code postal',
     'Region' =>'Région',
     'Update City' =>'Mettre à jour la ville',
-    'Select Region' =>'Sélectionnez une région',
+    'Select region' =>'Sélectionnez une région',
+    'Select city'=>'Sélectionnez une région',
 
     //Crud
     'Create' => 'Ajouter',
@@ -96,4 +97,7 @@ return [
     'Type'=>'Type',
     'Trash Date'=>'Date de la corbeille',
     'Write a short description about you 200 words max!'=>'Écrivez une brève description à propos de vous 200 mots maximum!',
+    'Animal'=>'Animal',
+    'City'=>'Ville',
+    'Enter a number or leave empty for later disscusion'=>'Entrez un numéro ou laissez-vous vide pour une discussion ultérieure',
 ];

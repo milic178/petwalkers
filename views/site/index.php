@@ -30,10 +30,10 @@ $baseUrl        =    $asset->baseUrl;
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
 
-        <h3 style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></h3>
+        <h3 style="text-align: center"><?= Yii::t('app','Here you can find a sitter for your pet o become one!');?></h3>
         <div class="col-md-12 text-center">
-            <?= Html::a(Yii::t('app','Find walker'),
-                ['/site/showAdds'],
+            <?= Html::a(Yii::t('app','Find sitter'),
+                ['/advert/index'],
                 [
                     'class'=>'btn btn-success btn-lg',
                     'id'=>'contact-us'
@@ -41,29 +41,25 @@ $baseUrl        =    $asset->baseUrl;
             )
             ?>
         </div>
+        <div class="col-md-12">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
+        </div>
         <p>
-            <?= Html::button(Yii::t('app', 'become walker'), ['value' => Url::to(['advert/create']),
+            <?= Html::button(Yii::t('app', 'Become walker'), ['value' => Url::to(['advert/create']),
                 'class' => 'showModalButton btn btn-success',
                 'id'=>'modalCreateAdvertButton']); ?>
         </p>
-
-        <?php
-        Modal::begin([
-            'id'=>'createAdvert',
-            'size'=>'modal-md'
-        ]);
-        echo "<div id='modalContentCreate'></div>";
-        Modal::end();
-        ?>
+            <?php
+            Modal::begin([
+                'id'=>'createAdvert',
+                'size'=>'modal-md'
+            ]);
+            echo "<div id='modalContentCreate'></div>";
+            Modal::end();
+            ?>
     </div>
-
 </div>
 <body>
-
-
 
 <!-- Page Content -->
 <div class="container">
@@ -109,7 +105,7 @@ $baseUrl        =    $asset->baseUrl;
     <!-- Portfolio Section -->
     <div class="row">
         <div class="col-lg-12">
-                <h2 class="page-header">Portfolio Heading</h2>
+                <h2 class="page-header">How does it work</h2>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="#">
@@ -139,7 +135,7 @@ $baseUrl        =    $asset->baseUrl;
     <!-- Features Section -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Modern Business Features</h2>
+            <h2 class="page-header">Benefints of finding your pet walker</h2>
         </div>
         <div class="col-md-6">
             <p>The Modern Business template by Start Bootstrap includes:</p>

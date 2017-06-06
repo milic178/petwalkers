@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form ->field($model, 'id_region')->dropDownList(
         \yii\helpers\ArrayHelper::map(\app\models\Region::find()->all(),'id_region','name'),
-        ['prompt'=>Yii::t('app','Select Region')]);
+        ['prompt'=>Yii::t('app','Select region')]);
     ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>

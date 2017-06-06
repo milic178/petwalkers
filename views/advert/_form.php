@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\Region;
+use app\models\City;
 use app\models\AdvertType;
 
 /* @var $this yii\web\View */
@@ -35,10 +36,28 @@ use app\models\AdvertType;
     ?>
 
     <?=
-    $form->field($model, 'id_city')
+
+    $form->field($model, 'id_region')
         ->dropDownList(
-            ArrayHelper::map(\app\models\City::find()->asArray()->all(), 'id_city', 'name')
+            ArrayHelper::map(Region::find()->asArray()->all(), 'id_region', 'name'),
+            [
+                'prompt'=>Yii::t('app','Select region'),
+                'onchange'=>'
+                $.post( "'.Yii::$app->urlManager->createUrl('city/get-city-by-region?id=').'"+$(this).val(), function( data ) {
+                  $( "select#advert-id_city" ).html( data );
+                });'
+            ]
         )
+    ?>
+
+    <?php
+    echo $form->field($model, 'id_city')
+        ->dropDownList(
+            ArrayHelper::map(City::find()->asArray()->all(), 'id_city', 'name'),
+            ['prompt'=>Yii::t('app','Select city'),],
+            ['id'=>'cityName']
+        );
+
     ?>
 
 

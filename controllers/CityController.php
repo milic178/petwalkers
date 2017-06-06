@@ -30,6 +30,11 @@ class CityController extends Controller
                // 'only' => ['index','create', 'update', 'delete','view'],
                 'rules' => [
                     [
+                        'actions' => ['get-city-by-region'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                    [
                         'actions' => ['index','create', 'update', 'delete','view'],
                         'allow' => true,
                         'roles' => ['admin'],
@@ -137,4 +142,30 @@ class CityController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    /** Retuns list of all cities in specific region, else returns empty option for view _form (Create Advert)
+     * @param $id
+     */
+    public function actionGetCityByRegion ($id){
+        $countPosts = City::find()
+            ->where(['id_region' => $id])
+            ->count();
+
+        $posts = City::find()
+            ->where(['id_region' => $id])
+            ->orderBy('id_region DESC')
+            ->all();
+
+        if($countPosts>0){
+            foreach($posts as $post){
+                echo "<option value='".$post->id_city."'>".$post->name."</option>";
+            }
+        }
+        else{
+            echo "<option>- No entry -</option>";
+        }
+    }
+
+
+
 }

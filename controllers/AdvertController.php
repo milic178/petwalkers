@@ -7,6 +7,7 @@ use app\models\Advert;
 use app\models\AdvertSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use app\components\AccessRule;
 use yii\filters\AccessControl;
@@ -32,19 +33,14 @@ class AdvertController extends Controller
                 // 'only' => ['index','create', 'update', 'delete','view'],
                 'rules' => [
                     [
-                        'actions' => ['view'],
+                        'actions' => ['view','index'],
                         'allow' => true,
                         'roles' => ['?','@'],
                     ],
                     [
-                        'actions' => ['index', 'update', 'delete'],
+                        'actions' => ['create','myadds','update', 'delete'],
                         'allow' => true,
-                        'roles' => ['admin'],
-                    ],
-                    [
-                        'actions' => ['create','myadds'],
-                        'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['@','admin'],
                     ],
                 ],
             ],
@@ -156,26 +152,79 @@ class AdvertController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_advert]);
-        } else {
+        if ($model->load(Yii::$app->request->post())) :
+
+            if(!Yii::$app->user->identity->isAdmin):
+
+                if($model->id_user != Yii::$app->user->id ):
+                    throw new ForbiddenHttpException(Yii::t('kvdialog','You are not the owner!'));
+                else:
+
+                    $model->save();
+
+                    \Yii::$app->getSession()->setFlash('success',[
+                        'type' => 'success',
+                        'duration' => 4500,
+                        'icon' => 'glyphicon glyphicon-ok-sign',
+                        'message' => Yii::t('kvdialog','You have successfully updated advertisement!'),
+                        'title' => Yii::t('kvdialog','Operation successful!'),
+                        'positonY' => 'top',
+                        'positonX' => 'right'
+                    ]);
+
+                    return $this->redirect(['view', 'id' => $model->id_advert]);
+                endif;
+
+            else:
+
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id_advert]);
+            endif;
+        endif;
+
+        if(Yii::$app->user->identity->isAdmin || $model->id_user == Yii::$app->user->id ):
             return $this->render('update', [
                 'model' => $model,
             ]);
-        }
+        else:
+            throw new ForbiddenHttpException(Yii::t('kvdialog','You are not the owner!'));
+        endif;
+
     }
 
     /**
      * Deletes an existing Advert model.
+     * Delete works only if add is your or if adming requests action
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+    $model = $this ->findModel($id);
 
-        return $this->redirect(['index']);
+        if(!Yii::$app->user->identity->isAdmin):
+            if ( $model->id_user!= Yii::$app->user->id ):
+                throw new ForbiddenHttpException(Yii::t('kvdialog','You are not the owner!'));
+            else:
+                $model->delete();
+
+                \Yii::$app->getSession()->setFlash('success',[
+                    'type' => 'success',
+                    'duration' => 4500,
+                    'icon' => 'glyphicon glyphicon-ok-sign',
+                    'message' => Yii::t('kvdialog','You have successfully deleted advertisement!'),
+                    'title' => Yii::t('kvdialog','Operation successful!'),
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+
+                return $this->actionMyadds();
+            endif;
+        else:
+            $model->delete();
+            return $this->redirect(['index']);
+        endif;
     }
 
     /**
@@ -187,7 +236,7 @@ class AdvertController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Advert::findOne($id)) !== null) {
+        if (($model = Advert::findOne($id)) ) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
@@ -208,15 +257,22 @@ class AdvertController extends Controller
 
     }
 
+    /** Returns a list of user owned advertisments
+     * @return string
+     */
     public function actionMyadds(){
         $dataProvider = new ActiveDataProvider([
             'query' => Advert::find()->where(['id_user' => \Yii::$app->user->identity->getId()])
         ]);
 
-
-
         return $this->render('myAdverts', [
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    /**
+     * Returns a list of cities in region
+     */
+
+
 }

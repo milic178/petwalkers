@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?php
-        if (Yii::$app->user->identity->isAdmin):
+        if (!Yii::$app->user->isGuest):
          print (Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));
          print (Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_advert], [
             'class' => 'btn btn-danger',

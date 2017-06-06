@@ -21,5 +21,15 @@ return [
     'Confirmation' => 'Avis',
     'Information' => 'Information',
     'Ok' => 'Ok',
-    'Update profile?' =>'Mettre à jour le profil?'
+    'Update profile?' =>'Mettre à jour le profil?',
+
+
+
+
+    // Popup warnings
+    'You have successfully updated advertisement!'=>'Vous avez mis à jour avec succès l\'annonce!',
+    'Operation successful!' =>'Opération réussie!',
+    'You are not the owner!'=>'Vous n\'êtes pas le propriétaire!',
+    'You have successfully deleted advertisement!' =>'\'Vous avez supprimé la publicité!\'',
+    'Request denied'=>'Demande refusée',
 ];
