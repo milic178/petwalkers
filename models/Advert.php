@@ -47,7 +47,7 @@ class Advert extends \yii\db\ActiveRecord
             [['price'], 'number'],
             [['id_user', 'id_type', 'id_city','id_animal'], 'integer'],
             [['title', 'slug'], 'string', 'max' => 60],
-            [['description'], 'string', 'max' => 220],
+            [['description'], 'string', 'max' => 300],
             [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
             [['id_type'], 'exist', 'skipOnError' => true, 'targetClass' => AdvertType::className(), 'targetAttribute' => ['id_type' => 'id_type']],
             [['id_city'], 'exist', 'skipOnError' => true, 'targetClass' => City::className(), 'targetAttribute' => ['id_city' => 'id_city']],

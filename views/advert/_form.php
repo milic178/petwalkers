@@ -18,7 +18,7 @@ use app\models\AdvertType;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => '6','placeholder' =>Yii::t('app','Write a short description about you 200 words max!')]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => '6','placeholder' =>Yii::t('app','Write a short description about what you offer to potential customers maximum 300 words!')]) ?>
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true,'placeholder' =>Yii::t('app','Enter a number or leave empty for later disscusion')]) ?>
 
