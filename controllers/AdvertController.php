@@ -30,15 +30,15 @@ class AdvertController extends Controller
                 'ruleConfig' => [
                     'class' => AccessRule::className(),
                 ],
-                // 'only' => ['index','create', 'update', 'delete','view'],
+                'only' => ['index','create', 'update', 'delete','view','listAdverts','myadds'],
                 'rules' => [
                     [
-                        'actions' => ['view','index'],
+                        'actions' => ['view','listAdverts'],
                         'allow' => true,
                         'roles' => ['?','@'],
                     ],
                     [
-                        'actions' => ['create','myadds','update', 'delete'],
+                        'actions' => ['create','myadds','update', 'delete','index'],
                         'allow' => true,
                         'roles' => ['@','admin'],
                     ],
@@ -270,9 +270,13 @@ class AdvertController extends Controller
         ]);
     }
 
-    /**
-     * Returns a list of cities in region
-     */
+
+
+    public function actionListAdverts(){
+
+
+        return $this->render('listAdverts');
+    }
 
 
 }

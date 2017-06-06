@@ -2,12 +2,14 @@
 
 namespace app\controllers;
 
+use app\models\AdvertType;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Advert;
 
 class SiteController extends Controller
 {
@@ -60,7 +62,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Advert();
+        return $this->render('index',[
+            'model' => $model,
+        ]);
     }
 
     /**

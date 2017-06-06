@@ -10,6 +10,13 @@ use app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
+use yii\widgets\ActiveForm;
+
+use app\models\AdvertType;
+use app\models\Region;
+use app\models\Animal;
+use app\models\Advert;
+use yii\helpers\ArrayHelper;
 
 
 /* @var $this \yii\web\View */
@@ -17,8 +24,9 @@ use yii\bootstrap\Modal;
 
 
 
-$asset         = @app\assets\AppAsset::register($this);
-$baseUrl        =    $asset->baseUrl;
+
+$this->registerJsFile('js/nlform.js');
+$this->registerJsFile('js/modernizr.custom.js');
 ?>
 
 
@@ -27,36 +35,51 @@ $baseUrl        =    $asset->baseUrl;
         'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_DROPDOWN,
         'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_LARGE
     ]); ?>
+
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
 
-        <h3 style="text-align: center"><?= Yii::t('app','Here you can find a sitter for your pet o become one!');?></h3>
-        <div class="col-md-12 text-center">
-            <?= Html::a(Yii::t('app','Find sitter'),
-                ['/advert/index'],
-                [
-                    'class'=>'btn btn-success btn-lg',
-                    'id'=>'contact-us'
-                ]
-            )
-            ?>
+        <h3 style="text-align: center"><?// Yii::t('app','Here you can find a sitter for your pet o become one!');?></h3>
+    </div>
+<div class="col-md-12">
+    <form id="nl-form" class="nl-form">
+        I feel like finding pet sitter for
+        <?=
+        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(AdvertType::find()->all(),'id_type','name'),['prompt'=>Yii::t('app','any type')]);
+        ?>
+        <br />in a
+        <?=
+        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Region::find()->all(),'id_region','name'),['prompt'=>Yii::t('app','any region')]);
+        ?>
+        for my
+        <?=
+        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Animal::find()->all(),'id_animal','species'),['prompt'=>Yii::t('app','any animal')]);
+        ?>
+        at
+        <?=
+        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Advert::find()->all(),'id_advert','price'),['prompt'=>Yii::t('app','any price')]);
+        ?>
+        <div class="nl-submit-wrap">
+            <button class="nl-submit" type="submit">Find sitter</button>
         </div>
-        <div class="col-md-12">
+        <div class="nl-overlay"></div>
+    </form>
+</div>
+    <?php $form = ActiveForm::begin([
+        'id' => 'profile-form',
+        'options' => ['class' => 'form-horizontal','enctype'=>'multipart/form-data'],
+        'fieldConfig' => [
+            'template' => "{label}\n<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-sm-offset-3 col-lg-9\">{error}\n{hint}</div>",
+            'labelOptions' => ['class' => 'col-lg-3 control-label'],
+        ],
+        'enableAjaxValidation' => true,
+        'enableClientValidation' => false,
+        'validateOnBlur' => false,
+    ]); ?>
 
-        </div>
-        <p>
-            <?= Html::button(Yii::t('app', 'Become walker'), ['value' => Url::to(['advert/create']),
-                'class' => 'showModalButton btn btn-success',
-                'id'=>'modalCreateAdvertButton']); ?>
-        </p>
-            <?php
-            Modal::begin([
-                'id'=>'createAdvert',
-                'size'=>'modal-md'
-            ]);
-            echo "<div id='modalContentCreate'></div>";
-            Modal::end();
-            ?>
+
+
+    <?php ActiveForm::end(); ?>
     </div>
 </div>
 <body>
@@ -101,6 +124,32 @@ $baseUrl        =    $asset->baseUrl;
         </div>
     </div>
     <!-- /.row -->
+    <div class="col-md-12 text-center">
+
+        <?= Html::a(Yii::t('app','Find sitter'),
+            ['advert/list-adverts'],
+            [
+                'class'=>'btn btn-success btn-lg',
+                'id'=>'find-fitter'
+            ]
+        )
+        ?>
+        <p>
+            <?= Html::button(Yii::t('app', 'Become walker'), ['value' => Url::to(['advert/create']),
+                'class' => 'showModalButton btn btn-success',
+                'id'=>'modalCreateAdvertButton']); ?>
+
+
+        </p>
+        <?php
+        Modal::begin([
+            'id'=>'createAdvert',
+            'size'=>'modal-md'
+        ]);
+        echo "<div id='modalContentCreate'></div>";
+        Modal::end();
+        ?>
+    </div>
 
     <!-- Portfolio Section -->
     <div class="row">

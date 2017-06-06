@@ -54,4 +54,8 @@ class AdvertType extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Advert::className(), ['id_type' => 'id_type']);
     }
+
+    public function showTypes(){
+       return AdvertType::find()->all();
+    }
 }

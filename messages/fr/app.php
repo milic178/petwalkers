@@ -100,5 +100,8 @@ return [
     'Animal'=>'Animal',
     'City'=>'Ville',
     'Enter a number or leave empty for later disscusion'=>'Entrez un numéro ou laissez-vous vide pour une discussion ultérieure',
-    'Write a short description about what you offer to potential customers maximum 300 words!'=>'Écrivez une brève description de ce que vous offrez aux clients potentiels au maximum 300 mots!'
+    'Write a short description about what you offer to potential customers maximum 300 words!'=>'Écrivez une brève description de ce que vous offrez aux clients potentiels au maximum 300 mots!',
+    'Select a course'=>'Sélectionnez un cours',
+    'Select a animal' =>'Sélectionnez un animal',
+
 ];

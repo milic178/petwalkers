@@ -6,6 +6,7 @@ use yii\helpers\ArrayHelper;
 use app\models\Region;
 use app\models\City;
 use app\models\AdvertType;
+use app\models\Animal;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Advert */
@@ -22,19 +23,17 @@ use app\models\AdvertType;
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true,'placeholder' =>Yii::t('app','Enter a number or leave empty for later disscusion')]) ?>
 
-    <?=
-    $form->field($model, 'id_animal')
-        ->dropDownList(
-            ArrayHelper::map(\app\models\Animal::find()->asArray()->all(), 'id_animal', 'species')
-        )
-    ?>
-    <?=
-    $form->field($model, 'id_type')
-        ->dropDownList(
-            ArrayHelper::map(AdvertType::find()->asArray()->all(), 'id_type', 'name')
-        )
-    ?>
 
+    <?php
+    $dataList=ArrayHelper::map(Animal::find()->asArray()->all(), 'id_animal', 'species');
+    echo $form->field($model, 'id_animal')->dropDownList($dataList,
+        ['prompt'=>Yii::t('app','Select a animal')]) ?>
+
+
+    <?php
+    $dataList=ArrayHelper::map(AdvertType::find()->asArray()->all(), 'id_type', 'name');
+    echo $form->field($model, 'id_type')->dropDownList($dataList,
+        ['prompt'=>Yii::t('app','Select a course')]) ?>
     <?=
 
     $form->field($model, 'id_region')
@@ -47,6 +46,7 @@ use app\models\AdvertType;
                   $( "select#advert-id_city" ).html( data );
                 });'
             ]
+
         )
     ?>
 
