@@ -14,7 +14,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 
-$this->title = Yii::t('app', 'Adverts');
+$this->title = Yii::t('app', 'List of adverts');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
@@ -24,6 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
+// making every row of DataGrid clickble, sending us to view that add
+    'rowOptions'   => function ($model) {
+        return ['data-id' => $model->id_advert];
+    },
     'columns' => [
         ['class' => 'yii\grid\SerialColumn'],
 
@@ -88,4 +92,16 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ],
 ]); ?>
-<?php Pjax::end(); ?></div
+<?php Pjax::end(); ?></div>
+
+<?php
+// making every row of DataGrid clickable, sending us to view that add
+$this->registerJs("
+
+    $('td').click(function (e) {
+        var id = $(this).closest('tr').data('id');
+        if(e.target == this)
+            location.href = '" . Url::to(['advert/view']) . "?id=' + id;
+    });
+
+");

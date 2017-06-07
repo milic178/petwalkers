@@ -56,7 +56,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <hr>
 
-                    <span class="label label-info"><?=Yii::t('app','User activity')?></span>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span><?=Yii::t('app','User activity')?></span>
+
                     <div class="row text-center">
                         <div class="col-md-12">
                             <strong><?= Yii::t('user', 'Registration time') ?>:</strong>
@@ -69,14 +71,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
 
                     <hr>
-                    <span class="label label-info"><?=Yii::t('app','About me')?></span>
+
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    <span><?=Yii::t('app','About me')?></span><br><br>
                         <?php if (!empty($profile->about_me)): ?>
                         <p><?= $profile->about_me?></p>
                         <?php endif; ?>
 
                         <?php if (!empty($profile->my_animals)): ?>
                     <hr>
-                            <span class="label label-info"><?=Yii::t('app','My pets')?></span>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <span><?=Yii::t('app','My pets')?></span>
                             <div>
                                 <br>
                                 <div class="row">

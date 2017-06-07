@@ -1,62 +1,149 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use app\assets\AppAsset;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Advert */
+/* @var $model app\models\Profile */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Adverts'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'List of adverts'), 'url' => ['list-adverts']];
 $this->params['breadcrumbs'][] = $this->title;
+
+AppAsset::register($this);
 ?>
+
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
 <div class="advert-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <br>
 
-    <p>
-        <?php
-        if (!Yii::$app->user->isGuest):
-         print (Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));
-         print (Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_advert], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
-                'method' => 'post',
-            ],
-        ]));
-        endif;
-        ?>
-    </p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title ">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                <?=Yii::t('app','Basic info') ?>
+            </h3>
+        </div>
+        <div class="panel-body">
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'title',
-            'description',
-            'price',
-            [
-                'attribute' => 'id_type',
-                'value' => $model->idType->name,
-            ],
-            [
-                'attribute' => 'id_city',
-                'value' => $model->idCity->name,
-           ],
-            'created',
-            'valid_until',
+            <div class="container-fluid">
+<!-- First row -->
+                <div class="row">
+<!-- First container -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('price') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->price ?>
+                            </div>
+                        </div>
+                    </div>
+<!-- Second container -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('id_type') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->idType->name ?>
+                            </div>
+                        </div>
+                    </div>
+<!-- Third container -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('id_city') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->idCity->name ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Second row -->
+                <div class="row">
+ <!-- first container -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('id_animal') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->idAnimal->species ?>
+                            </div>
+                        </div>
+                    </div>
+<!-- second container -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('created') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->created ?>
+                            </div>
+                        </div>
+                    </div>
+<!-- third container -->
+                    <div class="col-sm-4">
 
-        ],
-    ]) ?>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                    <?= $model->getAttributeLabel('valid_until') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $model->valid_until ?>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
-</div>
+    <!-- Displaying add description block-->
 
-<!-- Displaying popup -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title ">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                <?= $model->getAttributeLabel('description') ?>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <?= $model->description ?>
+        </div>
+    </div>
 
-<div>
+<!-- Displaying user profile popup -->
+
+    <div>
     <div class="text-center">
         <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
             <?=  Html::img($profile->getImageUrl(), [
@@ -171,6 +258,28 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 
-<!-- Displaying user reviews -->
 
-<h2>User reviews</h2>
+<!-- Displaying user reviews -->
+    <h2>User reviews</h2>
+
+
+
+
+
+
+
+
+<p class="text-center">
+    <?php
+    if (!Yii::$app->user->isGuest):
+        print (Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));
+        print (Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_advert], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'method' => 'post',
+            ],
+        ]));
+    endif;
+    ?>
+</p>

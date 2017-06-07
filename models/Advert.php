@@ -28,6 +28,7 @@ use Yii;
 class Advert extends \yii\db\ActiveRecord
 {
     public $id_region;
+    public $less_than;
     /**
      * @inheritdoc
      */
@@ -47,7 +48,7 @@ class Advert extends \yii\db\ActiveRecord
             [['price'], 'number'],
             [['id_user', 'id_type', 'id_city','id_animal'], 'integer'],
             [['title', 'slug'], 'string', 'max' => 60],
-            [['description'], 'string', 'max' => 300],
+            [['description'], 'string', 'max' => 1000],
             [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
             [['id_type'], 'exist', 'skipOnError' => true, 'targetClass' => AdvertType::className(), 'targetAttribute' => ['id_type' => 'id_type']],
             [['id_city'], 'exist', 'skipOnError' => true, 'targetClass' => City::className(), 'targetAttribute' => ['id_city' => 'id_city']],

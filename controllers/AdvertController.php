@@ -19,6 +19,7 @@ use yii\data\ActiveDataProvider;
  */
 class AdvertController extends Controller
 {
+
     /**
      * @inheritdoc
      */
@@ -38,9 +39,14 @@ class AdvertController extends Controller
                         'roles' => ['?','@'],
                     ],
                     [
-                        'actions' => ['create','myadds','update', 'delete','index'],
+                        'actions' => ['create','myadds','update', 'delete'],
                         'allow' => true,
                         'roles' => ['@','admin'],
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                        'roles' => ['admin'],
                     ],
                 ],
             ],
@@ -269,22 +275,29 @@ class AdvertController extends Controller
         ]);
     }
 
-
+    /** fucntion for listing adverts based on query parameters given by landing page!
+     * @return string
+     */
 
     public function actionListAdverts(){
 
-      // print_r($_GET['Advert']);die();
+        $searchModel = new AdvertSearch();
         if (Yii::$app->request->get()):
 
-            $searchModel = new AdvertSearch();
             $searchModel->id_type = $_GET['Advert']['id_type'];
             $searchModel->id_city = $_GET['Advert']['id_city'];
             $searchModel->id_animal = $_GET['Advert']['id_animal'];
-            $searchModel->price = $_GET['Advert']['price'];
+            $searchModel->max_price = $_GET['Advert']['price'];
 
+            if ($_GET['Advert']['price'] == 10):
+                $searchModel->min_price = 0 ;
+            elseif($_GET['Advert']['price'] == 20):
+                $searchModel->min_price = 10 ;
+            elseif($_GET['Advert']['price'] == 50):
+                $searchModel->min_price = 20 ;
+            endif;
 
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
 
             return $this->render('listAdverts', [
                 'searchModel' => $searchModel,
@@ -292,13 +305,11 @@ class AdvertController extends Controller
             ]);
 
         else:
-
-        //    $searchModel = new AdvertSearch();
-       //     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
             return $this->render('listAdverts', [
-         //       'dataProvider' => $dataProvider,
-        //        'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+                'searchModel' => $searchModel,
             ]);
         endif;
 

@@ -13,10 +13,8 @@ use yii\bootstrap\Modal;
 use yii\widgets\ActiveForm;
 
 use app\models\AdvertType;
-use app\models\Region;
 use app\models\Animal;
 use app\models\City;
-use app\models\Advert;
 use yii\helpers\ArrayHelper;
 
 
@@ -191,9 +189,7 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /.row -->
-
     <hr>
-
     <!-- Call to Action Section -->
     <div class="well">
         <div class="row">
@@ -207,3 +203,5 @@ IndexAsset::register($this);
     </div>
     <hr>
 </body>
+
+    

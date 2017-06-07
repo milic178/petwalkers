@@ -87,6 +87,8 @@ return [
     'Social Media Profile'=>'Profil na soc. omrežju',
 
     //Adds
+    'Advert'=>'Oglasi',
+    'Basic info' =>'Osnovni podatki',
     'Adds'=>'Oglasi',
     'Slug'=>'Slug',
     'Title'=>'Naslov',
@@ -103,7 +105,7 @@ return [
     'Animal'=>'Žival',
     'City'=>'Mesto',
     'Enter a number or leave empty for later disscusion'=>'Vnesite urno postavko, ali pustite prazno za kasnejši dogovor',
-    'Write a short description about what you offer to potential customers maximum 300 words!'=>'Napišite kaj ponujate v oglasu, največje možno število znakov je 300!',
+    'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Napišite kaj ponujate v oglasu, največje možno število znakov je 1000!',
     'Select a course'=>'Izberi vrsto oglasa',
     'Select a animal' =>'-Izberi žival-',
 

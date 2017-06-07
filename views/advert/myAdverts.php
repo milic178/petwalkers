@@ -9,15 +9,35 @@ List of all user adds on page
 
  */
 use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
 
 ?>
 
 <?php
 $this->title = Yii::t('app', 'My Adds');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'List of adverts'), 'url' => ['list-adverts']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
+
+<p>
+    <?= Html::button(Yii::t('app', 'Create Advert'), ['value' => Url::to(['advert/create']),
+        'class' => 'showModalButton btn btn-success',
+        'id'=>'modalCreateAdvertButton']); ?>
+</p>
+
+<?php
+Modal::begin([
+    'id'=>'createAdvert',
+    'size'=>'modal-lg'
+]);
+echo "<div id='modalContentCreate'></div>";
+Modal::end();
+?>
+
 
 <?= GridView::widget([
     'dataProvider' =>$dataProvider,
@@ -35,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute' =>   'created',
             'value'=> function ($model){
-                    $date = $model->created;
+                    $date = $model->valid_until;
                     $dt = new DateTime($date);
                     return $dt->format('d-m-Y');
             },
