@@ -107,5 +107,11 @@ return [
     'Select a course'=>'Izberi vrsto oglasa',
     'Select a animal' =>'-Izberi žival-',
 
+    //index
+    'any type'=>'vsak tip',
+    'any region'=>'vseh regijah',
+    'any price'=>'vseh cenah',
+    'any animal'=>'vse živali',
+    'Find sitter'=>'Najdi sprehajalca'
 
 ];

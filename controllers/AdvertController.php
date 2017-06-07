@@ -274,8 +274,33 @@ class AdvertController extends Controller
 
     public function actionListAdverts(){
 
+       //print_r($_POST['Advert']);die();
+        if (Yii::$app->request->post()):
 
-        return $this->render('listAdverts');
+            $searchModel = new AdvertSearch();
+            $searchModel->id_type = $_POST['Advert']['id_type'];
+            $searchModel->id_city = $_POST['Advert']['id_city'];
+            $searchModel->id_animal = $_POST['Advert']['id_animal'];
+            $searchModel->price = $_POST['Advert']['price'];
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+
+            return $this->render('listAdverts', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+
+        else:
+
+            $dataProvider = new ActiveDataProvider([
+                'query' => Advert::find()->all()
+            ]);
+
+            return $this->render('listAdverts', [
+                'dataProvider' => $dataProvider,
+            ]);
+        endif;
+
     }
 
 

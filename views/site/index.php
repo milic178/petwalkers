@@ -6,7 +6,7 @@ $this->title = 'Petwalkers';
 ?>
 
 <?php
-use app\assets\AppAsset;
+use app\assets\IndexAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
@@ -15,6 +15,7 @@ use yii\widgets\ActiveForm;
 use app\models\AdvertType;
 use app\models\Region;
 use app\models\Animal;
+use app\models\City;
 use app\models\Advert;
 use yii\helpers\ArrayHelper;
 
@@ -25,8 +26,7 @@ use yii\helpers\ArrayHelper;
 
 
 
-$this->registerJsFile('js/nlform.js');
-$this->registerJsFile('js/modernizr.custom.js');
+IndexAsset::register($this);
 ?>
 
 
@@ -41,47 +41,79 @@ $this->registerJsFile('js/modernizr.custom.js');
 
         <h3 style="text-align: center"><?// Yii::t('app','Here you can find a sitter for your pet o become one!');?></h3>
     </div>
-<div class="col-md-12">
-    <form id="nl-form" class="nl-form">
-        I feel like finding pet sitter for
-        <?=
-        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(AdvertType::find()->all(),'id_type','name'),['prompt'=>Yii::t('app','any type')]);
-        ?>
-        <br />in a
-        <?=
-        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Region::find()->all(),'id_region','name'),['prompt'=>Yii::t('app','any region')]);
-        ?>
-        for my
-        <?=
-        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Animal::find()->all(),'id_animal','species'),['prompt'=>Yii::t('app','any animal')]);
-        ?>
-        at
-        <?=
-        Html::activeDropDownList($model, 'id_type',ArrayHelper::map(Advert::find()->all(),'id_advert','price'),['prompt'=>Yii::t('app','any price')]);
-        ?>
-        <div class="nl-submit-wrap">
-            <button class="nl-submit" type="submit">Find sitter</button>
+
+
+    <div class="container demo-1">
+        <div class="main clearfix">
+
+            <?php $form = ActiveForm::begin([
+                'id' => 'nl-form',
+                'action' => ['advert/list-adverts'],
+                'options' => ['class' => 'nl-form','enctype'=>'multipart/form-data'],
+                'fieldConfig' => [
+                    'template' => "{label}\n<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-sm-offset-3 col-lg-9\">{error}\n{hint}</div>",
+                    'labelOptions' => ['class' => 'col-lg-3 control-label'],
+                ],
+                'enableAjaxValidation' => true,
+                'enableClientValidation' => false,
+                'validateOnBlur' => false,
+            ]); ?>
+             <?= Yii::t('app','I feel like finding pet sitter for') ?>
+                <?=
+                    Html::activeDropDownList($model, 'id_type',ArrayHelper::map(AdvertType::find()->all(),'id_type','name'),['prompt'=>Yii::t('app','any type')]);
+                ?>
+            <br />
+            <?= Yii::t('app','in') ?>
+                <?php
+            //        Html::activeDropDownList($model, 'id_region',ArrayHelper::map(Region::find()->all(),'id_region','name'),['prompt'=>Yii::t('app','any region')]);
+                ?>
+
+
+            <?=
+            Html::activeDropDownList($model, 'id_region',
+                    ArrayHelper::map(Region::find()->asArray()->all(), 'id_region', 'name'),
+                    [
+                        'prompt'=>Yii::t('app','any region'),
+                        'onchange'=>'
+                                $.post( "'.Yii::$app->urlManager->createUrl('city/get-city-by-region?id=').'"+$(this).val(), function( data ) {
+                              $( "select#advert-id_city" ).html( data );
+                            });'
+                    ]
+            )
+            ?>
+
+            <?=
+            Html::activeDropDownList($model, 'id_city',
+                ArrayHelper::map(City::find()->asArray()->all(), 'id_city', 'name'),
+                    ['prompt'=>Yii::t('app','any city'),],
+                    ['id'=>'cityName']
+                );
+
+            ?>
+
+            <?= Yii::t('app','for my') ?>
+                <?=
+                    Html::activeDropDownList($model, 'id_animal',ArrayHelper::map(Animal::find()->all(),'id_animal','species'),
+                        ['prompt'=>Yii::t('app','any animal'),
+                            'class' => 'nl-dd-checked']);
+                ?>
+            <?= Yii::t('app','at') ?>
+                <?=
+                    Html::activeDropDownList($model, 'price',ArrayHelper::map(Advert::find()->all(),'id_advert','price'),['prompt'=>Yii::t('app','any price')]);
+                ?>
+                <div class="nl-submit-wrap">
+                    <?= Html::submitButton(Yii::t('app', 'Find sitter'), ['class' => 'nl-submit']) ?>
+                </div>
+                <div class="nl-overlay"></div>
+            <?php ActiveForm::end(); ?>
         </div>
-        <div class="nl-overlay"></div>
-    </form>
-</div>
-    <?php $form = ActiveForm::begin([
-        'id' => 'profile-form',
-        'options' => ['class' => 'form-horizontal','enctype'=>'multipart/form-data'],
-        'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-sm-offset-3 col-lg-9\">{error}\n{hint}</div>",
-            'labelOptions' => ['class' => 'col-lg-3 control-label'],
-        ],
-        'enableAjaxValidation' => true,
-        'enableClientValidation' => false,
-        'validateOnBlur' => false,
-    ]); ?>
+    </div><!-- /container -->
 
+    <script src="js/nlform.js"></script>
+    <script>
+        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
 
-
-    <?php ActiveForm::end(); ?>
-    </div>
-</div>
 <body>
 
 <!-- Page Content -->

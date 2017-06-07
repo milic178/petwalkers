@@ -104,4 +104,11 @@ return [
     'Select a course'=>'Sélectionnez un cours',
     'Select a animal' =>'Sélectionnez un animal',
 
+    //index
+    'any type'=>'n\'importe quel type',
+    'any region'=>'toute région',
+    'any price'=>'tout prix',
+    'any animal'=>'tout animal',
+    'Find sitter'=>'Trouver sitter',
+
 ];

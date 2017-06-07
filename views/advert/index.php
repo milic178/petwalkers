@@ -3,11 +3,12 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\helpers\Url;
+use yii\bootstrap\Modal;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\AdvertSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-use yii\helpers\Url;
-use yii\bootstrap\Modal;
+
 
 $this->title = Yii::t('app', 'Adverts');
 $this->params['breadcrumbs'][] = $this->title;
@@ -86,6 +87,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'id_animal',
                 'value' => 'idAnimal.species',
+                'filter'=>
+                    \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),
                 'headerOptions' => ['style' => 'width:15%'],
             ],
 

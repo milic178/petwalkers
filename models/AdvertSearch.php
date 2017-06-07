@@ -19,7 +19,7 @@ class AdvertSearch extends Advert
     {
         return [
             [['id_advert',  'id_type', 'id_city'], 'integer'],
-            [['id_user','title', 'slug', 'description', 'created', 'valid_until', 'trash_date'], 'safe'],
+            [['id_user','title', 'slug', 'description', 'created', 'valid_until', 'trash_date','id_animal'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -76,7 +76,7 @@ class AdvertSearch extends Advert
             ->andFilterWhere(['like', 'slug', $this->slug])
             ->andFilterWhere(['like', 'user.username', $this->id_user])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'animal.species', $this->id_animal]);
+            ->andFilterWhere(['like', 'animal.id_animal', $this->id_animal]);
 
         return $dataProvider;
     }

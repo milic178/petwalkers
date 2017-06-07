@@ -27,15 +27,18 @@ use app\models\Animal;
     <?php
     $dataList=ArrayHelper::map(Animal::find()->asArray()->all(), 'id_animal', 'species');
     echo $form->field($model, 'id_animal')->dropDownList($dataList,
-        ['prompt'=>Yii::t('app','Select a animal')]) ?>
+        ['prompt'=>Yii::t('app','Select a animal')])
+    ?>
 
 
     <?php
     $dataList=ArrayHelper::map(AdvertType::find()->asArray()->all(), 'id_type', 'name');
     echo $form->field($model, 'id_type')->dropDownList($dataList,
-        ['prompt'=>Yii::t('app','Select a course')]) ?>
-    <?=
+        ['prompt'=>Yii::t('app','Select a course')])
+    ?>
 
+
+    <?=
     $form->field($model, 'id_region')
         ->dropDownList(
             ArrayHelper::map(Region::find()->asArray()->all(), 'id_region', 'name'),
