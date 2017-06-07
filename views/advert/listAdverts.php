@@ -36,6 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
         // 'description',
         [
             'attribute' =>   'created',
+            'value'=> function ($model){
+                    $date = $model->created;
+                    $dt = new DateTime($date);
+                    return $dt->format('d-m-Y');
+                    },
             'headerOptions' => ['style' => 'width:10%'],
         ],
         // 'valid_until',
@@ -52,8 +57,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'attribute' => 'id_type',
             'value' => 'idType.name',
             'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name')
+                \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name'),
+            'headerOptions' => ['style' => 'width:13%']
         ],
+        [
+            'attribute' => 'id_animal',
+            'value' => 'idAnimal.species',
+            'filter'=>
+                \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),
+            'headerOptions' => ['style' => 'width:13%'],
+        ],
+
         [
             'attribute' => 'id_city',
             'value' => 'idCity.name',
@@ -62,16 +76,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'headerOptions' => ['style' => 'width:15%'],
         ],
         [
-            'attribute' => 'id_animal',
-            'value' => 'idAnimal.species',
-            'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),
-            'headerOptions' => ['style' => 'width:15%'],
+            'attribute' => 'id_region',
+ // name of 2 relations then name of attribute
+            'value' => 'idCity.idRegion.name',
         ],
 
 
+
         ['class' => 'yii\grid\ActionColumn','template'=>'{view}',
-            'headerOptions' => ['style' => 'width:8%'],
+            'headerOptions' => ['style' => 'width:3%'],
         ],
     ],
 ]); ?>

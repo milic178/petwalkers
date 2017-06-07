@@ -108,6 +108,14 @@ class Advert extends \yii\db\ActiveRecord
         return $this->hasOne(Animal::className(), ['id_animal' => 'id_animal']);
     }
 
+
+    /** Finds if user has already advert with those parametes
+     * @param $type
+     * @param $city
+     * @param $animal
+     * @param $user
+     * @return bool
+     */
     public function duplicateAdvert($type,$city,$animal,$user){
 
         return Advert::find()

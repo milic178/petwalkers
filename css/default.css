@@ -28,10 +28,16 @@ body {
 }
 
 a {
-	color: #888;
+	color: #fff;
 	text-decoration: none;
 }
 
+p{
+	color: #0f0f0f;
+}
+h1{
+	font-size: 100px !important;
+}
 a:hover,
 a:active {
 	color: #333;
@@ -65,7 +71,7 @@ a:active {
 
 /* Main Content */
 .main {
-	max-width: 50em;
+	max-width: 100em;
 }
 
 /* To Navigation Style */

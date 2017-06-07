@@ -12,6 +12,7 @@ use app\models\Advert;
  */
 class AdvertSearch extends Advert
 {
+    public $lessThan;
     /**
      * @inheritdoc
      */
@@ -19,7 +20,7 @@ class AdvertSearch extends Advert
     {
         return [
             [['id_advert',  'id_type', 'id_city'], 'integer'],
-            [['id_user','title', 'slug', 'description', 'created', 'valid_until', 'trash_date','id_animal'], 'safe'],
+            [['id_user','title', 'slug', 'description', 'trash_date','id_animal','$lessThan'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -69,14 +70,15 @@ class AdvertSearch extends Advert
             'price' => $this->price,
             'id_type' => $this->id_type,
             'id_city' => $this->id_city,
-            'trash_date' => $this->trash_date,
+            'trash_date' => $this->trash_date
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'slug', $this->slug])
             ->andFilterWhere(['like', 'user.username', $this->id_user])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'animal.id_animal', $this->id_animal]);
+            ->andFilterWhere(['like', 'animal.id_animal', $this->id_animal])
+            ->andFilterWhere(['<', 'price', $this->max_price]);;
 
         return $dataProvider;
     }

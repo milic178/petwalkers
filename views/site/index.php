@@ -38,21 +38,17 @@ IndexAsset::register($this);
 
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
-
-        <h3 style="text-align: center"><?// Yii::t('app','Here you can find a sitter for your pet o become one!');?></h3>
     </div>
-
-
     <div class="container demo-1">
         <div class="main clearfix">
 
             <?php $form = ActiveForm::begin([
                 'id' => 'nl-form',
                 'action' => ['advert/list-adverts'],
+                'method' => 'get',
                 'options' => ['class' => 'nl-form','enctype'=>'multipart/form-data'],
                 'fieldConfig' => [
-                    'template' => "{label}\n<div class=\"col-lg-9\">{input}</div>\n<div class=\"col-sm-offset-3 col-lg-9\">{error}\n{hint}</div>",
-                    'labelOptions' => ['class' => 'col-lg-3 control-label'],
+                      'labelOptions' => ['class' => 'col-lg-3 control-label'],
                 ],
                 'enableAjaxValidation' => true,
                 'enableClientValidation' => false,
@@ -64,31 +60,12 @@ IndexAsset::register($this);
                 ?>
             <br />
             <?= Yii::t('app','in') ?>
-                <?php
-            //        Html::activeDropDownList($model, 'id_region',ArrayHelper::map(Region::find()->all(),'id_region','name'),['prompt'=>Yii::t('app','any region')]);
-                ?>
-
 
             <?=
-            Html::activeDropDownList($model, 'id_region',
-                    ArrayHelper::map(Region::find()->asArray()->all(), 'id_region', 'name'),
-                    [
-                        'prompt'=>Yii::t('app','any region'),
-                        'onchange'=>'
-                                $.post( "'.Yii::$app->urlManager->createUrl('city/get-city-by-region?id=').'"+$(this).val(), function( data ) {
-                              $( "select#advert-id_city" ).html( data );
-                            });'
-                    ]
-            )
-            ?>
-
-            <?=
-            Html::activeDropDownList($model, 'id_city',
+            Html::activeDropDownList($model,'id_city',
                 ArrayHelper::map(City::find()->asArray()->all(), 'id_city', 'name'),
-                    ['prompt'=>Yii::t('app','any city'),],
-                    ['id'=>'cityName']
+                    ['prompt'=>Yii::t('app','any city')]
                 );
-
             ?>
 
             <?= Yii::t('app','for my') ?>
@@ -97,10 +74,13 @@ IndexAsset::register($this);
                         ['prompt'=>Yii::t('app','any animal'),
                             'class' => 'nl-dd-checked']);
                 ?>
-            <?= Yii::t('app','at') ?>
-                <?=
-                    Html::activeDropDownList($model, 'price',ArrayHelper::map(Advert::find()->all(),'id_advert','price'),['prompt'=>Yii::t('app','any price')]);
+            <?= Yii::t('app','from') ?>
+                <?php
+                 echo Html::activeDropDownList($model, 'price',
+                     ['10'=>'0€ - 10€', '20'=>'10€ - 20€', '50'=>'20€ - 50€'],
+                     ['prompt'=>Yii::t('app','any price')]);
                 ?>
+            <?= Yii::t('app','per hour') ?>
                 <div class="nl-submit-wrap">
                     <?= Html::submitButton(Yii::t('app', 'Find sitter'), ['class' => 'nl-submit']) ?>
                 </div>
@@ -156,32 +136,7 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /.row -->
-    <div class="col-md-12 text-center">
 
-        <?= Html::a(Yii::t('app','Find sitter'),
-            ['advert/list-adverts'],
-            [
-                'class'=>'btn btn-success btn-lg',
-                'id'=>'find-fitter'
-            ]
-        )
-        ?>
-        <p>
-            <?= Html::button(Yii::t('app', 'Become walker'), ['value' => Url::to(['advert/create']),
-                'class' => 'showModalButton btn btn-success',
-                'id'=>'modalCreateAdvertButton']); ?>
-
-
-        </p>
-        <?php
-        Modal::begin([
-            'id'=>'createAdvert',
-            'size'=>'modal-md'
-        ]);
-        echo "<div id='modalContentCreate'></div>";
-        Modal::end();
-        ?>
-    </div>
 
     <!-- Portfolio Section -->
     <div class="row">
@@ -250,9 +205,5 @@ IndexAsset::register($this);
             </div>
         </div>
     </div>
-
     <hr>
-
-
-
 </body>

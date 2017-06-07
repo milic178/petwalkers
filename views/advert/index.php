@@ -56,10 +56,20 @@ $this->params['breadcrumbs'][] = $this->title;
            // 'description',
             [
                 'attribute' =>   'created',
+                'value'=> function ($model){
+                    $date = $model->created;
+                    $dt = new DateTime($date);
+                    return $dt->format('d-m-Y');
+                },
                 'headerOptions' => ['style' => 'width:10%'],
             ],
             [
                 'attribute' =>   'valid_until',
+                'value'=> function ($model){
+                    $date = $model->valid_until;
+                    $dt = new DateTime($date);
+                    return $dt->format('d-m-Y');
+                },
                 'headerOptions' => ['style' => 'width:10%'],
             ],
             [

@@ -101,7 +101,6 @@ class AdvertController extends Controller
 
             $model->id_user = Yii::$app->user->id;
 
-
             if ( $model->duplicateAdvert($model->id_type,$model->id_city,$model->id_animal,$model->id_user)):
 
                 \Yii::$app->getSession()->setFlash('danger',[
@@ -274,14 +273,16 @@ class AdvertController extends Controller
 
     public function actionListAdverts(){
 
-       //print_r($_POST['Advert']);die();
-        if (Yii::$app->request->post()):
+      // print_r($_GET['Advert']);die();
+        if (Yii::$app->request->get()):
 
             $searchModel = new AdvertSearch();
-            $searchModel->id_type = $_POST['Advert']['id_type'];
-            $searchModel->id_city = $_POST['Advert']['id_city'];
-            $searchModel->id_animal = $_POST['Advert']['id_animal'];
-            $searchModel->price = $_POST['Advert']['price'];
+            $searchModel->id_type = $_GET['Advert']['id_type'];
+            $searchModel->id_city = $_GET['Advert']['id_city'];
+            $searchModel->id_animal = $_GET['Advert']['id_animal'];
+            $searchModel->price = $_GET['Advert']['price'];
+
+
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
 
@@ -292,12 +293,12 @@ class AdvertController extends Controller
 
         else:
 
-            $dataProvider = new ActiveDataProvider([
-                'query' => Advert::find()->all()
-            ]);
+        //    $searchModel = new AdvertSearch();
+       //     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
             return $this->render('listAdverts', [
-                'dataProvider' => $dataProvider,
+         //       'dataProvider' => $dataProvider,
+        //        'searchModel' => $searchModel,
             ]);
         endif;
 
