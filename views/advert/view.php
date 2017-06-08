@@ -22,7 +22,8 @@ AppAsset::register($this);
     <h1><?= Html::encode($this->title) ?></h1>
     <br>
 
-    <div class="panel panel-default">
+<!-- Displaying basic info primary box -->
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title ">
                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -53,7 +54,7 @@ AppAsset::register($this);
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title ">
-                                    <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                                       <i class="fa fa-sitemap" aria-hidden="true"></i>
                                     <?= $model->getAttributeLabel('id_type') ?>
                                 </h3>
                             </div>
@@ -67,7 +68,9 @@ AppAsset::register($this);
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title ">
-                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                                    <span>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
                                     <?= $model->getAttributeLabel('id_city') ?>
                                 </h3>
                             </div>
@@ -84,7 +87,9 @@ AppAsset::register($this);
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title ">
-                                    <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                                    <span>
+                                        <i class="fa fa-paw" aria-hidden="true"></i>
+                                    </span>
                                     <?= $model->getAttributeLabel('id_animal') ?>
                                 </h3>
                             </div>
@@ -113,7 +118,7 @@ AppAsset::register($this);
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title ">
-                                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                    <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
                                     <?= $model->getAttributeLabel('valid_until') ?>
                                 </h3>
                             </div>
@@ -129,7 +134,7 @@ AppAsset::register($this);
 
     <!-- Displaying add description block-->
 
-    <div class="panel panel-default">
+    <div class="panel panel-success">
         <div class="panel-heading">
             <h3 class="panel-title ">
                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
@@ -265,15 +270,18 @@ AppAsset::register($this);
 
 
 
-
+    <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                        </span>
 
 
 
 <p class="text-center">
     <?php
     if (!Yii::$app->user->isGuest):
-        print (Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));
-        print (Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_advert], [
+        print (Html::a('<i class="fa fa-pencil" aria-hidden="true"></i>'.Yii::t('app', ' Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));
+        print (Html::a(' <i class="fa fa-trash-o"></i>'.Yii::t('app', ' Delete'), ['delete', 'id' => $model->id_advert], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),

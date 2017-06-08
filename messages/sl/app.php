@@ -67,9 +67,9 @@ return [
 
 
     //Crud
-    'Create' => 'Vnesi',
-    'Update' => 'Posodobi',
-    'Delete' => 'Izbriši',
+    ' Create' => ' Vnesi',
+    ' Update' => ' Posodobi',
+    ' Delete' => ' Izbriši',
 
     //Faq
     'More questions? Dont hesitate!' => 'Niste našli odgovora? Potem ne oklevajte!',

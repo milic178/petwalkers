@@ -66,9 +66,9 @@ return [
     'Select city'=>'Sélectionnez une région',
 
     //Crud
-    'Create' => 'Ajouter',
-    'Update' => 'Mettre à jour',
-    'Delete' => 'Effacer',
+    ' Create' => ' Ajouter',
+    ' Update' => ' Mettre à jour',
+    ' Delete' => ' Effacer',
 
     //Faq
     'More questions? Dont hesitate!' =>'Plus de question? Alors tanqet pa!',

@@ -29,10 +29,7 @@ IndexAsset::register($this);
 
 
 <div class="site-index">
-    <?= \lajax\languagepicker\widgets\LanguagePicker::widget([
-        'skin' => \lajax\languagepicker\widgets\LanguagePicker::SKIN_DROPDOWN,
-        'size' => \lajax\languagepicker\widgets\LanguagePicker::SIZE_LARGE
-    ]); ?>
+
 
     <div class="jumbotron">
         <h1><?= \Yii::t('app', 'Welcome');?></h1>
@@ -85,15 +82,9 @@ IndexAsset::register($this);
                 <div class="nl-overlay"></div>
             <?php ActiveForm::end(); ?>
         </div>
-    </div><!-- /container -->
-
-    <script src="js/nlform.js"></script>
-    <script>
-        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
-    </script>
-
+    </div>
+    <!-- /container -->
 <body>
-
 <!-- Page Content -->
 <div class="container">
 
@@ -202,6 +193,12 @@ IndexAsset::register($this);
         </div>
     </div>
     <hr>
+</div>
 </body>
+
+    <script src="js/nlform.js"></script>
+    <script>
+        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
 
     

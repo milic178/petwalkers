@@ -27,8 +27,15 @@ body {
 	overflow-x: hidden;
 }
 
+.wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 0px !important;
+}
+
 a {
-	color: #fff;
+	color: #9d9d9d	;
 	text-decoration: none;
 }
 
@@ -36,7 +43,7 @@ p{
 	color: #0f0f0f;
 }
 h1{
-	font-size: 100px !important;
+	font-size: 5em !important;
 }
 a:hover,
 a:active {
