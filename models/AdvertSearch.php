@@ -22,7 +22,7 @@ class AdvertSearch extends Advert
         return [
             [['id_advert',  'id_type', 'id_city'], 'integer'],
             [['id_user','title', 'slug', 'description', 'trash_date','id_animal','max_price','min_price'], 'safe'],
-            [['price'], 'number'],
+           // [['price'], 'number'],
         ];
     }
 

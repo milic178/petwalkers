@@ -32,7 +32,11 @@ IndexAsset::register($this);
 
 
     <div class="jumbotron">
-        <h1><?= \Yii::t('app', 'Welcome');?></h1>
+
+        <h1>
+            <i class="fa fa-paw fa-lg" aria-hidden="true"></i>
+            <?= \Yii::t('app', 'Welcome');?>
+        </h1>
     </div>
     <div class="container demo-1">
         <div class="main clearfix">
