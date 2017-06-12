@@ -22,7 +22,7 @@ class AdvertSearch extends Advert
         return [
             [['id_advert',  'id_type', 'id_city'], 'integer'],
             [['id_user','title', 'slug', 'description', 'trash_date','id_animal','max_price','min_price'], 'safe'],
-           // [['price'], 'number'],
+          //  [['price'], 'number'],
         ];
     }
 
@@ -79,7 +79,6 @@ class AdvertSearch extends Advert
             ->andFilterWhere(['like', 'user.username', $this->id_user])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'animal.id_animal', $this->id_animal])
-           // ->andFilterWhere(['>', 'price', $this->min_price])
             ->andFilterWhere(['between', 'price',$this->min_price, $this->max_price]);;
 
         return $dataProvider;

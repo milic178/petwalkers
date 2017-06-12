@@ -20,10 +20,6 @@ use yii\helpers\ArrayHelper;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
-
-
-
 IndexAsset::register($this);
 ?>
 
@@ -88,7 +84,8 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /container -->
-<body>
+
+
 <!-- Page Content -->
 <div class="container">
 
@@ -198,7 +195,7 @@ IndexAsset::register($this);
     </div>
     <hr>
 </div>
-</body>
+
 
     <script src="js/nlform.js"></script>
     <script>

@@ -9,6 +9,7 @@
  */
 
 return [
+    'Rate walker'=>'Oceni sprehajalca',
     'Welcome' => 'Dobrodošli',
     'Heading'=>'Glava',
     'Contact us'=>'Pišite nam',
@@ -97,7 +98,7 @@ return [
     'Create Advert'=>'Ustvari oglas',
     'Adverts'=>'Oglasi',
     'Valid until'=>'Veljaven do',
-    'Price €/h'=>'Cena',
+    'Price €/h'=>'Cena €/u',
     'Walker'=>'Sprehajalec',
     'Type'=>'Tip oglasa',
     'Trash Date'=>'Datum izbrisa',
@@ -108,6 +109,7 @@ return [
     'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Napišite kaj ponujate v oglasu, največje možno število znakov je 1000!',
     'Select a course'=>'Izberi vrsto oglasa',
     'Select a animal' =>'-Izberi žival-',
+    'All result shown are for price of maximum {price} €/hour' =>'Prikazani so rezultati z največjo urno postavko {price}€',
 
     //index
     'any type'=>'vsak tip',

@@ -20,7 +20,14 @@ $this->params['breadcrumbs'][] = $this->title;
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
 <?php Pjax::begin(); ?>
-
+<div class="text-right">
+    <span class="alert alert-info">
+        <?=
+        Yii::t('app','All result shown are for price of maximum {price} €/hour',
+            ['price'=> $_GET['Advert']['price']])
+        ?>
+    </span>
+</div>
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,

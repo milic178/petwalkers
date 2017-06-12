@@ -43,9 +43,10 @@ AppAsset::register($this);
 */
        if (Yii::$app->user->isGuest) {
            $navItems=[
-               ['label' =>'<i class="fa fa-id-card fa-lg" aria-hidden="true"></i> '. Yii::t('app','About'), 'url' => '/site/about'],
                ['label' =>'<i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> '. Yii::t('app','Register'), 'url' => ['/user/register']],
                ['label' =>'<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> '. Yii::t('app','Login'), 'url' => ['/user/login']],
+               ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['#']],
+
 
            ];
        }
@@ -80,7 +81,9 @@ AppAsset::register($this);
        }
 
 
-       array_push($navItems,['label' =>'<i class="fa fa-info" aria-hidden="true"></i> '. Yii::t('app','Help'),
+       array_push($navItems,
+           ['label' =>'<i class="fa fa-id-card fa-lg" aria-hidden="true"></i> '. Yii::t('app','About'), 'url' => '/site/about'],
+           ['label' =>'<i class="fa fa-info" aria-hidden="true"></i> '. Yii::t('app','Help'),
            'items' =>
                [
                    ['label' =>'<i class="fa fa-question" aria-hidden="true"></i> '. Yii::t('app','Questions'), 'url' => '/site/faq'],

@@ -9,6 +9,7 @@
  */
 
 return [
+    'Rate walker'=>'Taux marcheur',
     'Welcome' => 'Bienvenue',
     'Heading' =>'Tette',
     'Contact us' =>'Contactez nous',
@@ -105,6 +106,8 @@ return [
     'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Écrivez une brève description de ce que vous offrez aux clients potentiels au maximum 1000 mots!',
     'Select a course'=>'Sélectionnez un cours',
     'Select a animal' =>'Sélectionnez un animal',
+
+    'All result shown are for price of maximum {price} €/hour' =>'Tous les résultats affichés sont pour le prix maximum {price} €/heure',
 
     //index
     'any type'=>'n\'importe quel type',

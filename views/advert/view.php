@@ -132,7 +132,7 @@ AppAsset::register($this);
     </div>
     </div>
 
-    <!-- Displaying add description block-->
+ <!-- Displaying add description block-->
 
     <div class="panel panel-success">
         <div class="panel-heading">
@@ -168,7 +168,9 @@ AppAsset::register($this);
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <div class="alert alert-info"><?= Yii::t('app','More about walker')?></div>
+                        <div class="alert alert-info">
+                            <?= Yii::t('app','More about walker')?>
+                        </div>
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -184,7 +186,9 @@ AppAsset::register($this);
                     </div>
                     <hr>
 
-                    <span class="label label-info"><?=Yii::t('app','User activity')?></span>
+                    <span class="label label-info">
+                        <?=Yii::t('app','User activity')?>
+                    </span>
                     <div class="row text-center">
                         <div class="col-md-12">
                             <strong><?= Yii::t('user', 'Registration time') ?>:</strong>
