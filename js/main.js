@@ -23,3 +23,12 @@ $(function () {
     })
 });
 
+// show modal from (popup) for submiting review code
+$(function() {
+$('#EnterCodeModalButton a').click(function(e) {
+    e.preventDefault();
+    $('#enter-code').modal('show')
+        .find('#modalFormContent')
+        .load($(this).attr('href'));
+});
+});

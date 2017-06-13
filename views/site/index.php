@@ -23,7 +23,6 @@ use yii\helpers\ArrayHelper;
 IndexAsset::register($this);
 ?>
 
-
 <div class="site-index">
 
 
@@ -202,4 +201,15 @@ IndexAsset::register($this);
         var nlform = new NLForm( document.getElementById( 'nl-form' ) );
     </script>
 
-    
+<!-- Modal for entering review code -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>

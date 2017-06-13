@@ -42,6 +42,14 @@ a {
 p{
 	color: #0f0f0f;
 }
+
+/* modal content style */
+.modal-content{
+	background-color: #e96d65!important;
+}
+.has-error .help-block{
+	color: #fff!important;
+}
 h1{
 	font-size: 5em !important;
 }
