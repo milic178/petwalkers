@@ -49,11 +49,12 @@ AppAsset::register($this);
                ['label' =>'<i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> '. Yii::t('app','Register'), 'url' => ['/user/register']],
                ['label' =>'<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> '. Yii::t('app','Login'), 'url' => ['/user/login']],
                ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['review/enter-code'],'options' => ['id' => 'EnterCodeModalButton']],
-
            ];
        }
        else {
            $navItems=[
+               ['label' =>'Request code', 'url' => ['review/request-code']],
+
                ['label' =>'<i class="fa fa-home fa-lg" aria-hidden="true"></i> '. Yii::t('app','Home'), 'url' => ''.Yii::$app->homeUrl.''],
                ['label'=>'<i class="fa fa-bolt fa-lg" aria-hidden="true"></i> '. 'Administrator','visible' => Yii::$app->user->identity->isAdmin,
                    'items' =>

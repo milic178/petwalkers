@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use app\assets\AppAsset;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Advert */
@@ -146,6 +148,8 @@ AppAsset::register($this);
         </div>
     </div>
 
+
+
 <!-- Displaying user profile popup -->
 
     <div>
@@ -252,7 +256,6 @@ AppAsset::register($this);
                                 )
                                 ?>
                             </p>
-
                         </div>
                     <?php endif; ?>
                     <br>
@@ -267,6 +270,49 @@ AppAsset::register($this);
     </div>
 </div>
 
+<!--Displaying user contact email / phone -->
+    <div>
+        <div class="panel-heading">
+            <?= Html::button(Yii::t('app', 'Contact walker'), ['value' => Url::to(['review/request-code']),
+                'class' => 'showModalButton btn btn-success',
+                'id'=>'contact-walker']); ?>
+        </div>
+
+        <div class="panel-body">
+            <div class="container-fluid">
+                <div class="col-sm-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title ">
+                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                                <?= $model->getAttributeLabel('valid_until') ?>
+                            </h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <?= $model->valid_until ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title ">
+                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                                <?= $model->getAttributeLabel('valid_until') ?>
+                            </h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <?= $model->valid_until ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 <!-- Displaying user reviews -->
     <h2>User reviews</h2>
@@ -277,7 +323,7 @@ AppAsset::register($this);
     <span class="fa-stack fa-5x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
                               <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-                        </span>
+    </span>
 
 
 
@@ -295,3 +341,18 @@ AppAsset::register($this);
     endif;
     ?>
 </p>
+
+</div>
+
+<!-- Modal for requestig review code -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Request review code').'</h3>',
+        'id'=>'request-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalRequestCode'></div>";
+    Modal::end();
+    ?>
+</div>

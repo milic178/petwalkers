@@ -27,6 +27,15 @@ class ReviewController extends \yii\web\Controller
 
     }
 
-
+    /** Actoin for rendering view for requesting code  to give review
+     * @return string
+     */
+    public function actionRequestCode()
+    {
+        $model = new Reviews();
+        return $this->renderAjax('requestCode',[
+            'model' => $model,
+        ]);
+    }
 
 }

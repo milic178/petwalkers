@@ -32,3 +32,14 @@ $('#EnterCodeModalButton a').click(function(e) {
         .load($(this).attr('href'));
 });
 });
+
+
+// show modal from (popup) for requeting review code
+$(function() {
+    $('#contact-walker').click(function(e) {
+        e.preventDefault();
+        $('#request-code').modal('show')
+            .find('#modalRequestCode')
+            .load($(this).attr('value'));
+    });
+});
