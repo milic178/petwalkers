@@ -13,6 +13,7 @@ use dektrium\user\widgets\Connect;
 use dektrium\user\models\LoginForm;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\bootstrap\Modal;
 
 /**
  * @var yii\web\View $this
@@ -24,11 +25,24 @@ $this->title = Yii::t('user','Login with your account');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
+
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-        <div class="panel panel-default">
+        <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
             </div>

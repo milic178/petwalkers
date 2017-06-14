@@ -17,7 +17,7 @@ use app\assets\IndexAsset;
 $this->title = Yii::t('app', 'Enter review code');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Review code')];
 $this->params['breadcrumbs'][] = $this->title;
-IndexAsset::register($this);
+//IndexAsset::register($this);
 ?>
 
 

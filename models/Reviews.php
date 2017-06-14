@@ -2,7 +2,9 @@
 
 namespace app\models;
 
+
 use Yii;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "reviews".
@@ -75,5 +77,35 @@ class Reviews extends \yii\db\ActiveRecord
     public function getIdProfile()
     {
         return $this->hasOne(Profile::className(), ['user_id' => 'id_profile']);
+    }
+
+    /**
+     * Checks if code exsists in database
+     * @param $code
+     * @return array
+     */
+    public static function codeExsists($code){
+        $review = Reviews::find()
+            ->where( [ 'review_code' => $code ] )
+            ->one();
+        return $review;
+    }
+
+    /** We check if code has been older than 2 days if so we return return false and throw error excpetion
+     * @param $code
+     * @return bool
+     */
+    public static function codeValid($code){
+        $review = self::codeExsists($code);
+        $today = date('Y/m/d h:m:s', time());
+
+        $diff = strtotime($review->created) - strtotime($today);
+        $days = $diff / 60 / 60 / 24;
+//print_r($days);die();
+        if ($days > - 2):
+            return false;
+        else:
+            return true;
+        endif;
     }
 }

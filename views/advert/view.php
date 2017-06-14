@@ -17,6 +17,18 @@ $this->params['breadcrumbs'][] = $this->title;
 AppAsset::register($this);
 ?>
 
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
@@ -285,14 +297,12 @@ Dialog::widget([
                 'id'=>'contact-walker']); ?>
         </div>
 
-        <div id="userContactInfo" style="display:none;">
+        <div id="userContactInfo" style="display:none;" >
             <div class="panel-body">
-                <div class="container-fluid">
                     <div class="col-sm-6">
-
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title ">
+                                <h3 class="panel-title">
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                     <?= $profile->getAttributeLabel('telephone') ?>
                                 </h3>
@@ -304,10 +314,9 @@ Dialog::widget([
                     </div>
 
                     <div class="col-sm-6">
-
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title ">
+                                <h3 class="panel-title">
                                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                     <?= Yii::t('app','Email') ?>
                                 </h3>
@@ -317,8 +326,6 @@ Dialog::widget([
                             </div>
                         </div>
                     </div>
-
-                </div>
             </div>
         </div>
     </div>

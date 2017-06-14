@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Reviews;
+use yii\web\NotFoundHttpException;
+use yii\web\HttpException;
 
 class ReviewController extends \yii\web\Controller
 {
@@ -12,15 +14,27 @@ class ReviewController extends \yii\web\Controller
     }
 
 
-    /** Action for rendering form where we submit review code
+    /** Action for rendering form where we submit review code and perform validation for code. If all is ok we render view to leave
+     * review for user
      * @return string
      */
     public function actionEnterCode()
     {
         $model = new Reviews();
 
+
         if ($model->load(\Yii::$app->request->post())):
-            print_r($_POST);die();
+
+            $code = \Yii::$app->request->post('Reviews')['review_code'];
+            // print_r($code);die();
+                if(!Reviews::codeExsists($code)){
+                    throw new NotFoundHttpException(\Yii::t('app','Code you have entered does not exist or has been deleted!'));
+                }
+
+                if (!Reviews::codeValid($code)){
+                    throw new HttpException(\Yii::t('app','Code you have entered is older than 2 days making it invalid!'));
+                }
+
         endif;
 
         return $this->renderAjax('enterCode',[

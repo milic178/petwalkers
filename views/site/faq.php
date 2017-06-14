@@ -7,14 +7,25 @@
  */
 
 use yii\helpers\Html;
-use yii\helpers\Url;
+use yii\bootstrap\Modal;
 
 
 
 $this->title = Yii::t('app','Questions');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
 <!-- Content Row -->
 <div class="row">
     <div class="col-md-12">

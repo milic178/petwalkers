@@ -19,12 +19,31 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
+
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
+
 <?php Pjax::begin(); ?>
 <div class="text-right">
     <span class="alert alert-info">
-        <?=
-        Yii::t('app','All result shown are for price of maximum {price} €/hour',
-            ['price'=> $_GET['Advert']['price']])
+        <?php
+
+        if (empty($_GET['Advert']['price'])):
+            $value = "50";
+        else:
+            $value = $_GET['Advert']['price'];
+        endif;
+        echo Yii::t('app','All result shown are for price of maximum {price}€/hour',['price'=> $value ]);
         ?>
     </span>
 </div>
@@ -102,12 +121,13 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php Pjax::end(); ?></div>
 
 <?php
-// making every row of DataGrid clickable, sending us to view that add
+// making every row of DataGrid clickable except filter columns, sending us to view  add
 $this->registerJs("
 
-    $('td').click(function (e) {
+    $('tbody td').css('cursor', 'pointer');
+    $('tbody td').click(function (e) {
         var id = $(this).closest('tr').data('id');
-        if(e.target == this)
+        if (e.target == this)
             location.href = '" . Url::to(['advert/view']) . "?id=' + id;
     });
 

@@ -120,6 +120,11 @@ return [
 
     // view add
 
-    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Koda je uspešno generirana, njena veljavnost je 2 dni! Vaša koda je -->  '
+    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Koda je uspešno generirana, njena veljavnost je 2 dni! Vaša koda je -->  ',
+
+
+    //errors
+    'Code you have entered does not exist or has been deleted!'=>'Koda ki ste jo vnesli ne obstaja ali je neveljavna!',
+    'Code you have entered is older than 2 days making it invalid!' =>'Koda ki ste jo vnesli je starejša od 2 dni, kar pomeni da je neveljavna!',
 
 ];

@@ -121,4 +121,9 @@ return [
     //view add
     'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Le code de révision a été généré et est valable pour 2 jours! Veuillez enregistrer le code si vous souhaitez évaluer Pet Walker! Votre code est: ',
 
+
+    //errors
+    'Code you have entered does not exist or has been deleted!'=>'Le code que vous avez entré n\'existe pas ou a été supprimé!',
+    'Code you have entered is older than 2 days making it invalid!' =>'Le code que vous avez entré est supérieur à 2 jours, ce qui le rend invalide!',
+
 ];

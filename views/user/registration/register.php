@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\bootstrap\Modal;
 
 /**
  * @var yii\web\View              $this
@@ -11,6 +12,19 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Register');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
+
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">

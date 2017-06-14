@@ -48,7 +48,7 @@ AppAsset::register($this);
            $navItems=[
                ['label' =>'<i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> '. Yii::t('app','Register'), 'url' => ['/user/register']],
                ['label' =>'<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> '. Yii::t('app','Login'), 'url' => ['/user/login']],
-               ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['review/enter-code'],'options' => ['id' => 'EnterCodeModalButton']],
+               ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['/review/enter-code'],'options' => ['id' => 'EnterCodeModalButton']],
            ];
        }
        else {
