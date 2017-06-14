@@ -116,4 +116,9 @@ return [
     'any animal'=>'tout animal',
     'Find sitter'=>'Trouver sitter',
 
+
+
+    //view add
+    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Le code de révision a été généré et est valable pour 2 jours! Veuillez enregistrer le code si vous souhaitez évaluer Pet Walker! Votre code est: ',
+
 ];

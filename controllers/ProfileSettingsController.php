@@ -54,7 +54,7 @@ class ProfileSettingsController extends SettingsController
                 ]);
 
                 $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
-                 return $this->refresh();
+                return $this->refresh();
             endif;
 
         }

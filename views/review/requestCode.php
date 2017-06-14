@@ -11,34 +11,28 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
 <p>
-    <?=Yii::t('app','To get walker contant information put your') ?>
+    <?=Yii::t('app','To get walker contant information fill this form') ?>
+    <i class="fa fa-smile-o" aria-hidden="true"></i>
 </p>
             <div class="panel-body">
+
                 <?php $form = ActiveForm::begin([
-                    'id' => 'profile-form',
-                    'options' => ['class' => 'form-horizontal','enctype'=>'multipart/form-data'],
-                    'enableAjaxValidation' => true,
-                    'enableClientValidation' => false,
-                    'validateOnBlur' => false,
-                ]); ?>
+                        'id' => 'request-code-form',
+                        'enableClientValidation' => true,
+                    ]); ?>
 
-                <?= $form->field($model, 'name') ?>
+                    <?= $form->field($model, 'name') ?>
 
-                <?= $form->field($model, 'lastname') ?>
+                    <?= $form->field($model, 'lastname') ?>
 
-                <?= $form->field($model, 'petname') ?>
+                    <?= $form->field($model, 'petname') ?>
 
-
-                <div class="form-group">
-                        <?= Html::button(Yii::t('user','Request code'),
-                            [
-                                'id'=>'btn-custom',
-                                'class' => 'btn btn-block btn-success',
-                            ]) ?>
-
-                        <br>
-                    </div>
-                </div>
-
+                    <?= Html::submitButton(Yii::t('user','Request code'),
+                                [
+                                    'name' => 'request-code-submit-button',
+                                    'id'=>'request-code-submit-button',
+                                    'class' => 'btn btn-block btn-success',
+                                ]) ?>
                 <?php ActiveForm::end(); ?>
             </div>
+

@@ -116,6 +116,10 @@ return [
     'any region'=>'vseh regijah',
     'any price'=>'vseh cenah',
     'any animal'=>'vse živali',
-    'Find sitter'=>'Najdi sprehajalca'
+    'Find sitter'=>'Najdi sprehajalca',
+
+    // view add
+
+    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Koda je uspešno generirana, njena veljavnost je 2 dni! Vaša koda je -->  '
 
 ];

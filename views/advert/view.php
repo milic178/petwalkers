@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use app\assets\AppAsset;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
+use kartik\dialog\Dialog;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Advert */
@@ -18,6 +19,12 @@ AppAsset::register($this);
 
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
+
+<?=
+Dialog::widget([
+    'options' => ['type' => Dialog::TYPE_SUCCESS ],
+]);
+?>
 
 <div class="advert-view">
 
@@ -273,43 +280,45 @@ AppAsset::register($this);
 <!--Displaying user contact email / phone -->
     <div>
         <div class="panel-heading">
-            <?= Html::button(Yii::t('app', 'Contact walker'), ['value' => Url::to(['review/request-code']),
+            <?= Html::button(Yii::t('app', 'Contact walker'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
                 'class' => 'showModalButton btn btn-success',
                 'id'=>'contact-walker']); ?>
         </div>
 
-        <div class="panel-body">
-            <div class="container-fluid">
-                <div class="col-sm-6">
+        <div id="userContactInfo" style="display:none;">
+            <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="col-sm-6">
 
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title ">
-                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
-                                <?= $model->getAttributeLabel('valid_until') ?>
-                            </h3>
-                        </div>
-                        <div class="panel-body text-center">
-                            <?= $model->valid_until ?>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title ">
-                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
-                                <?= $model->getAttributeLabel('valid_until') ?>
-                            </h3>
-                        </div>
-                        <div class="panel-body text-center">
-                            <?= $model->valid_until ?>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <?= $profile->getAttributeLabel('telephone') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $profile->telephone ?>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="col-sm-6">
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title ">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <?= Yii::t('app','Email') ?>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <?= $profile->user->email ?>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -326,7 +335,7 @@ AppAsset::register($this);
     </span>
 
 
-
+<!-- Buttons for updating and deleting add info -->
 <p class="text-center">
     <?php
     if (!Yii::$app->user->isGuest):
@@ -344,11 +353,11 @@ AppAsset::register($this);
 
 </div>
 
-<!-- Modal for requestig review code -->
+<!-- Modal form for requestig review code -->
 <div>
     <?php
     Modal::begin([
-        'header' => '<h3>'.Yii::t('app','Request review code').'</h3>',
+        'header' => '<h3>'.Yii::t('app','Request walker contact').'</h3>',
         'id'=>'request-code',
         'size'=>'modal-sm',
     ]);
@@ -356,3 +365,38 @@ AppAsset::register($this);
     Modal::end();
     ?>
 </div>
+
+
+
+
+
+
+
+
+<?php
+// js code for submiting with ajax and rendering new modal with responce showing code and user contact info
+
+$js = <<< JS
+$('body').on('beforeSubmit','#request-code-form', function () {
+     var form = $(this);
+     // return false if form still have some validation errors
+     if (form.find('.has-error').length) {
+          return false;
+     }
+     // submit form
+     $.ajax({
+          url: form.attr('action'),
+          type: 'post',
+          data: form.serialize(),
+          success: function (response) {
+              $('#request-code').modal('hide');
+              console.log(response)
+              krajeeDialog.alert(response.message+response.code)
+              document.getElementById("userContactInfo").style.display = 'inline';
+          }
+     });
+     return false;
+});
+JS;
+$this->registerJs($js);
+?>
