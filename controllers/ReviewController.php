@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Profile;
 use app\models\Reviews;
 use yii\web\NotFoundHttpException;
-use yii\web\HttpException;
 use yii\base\UserException;
 
 class ReviewController extends \yii\web\Controller
@@ -17,16 +17,16 @@ class ReviewController extends \yii\web\Controller
 
     /** Action for rendering form where we submit review code and perform validation for code. If all is ok we render view to leave
      * review for user
+     *
      * @return string
      */
     public function actionEnterCode()
     {
         $model = new Reviews();
 
-
         if ($model->load(\Yii::$app->request->post())):
-
             $code = \Yii::$app->request->post('Reviews')['review_code'];
+            //validating code imput
                 if(!Reviews::codeExsists($code)){
                     throw new NotFoundHttpException(\Yii::t('app','Code you have entered does not exist or has been deleted!'));
                 }
@@ -37,6 +37,27 @@ class ReviewController extends \yii\web\Controller
                     throw new UserException(\Yii::t('app','Code you have entered has already been used!'));
                 }
 
+            $review = Reviews::find()->where( [ 'review_code' => $code ] )->one();
+            $profile = Profile::findOne($review->id_profile);
+
+            if(!$profile){
+                throw new NotFoundHttpException(\Yii::t('app','The user does not exist or yet has no profile!'));
+            }
+
+            \Yii::$app->getSession()->setFlash('success',[
+                'type' => 'success',
+                'duration' => 5000,
+                'icon' => 'glyphicon glyphicon-ok-sign',
+                'message' => \Yii::t('app','Please fill the form below to post your review about user.'),
+                'title' => \Yii::t('app','Review code accepted!'),
+                'positonY' => 'top',
+                'positonX' => 'right'
+            ]);
+
+            return $this->render('enterReviewForm', [
+                'review' => $review,
+                'profile' => $profile,
+            ]);
         endif;
 
         return $this->renderAjax('enterCode',[
@@ -44,9 +65,6 @@ class ReviewController extends \yii\web\Controller
         ]);
     }
 
-    public function checkCode(){
-
-    }
 
     /** Actoin for rendering form for requesting code to post review
      * @return string
@@ -83,11 +101,14 @@ class ReviewController extends \yii\web\Controller
                 endif;
         }
 
-
-
         return $this->renderAjax('requestCode',[
             'model' => $model,
         ]);
+    }
+
+
+    public function actionSaveReview(){
+
     }
 
 }

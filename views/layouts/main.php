@@ -53,8 +53,6 @@ AppAsset::register($this);
        }
        else {
            $navItems=[
-               ['label' =>'Request code', 'url' => ['review/request-code']],
-
                ['label' =>'<i class="fa fa-home fa-lg" aria-hidden="true"></i> '. Yii::t('app','Home'), 'url' => ''.Yii::$app->homeUrl.''],
                ['label'=>'<i class="fa fa-bolt fa-lg" aria-hidden="true"></i> '. 'Administrator','visible' => Yii::$app->user->identity->isAdmin,
                    'items' =>

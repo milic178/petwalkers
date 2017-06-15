@@ -42,7 +42,7 @@ class Reviews extends \yii\db\ActiveRecord
         return [
             [['name', 'lastname', 'petname', 'review_code', 'id_profile'], 'required'],
             [['rating', 'used', 'approved', 'id_profile'], 'integer'],
-            [['created', 'valid_until'], 'safe'],
+            [['created', 'valid_until','review_code'], 'safe'],
             [['name', 'lastname', 'petname'], 'string', 'max' => 80],
             [['description'], 'string', 'max' => 250],
             [['review_code'], 'string', 'max' => 45],

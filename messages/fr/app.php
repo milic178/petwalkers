@@ -129,4 +129,19 @@ return [
     'Please contact us if you think this is a server error. Thank you.' =>'Veuillez nous contacter si vous pensez qu\'il s\'agit d\'une erreur de serveur. Je vous remercie.',
     'Code you have entered has already been used!' => 'Le code que vous avez entré a déjà été utilisé!',
     'This walker has been already reviewed by person with that name and pet!'=>'Ce marcheur a déjà été examiné par une personne avec ce nom et son animal de compagnie!',
+    'The user does not exsist or yet has no profile!' => 'L\'utilisateur n\'existe pas ou n\'a pas encore de profil!',
+
+    //
+    //review
+    'Review code accepted!' =>'Code d\'examen accepté!',
+    'Please fill the form below to post your review about user.' =>'Veuillez remplir le formulaire ci-dessous pour poster votre avis sur l\'utilisateur.',
+    'Write your experience and satisfaction with walker maximum 200 words!'=>'Écrivez votre expérience et votre satisfaction à l\'égard de 200 mots de randonneur maximum!',
+    'Review'=>'La revue',
+    'Hi {name} {lastname}, how are you today? And how is {petname} doing? Write a short review bout your experience with {user_name} so we can build a better community!' =>'Salut {name} {lastname}, comment allez-vous aujourd\'hui? Et comment fonctionne {petname}? Écrivez une petite critique sur votre expérience avec {user_name} afin que nous puissions créer une communauté meilleure!',
+    'Rating' =>'Évaluation',
+    'Post review' =>'Poster un avis',
+    'Enter the code to write a review about your experience with walker you booked'=>'Poster une critiqueInscrivez le code pour écrire un commentaire sur votre expérience avec Walker que vous avez réservé',
+    'Review Code'=>'Code de révision',
+    'Enter code'=>'Entrez le code',
+
 ];

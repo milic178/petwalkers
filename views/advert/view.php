@@ -414,8 +414,9 @@ $('body').on('beforeSubmit','#request-code-form', function () {
           },
           error: function (response) {
               $('#request-code').modal('hide');
-              console.log(response.responseText)
+              console.log(response)
               krajeeDialogError.alert(response.responseText)
+              document.getElementById("userContactInfo").style.display = 'none';
           }
      });
      return false;
