@@ -126,5 +126,9 @@ return [
     //errors
     'Code you have entered does not exist or has been deleted!'=>'Koda ki ste jo vnesli ne obstaja ali je neveljavna!',
     'Code you have entered is older than 2 days making it invalid!' =>'Koda ki ste jo vnesli je starejša od 2 dni, kar pomeni da je neveljavna!',
+    'The above error occurred while the Web server was processing your request.' =>'Pri obdelavi vaše zahteve je prišlo do zgornje napake!',
+    'Please contact us if you think this is a server error. Thank you.' =>'Prosimo obrnite se na nas, če menite, da je to napaka strežnika.',
+    'Code you have entered has already been used!' => 'Koda ki ste jo vnesli je bila že uporabljena!',
+    'This user has been already reviewed by person with that name and pet!' =>' Uporabnik je že bill ocenjen s strani nekoga ki ima isto ime in ime ljubljenčka!',
 
 ];

@@ -32,11 +32,22 @@ AppAsset::register($this);
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
+<!-- printing dialog widget SUCCESS and filling with message -->
 <?=
 Dialog::widget([
     'options' => ['type' => Dialog::TYPE_SUCCESS ],
 ]);
 ?>
+
+
+<!-- printing dialog widget ERROR and filling with message -->
+<?=
+Dialog::widget([
+    'libName' => 'krajeeDialogError', // a custom lib name
+    'options' => ['type' => Dialog::TYPE_DANGER ],
+]);
+?>
+
 
 <div class="advert-view">
 
@@ -400,6 +411,11 @@ $('body').on('beforeSubmit','#request-code-form', function () {
               console.log(response)
               krajeeDialog.alert(response.message+response.code)
               document.getElementById("userContactInfo").style.display = 'inline';
+          },
+          error: function (response) {
+              $('#request-code').modal('hide');
+              console.log(response.responseText)
+              krajeeDialogError.alert(response.responseText)
           }
      });
      return false;

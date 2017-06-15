@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Reviews;
 use yii\web\NotFoundHttpException;
 use yii\web\HttpException;
+use yii\base\UserException;
 
 class ReviewController extends \yii\web\Controller
 {
@@ -26,13 +27,14 @@ class ReviewController extends \yii\web\Controller
         if ($model->load(\Yii::$app->request->post())):
 
             $code = \Yii::$app->request->post('Reviews')['review_code'];
-            // print_r($code);die();
                 if(!Reviews::codeExsists($code)){
                     throw new NotFoundHttpException(\Yii::t('app','Code you have entered does not exist or has been deleted!'));
                 }
-
-                if (!Reviews::codeValid($code)){
-                    throw new HttpException(\Yii::t('app','Code you have entered is older than 2 days making it invalid!'));
+                if (Reviews::codeValid($code)){
+                    throw new UserException(\Yii::t('app','Code you have entered is older than 2 days making it invalid!'));
+                }
+                if(Reviews::codeUsed($code)){
+                    throw new UserException(\Yii::t('app','Code you have entered has already been used!'));
                 }
 
         endif;
@@ -46,7 +48,7 @@ class ReviewController extends \yii\web\Controller
 
     }
 
-    /** Actoin for rendering view for requesting code  to generate review code
+    /** Actoin for rendering form for requesting code to post review
      * @return string
      */
     public function actionRequestCode($id_profile)
@@ -55,22 +57,30 @@ class ReviewController extends \yii\web\Controller
         $model = new Reviews();
 
         if ($model->load(\Yii::$app->request->post())) {
-            $code = \Yii::$app->getSecurity()->generateRandomString(8);
-            $model->review_code = $code;
-            $model->id_profile = $id_profile;
 
-            // code is valid for 2 days after requesting
-            $model->valid_until = date('Y-m-d H:i:s', strtotime('+2 days', strtotime(date('Y-m-d H:i:s'))));
+            $name = \Yii::$app->request->post('Reviews')['name'];
+            $lastname = \Yii::$app->request->post('Reviews')['lastname'];
+            $petname = \Yii::$app->request->post('Reviews')['petname'];
 
-            if($model->save()):
-                \Yii::$app->response->format = 'json';
-                $message = \Yii::t('app','Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ');
-                return ['message' =>$message , 'code'=>$model->review_code];
-            else:
-                \Yii::$app->response->format = 'json';
-                $message = \Yii::t('app','Something went wrong we couldt generate your code:    ');
-                return ['message' => $message, $model->errors ];
-            endif;
+            if (Reviews::reviewerExsists($name, $lastname, $petname)){
+                throw new UserException (\Yii::t('app','This user has been already reviewed by person with that name and pet!'));
+            }
+                $code = \Yii::$app->getSecurity()->generateRandomString(8);
+                $model->review_code = $code;
+                $model->id_profile = $id_profile;
+
+                // code is valid for 2 days after requesting
+                $model->valid_until = date('Y-m-d H:i:s', strtotime('+2 days', strtotime(date('Y-m-d H:i:s'))));
+
+                if($model->save()):
+                    \Yii::$app->response->format = 'json';
+                    $message = \Yii::t('app','Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ');
+                    return ['message' =>$message , 'code'=>$model->review_code];
+                else:
+                    \Yii::$app->response->format = 'json';
+                    $message = \Yii::t('app','Something went wrong we couldt generate your code:    ');
+                    return ['message' => $message, $model->errors ];
+                endif;
         }
 
 

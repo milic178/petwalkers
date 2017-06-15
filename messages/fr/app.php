@@ -125,5 +125,8 @@ return [
     //errors
     'Code you have entered does not exist or has been deleted!'=>'Le code que vous avez entré n\'existe pas ou a été supprimé!',
     'Code you have entered is older than 2 days making it invalid!' =>'Le code que vous avez entré est supérieur à 2 jours, ce qui le rend invalide!',
-
+    'The above error occurred while the Web server was processing your request.' =>'L\'erreur ci-dessus s\'est produite alors que le serveur Web a traité votre demande.',
+    'Please contact us if you think this is a server error. Thank you.' =>'Veuillez nous contacter si vous pensez qu\'il s\'agit d\'une erreur de serveur. Je vous remercie.',
+    'Code you have entered has already been used!' => 'Le code que vous avez entré a déjà été utilisé!',
+    'This walker has been already reviewed by person with that name and pet!'=>'Ce marcheur a déjà été examiné par une personne avec ce nom et son animal de compagnie!',
 ];

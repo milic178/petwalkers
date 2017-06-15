@@ -79,12 +79,23 @@ class Reviews extends \yii\db\ActiveRecord
         return $this->hasOne(Profile::className(), ['user_id' => 'id_profile']);
     }
 
+
+    public static function reviewerExsists($name,$lastname,$petname){
+
+        $review = Reviews::find()
+            ->where(['name'=>$name, 'lastname' =>$lastname, 'petname' => $petname])
+            ->exists();
+
+         return $review == 1 ? true : false;
+    }
+
     /**
      * Checks if code exsists in database
      * @param $code
      * @return array
      */
     public static function codeExsists($code){
+
         $review = Reviews::find()
             ->where( [ 'review_code' => $code ] )
             ->one();
@@ -96,16 +107,23 @@ class Reviews extends \yii\db\ActiveRecord
      * @return bool
      */
     public static function codeValid($code){
+
         $review = self::codeExsists($code);
         $today = date('Y/m/d h:m:s', time());
 
         $diff = strtotime($review->created) - strtotime($today);
         $days = $diff / 60 / 60 / 24;
-//print_r($days);die();
-        if ($days > - 2):
-            return false;
-        else:
-            return true;
-        endif;
+
+        return $days > - 2 ? false : true;
+    }
+
+    /** We check if code has been alredy used to make a review
+     * @param $code
+     * @return bool
+     */
+    public static function codeUsed($code){
+
+        $review = Reviews::codeExsists($code);
+        return $review->used == 1 ? true : false;
     }
 }
