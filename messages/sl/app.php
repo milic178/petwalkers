@@ -144,4 +144,16 @@ return [
     'Enter the code to write a review about your experience with walker you booked'=>'Vnesite kodo, da lahko podate mnenje o vaši izkušnji z sprehajalcem.',
     'Review Code'=>'Koda',
     'Enter code'=>'Vnesite kodo',
+    '{attribute} can be only full star'=>'{attribute} je lahko samo cela zvezda',
+    'Clean'=>'Počisti',
+    'Not rated'=>'Neocenjen',
+    'Very Poor'=>'Zelo slabo',
+    'Poor'=>'Slabo',
+    'Ok'=>'Ok',
+    'Good'=>'Dobro',
+    'Very Good'=>'Zelo dobro',
+    'Extremely Good'=>'Izjemno',
+
+    'Soemthing went wrong, please contact us with more details.'=>'Prišlo je do napake prosimo če nas kontaktirate.',
+
 ];

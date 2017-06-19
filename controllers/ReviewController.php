@@ -24,8 +24,8 @@ class ReviewController extends \yii\web\Controller
     {
         $model = new Reviews();
 
-        if ($model->load(\Yii::$app->request->post())):
-            $code = \Yii::$app->request->post('Reviews')['review_code'];
+        if ($model->load(\Yii::$app->request->get())):
+            $code = \Yii::$app->request->get('Reviews')['review_code'];
             //validating code imput
                 if(!Reviews::codeExsists($code)){
                     throw new NotFoundHttpException(\Yii::t('app','Code you have entered does not exist or has been deleted!'));
@@ -106,9 +106,23 @@ class ReviewController extends \yii\web\Controller
         ]);
     }
 
-
+    /**  Function for saving review wth description and reting
+     * @return \yii\web\Response
+     * @throws UserException
+     *
+     */
     public function actionSaveReview(){
 
-    }
+        $model = Reviews::codeExsists(\Yii::$app->request->post('Reviews')['revew_code']);
+        $model->description = \Yii::$app->request->post('Reviews')['description'];
+        $model->rating = \Yii::$app->request->post('Reviews')['rating'];
+        $model->used = 1;
+
+        if( $model->save()):
+            return $this->redirect(['site/index']);
+        else:
+            throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details.'));
+        endif;
+        }
 
 }

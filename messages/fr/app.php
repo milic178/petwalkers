@@ -143,5 +143,15 @@ return [
     'Enter the code to write a review about your experience with walker you booked'=>'Poster une critiqueInscrivez le code pour écrire un commentaire sur votre expérience avec Walker que vous avez réservé',
     'Review Code'=>'Code de révision',
     'Enter code'=>'Entrez le code',
+    '{attribute} can be only full star'=>'{attribute} ne peut être qu\'une étoile complète',
+    'Clean'=>'Nettoyer',
+    'Not rated'=>'Non classé',
+    'Very Poor'=>'Très pauvre',
+    'Poor'=>'Pauvre',
+    'Ok'=>'Ok',
+    'Good'=>'Bien',
+    'Very Good'=>'Très bon',
+    'Extremely Good'=>'Incroyable',
 
+    'Soemthing went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
 ];

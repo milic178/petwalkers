@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="review-code-form">
     <?php $form = ActiveForm::begin([ 'enableClientValidation' => true,
+        'method' => 'get',
         'options'=> [
             'id' => 'review-code-form'
         ]]);

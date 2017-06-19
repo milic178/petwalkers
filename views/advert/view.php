@@ -35,7 +35,11 @@ AppAsset::register($this);
 <!-- printing dialog widget SUCCESS and filling with message -->
 <?=
 Dialog::widget([
-    'options' => ['type' => Dialog::TYPE_SUCCESS ],
+    'libName' => 'krajeeDialogSuccess',
+    'options' => [
+        'type' => Dialog::TYPE_SUCCESS,
+        'title' => Yii::t('app', 'Information')
+    ],
 ]);
 ?>
 
@@ -44,7 +48,10 @@ Dialog::widget([
 <?=
 Dialog::widget([
     'libName' => 'krajeeDialogError', // a custom lib name
-    'options' => ['type' => Dialog::TYPE_DANGER ],
+    'options' => [
+        'type' => Dialog::TYPE_DANGER,
+        'title' => Yii::t('app', 'Information')
+    ],
 ]);
 ?>
 
@@ -409,14 +416,17 @@ $('body').on('beforeSubmit','#request-code-form', function () {
           success: function (response) {
               $('#request-code').modal('hide');
               console.log(response)
-              krajeeDialog.alert(response.message+response.code)
-              document.getElementById("userContactInfo").style.display = 'inline';
+              krajeeDialogSuccess.alert(response.message+response.code)
+             // document.getElementById("userContactInfo").style.display = 'inline';
+              $("#userContactInfo").show();
+          
           },
-          error: function (response) {
+          error: function (response, status) {
               $('#request-code').modal('hide');
               console.log(response)
               krajeeDialogError.alert(response.responseText)
-              document.getElementById("userContactInfo").style.display = 'none';
+             // document.getElementById("userContactInfo").style.display = 'none';
+              $("#userContactInfo").hide();
           }
      });
      return false;
