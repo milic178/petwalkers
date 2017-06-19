@@ -123,6 +123,13 @@ class ReviewController extends \yii\web\Controller
         else:
             throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details.'));
         endif;
-        }
+
+    }
+
+
+    public function actionShowReviews(){
+
+        return $this->render('showReviews');
+    }
 
 }

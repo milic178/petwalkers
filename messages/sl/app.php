@@ -81,7 +81,7 @@ return [
     'My pets'=>'Moji ljubljenčki',
     'More about walker'=>'Več o sprehajalcu',
     'Close' =>'Zapri',
-    'Click on my face for more' => 'Kliknite na sliko za več info',
+    'Click on my face to see my profile' => 'Kliknite na sliko za več informacij',
     'Walker has experence with animals at home!' => 'Sprehajalec ima izkušnje z živali na domu!',
     'Skills' =>'Sposobnosti',
     'User activity'=>'Dejavnost uporbnika',

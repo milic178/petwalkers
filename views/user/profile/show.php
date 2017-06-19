@@ -23,24 +23,26 @@ $this->params['breadcrumbs'][] = $this->title;
 <div>
     <div class="text-center">
         <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
-                <?=  Html::img($profile->getImageUrl(), [
-                    'class'=>'img-rounded',
-                    'width'=>'110px',
-                    'height'=>'100px',
-                    'title'=>$profile->first_name,
-                ]); ?>
-            </a>
-            <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
-            <em>    <?= Yii::t('app','Click on my face for more')?> </em>
+            <?=  Html::img($profile->getImageUrl(), [
+                'class'=>'img-rounded',
+                'width'=>'110px',
+                'height'=>'100px',
+                'title'=>$profile->first_name,
+            ]); ?>
+        </a>
+        <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
+        <em>    <?= Yii::t('app','Click on my face for more')?> </em>
     </div>
-<!-- Modal -->
+    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <div class="alert alert-info"><?= Yii::t('app','More about walker')?></div>
+                        <div class="alert alert-info">
+                            <?= Yii::t('app','More about walker')?>
+                        </div>
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -56,9 +58,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <hr>
 
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    <span><?=Yii::t('app','User activity')?></span>
-
+                    <span class="label label-info">
+                        <?=Yii::t('app','User activity')?>
+                    </span>
                     <div class="row text-center">
                         <div class="col-md-12">
                             <strong><?= Yii::t('user', 'Registration time') ?>:</strong>
@@ -71,69 +73,60 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
 
                     <hr>
-
-                    <span class="glyphicon glyphicon-info-sign"></span>
-                    <span><?=Yii::t('app','About me')?></span><br><br>
-                        <?php if (!empty($profile->about_me)): ?>
+                    <span class="label label-info"><?=Yii::t('app','About me')?></span>
+                    <?php if (!empty($profile->about_me)): ?>
                         <p><?= $profile->about_me?></p>
-                        <?php endif; ?>
+                    <?php endif; ?>
 
-                        <?php if (!empty($profile->my_animals)): ?>
-                    <hr>
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                            <span><?=Yii::t('app','My pets')?></span>
-                            <div>
-                                <br>
-                                <div class="row">
-                                        <div class="col-sm-4">
-                                                <?= Html::img(\Yii::$app->params['uploadUrl'].'dog.png',[
-                                                    'class'=>'center-block'
-                                                ]);?>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <?= Html::img(\Yii::$app->params['uploadUrl'].'turtle.png',[
-                                                'class'=>'center-block'
-                                            ]);?>
-                                        </div>
-                                        <div class="col-sm-4">
-                                                <?= Html::img(\Yii::$app->params['uploadUrl'].'cat.png',[
-                                                    'class'=>'center-block'
-                                                ]);?>
-                                        </div>
+                    <?php if (!empty($profile->my_animals)): ?>
+                        <hr>
+                        <span class="label label-info"><?=Yii::t('app','My pets')?></span>
+                        <div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <?= Html::img(\Yii::$app->params['uploadUrl'].'dog.png',[
+                                        'class'=>'center-block'
+                                    ]);?>
                                 </div>
-                                <div class="col-md-12 text-center">
-                                    <p>
-                                        <?=$profile->first_name;?>
-                                        <?=Yii::t('app','is a proud owner of');?>
-                                        <?=$profile->my_animals;?>
-                                        <?=Yii::t('app','pets');?>
-                                    </p>
+                                <div class="col-sm-4">
+                                    <?= Html::img(\Yii::$app->params['uploadUrl'].'turtle.png',[
+                                        'class'=>'center-block'
+                                    ]);?>
+                                </div>
+                                <div class="col-sm-4">
+                                    <?= Html::img(\Yii::$app->params['uploadUrl'].'cat.png',[
+                                        'class'=>'center-block'
+                                    ]);?>
                                 </div>
                             </div>
-                                <?php endif; ?>
-                        <br>
-
-                        <?php if (!empty($profile->social_link)): ?>
-                            <hr>
-                            <div class=" text-center">
-                                <br>
-                                    <p><?= Html::a(Yii::t('app','Social Media Profile'),
-                                            $profile->social_link,
-                                            [
-                                                'class'=>'btn btn-success btn-sm' ,
-                                                'target'=>'_blank',
-                                            ]
-                                        )
-                                        ?>
-                                    </p>
-
+                            <div class="col-md-12 text-center">
+                                <p>
+                                    <?=$profile->first_name;?>
+                                    <?=Yii::t('app','is a proud owner of');?>
+                                    <?=$profile->my_animals;?>
+                                    <?=Yii::t('app','pets');?>
+                                </p>
                             </div>
-                        <?php endif; ?>
-                        <br>
-
-
-
-
+                        </div>
+                    <?php endif; ?>
+                    <br>
+                    <?php if (!empty($profile->social_link)): ?>
+                        <hr>
+                        <div class=" text-center">
+                            <br>
+                            <p><?= Html::a(Yii::t('app','Social Media Profile'),
+                                    $profile->social_link,
+                                    [
+                                        'class'=>'btn btn-success btn-sm' ,
+                                        'target'=>'_blank',
+                                    ]
+                                )
+                                ?>
+                            </p>
+                        </div>
+                    <?php endif; ?>
+                    <br>
                 </div>
                 <div class="modal-footer">
                     <div class="col-md-12 text-center">
