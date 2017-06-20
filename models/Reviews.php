@@ -127,4 +127,15 @@ class Reviews extends \yii\db\ActiveRecord
         $review = Reviews::codeExsists($code);
         return $review->used == 1 ? true : false;
     }
+
+    /** Function for returning all approved reviews
+     * @param $id_profile
+     * @return array|\yii\db\ActiveRecord[]
+     */
+    public static function listAllApprovedReviews($id_profile){
+        $model = Reviews::find()
+            ->where(['id_profile'=>$id_profile, 'used' =>1, 'approved' => 1])
+            ->all();
+        return $model;
+    }
 }
