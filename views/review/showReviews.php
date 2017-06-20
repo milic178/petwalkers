@@ -11,34 +11,10 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Carousel;
+use kartik\rating\StarRating;
 
 $this -> title = Yii::t('app','Show reviews');
 ?>
-
-
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <?php
-            foreach ($model as $reviews):
-            ?>
-            <?php echo Carousel::widget(
-                ['items' => [
-                    ['content' => $reviews->name.''.$reviews->lastname,
-                        'caption' => $reviews->description,
-                        'options' => ['interval' => '100']
-                    ]
-                ]
-                ]); ?>
-            <?php
-            endforeach;
-                ?>
-        </div>
-    </div>
-</div>
-
-
-
 
 <div class="container">
     <div class="row">
@@ -55,19 +31,36 @@ $this -> title = Yii::t('app','Show reviews');
                         <?php foreach ($model as $reviews): ?>
                         <div class="col-md-4 col-sm-6">
                             <div class="block-text rel zmin">
-                                <a title="" href="#"><?= $reviews->name.' '.$reviews->lastname ?></a>
-                                <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
+                                <a><?= $reviews->name.' '.$reviews->lastname ?></a>
+                                <div>
+                                    <?=
+                                     StarRating::widget([
+                                        'name' => 'rating',
+                                        'value' => $reviews->rating,
+                                        'pluginOptions' => [
+                                            'displayOnly' => true,
+                                            'size' => 'xm',
+                                        ]
+                                     ]);?>
+                                </div>
+                                <div class="mark"></div>
                                 <p><?=$reviews->description?></p>
                                 <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                             </div>
+                            <br>
                             <div class="person-text rel">
-                                <img src=""/>
-                                <a title="" href="#">Anna</a>
-                                <i>from Glasgow, Scotland</i>
+                                <?= Html::img('@web/uploads/default_user.jpg', [
+                                    'alt'=>'default user',
+                                    'class'=>'img-circle',
+                                    'width'=>'10%',
+                                    'height'=>'10%',
+                                ]);?>
                             </div>
                         </div>
                         <?php endforeach; ?>
                     </div>
+                </div>
+
                 <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>

@@ -44,7 +44,7 @@
 }
 .block-text ins {
     bottom: -44px;
-    left: 50%;
+    left: 45%;
     margin-left: -60px;
 }
 
@@ -67,8 +67,8 @@
 .person-text a {
     color: #ffcc00;
     display: block;
-    font-size: 14px;
-    margin-top: 3px;
+    font-size: 14   px;
+    margin-bottom: 3px;
     text-decoration: underline;
 }
 .person-text i {

@@ -44,7 +44,7 @@ class Reviews extends \yii\db\ActiveRecord
             [['used', 'approved', 'id_profile'], 'integer'],
             [['rating'], 'integer','message' => Yii::t('app','{attribute} can be only full star')],
             [['created', 'valid_until','review_code','description'], 'safe'],
-            [['name', 'lastname', 'petname'], 'string', 'max' => 80],
+            [['name', 'lastname', 'petname'], 'string', 'max' => 45],
             [['description'], 'string', 'max' => 250],
             [['review_code'], 'string', 'max' => 45],
             [['id_profile'], 'exist', 'skipOnError' => true, 'targetClass' => Profile::className(), 'targetAttribute' => ['id_profile' => 'user_id']],
