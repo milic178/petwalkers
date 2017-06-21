@@ -18,7 +18,7 @@ $this -> title = Yii::t('app','Show reviews');
 
 <div class="container">
     <div class="row">
-        <h2>Carousel Reviews</h2>
+        <h2><?= Yii::t('app','User reviews') ?></h2>
     </div>
 </div>
 <div class="carousel-reviews broun-block">
@@ -31,23 +31,25 @@ $this -> title = Yii::t('app','Show reviews');
                         <?php foreach ($model as $reviews): ?>
                         <div class="col-md-4 col-sm-6">
                             <div class="block-text rel zmin">
-                                <a><?= $reviews->name.' '.$reviews->lastname ?></a>
+                                <a title="" href="#"><?= $reviews->name.' '.$reviews->lastname ?></a>
                                 <div>
                                     <?=
-                                     StarRating::widget([
+                                    StarRating::widget([
                                         'name' => 'rating',
                                         'value' => $reviews->rating,
                                         'pluginOptions' => [
                                             'displayOnly' => true,
                                             'size' => 'xm',
                                         ]
-                                     ]);?>
+                                    ]);?>
                                 </div>
-                                <div class="mark"></div>
-                                <p><?=$reviews->description?></p>
+                                <div class="mark">
+                                    <p>
+                                        <?=$reviews->description?>
+                                    </p>
+                                </div>
                                 <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                            </div>
-                            <br>
+                            </div><br>
                             <div class="person-text rel">
                                 <?= Html::img('@web/uploads/default_user.jpg', [
                                     'alt'=>'default user',
@@ -59,8 +61,9 @@ $this -> title = Yii::t('app','Show reviews');
                         </div>
                         <?php endforeach; ?>
                     </div>
+                    <div class="item">
+                    </div>
                 </div>
-
                 <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
