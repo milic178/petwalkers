@@ -126,12 +126,13 @@ class ReviewController extends \yii\web\Controller
 
     }
 
-
+    /** Displaying user review for testing purposes!
+     * @return string
+     */
     public function actionShowReviews(){
 
         $id_profile = 45;
         $model = Reviews::listAllApprovedReviews($id_profile);
-
         return $this->render('showReviews',[
             'model' => $model,
         ]);

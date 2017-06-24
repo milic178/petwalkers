@@ -5,6 +5,7 @@ use app\assets\AppAsset;
 use yii\bootstrap\Modal;
 use yii\helpers\Url;
 use kartik\dialog\Dialog;
+use app\models\Reviews;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Advert */
@@ -355,14 +356,8 @@ Dialog::widget([
 
 
 <!-- Displaying user reviews -->
-    <h2>User reviews</h2>
+<?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews($profile->user_id)]) ?>
 
-
-
-    <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-    </span>
 
 
 <!-- Buttons for updating and deleting add info -->
