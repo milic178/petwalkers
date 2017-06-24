@@ -48,12 +48,13 @@ $this -> title = Yii::t('app','Show reviews');
                         </div>
                     </div>
                     <?php else:?>
-
-                        <?php $i = 1; ?>
+<!-- If has revews we display 3 and then next 3-->
+                        <?php $i = 1;  ?>
                         <?php foreach ($model as $reviews): ?>
-                            <?php $item_class = ($i == 1) ? 'item active' : 'item'; ?>
+                            <?php $item_class = ($i==1   ) ? 'item active' : 'item'; ?>
                             <div class="<?php echo $item_class; ?>">
-                                    <div class="col-md-4 col-sm-6">
+
+                                    <div class="col-md-6 col-sm-6">
                                     <div class="block-text rel zmin">
                                         <a title="" href="#"><?= $reviews->name.' '.$reviews->lastname ?></a>
                                         <div>
