@@ -155,5 +155,12 @@ return [
     'Extremely Good'=>'Izjemno',
 
     'Soemthing went wrong, please contact us with more details.'=>'Prišlo je do napake prosimo če nas kontaktirate.',
+    'User reviews:' =>'Ocene uporabnika:',
+    'My rating:'=>'Moja ocena:',
+    'User has yet not been rated by community!'=>'Nihče še ni podal mnenja o izkušnji s tem sprehajalcem!',
+    'Show reviews'=>'Prikaži ocene',
+    'Random user opinion'=>'Ocena naključnega uporabnika',
+    'Contact walker'=>'Kontaktiraj sprehajalca',
+    'List of adverts'=>'Seznam oglasov',
 
 ];

@@ -18,7 +18,7 @@ $this -> title = Yii::t('app','Show reviews');
 
 <div class="container">
     <div class="row">
-        <h2><?= Yii::t('app','User reviews') ?></h2>
+        <h2><?= Yii::t('app','User reviews:') ?></h2>
     </div>
 </div>
 <div class="carousel-reviews broun-block">
@@ -32,8 +32,8 @@ $this -> title = Yii::t('app','Show reviews');
                     <div class="item active">
                         <div class="col-md-4 col-sm-6">
                             <div class="block-text rel zmin">
-                                <a title="" href="#">Hercules</a>
-                                <div class="mark"><?= Yii::t('app','My rating:') ?> <span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span>  </span></div>
+                                <a title="" href="#"><?=Yii::t('app','Random user opinion') ?></a>
+                                <div class="mark"><?= Yii::t('app','My rating:') ?> <span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span></div>
                                 <p><?= Yii::t('app','User has yet not been rated by community!') ?></p>
                                 <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                             </div>

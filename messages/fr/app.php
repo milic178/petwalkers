@@ -154,4 +154,11 @@ return [
     'Extremely Good'=>'Incroyable',
 
     'Soemthing went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
+    'User reviews:' =>'Critiques d\'utilisateurs:',
+    'My rating:'=>'Mon classement:',
+    'User has yet not been rated by community!'=>'L\'utilisateur n\'a pas encore été évalué par communauté!',
+    'Show reviews'=>'Afficher les commentaires',
+    'Random user opinion'=>'Opinion d\'utilisateur aléatoire',
+    'Contact walker'=>'Contacter le promeneur ',
+    'List of adverts'=>'Liste des annonces',
 ];
