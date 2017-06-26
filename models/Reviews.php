@@ -135,7 +135,10 @@ class Reviews extends \yii\db\ActiveRecord
     public static function listAllApprovedReviews($id_profile){
         $model = Reviews::find()
             ->where(['id_profile'=>$id_profile, 'used' =>1, 'approved' => 1])
+            ->orderBy(['rating'=>SORT_DESC])
             ->all();
         return $model;
     }
+
+
 }

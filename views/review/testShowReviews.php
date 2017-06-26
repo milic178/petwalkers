@@ -2,40 +2,31 @@
 /**
  * Created by PhpStorm.
  * User: Milic_lenovo
- * Date: 19.6.2017
- * Time: 17:33
- *
- * view for showing user views with ratings and desciprition
+ * Date: 26.6.2017
+ * Time: 14:31
  */
-
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Carousel;
 use kartik\rating\StarRating;
 
-$this -> title = Yii::t('app','Show reviews');
 ?>
 
-<div class="container">
-    <div class="row">
-        <h2><?= Yii::t('app','User reviews:') ?></h2>
-    </div>
-</div>
 <div class="carousel-reviews broun-block">
     <div class="container">
         <div class="row">
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                <!-- Carousel inner-->
+<!-- Carousel inner-->
                 <div class="carousel-inner">
-                    <!-- Active item -->
-                    <!-- if user has no reviews -->
+<!-- Active item -->
+<!-- if user has no reviews -->
                     <?php if($model == false):?>
                         <div class="item active">
                             <div class="col-md-6 col-sm-6">
                                 <div class="block-text rel zmin">
                                     <a title="" href="#"><?=Yii::t('app','Random user opinion') ?></a>
-                                    <div class="mark text-warning"><?= Yii::t('app','My rating:') ?> <span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span></div>
-                                    <div class="text-warning" ><?= Yii::t('app','User has yet not been rated by community!') ?></div>
+                                    <div class="mark"><?= Yii::t('app','My rating:') ?> <span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span><span class="rating-input"><span class="glyphicon glyphicon-star-empty"></span></span></div>
+                                    <p><?= Yii::t('app','User has yet not been rated by community!') ?></p>
                                     <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                                 </div>
                                 <div class="person-text rel"><br>
@@ -54,12 +45,12 @@ $this -> title = Yii::t('app','Show reviews');
                         $i=1;
                         foreach ($model as $reviews){
 
-                            if($i%3 == 0 ) {
+                            if($i%3==0) {
                                 echo '</div><div class="item">';
                             }
                             ?>
                             <!--code to output the images -->
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-4 col-sm-6">
                                 <div class="block-text rel zmin">
                                     <a title="" href="#"><?= $reviews->name.' '.$reviews->lastname ?></a>
                                     <div>
@@ -93,10 +84,10 @@ $this -> title = Yii::t('app','Show reviews');
                             <?php $i++; } ?>
                     </div>
                     <!--END OF item -->
-                    <!-- END OF Carousel inner-->
+<!-- END OF Carousel inner-->
                 </div>
                 <?php endif;?>
-                <!-- Carousel indicators left and right-->
+<!-- Carousel indicators left and right-->
                 <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
@@ -107,6 +98,5 @@ $this -> title = Yii::t('app','Show reviews');
         </div>
     </div>
 </div>
-
 
 

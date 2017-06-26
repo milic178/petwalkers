@@ -40,8 +40,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         <h3 class="panel-title">
                                 <?=  Html::img($profile->getImageUrl(), [
                                     'class'=>'img-thumbnail',
-                                    'width'=>'100%',
-                                    'height'=>'10%',
+                                            'width'=>'100%',
+                                            'height'=>'10%',
                                     'title'=>$profile->first_name,
                                 ]); ?>
                         </h3>

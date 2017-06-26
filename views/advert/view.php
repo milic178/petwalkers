@@ -184,7 +184,7 @@ Dialog::widget([
 
 <!-- Displaying add description block-->
 
-    <div class="panel panel-primary">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title ">
                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
@@ -197,7 +197,7 @@ Dialog::widget([
     </div>
 
 <!-- Displaying basic info primary box -->
-<div class="panel panel-primary">
+<div class="panel panel-danger">
     <div class="panel-heading">
         <h3 class="panel-title ">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>

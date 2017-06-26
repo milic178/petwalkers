@@ -132,9 +132,10 @@ class ReviewController extends \yii\web\Controller
     public function actionShowReviews(){
 
         $id_profile = 45;
+
         $model = Reviews::listAllApprovedReviews($id_profile);
         return $this->render('showReviews',[
-            'model' => $model,
+            'model' => $model
         ]);
     }
 
