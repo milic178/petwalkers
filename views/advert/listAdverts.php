@@ -32,9 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 </div>
-
-<?php Pjax::begin(); ?>
-<div class="text-right">
+    <div class="text-center">
     <span class="alert alert-info">
         <?php
 
@@ -46,7 +44,9 @@ $this->params['breadcrumbs'][] = $this->title;
         echo Yii::t('app','All result shown are for price of maximum {price}€/hour',['price'=> $value ]);
         ?>
     </span>
-</div>
+    </div>
+<?php Pjax::begin(); ?>
+
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
@@ -86,23 +86,27 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute' => 'id_type',
             'value' => 'idType.name',
-            'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name'),
+            //'filter'=>
+          //      \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name'),
+            'filter' => Html::activeDropDownList($searchModel, 'id_type', \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name'),['class'=>'form-control','prompt' => Yii::t('app','Any type')]),
+
             'headerOptions' => ['style' => 'width:13%']
         ],
         [
             'attribute' => 'id_animal',
             'value' => 'idAnimal.species',
-            'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),
+           // 'filter'=>
+           //     \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),
             'headerOptions' => ['style' => 'width:13%'],
+            'filter' => Html::activeDropDownList($searchModel, 'id_animal', \yii\helpers\ArrayHelper::map(\app\models\Animal::find()->all(), 'id_animal', 'species'),['class'=>'form-control','prompt' => Yii::t('app','Any animal')]),
         ],
 
         [
             'attribute' => 'id_city',
             'value' => 'idCity.name',
-            'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),
+         //   'filter'=>
+         //       \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),
+            'filter' => Html::activeDropDownList($searchModel, 'id_city', \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),['class'=>'form-control','prompt' => Yii::t('app','Any city')]),
             'headerOptions' => ['style' => 'width:15%'],
         ],
         [

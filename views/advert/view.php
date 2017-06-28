@@ -180,6 +180,7 @@ Dialog::widget([
             </div>
         </div>
     </div>
+</div>
     <br>
 
 <!-- Displaying add description block-->
@@ -343,6 +344,7 @@ Dialog::widget([
         </div>
     </div>
 
+
 <!-- Button for contacting walker -->
     <div class="row">
         <div class="col-lg-12">
@@ -378,6 +380,7 @@ Dialog::widget([
 
 </div>
 
+
 <!-- Modal form for requestig review code -->
 <div>
     <?php
@@ -390,7 +393,6 @@ Dialog::widget([
     Modal::end();
     ?>
 </div>
-
 
 
 
