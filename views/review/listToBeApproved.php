@@ -51,7 +51,7 @@ echo GridView::widget([
 
                 },
                 'decline' => function ($url, $model) {
-                    
+
                 }
             ]
         ],

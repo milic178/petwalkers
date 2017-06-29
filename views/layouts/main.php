@@ -69,11 +69,11 @@ AppAsset::register($this);
                    ],
                ],
 
-               ['label' =>'<i class="fa fa-user-o fa-lg" aria-hidden="true"></i> '. Yii::$app->user->identity->username .' ',
+               ['label' =>'<i class="fa fa-user-o fa-lg" aria-hidden="true"></i> '. Yii::$app->user->identity->username .' '.Reviews::countReviewsWaiting(),
                    'items' =>
                    [
                         ['label' =>'<i class="fa fa-cogs" aria-hidden="true"></i> '. Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
-                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications {numbNotification}!',[
+                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications {numbNotification}',[
                                'numbNotification' => Reviews::countReviewsWaiting(),
                            ]), 'url' => '/review/approve-reviews'],
                         ['label' =>'<i class="fa fa-sign-out" aria-hidden="true"></i> ' .Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],

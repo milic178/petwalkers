@@ -155,8 +155,11 @@ class Reviews extends \yii\db\ActiveRecord
             ->where(['id_profile'=>Yii::$app->user->identity->id, 'used' =>1, 'approved' => 0])
             ->count();
 
-
-        return $countReviewsToDisplay;
+    if($countReviewsToDisplay == 0):
+        $countReviewsToDisplay ==false;
+        else:
+        return '('.$countReviewsToDisplay.')';
+    endif;
     }
 
 

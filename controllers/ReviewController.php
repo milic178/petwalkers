@@ -135,7 +135,7 @@ class ReviewController extends \yii\web\Controller
         if( $model->save()):
             \Yii::$app->getSession()->setFlash('success',[
                 'type' => 'success',
-                'duration' => 5000,
+                'duration' => 7000,
                 'icon' => 'glyphicon glyphicon-ok-sign',
                 'message' => \Yii::t('app',('Thank you! Review has been submitted and will be public when approved by system')),
                 'title' => \Yii::t('app',('Review submitted')),
