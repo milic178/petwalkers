@@ -25,7 +25,8 @@ IndexAsset::register($this);
 
 <div class="site-index">
 
-
+<!-- Rendering alert view (displaying growl messages -->
+ <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
     <div class="jumbotron">
 
         <h1>

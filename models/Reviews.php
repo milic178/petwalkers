@@ -26,6 +26,7 @@ use yii\db\Expression;
  */
 class Reviews extends \yii\db\ActiveRecord
 {
+
     /**
      * @inheritdoc
      */
@@ -80,7 +81,12 @@ class Reviews extends \yii\db\ActiveRecord
         return $this->hasOne(Profile::className(), ['user_id' => 'id_profile']);
     }
 
-
+    /** With given params we check if some1 has already given a review with those params
+     * @param $name
+     * @param $lastname
+     * @param $petname
+     * @return bool
+     */
     public static function reviewerExsists($name,$lastname,$petname){
 
         $review = Reviews::find()
@@ -137,6 +143,26 @@ class Reviews extends \yii\db\ActiveRecord
             ->where(['id_profile'=>$id_profile, 'used' =>1, 'approved' => 1])
             ->orderBy(['rating'=>SORT_DESC])
             ->all();
+        return $model;
+    }
+
+    /**  Counting reviews waiting to be approved and displaying in NavBar!
+     * @return
+     *
+     */
+    public static function countReviewsWaiting(){
+        $countReviewsToDisplay = Reviews::find()
+            ->where(['id_profile'=>Yii::$app->user->identity->id, 'used' =>1, 'approved' => 0])
+            ->count();
+
+
+        return $countReviewsToDisplay;
+    }
+
+
+    public static function reviewsToApproved($user_id){
+        $model = Reviews::find()
+            ->where(['id_profile'=>$user_id, 'used' =>1, 'approved' => 0]);
         return $model;
     }
 

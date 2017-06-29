@@ -47,6 +47,7 @@ endif;
     <div class="col-md-3">
 
         <?= $this->render('_menu');
+        //dialog to to confirm updatep profile
         echo
         Dialog::widget([
             'options' => ['type' => Dialog::TYPE_SUCCESS ],
@@ -124,9 +125,7 @@ $("#btn-custom").on("click", function() {
     krajeeDialog.confirm("$text", function (result) {
         if (result) {
            $('#profile-form').yiiActiveForm('submitForm');  
-        } else {
-            event.preventDefault();
-              }
+        } 
     });
 });
 JS;

@@ -6,12 +6,26 @@ use app\models\Profile;
 use app\models\Reviews;
 use yii\web\NotFoundHttpException;
 use yii\base\UserException;
+use yii\data\ActiveDataProvider;
 
 class ReviewController extends \yii\web\Controller
 {
-    public function actionIndex()
+    /** Action for displaying reviews to be approved and approving them with ajax
+     * @return string
+     */
+    public function actionApproveReviews()
     {
-        return $this->render('index');
+        $model = Reviews::reviewsToApproved(\Yii::$app->user->identity->id);
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $model,
+            'pagination' => [
+                'pagesize' => 10,
+            ],
+        ]);
+        return $this->render('listToBeApproved',[
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
 
@@ -119,14 +133,24 @@ class ReviewController extends \yii\web\Controller
         $model->used = 1;
 
         if( $model->save()):
-            return $this->redirect(['site/index']);
+            \Yii::$app->getSession()->setFlash('success',[
+                'type' => 'success',
+                'duration' => 5000,
+                'icon' => 'glyphicon glyphicon-ok-sign',
+                'message' => \Yii::t('app',('Thank you! Review has been submitted and will be public when approved by system')),
+                'title' => \Yii::t('app',('Review submitted')),
+                'positonY' => 'top',
+                'positonX' => 'right'
+            ]);
+
+             $this->goHome();
         else:
             throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details.'));
         endif;
 
     }
 
-    /** Displaying user review for testing purposes!
+    /** Displaying user reviews for testing purposes!
      * @return string
      */
     public function actionShowReviews(){

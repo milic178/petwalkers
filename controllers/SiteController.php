@@ -13,6 +13,7 @@ use app\models\Advert;
 
 class SiteController extends Controller
 {
+    public  $message = 5;
     /**
      * @inheritdoc
      */

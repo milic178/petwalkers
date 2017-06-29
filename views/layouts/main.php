@@ -8,8 +8,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\models\Reviews;
 
-use kartik\popover\PopoverX;
 
 
 AppAsset::register($this);
@@ -73,10 +73,13 @@ AppAsset::register($this);
                    'items' =>
                    [
                         ['label' =>'<i class="fa fa-cogs" aria-hidden="true"></i> '. Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
-
+                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications {numbNotification}!',[
+                               'numbNotification' => Reviews::countReviewsWaiting(),
+                           ]), 'url' => '/review/approve-reviews'],
                         ['label' =>'<i class="fa fa-sign-out" aria-hidden="true"></i> ' .Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
+
                    ]
-               ]
+                   ]
 
            ];
        }

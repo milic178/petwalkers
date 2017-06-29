@@ -163,4 +163,7 @@ return [
     'Contact walker'=>'Kontaktiraj sprehajalca',
     'List of adverts'=>'Seznam oglasov',
 
+    'Thank you! Review has been submitted and will be public when approved by system'=>'Hvala za oddajo! Vaša ocena uporabnika bo javno objavljena, ko jo potrdi sistem.',
+    'Review submitted'=>'Mnenje je oddano!'
+
 ];
