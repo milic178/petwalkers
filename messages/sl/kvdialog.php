@@ -29,4 +29,14 @@ return [
     'You are not the owner!'=>'Vi niste lastnik!',
     'Request denied'=>'Zahteva zavrnjena',
     'You have successfully deleted advertisement!' =>'Uspešno ste izbrisali oglas!',
+
+    //Growl messages
+    'You have already posted advert with this specifics'=>'',
+    'Advert not created'=>'',
+    'You have succesfuly posted advertisment!'=>'',
+    'Add created'=>'',
+    'Review declined!'=>'',
+    'You have declined review for your profile.'=>'',
+    'Review accepted!'=>'',
+    'Review will be shown on your profile.'=>'',
 ];

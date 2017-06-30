@@ -113,8 +113,8 @@ class AdvertController extends Controller
                     'type' => 'danger',
                     'duration' => 4500,
                     'icon' => 'glyphicon glyphicon-remove-sign',
-                    'message' => 'You have already posted advert with this specifics',
-                    'title' => 'Advert not created',
+                    'message' => Yii::t('kvdialog','You have already posted advert with this specifics'),
+                    'title' => Yii::t('kvdialog','Advert not created'),
                     'positonY' => 'top',
                     'positonX' => 'right'
                 ]);
@@ -129,8 +129,8 @@ class AdvertController extends Controller
                     'type' => 'success',
                     'duration' => 4500,
                     'icon' => 'glyphicon glyphicon-ok-sign',
-                    'message' => 'You have succesfuly posted advertisment!',
-                    'title' => 'Add created',
+                    'message' => Yii::t('kvdialog','You have succesfuly posted advertisment!'),
+                    'title' => Yii::t('kvdialog','Add created'),
                     'positonY' => 'top',
                     'positonX' => 'right'
                 ]);

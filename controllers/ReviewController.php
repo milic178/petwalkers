@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\Profile;
 use app\models\Reviews;
 use yii\web\NotFoundHttpException;
@@ -10,10 +11,10 @@ use yii\data\ActiveDataProvider;
 
 class ReviewController extends \yii\web\Controller
 {
-    /** Action for displaying reviews to be approved and approving them with ajax
+    /** Action for listing reviews to be accepted/declined by user
      * @return string
      */
-    public function actionApproveReviews()
+    public function actionListReviews()
     {
         $model = Reviews::reviewsToApproved(\Yii::$app->user->identity->id);
 
@@ -27,6 +28,57 @@ class ReviewController extends \yii\web\Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+
+
+    /** Functon for declining review and deleting it from database
+     * @return \yii\console\Response|\yii\web\Response
+     */
+    public function actionReviewDecline(){
+        $text = Yii::t('app','Review has been selected');
+        //return \yii\helpers\Json::encode($text);
+///print_r($_POST);die();
+        $id = \Yii::$app->request->post('id_review');
+        if ( $model = $this ->findModel($id)):
+            $model->used = 0;
+           if($model->save()) :
+
+               $model->refresh();
+               return \yii\helpers\Json::encode($text);
+            else:
+                return \yii\helpers\Json::encode();
+                throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
+            endif;
+        endif;
+    }
+
+    /** Functon for accepting review and deleting it from database
+     * @return \yii\console\Response|\yii\web\Response
+     */
+    public function actionReviewAccept(){
+
+
+        $id = \Yii::$app->request->post('id_review');
+        if ( $model = $this ->findModel($id)):
+            $model->approved = 1;
+
+            if ($model->save()):
+                \Yii::$app->getSession()->setFlash('success',[
+                    'type' => 'success',
+                    'duration' => 5500,
+                    'icon' => 'glyphicon glyphicon-ok-sign',
+                    'message' => Yii::t('kvdialog','Review will be shown on your profile.'),
+                    'title' => Yii::t('kvdialog','Review accepted!'),
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+                return $this->redirect(['/review/list-reviews']);
+
+            else:
+                throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
+            endif;
+        endif;
+    }
+
 
 
     /** Action for rendering form where we submit review code and perform validation for code. If all is ok we render view to leave
@@ -162,5 +214,23 @@ class ReviewController extends \yii\web\Controller
             'model' => $model
         ]);
     }
+
+
+    /**
+     * Finds the Advert model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $id
+     * @return Reviews the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($id)
+    {
+        if (($model = Reviews::findOne($id)) ) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
 
 }

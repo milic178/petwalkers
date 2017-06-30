@@ -162,7 +162,10 @@ class Reviews extends \yii\db\ActiveRecord
     endif;
     }
 
-
+    /** Function for returing list of all reviews, yet to be approved by end user!
+     * @param $user_id
+     * @return $this
+     */
     public static function reviewsToApproved($user_id){
         $model = Reviews::find()
             ->where(['id_profile'=>$user_id, 'used' =>1, 'approved' => 0]);
