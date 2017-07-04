@@ -165,6 +165,14 @@ return [
     'Thank you! Review has been submitted and will be public when approved by system'=>'Je vous remercie! L\'examen a été soumis et sera public lorsqu\'il sera approuvé par le système',
     'Review submitted'=>'Revue soumise',
 
+    // front page
+    'I feel like finding pet sitter for'=>'Želim najti osebo za',
+    'in'=>'v',
+    'any city'=>'mestu',
+    'for my'=>'za',
+    'from'=>'ter plačati',
+    'per hour'=>'na uro',
+
 
 
 ];

@@ -166,6 +166,16 @@ return [
     'Thank you! Review has been submitted and will be public when approved by system'=>'Hvala za oddajo! Vaša ocena uporabnika bo javno objavljena, ko jo potrdi sistem.',
     'Review submitted'=>'Mnenje je oddano!',
 
+    //front page
+    'I feel like finding pet sitter for'=>'Želim najti osebo za',
+    'in'=>'v',
+    'any city'=>'mestu',
+    'for my'=>'za',
+    'from'=>'ter plačati',
+    'per hour'=>'na uro',
+
+
+
 
 
 
