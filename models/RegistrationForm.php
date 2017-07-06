@@ -22,6 +22,7 @@ class RegistrationForm extends BaseRegistrationForm
     public $last_name;
     public $telephone;
     public $avatar_photo;
+    public $repeat_password;
 
 
     public function rules()
@@ -32,6 +33,8 @@ class RegistrationForm extends BaseRegistrationForm
         $rules[] = ['first_name', 'required'];
         $rules[] = ['last_name', 'required'];
         $rules[] = ['telephone', 'required'];
+        $rules[] = ['repeat_password', 'compare', 'compareAttribute'=>'password', 'skipOnEmpty' => false, 'message'=>\Yii::t('app','Passwords don\'t match!')];
+
         return $rules;
     }
 
@@ -42,7 +45,7 @@ class RegistrationForm extends BaseRegistrationForm
         $labels['last_name'] = \Yii::t('user', 'Last Name');
         $labels['telephone'] = \Yii::t('user', 'Phone number');
         $labels['avatar_photo'] = \Yii::t('user', 'Avatar Photo');
-
+        $labels['repeat_password'] = \Yii::t('app', 'Repeat password');
         return $labels;
     }
 

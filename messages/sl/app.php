@@ -12,7 +12,7 @@ return [
     'Rate walker'=>'Oceni sprehajalca',
     'Welcome' => 'Dobrodošli',
     'Heading'=>'Glava',
-    'Contact us'=>'Pišite nam',
+    'Contact us '=>'Pišite nam ',
     //menu
     'Register' => 'Registracija',
     'Login'=>'Prijava',
@@ -22,9 +22,9 @@ return [
     'My Profile' =>'Moj Profil',
     'My Adds'=>'Moji Oglasi',
     'Logout' =>'Odjava',
-    'Questions' =>'Vprašanja',
-    'How does it work?' =>'Kako deluje?',
-    'About' =>'O nas',
+    'Questions ' =>'Vprašanja ',
+    'How does it work ' =>'Kako deluje ',
+    'About ' =>'O nas ',
     'Help' =>'Pomoč',
 
     //Profile
@@ -165,6 +165,9 @@ return [
 
     'Thank you! Review has been submitted and will be public when approved by system'=>'Hvala za oddajo! Vaša ocena uporabnika bo javno objavljena, ko jo potrdi sistem.',
     'Review submitted'=>'Mnenje je oddano!',
+
+    'Passwords don\'t match!'=>'Gesli se ne ujemata',
+    'Repeat password' =>'Ponovite geslo',
 
     //front page
     'I feel like finding pet sitter for'=>'Želim najti osebo za',

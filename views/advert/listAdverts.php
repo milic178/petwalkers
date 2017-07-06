@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </span>
     </div>
 <?php Pjax::begin(); ?>
-
+<div class="row">
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
@@ -58,10 +58,11 @@ $this->params['breadcrumbs'][] = $this->title;
         ['class' => 'yii\grid\SerialColumn'],
 
         //'id_advert',
-        [
+      /*  [
             'attribute' =>  'title',
             'headerOptions' => ['style' => 'width:15%'],
         ],
+      */
         // 'slug',
         // 'description',
         [
@@ -81,7 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute' => 'id_user',
             'value' => 'idUser.username',
-            'headerOptions' => ['style' => 'width:10%'],
+            'headerOptions' => ['style' => 'width:15%'],
         ],
         [
             'attribute' => 'id_type',
@@ -107,12 +108,14 @@ $this->params['breadcrumbs'][] = $this->title;
          //   'filter'=>
          //       \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),
             'filter' => Html::activeDropDownList($searchModel, 'id_city', \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),['class'=>'form-control','prompt' => Yii::t('app','Any city')]),
-            'headerOptions' => ['style' => 'width:15%'],
+            'headerOptions' => ['style' => 'width:20%'],
         ],
         [
             'attribute' => 'id_region',
  // name of 2 relations then name of attribute
             'value' => 'idCity.idRegion.name',
+            'headerOptions' => ['style' => 'width:15%'],
+
         ],
 
 
@@ -136,3 +139,5 @@ $this->registerJs("
     });
 
 ");
+?>
+</div>

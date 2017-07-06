@@ -12,7 +12,7 @@ return [
     'Rate walker'=>'Taux marcheur',
     'Welcome' => 'Bienvenue',
     'Heading' =>'Tette',
-    'Contact us' =>'Contactez nous',
+    'Contact us ' =>'Contactez nous ',
     //menu
     'Register' => 'Inscription',
     'Login'=>'Connexion',
@@ -22,9 +22,9 @@ return [
     'My Profile' =>'Mon profil',
     'My Adds'=>'Mes annonces',
     'Logout' =>'Déconnexion',
-    'Questions' =>'Questions',
-    'How does it work?' =>'Comment ça marche?',
-    'About' =>'À propos de nous',
+    'Questions ' =>'Questions ',
+    'How does it work ' =>'Comment ça marche ',
+    'About ' =>'À propos de nous ',
     'Help' =>'Aide',
 
     //Profile
@@ -165,13 +165,15 @@ return [
     'Thank you! Review has been submitted and will be public when approved by system'=>'Je vous remercie! L\'examen a été soumis et sera public lorsqu\'il sera approuvé par le système',
     'Review submitted'=>'Revue soumise',
 
+    'Passwords don\'t match!'=>'Les mots de passe ne correspondent pas!',
+    'Repeat password' =>'Répéter le mot de passe',
     // front page
-    'I feel like finding pet sitter for'=>'Želim najti osebo za',
-    'in'=>'v',
-    'any city'=>'mestu',
-    'for my'=>'za',
-    'from'=>'ter plačati',
-    'per hour'=>'na uro',
+    'I feel like finding pet sitter for'=>'',
+    'in'=>'',
+    'any city'=>'',
+    'for my'=>'',
+    'from'=>' ',
+    'per hour'=>'',
 
 
 

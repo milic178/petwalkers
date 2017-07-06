@@ -46,9 +46,9 @@ AppAsset::register($this);
 */
        if (Yii::$app->user->isGuest) {
            $navItems=[
+               ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['/review/enter-code'],'options' => ['id' => 'EnterCodeModalButton']],
                ['label' =>'<i class="fa fa-user-plus fa-lg" aria-hidden="true"></i> '. Yii::t('app','Register'), 'url' => ['/user/register']],
                ['label' =>'<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> '. Yii::t('app','Login'), 'url' => ['/user/login']],
-               ['label' =>'<i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i> '. Yii::t('app','Rate walker'), 'url' => ['/review/enter-code'],'options' => ['id' => 'EnterCodeModalButton']],
            ];
        }
        else {
@@ -64,7 +64,6 @@ AppAsset::register($this);
                ],
                ['label' =>'<i class="fa fa-list-alt fa-lg" aria-hidden="true"></i> '. Yii::t('app','Advert').'',
                    'items' =>[
-                       ['label' =>'<i class="fa fa-plus" aria-hidden="true"></i> '. Yii::t('app','Create Advert'), 'url' => '/advert/create'],
                        ['label' =>'<i class="fa fa-list-ol" aria-hidden="true"></i> '. Yii::t('app','My Adds'), 'url' => '/advert/myadds'],
                    ],
                ],
@@ -85,13 +84,13 @@ AppAsset::register($this);
 
 
        array_push($navItems,
-           ['label' =>'<i class="fa fa-id-card fa-lg" aria-hidden="true"></i> '. Yii::t('app','About'), 'url' => '/site/about'],
            ['label' =>'<i class="fa fa-info" aria-hidden="true"></i> '. Yii::t('app','Help'),
            'items' =>
                [
-                   ['label' =>'<i class="fa fa-question" aria-hidden="true"></i> '. Yii::t('app','Questions'), 'url' => '/site/faq'],
-                   ['label' =>'<i class="fa fa-lightbulb-o" aria-hidden="true"></i> '. Yii::t('app','How does it work?'), 'url' => '/site/how'],
-                   ['label' =>'<i class="fa fa-pencil-square-o" aria-hidden="true"></i> '. Yii::t('app','Contact us'), 'url' => '/site/contact'],
+                   ['label' =>Yii::t('app','Questions '). '<i class="fa fa-question" aria-hidden="true"></i> ', 'url' => '/site/faq'],
+                   ['label' =>Yii::t('app','How does it work '). '<i class="fa fa-question" aria-hidden="true"></i> ', 'url' => '/site/how'],
+                   ['label' =>Yii::t('app','Contact us '). '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> ', 'url' => '/site/contact'],
+                   ['label' => Yii::t('app','About '). '<i class="fa fa-id-card fa-lg" aria-hidden="true"></i> ', 'url' => '/site/about'],
                ]
        ]);
 

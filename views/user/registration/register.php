@@ -117,6 +117,23 @@ $this->params['breadcrumbs'][] = $this->title;
                 ?>
 
 
+                <?= $form->field($model, 'repeat_password',[
+                    'template' => '
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                {input}
+            </div>
+            {error}',
+                    'inputOptions' => [
+                        'placeholder' => $model->getAttributeLabel('repeat_password'),
+                        'class'=>'form-control',
+                    ]])->passwordInput()
+                ?>
+
+
+
+
+
                 <?=  $form->field($model, 'avatar_photo')
                     ->hiddenInput(['value' => 'default_user.jpg'])
                     ->label(false) ?>
