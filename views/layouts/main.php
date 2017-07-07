@@ -14,7 +14,13 @@ use app\models\Reviews;
 
 AppAsset::register($this);
 ?>
-
+<!---registering meta tags for facebook share, like..... --->
+<?php
+$this->registerMetaTag(Yii::$app->params['og_title'], 'og_title');
+$this->registerMetaTag(Yii::$app->params['og_description'], 'og_description');
+$this->registerMetaTag(Yii::$app->params['og_url'], 'og_url');
+$this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
+?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">

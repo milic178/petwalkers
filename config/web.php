@@ -20,7 +20,16 @@ $config = [
             'cost' => 12,
             'admins' => ['milic178']
         ],
-    ],
+        'social' => [
+            // the module class
+            'class' => 'kartik\social\Module',
+            // the global settings for the facebook plugins widget
+            'facebook' => [
+                'appId' => '875927969242038',
+                'app_secret' => '865277203135acc0457f9eae1bb15c2e',
+            ],
+        ],
+        ],
 
 
     'id' => 'basic',

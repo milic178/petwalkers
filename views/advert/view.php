@@ -1,5 +1,6 @@
 <?php
 
+use kartik\social\FacebookPlugin;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use yii\bootstrap\Modal;
@@ -18,6 +19,15 @@ $this->params['breadcrumbs'][] = $this->title;
 AppAsset::register($this);
 ?>
 
+<!-- facebook share meta tag ---->
+
+
+<?php
+Yii::$app->params['og_title']['content'] = $model->title;
+Yii::$app->params['og_description']['content'] = $model->description;
+Yii::$app->params['og_url']['content'] = Yii::$app->request->getUrl();
+Yii::$app->params['og_image']['content'] = 'image.jpg';
+?>
 <!-- Displaying modal form for entering review code and rating user -->
 <div>
     <?php
@@ -347,15 +357,28 @@ Dialog::widget([
 
 <!-- Button for contacting walker -->
     <div class="row">
-        <div class="col-lg-12">
-            <div class="text-center">
+        <div class="col-md-6">
+            <div class="text-right">
             <?= Html::button(Yii::t('app', 'Contact walker'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
                 'class' => 'btn btn-success',
                 'id'=>'contact-walker']); ?>
             </div>
         </div>
-    </div>
+        <div class="col-md-6">
+            <div class="text-left">
+                <?= FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE,
+                    'settings' =>
+                    [
+                        'size'=>'large',
+                        'layout'=>'button_count',
+                        'mobile_iframe'=>'false',
+                    ],
+                    'appId'=>'875927969242038'
 
+                ]); ?>
+            </div>
+        </div>
+    </div>
 
 <!-- Displaying user reviews -->
 <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews($profile->user_id)]) ?>

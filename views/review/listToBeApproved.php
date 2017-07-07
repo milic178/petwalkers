@@ -61,9 +61,9 @@ echo Dialog::widget(); ?>
             ],
 
             ['class' => 'yii\grid\ActionColumn',
-                'headerOptions' => ['style' => 'width:10%'],
+                'headerOptions' => ['style' => 'width:5%'],
                 'header' => Yii::t('user', 'Actions'),
-                'template' => '{approve} {decline} {testAccept}, {testDecline}',
+                'template' => '{approve} {decline}',
                 'buttons' => [
                     'approve' => function ($url, $model, $key) {
                         return Html::a(Yii::t('app','Approve'), ['review/review-accept'],
@@ -72,7 +72,7 @@ echo Dialog::widget(); ?>
                                 'data' => [
                                     'method' => 'POST',
                                     'params' => ['id_review' => $model->id_review],
-                                ],
+                                ]
                             ]);
                     },
                     'decline' => function ($url, $model, $key) {
@@ -84,45 +84,6 @@ echo Dialog::widget(); ?>
                                     'params' => ['id_review' => $model->id_review]
                                 ]
                             ]);
-                    },
-                    'testAccept' => function ($url, $model, $key) {
-                        return Html::a('Your Link name', false, [
-                            'title' => Yii::t('yii', 'Close'),
-                            'onclick'=>"
-                                 $.ajax({
-                                type     :'POST',
-                                data : {id_review : $model->id_review},
-                                url  : '/review/review-accept',
-                                    success  : function(response) {
-                                       krajeeDialog.alert(response,function(result) {     
-                                         });
-                                    }
-                                });"
-                            ]
-                        );
-                    },
-                    //Code for sending ajax request, success answer we get 7
-                    //dialog box with message (translatable) and refresh GridView with Ajax
-                    'testDecline' => function ($url, $model, $key) {
-                        return Html::a('Test decine', false, [
-                                'title' => Yii::t('yii', 'Close'),
-                                'class' => 'btn btn-info btn-xs',
-                                'onclick'=>"
-                                 $.ajax({
-                                type     :'POST',
-                                data : {id_review : $model->id_review},
-                                url  : '/review/review-decline',
-                                    success  : function(response) { 
-                                       krajeeDialog.alert(response,function(result) {  
-                                         yourFunction();
-                                         });
-                                    },
-                                     complete: function (data) {
-                                        $.pjax({container: '#pjax-listReviews'}) 
-                                     }
-                                });"
-                            ]
-                        );
                     },
                 ],
             ],

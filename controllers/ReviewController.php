@@ -34,20 +34,26 @@ class ReviewController extends \yii\web\Controller
      * @return \yii\console\Response|\yii\web\Response
      */
     public function actionReviewDecline(){
-        $text = Yii::t('app','Review has been selected');
-        //return \yii\helpers\Json::encode($text);
-///print_r($_POST);die();
+
         $id = \Yii::$app->request->post('id_review');
         if ( $model = $this ->findModel($id)):
-            $model->used = 0;
-           if($model->save()) :
-
+            if($model->delete()) :
                $model->refresh();
-               return \yii\helpers\Json::encode($text);
+                \Yii::$app->getSession()->setFlash('info',[
+                    'type' => 'info',
+                    'duration' => 5500,
+                    'icon' => 'glyphicon glyphicon-info-sign',
+                    'message' => Yii::t('kvdialog','You have declined review for your profile.'),
+                    'title' => Yii::t('kvdialog','Review declined!'),
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+                return $this->redirect(['/review/list-reviews']);
             else:
-                return \yii\helpers\Json::encode();
                 throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
             endif;
+        else:
+            throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
         endif;
     }
 

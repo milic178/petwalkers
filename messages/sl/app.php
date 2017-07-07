@@ -124,11 +124,11 @@ return [
 
 
     //errors
-    'Code you have entered does not exist or has been deleted!'=>'Koda ki ste jo vnesli ne obstaja ali je neveljavna!',
-    'Code you have entered is older than 2 days making it invalid!' =>'Koda ki ste jo vnesli je starejša od 2 dni, kar pomeni da je neveljavna!',
+    'Code you have entered does not exist or has been deleted!'=>'Koda, ki ste jo vnesli ne obstaja ali je neveljavna!',
+    'Code you have entered is older than 2 days making it invalid!' =>'Koda, ki ste jo vnesli je starejša od 2 dni, kar pomeni da je neveljavna!',
     'The above error occurred while the Web server was processing your request.' =>'Pri obdelavi vaše zahteve je prišlo do zgornje napake!',
     'Please contact us if you think this is a server error. Thank you.' =>'Prosimo obrnite se na nas, če menite, da je to napaka strežnika.',
-    'Code you have entered has already been used!' => 'Koda ki ste jo vnesli je bila že uporabljena!',
+    'Code you have entered has already been used!' => 'Koda, ki ste jo vnesli je bila že uporabljena!',
     'This user has been already reviewed by person with that name and pet!' =>' Uporabnik je že bill ocenjen s strani nekoga ki ima isto ime in ime ljubljenčka!',
     'The user does not exsist or yet has no profile!' =>'Uporabnik ne obstaja ali pa še nima ustvarjenega profila!',
 
@@ -136,12 +136,12 @@ return [
     //review
     'Review code accepted!' =>'Koda je pravilna!',
     'Please fill the form below to post your review about user.' =>'Prosimo izpolnite obrazec, da lahko objavite vaše mnenje o sprehajalcu.',
-    'Write your experience and satisfaction with walker maximum 200 words!'=>'Opišite vašo izkušnjo z sprehajalcem, maksimalno število črk je 200!',
+    'Write your experience and satisfaction with walker maximum 200 words!'=>'Opišite vašo izkušnjo s sprehajalcem, maksimalno število črk je 200!',
     'Review'=>'Ocena sprehajalca',
     'Hi {name} {lastname}, how are you today? And how is {petname} doing? Write a short review bout your experience with {user_name} so we can build a better community!' =>'Pozdravljen {name} {lastname}! Kako se počutite danes? Kaj pa {petname} počne? Napišite krajši opis vaše izkušnje z {user_name} z namenom da naredimo boljšo skupnost!',
     'Rating' =>'Ocena',
     'Post review' =>'Objavi oceno',
-    'Enter the code to write a review about your experience with walker you booked'=>'Vnesite kodo, da lahko podate mnenje o vaši izkušnji z sprehajalcem.',
+    'Enter the code to write a review about your experience with walker you booked'=>'Vnesite kodo, da lahko podate mnenje o vaši izkušnji s sprehajalcem.',
     'Review Code'=>'Koda',
     'Enter code'=>'Vnesite kodo',
     '{attribute} can be only full star'=>'{attribute} je lahko samo cela zvezda',
