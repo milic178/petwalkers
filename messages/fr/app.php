@@ -153,7 +153,9 @@ return [
     'Very Good'=>'Très bon',
     'Extremely Good'=>'Incroyable',
 
-    'Soemthing went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
+    'The requested page does not exist.'=>'La page demandée n\'existe pas.',
+    'We couldn\'t find that review, please contact us with more details'=>' ',
+    'Something went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
     'User reviews:' =>'Critiques d\'utilisateurs:',
     'My rating:'=>'Mon classement:',
     'User has yet not been rated by community!'=>'L\'utilisateur n\'a pas encore été évalué par communauté!',

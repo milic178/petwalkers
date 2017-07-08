@@ -27,6 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
         'id'=>'enter-code',
         'size'=>'modal-sm',
+        'clientOptions' => [
+            'backdrop' => 'static'
+        ]
     ]);
     echo "<div id='modalFormContent'></div>";
     Modal::end();

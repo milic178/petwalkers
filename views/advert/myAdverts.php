@@ -29,10 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'id'=>'modalCreateAdvertButton']); ?>
 </p>
 
+<!--- Showing popup modal window for creating add -->
 <?php
 Modal::begin([
     'id'=>'createAdvert',
-    'size'=>'modal-lg'
+    'size'=>'modal-lg',
+    'clientOptions' => [
+        'backdrop' => 'static'
+    ]
 ]);
 echo "<div id='modalContentCreate'></div>";
 Modal::end();

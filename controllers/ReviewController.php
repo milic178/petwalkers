@@ -37,23 +37,24 @@ class ReviewController extends \yii\web\Controller
 
         $id = \Yii::$app->request->post('id_review');
         if ( $model = $this ->findModel($id)):
-            if($model->delete()) :
-               $model->refresh();
-                \Yii::$app->getSession()->setFlash('info',[
-                    'type' => 'info',
-                    'duration' => 5500,
-                    'icon' => 'glyphicon glyphicon-info-sign',
-                    'message' => Yii::t('kvdialog','You have declined review for your profile.'),
-                    'title' => Yii::t('kvdialog','Review declined!'),
-                    'positonY' => 'top',
-                    'positonX' => 'right'
-                ]);
-                return $this->redirect(['/review/list-reviews']);
-            else:
-                throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
-            endif;
+            $model->declined = 1;
+                if($model->save()) :
+                   $model->refresh();
+                    \Yii::$app->getSession()->setFlash('info',[
+                        'type' => 'info',
+                        'duration' => 5500,
+                        'icon' => 'glyphicon glyphicon-info-sign',
+                        'message' => Yii::t('kvdialog','You have declined review for your profile.'),
+                        'title' => Yii::t('kvdialog','Review declined!'),
+                        'positonY' => 'top',
+                        'positonX' => 'right'
+                    ]);
+                    return $this->redirect(['/review/list-reviews']);
+                else:
+                    throw new UserException(\Yii::t('app','Something went wrong, please contact us with more details'));
+                endif;
         else:
-            throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
+            throw new UserException(\Yii::t('app','We couldn\'t find that review, please contact us with more details'));
         endif;
     }
 
@@ -61,7 +62,6 @@ class ReviewController extends \yii\web\Controller
      * @return \yii\console\Response|\yii\web\Response
      */
     public function actionReviewAccept(){
-
 
         $id = \Yii::$app->request->post('id_review');
         if ( $model = $this ->findModel($id)):
@@ -234,7 +234,7 @@ class ReviewController extends \yii\web\Controller
         if (($model = Reviews::findOne($id)) ) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException(Yii::t('app','The requested page does not exist.'));
         }
     }
 

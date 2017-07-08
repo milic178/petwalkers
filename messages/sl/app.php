@@ -154,7 +154,9 @@ return [
     'Very Good'=>'Zelo dobro',
     'Extremely Good'=>'Izjemno',
 
-    'Soemthing went wrong, please contact us with more details.'=>'Prišlo je do napake prosimo če nas kontaktirate.',
+    'The requested page does not exist.'=>'Zahtevana stran ne obstaja.',
+    'We couldn\'t find that review, please contact us with more details'=>'Želene ocene nismo mogli najti, prosimo kontaktirajte nas z več podrobnosti',
+    'Something went wrong, please contact us with more details.'=>'Prišlo je do napake prosimo če nas kontaktirate.',
     'User reviews:' =>'Ocene uporabnika:',
     'My rating:'=>'Moja ocena:',
     'User has yet not been rated by community!'=>'Nihče še ni podal mnenja o izkušnji s tem sprehajalcem!',

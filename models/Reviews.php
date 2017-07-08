@@ -17,6 +17,7 @@ use yii\db\Expression;
  * @property string $description
  * @property integer $used
  * @property integer $approved
+ * @property integer $declined
  * @property string $review_code
  * @property string $created
  * @property string $valid_until
@@ -42,7 +43,7 @@ class Reviews extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'lastname', 'petname', 'review_code', 'id_profile'], 'required'],
-            [['used', 'approved', 'id_profile'], 'integer'],
+            [['used','declined', 'approved', 'id_profile'], 'integer'],
             [['rating'], 'integer','message' => Yii::t('app','{attribute} can be only full star')],
             [['created', 'valid_until','review_code','description'], 'safe'],
             [['name', 'lastname', 'petname'], 'string', 'max' => 45],
@@ -66,6 +67,7 @@ class Reviews extends \yii\db\ActiveRecord
             'description' => Yii::t('app', 'Description'),
             'used' => Yii::t('app', 'Used'),
             'approved' => Yii::t('app', 'Approved'),
+            'declined' => Yii::t('app', 'Declined'),
             'review_code' => Yii::t('app', 'Review Code'),
             'created' => Yii::t('app', 'Created'),
             'valid_until' => Yii::t('app', 'Valid Until'),
@@ -152,7 +154,7 @@ class Reviews extends \yii\db\ActiveRecord
      */
     public static function countReviewsWaiting(){
         $countReviewsToDisplay = Reviews::find()
-            ->where(['id_profile'=>Yii::$app->user->identity->id, 'used' =>1, 'approved' => 0])
+            ->where(['id_profile'=>Yii::$app->user->identity->id, 'used' =>1, 'approved' => 0,'declined' => 0])
             ->count();
 
     if($countReviewsToDisplay == 0):
@@ -168,7 +170,7 @@ class Reviews extends \yii\db\ActiveRecord
      */
     public static function reviewsToApproved($user_id){
         $model = Reviews::find()
-            ->where(['id_profile'=>$user_id, 'used' =>1, 'approved' => 0]);
+            ->where(['id_profile'=>$user_id, 'used' =>1, 'approved' => 0, 'declined' => 0]);
         return $model;
     }
 
