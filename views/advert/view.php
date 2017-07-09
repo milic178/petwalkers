@@ -124,7 +124,12 @@ Dialog::widget([
                             </div>
                             <div class="col-md-12">
                                 <strong><?= Yii::t('user', 'Last seen') ?>:</strong>
-                                <?= Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$profile->user->last_login_at]) ?>
+                                <?php if(!$profile->user->last_login_at==null):
+                                            echo Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$profile->user->last_login_at]);
+                                        else:
+                                        echo Yii::t('app','Current user did not login to the application!');
+                                        endif;
+                                ?>
                             </div>
                         </div>
 
@@ -362,7 +367,7 @@ Dialog::widget([
     <div class="row">
         <div class="col-md-6">
             <div class="text-right">
-            <?= Html::button(Yii::t('app', 'Contact walker'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
+            <?= Html::button(Yii::t('app', 'Contact user'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
                 'class' => 'btn btn-success',
                 'id'=>'contact-walker']); ?>
             </div>

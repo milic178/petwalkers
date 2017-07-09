@@ -154,6 +154,7 @@ return [
     'Very Good'=>'Zelo dobro',
     'Extremely Good'=>'Izjemno',
 
+    'Current user did not login to the application!'=>'Uporabnik še ni bil prijavljen.',
     'The requested page does not exist.'=>'Zahtevana stran ne obstaja.',
     'We couldn\'t find that review, please contact us with more details'=>'Želene ocene nismo mogli najti, prosimo kontaktirajte nas z več podrobnosti',
     'Something went wrong, please contact us with more details.'=>'Prišlo je do napake prosimo če nas kontaktirate.',
@@ -162,7 +163,7 @@ return [
     'User has yet not been rated by community!'=>'Nihče še ni podal mnenja o izkušnji s tem sprehajalcem!',
     'Show reviews'=>'Prikaži ocene',
     'Random user opinion'=>'Ocena naključnega uporabnika',
-    'Contact walker'=>'Kontaktiraj sprehajalca',
+    'Contact user'=>'Kontaktiraj uporabnika',
     'List of adverts'=>'Seznam oglasov',
 
     'Thank you! Review has been submitted and will be public when approved by system'=>'Hvala za oddajo! Vaša ocena uporabnika bo javno objavljena, ko jo potrdi sistem.',

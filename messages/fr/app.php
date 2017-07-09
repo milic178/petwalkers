@@ -153,6 +153,7 @@ return [
     'Very Good'=>'Très bon',
     'Extremely Good'=>'Incroyable',
 
+    'Current user did not login to the application!'=>'',
     'The requested page does not exist.'=>'La page demandée n\'existe pas.',
     'We couldn\'t find that review, please contact us with more details'=>' ',
     'Something went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
@@ -161,7 +162,7 @@ return [
     'User has yet not been rated by community!'=>'L\'utilisateur n\'a pas encore été évalué par communauté!',
     'Show reviews'=>'Afficher les commentaires',
     'Random user opinion'=>'Opinion d\'utilisateur aléatoire',
-    'Contact walker'=>'Contacter le promeneur ',
+    'Contact user'=>'Contacter le utilisateur ',
     'List of adverts'=>'Liste des annonces',
 
     'Thank you! Review has been submitted and will be public when approved by system'=>'Je vous remercie! L\'examen a été soumis et sera public lorsqu\'il sera approuvé par le système',

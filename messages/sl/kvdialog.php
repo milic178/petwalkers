@@ -39,4 +39,5 @@ return [
     'You have declined review for your profile.'=>'',
     'Review accepted!'=>'',
     'Review will be shown on your profile.'=>'',
+    'Are you sure you want to publish this review?'=>'Ali ste prepričani da želite objaviti to vsebino?',
 ];

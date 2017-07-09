@@ -10,6 +10,7 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use kartik\rating\StarRating;
+use kartik\dialog\Dialog;
 
 $this->title = Yii::t('app', 'Review');
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,6 +19,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <!--popup with success message -->
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
+<!--dialog to confirm enter review -->
+<?=
+        Dialog::widget([
+            'options' => ['type' => Dialog::TYPE_SUCCESS ],
+        ]);
+?>
 <div class="row">
         <div class="col-md-12">
                 <div class="panel panel-success">
@@ -44,6 +51,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                             'height'=>'10%',
                                     'title'=>$profile->first_name,
                                 ]); ?>
+                                <div class="text-center" style="padding-top:5px;">
+                                        <?=$profile->first_name ?>
+                                        <?=$profile->last_name ?>
+                                </div>
                         </h3>
                 </div>
                 </div>
@@ -56,10 +67,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                         <div class="panel-body">
                                 <?php $form = ActiveForm::begin([
-                                            'action' => 'save-review',
                                             'id' => 'enterReview-form',
-                                            'enableAjaxValidation' => false,
-                                            'enableClientValidation' => true,
+                                            'action' => 'save-review',
+                                            'options' => ['enctype'=>'multipart/form-data'],
+                                            'enableAjaxValidation' => true,
+                                            'enableClientValidation' => false,
                                             'validateOnBlur' => false,
                                 ]); ?>
 
@@ -85,7 +97,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                 <div class="row">
                                 <div class="col-md-2 pull-right">
-                                            <?= Html::submitButton(Yii::t('app', 'Post review'), ['class' => 'btn btn-block btn-success']) ?>
+                                            <?= Html::button(Yii::t('app', 'Post review'),
+                                                [
+                                                    'id'=>'btn-submit',
+                                                    'class' => 'btn btn-block btn-success'
+                                                ]) ?>
                                 </div>
                                 </div>
                                 <?php ActiveForm::end(); ?>
@@ -94,3 +110,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
         </div>
 </div>
+<?php
+$text = Yii::t('kvdialog','Are you sure you want to publish this review?');
+
+$js = <<< JS
+$("#btn-submit").on("click", function() {
+    krajeeDialog.confirm("$text", function (result) {
+        if (result) {
+           $('#enterReview-form').yiiActiveForm('submitForm');  
+        } 
+    });
+});
+JS;
+$this->registerJs($js);
+?>
