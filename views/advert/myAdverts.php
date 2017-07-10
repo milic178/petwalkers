@@ -21,7 +21,7 @@ $this->title = Yii::t('app', 'My Adds');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'List of adverts'), 'url' => ['list-adverts']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<!-- showing poopup messages-->
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
 <p>
@@ -43,7 +43,8 @@ echo "<div id='modalContentCreate'></div>";
 Modal::end();
 ?>
 
-<?= $countDates?>
+
+<!-- Displaying gridView with all data-->
 <?= GridView::widget([
     'dataProvider' =>$dataProvider,
     'layout'       => "{items}\n{pager}",

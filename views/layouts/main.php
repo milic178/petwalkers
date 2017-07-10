@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\models\Reviews;
+use app\models\Advert;
 
 
 
@@ -68,9 +69,9 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                        ['label' =>'<i class="fa fa-map" aria-hidden="true"></i> '. Yii::t('app','List of cities'), 'url' => ['/city/index']],
                    ]
                ],
-               ['label' =>'<i class="fa fa-list-alt fa-lg" aria-hidden="true"></i> '. Yii::t('app','Advert').'',
+               ['label' =>'<i class="fa fa-list-alt fa-lg" aria-hidden="true"></i> '. Yii::t('app','Advert').''.' '.Advert::notifyAdds(),
                    'items' =>[
-                       ['label' =>'<i class="fa fa-list-ol" aria-hidden="true"></i> '. Yii::t('app','My Adds'), 'url' => '/advert/myadds'],
+                       ['label' =>'<i class="fa fa-list-ol" aria-hidden="true"></i> '. Yii::t('app','My Adds').' '.Advert::notifyAdds(), 'url' => '/advert/myadds'],
                    ],
                ],
 

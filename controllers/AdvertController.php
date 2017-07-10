@@ -269,7 +269,20 @@ class AdvertController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Advert::find()->where(['id_user' => \Yii::$app->user->identity->getId()])
         ]);
-$countDates = Advert::adddsToExpire();
+        $countDates = Advert::addsToExpire();
+
+        if ($countDates != 0 ):
+            \Yii::$app->getSession()->setFlash('warning',[
+                'type' => 'warning',
+                'duration' => 4500,
+                'icon' => 'glyphicon glyphicon-exclamation-sign',
+                'message' => Yii::t('kvdialog','You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!', ['n' => $countDates]),
+                'title' => Yii::t('kvdialog','Warning!'),
+                'positonY' => 'top',
+                'positonX' => 'right'
+            ]);
+
+        endif;
         return $this->render('myAdverts', [
             'dataProvider' => $dataProvider,
             'countDates'=>$countDates

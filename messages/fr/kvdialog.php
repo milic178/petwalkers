@@ -22,6 +22,7 @@ return [
     'Information' => 'Information',
     'Ok' => 'Ok',
     'Update profile?' =>'Mettre à jour le profil?',
+    'Attention!'=>'Opozorilo!',
 
 
 
@@ -43,5 +44,6 @@ return [
     'Review accepted!'=>'',
     'Review will be shown on your profile.'=>'',
     'Are you sure you want to publish this review?'=>'',
+    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>''
 
 ];

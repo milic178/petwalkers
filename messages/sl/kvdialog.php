@@ -22,6 +22,7 @@ return [
     'Information' => 'Obvestilo',
     'Ok' => 'ok',
     'Update profile?' =>'Posodobi profil',
+    'Warning!'=>'Opozorilo!',
 
     // Popup warnings
     'You have successfully updated advertisement!'=>'Uspešno ste posodobili oglas!',
@@ -40,4 +41,5 @@ return [
     'Review accepted!'=>'',
     'Review will be shown on your profile.'=>'',
     'Are you sure you want to publish this review?'=>'Ali ste prepričani da želite objaviti to vsebino?',
+    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Pozor! Imate {n,plural,=1{# oglas} =2{# oglasa} other{# oglasev}}, katerim veljavnost bo potekla v manj kot štirih dneh!'
 ];

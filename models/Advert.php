@@ -124,12 +124,30 @@ class Advert extends \yii\db\ActiveRecord
             ->exists();
     }
 
-    public static function adddsToExpire(){
-        return Advert::find()
+    /*** function for counting how many adverts by specific user are less than 4 days than valid_until
+     * and about to expire. Due to ActiveRecord not working i added raw SQL query
+     * @return int|string
+     */
+    public static function addsToExpire(){
+        $user = Yii::$app->user->identity->getId();
+        $sql = "SELECT * FROM `advert` WHERE (`id_user`=$user) AND (TIMESTAMPDIFF(DAY,NOW(),valid_until) <= 4) AND (TIMESTAMPDIFF(DAY,NOW(),valid_until) > 0)";
+        $model = Advert::findBySql($sql)->count();
+
+        return $model;
+      /*  return Advert::find()
             ->where(['id_user' => \Yii::$app->user->identity->getId()])
             ->andWhere(['<=','(TIMESTAMPDIFF(DAY, valid_until, NOW()))',4])
             ->andWhere(['>','(TIMESTAMPDIFF(DAY, valid_until, NOW()))',0])
-            ->count()
-            ->all();
+            ->count();
+*/
+    }
+
+    /** small funciton for displaying number of adds and append ( ) in NavBar
+     * @return string
+     */
+    public static function notifyAdds(){
+        $count = Advert::addsToExpire();
+        $result = ($count != 0 ? '('.$count.')' : '');
+        return $result;
     }
 }

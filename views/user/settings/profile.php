@@ -40,7 +40,7 @@ endif;
  ?>
 
 
-
+<!-- showing poopup messages-->
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
 <div class="row">
