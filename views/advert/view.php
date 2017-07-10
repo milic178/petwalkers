@@ -389,6 +389,7 @@ Dialog::widget([
     </div>
 
 <!-- Displaying user reviews -->
+<h2><?= Yii::t('app','User reviews:') ?></h2>
 <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews($profile->user_id)]) ?>
 
 

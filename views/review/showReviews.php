@@ -17,9 +17,7 @@ $this -> title = Yii::t('app','Show reviews');
 ?>
 
 <div class="container">
-    <div class="row">
-        <h2><?= Yii::t('app','User reviews:') ?></h2>
-    </div>
+
 </div>
 <div class="carousel-reviews broun-block">
     <div class="container">

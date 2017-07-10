@@ -250,7 +250,7 @@ class AdvertController extends Controller
 
     /**
      * @param $id
-     * Fuction made for seting default valid date for add  (+2 weeks) from creation
+     * Fuction made for setting default valid date for add  (+2 weeks) from creation
      */
     public function setValidDate($id){
         $model =  $this->findModel($id);
@@ -262,16 +262,17 @@ class AdvertController extends Controller
 
     }
 
-    /** Returns a list of user owned advertisments
+    /** Returns a list of user owned adds
      * @return string
      */
     public function actionMyadds(){
         $dataProvider = new ActiveDataProvider([
             'query' => Advert::find()->where(['id_user' => \Yii::$app->user->identity->getId()])
         ]);
-
+$countDates = Advert::adddsToExpire();
         return $this->render('myAdverts', [
             'dataProvider' => $dataProvider,
+            'countDates'=>$countDates
         ]);
     }
 

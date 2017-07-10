@@ -5,9 +5,10 @@ use  yii\grid\GridView;
 use yii\helpers\Html;
 use kartik\dialog\Dialog;
 use yii\widgets\Pjax;
+use app\models\Reviews;
 
 ?>
-
+<div>
 <h1><?= Yii::t('app','List of reviews waiting for confirmation') ?></h1>
 
 <p class="bg-info text-white">
@@ -91,13 +92,10 @@ echo Dialog::widget(); ?>
     ]);
 
     ?>
-
-<?php
-$this->registerJs( <<< EOT_JS_CODE
-
-        
-
-EOT_JS_CODE
-);
-?>
 <?php Pjax::end(); ?>
+<div style="padding-top: 5%">
+    <h2><?= Yii::t('app','My reviews:') ?></h2>
+    <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews(Yii::$app->user->id)]) ?>
+</div>
+
+</div>

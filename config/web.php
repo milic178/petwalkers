@@ -21,7 +21,6 @@ $config = [
             'admins' => ['milic178']
         ],
         'social' => [
-            // the module class
             'class' => 'kartik\social\Module',
             // the global settings for the facebook plugins widget
             'facebook' => [

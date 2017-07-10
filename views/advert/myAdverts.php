@@ -13,6 +13,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
 
+
 ?>
 
 <?php
@@ -42,7 +43,7 @@ echo "<div id='modalContentCreate'></div>";
 Modal::end();
 ?>
 
-
+<?= $countDates?>
 <?= GridView::widget([
     'dataProvider' =>$dataProvider,
     'layout'       => "{items}\n{pager}",
@@ -52,14 +53,14 @@ Modal::end();
         //'id_advert',
         [
             'attribute' =>  'title',
-            'headerOptions' => ['style' => 'width:15%'],
+            'headerOptions' => ['style' => 'width:25%'],
         ],
         // 'slug',
         // 'description',
         [
             'attribute' =>   'created',
             'value'=> function ($model){
-                    $date = $model->valid_until;
+                    $date = $model->created;
                     $dt = new DateTime($date);
                     return $dt->format('d-m-Y');
             },
@@ -87,19 +88,20 @@ Modal::end();
             'attribute' => 'id_type',
             'value' => 'idType.name',
             'filter'=>
-                \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name')
+                \yii\helpers\ArrayHelper::map(\app\models\AdvertType::find()->all(), 'id_type', 'name'),
+            'headerOptions' => ['style' => 'width:10%'],
         ],
         [
             'attribute' => 'id_city',
             'value' => 'idCity.name',
             'filter'=>
                 \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),
-            'headerOptions' => ['style' => 'width:15%'],
+            'headerOptions' => ['style' => 'width:10%'],
         ],
         [
             'attribute' => 'id_animal',
             'value' => 'idAnimal.species',
-            'headerOptions' => ['style' => 'width:15%'],
+            'headerOptions' => ['style' => 'width:10%'],
         ],
 
         // 'trash_date',

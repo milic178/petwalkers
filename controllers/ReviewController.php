@@ -8,9 +8,50 @@ use app\models\Reviews;
 use yii\web\NotFoundHttpException;
 use yii\base\UserException;
 use yii\data\ActiveDataProvider;
+use app\components\AccessRule;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
 class ReviewController extends \yii\web\Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                ],
+                'only' => ['list-reviews','review-decline', 'review-accept', 'show-reviews','save-review','request-code','enter-code'],
+                'rules' => [
+                    [
+                        'actions' => ['enter-code','save-review'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                    [
+                        'actions' => ['request-code'],
+                        'allow' => true,
+                        'roles' => ['?','@'],
+                    ],
+                    [
+                        'actions' => ['list-reviews','review-decline','review-accept','show-reviews'],
+                        'allow' => true,
+                        'roles' => ['@','admin'],
+                    ]
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
+
+
     /** Action for listing reviews to be accepted/declined by user
      * @return string
      */
@@ -98,7 +139,7 @@ class ReviewController extends \yii\web\Controller
 
         if ($model->load(\Yii::$app->request->get())):
             $code = \Yii::$app->request->get('Reviews')['review_code'];
-            //validating code imput
+            //validating code input
                 if(!Reviews::codeExsists($code)){
                     throw new NotFoundHttpException(\Yii::t('app','Code you have entered does not exist or has been deleted!'));
                 }
@@ -178,7 +219,7 @@ class ReviewController extends \yii\web\Controller
         ]);
     }
 
-    /**  Function for saving review wth description and reting
+    /**  Function for saving review wth description and rating
      * @return \yii\web\Response
      * @throws UserException
      *

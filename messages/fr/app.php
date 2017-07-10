@@ -158,6 +158,7 @@ return [
     'We couldn\'t find that review, please contact us with more details'=>' ',
     'Something went wrong, please contact us with more details.'=>'Quelque chose s\'est mal passé, contactez-nous avec plus de détails.',
     'User reviews:' =>'Critiques d\'utilisateurs:',
+    'My reviews:'=>'Mes critiques:',
     'My rating:'=>'Mon classement:',
     'User has yet not been rated by community!'=>'L\'utilisateur n\'a pas encore été évalué par communauté!',
     'Show reviews'=>'Afficher les commentaires',

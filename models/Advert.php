@@ -123,4 +123,13 @@ class Advert extends \yii\db\ActiveRecord
             ->where(['id_type'=> $type,'id_city'=> $city, 'id_animal'=> $animal,'id_user'=> $user])
             ->exists();
     }
+
+    public static function adddsToExpire(){
+        return Advert::find()
+            ->where(['id_user' => \Yii::$app->user->identity->getId()])
+            ->andWhere(['<=','(TIMESTAMPDIFF(DAY, valid_until, NOW()))',4])
+            ->andWhere(['>','(TIMESTAMPDIFF(DAY, valid_until, NOW()))',0])
+            ->count()
+            ->all();
+    }
 }
