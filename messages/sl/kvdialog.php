@@ -23,6 +23,7 @@ return [
     'Ok' => 'ok',
     'Update profile?' =>'Posodobi profil',
     'Warning!'=>'Opozorilo!',
+    'Error'=>'Napaka!',
 
     // Popup warnings
     'You have successfully updated advertisement!'=>'Uspešno ste posodobili oglas!',
@@ -41,5 +42,7 @@ return [
     'Review accepted!'=>'',
     'Review will be shown on your profile.'=>'',
     'Are you sure you want to publish this review?'=>'Ali ste prepričani da želite objaviti to vsebino?',
-    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Pozor! Imate {n,plural,=1{# oglas} =2{# oglasa} other{# oglasev}}, katerim veljavnost bo potekla v manj kot štirih dneh!'
+    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Pozor! Imate {n,plural,=1{# oglas} =2{# oglasa} other{# oglasev}}, katerim veljavnost bo potekla v manj kot štirih dneh!',
+    'An email has been sent with instructions for resetting your password!'=>'E-mail sporočilo je bilo poslano z navodili za ponastavitev gesla!',
+    'Something went wrong your account has not been confirmed!'=>'Nekaj je šlo narobe, vaš račun ni bil potrjen!',
 ];

@@ -212,4 +212,5 @@ return [
     'Your profile has been updated' => 'Votre profil a été mis à jour',
     '{0, date, MMMM dd, YYYY HH:mm}' => '{0, date, d MMMM YYYY à HH:mm}',
     'We have generated a password for you' => 'Un mot de passe a été généré automatiquement pour vous',
+    'Thank you.'=>'Merci.',
 ];

@@ -8,13 +8,19 @@ $config = [
         'user' => [
             'class' => 'dektrium\user\Module',
             'modelMap' => [
+                //overriding modules from extension and adding custom code
                  'RegistrationForm' =>'app\models\RegistrationForm',
                  'Profile' => 'app\models\Profile',
-                 'User' => 'app\models\User'
+                 'User' => 'app\models\User',
+                 'RecoveryForm'=>'app\models\RecoveryForm',
+                 'ResendForm'=>'app\models\ResendForm',
+                 'SettingsForm'=>'app\models\SettingsForm',
             ],
+            //overriding controllers from extension and adding custom code
             'controllerMap' => [
                 'settings' => 'app\controllers\ProfileSettingsController',
                 'registration' => 'app\controllers\RegisterController',
+                'admin' => 'app\controllers\user\AdminController'
             ],
             'confirmWithin' => 21600,
             'cost' => 12,

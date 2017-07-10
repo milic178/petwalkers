@@ -3,6 +3,7 @@
 namespace app\models;
 use dektrium\user\models\User as BaseProfile;
 use dektrium\user\models\Token;
+use dektrium\user\Module;
 
 class User extends BaseProfile
 {
@@ -38,8 +39,8 @@ class User extends BaseProfile
                     'type' => 'success',
                     'duration' => 5500,
                     'icon' => 'glyphicon glyphicon-ok-sign',
-                    'message' => 'Registration is now complete!',
-                    'title' => 'Thank you',
+                    'message' => \Yii::t('user','Welcome! Registration is complete.'),
+                    'title' => \Yii::t('user','Thank you.'),
                     'positonY' => 'top',
                     'positonX' => 'right'
                 ]);
@@ -50,8 +51,8 @@ class User extends BaseProfile
                     'type' => 'danger',
                     'duration' => 5500,
                     'icon' => 'glyphicon glyphicon-remove-sign',
-                    'message' => 'Something went wrong your account has not been confirmed!',
-                    'title' => 'Oh snap',
+                    'message' =>\Yii::t('user','Something went wrong your account has not been confirmed!'),
+                    'title' => \Yii::t('kvdialog','Error'),
                     'positonY' => 'top',
                     'positonX' => 'right'
                 ]);
@@ -62,8 +63,8 @@ class User extends BaseProfile
                 'type' => 'danger',
                 'duration' => 5500,
                 'icon' => 'glyphicon glyphicon-remove-sign',
-                'message' => 'The confirmation link is invalid or expired. Please try requesting a new one!',
-                'title' => 'Oh snap',
+                'message' => \Yii::t('user','The confirmation link is invalid or expired. Please try requesting a new one!'),
+                'title' => \Yii::t('kvdialog','Error'),
                 'positonY' => 'top',
                 'positonX' => 'right'
             ]);
@@ -73,6 +74,89 @@ class User extends BaseProfile
     }
 
 
+    /**
+     * This method attempts changing user email. If user's "unconfirmed_email" field is empty is returns false, else if
+     * somebody already has email that equals user's "unconfirmed_email" it returns false, otherwise returns true and
+     * updates user's password.
+     *
+     * @param string $code
+     *
+     * @return bool
+     * @throws \Exception
+     */
+    public function attemptEmailChange($code)
+    {
+        // TODO refactor method
+
+        /** @var Token $token */
+        $token = $this->finder->findToken([
+            'user_id' => $this->id,
+            'code'    => $code,
+        ])->andWhere(['in', 'type', [Token::TYPE_CONFIRM_NEW_EMAIL, Token::TYPE_CONFIRM_OLD_EMAIL]])->one();
+
+        if (empty($this->unconfirmed_email) || $token === null || $token->isExpired) {
+            \Yii::$app->getSession()->setFlash('danger',[
+                'type' => 'danger',
+                'duration' => 5500,
+                'icon' => 'glyphicon glyphicon-remove-sign',
+                'message' =>\Yii::t('user','Your confirmation token is invalid or expired'),
+                'title' => \Yii::t('kvdialog','Error'),
+                'positonY' => 'top',
+                'positonX' => 'right'
+            ]);
+        } else {
+            $token->delete();
+
+            if (empty($this->unconfirmed_email)) {
+                \Yii::$app->getSession()->setFlash('danger',[
+                    'type' => 'danger',
+                    'duration' => 5500,
+                    'icon' => 'glyphicon glyphicon-remove-sign',
+                    'message' =>\Yii::t('user', 'An error occurred processing your request'),
+                    'title' => \Yii::t('kvdialog','Error'),
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+            } elseif ($this->finder->findUser(['email' => $this->unconfirmed_email])->exists() == false) {
+                if ($this->module->emailChangeStrategy == Module::STRATEGY_SECURE) {
+                    switch ($token->type) {
+                        case Token::TYPE_CONFIRM_NEW_EMAIL:
+                            $this->flags |= self::NEW_EMAIL_CONFIRMED;
+                            \Yii::$app->getSession()->setFlash('success',[
+                                'type' => 'success',
+                                'duration' => 5500,
+                                'icon' => 'glyphicon glyphicon-ok-sign',
+                                'message' => \Yii::t('user','Awesome, almost there. Now you need to click the confirmation link sent to your old email address'),
+                                'title' => \Yii::t('user','Thank you.'),
+                                'positonY' => 'top',
+                                'positonX' => 'right'
+                            ]);
+
+                            break;
+                        case Token::TYPE_CONFIRM_OLD_EMAIL:
+                            $this->flags |= self::OLD_EMAIL_CONFIRMED;
+                            \Yii::$app->getSession()->setFlash('success',[
+                                'type' => 'success',
+                                'duration' => 5500,
+                                'icon' => 'glyphicon glyphicon-ok-sign',
+                                'message' => \Yii::t('user','Awesome, almost there. Now you need to click the confirmation link sent to your new email address'),
+                                'title' => \Yii::t('user','Thank you.'),
+                                'positonY' => 'top',
+                                'positonX' => 'right'
+                            ]);
+                            break;
+                    }
+                }
+                if ($this->module->emailChangeStrategy == Module::STRATEGY_DEFAULT
+                    || ($this->flags & self::NEW_EMAIL_CONFIRMED && $this->flags & self::OLD_EMAIL_CONFIRMED)) {
+                    $this->email = $this->unconfirmed_email;
+                    $this->unconfirmed_email = null;
+                    \Yii::$app->session->setFlash('success', \Yii::t('user', 'Your email address has been changed'));
+                }
+                $this->save(false);
+            }
+        }
+    }
 
 
 }
