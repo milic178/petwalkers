@@ -40,6 +40,7 @@ $config = [
 
 
     'id' => 'basic',
+    'name'=>'Petwalkers',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 
