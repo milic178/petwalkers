@@ -20,7 +20,9 @@ $config = [
             'controllerMap' => [
                 'settings' => 'app\controllers\ProfileSettingsController',
                 'registration' => 'app\controllers\RegisterController',
-                'admin' => 'app\controllers\user\AdminController'
+                'admin' => 'app\controllers\AdminController',
+                'recovery'=>'app\controllers\RecoveryController',
+
             ],
             'confirmWithin' => 21600,
             'cost' => 12,

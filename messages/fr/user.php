@@ -213,4 +213,12 @@ return [
     '{0, date, MMMM dd, YYYY HH:mm}' => '{0, date, d MMMM YYYY à HH:mm}',
     'We have generated a password for you' => 'Un mot de passe a été généré automatiquement pour vous',
     'Thank you.'=>'Merci.',
+    'New Password has been generated and sent to user'=>'Nouveau mot de passe a été généré et envoyé à l\'utilisateur',
+    'Generate and send new password to user'=>'Générer et envoyer un nouveau mot de passe à l\'utilisateur',
+    'Are you sure?'=>'Êtes-vous sûr?',
+    'Your account on {0} has a new password'=>'Votre compte sur {0} a un nouveau mot de passe',
+    'We have generated a password for you'=>'Nous avons généré un mot de passe pour vous',
+    'Your password on {0} has been changed' =>'Votre mot de passe sur {0} a été changé',
+
+
 ];
