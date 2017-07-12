@@ -11,7 +11,7 @@ use yii\bootstrap\Modal;
 
 
 
-$this->title = Yii::t('app','Questions');
+$this->title = Yii::t('app','Questions ');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <!-- Displaying modal form for entering review code and rating user -->
@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 </div>
+<h1><?= Yii::t('app','Frequently asked questions') ?></h1>
 <!-- Content Row -->
 <div class="row">
     <div class="col-md-12">
@@ -36,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Zakaj moj oglas ni prikazan na seznamu, čeprav sem vnesel pravilne iskalne kriterije?</a>
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">

@@ -26,6 +26,8 @@ return [
     'How does it work ' =>'Comment ça marche ',
     'About ' =>'À propos de nous ',
     'Help' =>'Aide',
+    'Frequently asked questions'=>'',
+
 
     //Profile
     'First Name'=>'Prénom',

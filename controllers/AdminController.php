@@ -11,7 +11,7 @@
 namespace app\controllers;
 
 use dektrium\user\controllers\AdminController as BaseAdminController;
-use dektrium\user\models\Profile;
+use app\models\Profile;
 use dektrium\user\models\User;
 use dektrium\user\models\UserSearch;
 use yii\helpers\Url;

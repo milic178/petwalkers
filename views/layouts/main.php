@@ -91,7 +91,8 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
 
 
        array_push($navItems,
-           ['label' =>'<i class="fa fa-info" aria-hidden="true"></i> '. Yii::t('app','Help'),
+           ['label' =>'<i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> '. Yii::t('news','News'), 'url' => ['/news/index']],
+           ['label' =>'<i class="fa fa-info fa-lg" aria-hidden="true"></i> '. Yii::t('app','Help'),
            'items' =>
                [
                    ['label' =>Yii::t('app','Questions '). '<i class="fa fa-question" aria-hidden="true"></i> ', 'url' => '/site/faq'],

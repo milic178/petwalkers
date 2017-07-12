@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 AppAsset::register($this);
 ?>
 
-<!-- facebook share meta tag ---->
+
 
 
 <?php
@@ -365,15 +365,16 @@ Dialog::widget([
 
 <!-- Button for contacting walker -->
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-6">
             <div class="text-right">
             <?= Html::button(Yii::t('app', 'Contact user'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
                 'class' => 'btn btn-success',
                 'id'=>'contact-walker']); ?>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-6">
             <div class="text-left">
+                <!-- facebook share meta tag ---->
                 <?= FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE,
                     'settings' =>
                     [
@@ -395,7 +396,7 @@ Dialog::widget([
 
 
 <!-- Buttons for updating and deleting add info -->
-<p class="text-center">
+<p class="text-center" style="padding-top: 5%">
     <?php
     if (!Yii::$app->user->isGuest):
         print (Html::a('<i class="fa fa-pencil" aria-hidden="true"></i>'.Yii::t('app', ' Update'), ['update', 'id' => $model->id_advert], ['class' => 'btn btn-primary']));

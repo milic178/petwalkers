@@ -312,7 +312,7 @@ class AdvertController extends Controller
             endif;
 
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+            $dataProvider->pagination->pageSize=20;
             return $this->render('listAdverts', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
@@ -320,7 +320,7 @@ class AdvertController extends Controller
 
         else:
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+            $dataProvider->pagination->pageSize=20;
             return $this->render('listAdverts', [
                 'dataProvider' => $dataProvider,
                 'searchModel' => $searchModel,

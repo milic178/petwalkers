@@ -8,6 +8,8 @@ use yii\widgets\Pjax;
 use app\models\Reviews;
 
 ?>
+
+<?= $this->params['breadcrumbs'][] ='' ?>
 <div>
 <h1><?= Yii::t('app','List of reviews waiting for confirmation') ?></h1>
 

@@ -26,6 +26,8 @@ return [
     'How does it work ' =>'Kako deluje ',
     'About ' =>'O nas ',
     'Help' =>'Pomoč',
+    'Frequently asked questions'=>'Najbolj pogosta vprašanja',
+
 
     //Profile
     'First Name'=>'Ime',

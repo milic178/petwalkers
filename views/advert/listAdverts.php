@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 </div>
-    <div class="text-center">
+    <div class="text-center" style="padding-bottom: 3%">
     <span class="alert alert-info">
         <?php
 
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </span>
     </div>
 <?php Pjax::begin(); ?>
-<div class="row grid-view-style">
+<div class="table-responsive">
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
                     'filterModel' => $searchModel,
