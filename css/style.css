@@ -66,7 +66,7 @@
 .person-text a {
     color: #ffcc00;
     display: block;
-    font-size: 14   px;
+    font-size: 14px;
     margin-bottom: 3px;
     text-decoration: underline;
 }
@@ -78,3 +78,22 @@
 .rel {
     position: relative;
 }
+
+.grid-view-style{
+
+}
+
+/* style of table th and td */
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #529642;
+    border-top: 1px solid #529642 !important;
+}
+
+.table{
+    background-color: #dfea45;
+}
+
+body{
+    background-color: #e1f388;
+}
+

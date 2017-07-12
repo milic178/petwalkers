@@ -29,7 +29,7 @@ return [
     'Assignments' => 'Naloge',
     'Awesome, almost there. Now you need to click the confirmation link sent to your new email address' => 'Bravo! Samo še korak nas loči do zaključka. Kliknite na povezavo, ki je bila poslana na vaš nov email naslov',
     'Awesome, almost there. Now you need to click the confirmation link sent to your old email address' => 'Bravo! Samo še korak nas loči do zaključka. Kliknite na povezavo, ki je bila poslana na vaš star email naslov',
-    'Complete password reset on {0}' => 'Popolna ponastavitev gesla {0}',
+    'Complete password reset on {0}' => 'Ponastavitev gesla {0}',
     'Confirm account on {0}' => 'Potrdite računa na {0}',
     'Confirm email change on {0}' => 'Ponastavitev emaila na {0}',
     'Confirmation status' => 'Potrditev statusa',
@@ -158,8 +158,8 @@ return [
     'Gravatar email' => 'Gravatar email',
     'Hello' => 'Pozdravljeni',
     'If you already registered, sign in and connect this account on settings page' => 'V primeru, da ste že registrirani povežite ta račun v nastavitvah!',
-    'If you cannot click the link, please try pasting the text into your browser' => 'Če povezava ni aktivena, jo prilepite v brskalnik!',
-    'If you did not make this request you can ignore this email' => 'Če to ni bila vaša zahteva, ignoriratje sporočilo!',
+    'If you cannot click the link, please try pasting the text into your browser' => 'Če povezava ni aktivena, jo prilepite v brskalnik',
+    'If you did not make this request you can ignore this email' => 'Če to ni bila vaša zahteva, ignoriratje sporočilo',
     'In order to complete your registration, please click the link below' => 'Za dokončanje registracije, kliknite na spodnjo povezavo!',
     'In order to complete your request, please click the link below' => 'Za dokončanje zahteve, kliknite na spodnjo povezavo!',
     'Information' => 'Podrobnosti prijave',
@@ -174,7 +174,7 @@ return [
     'New password' => 'Novo geslo',
     'Password' => 'Geslo',
     'Password has been changed' => 'Geslo je bilo spremenjeno',
-    'Please click the link below to complete your password reset' => 'Kliknite na spodnjo povezavo, da se zaključi postopek spremembe gesla!.',
+    'Please click the link below to complete your password reset' => 'Kliknite na spodnjo povezavo, da se zaključi postopek spremembe gesla',
     'Please fix following errors:' => 'Popravite sledeče napake:',
     'Profile' => 'Profil',
     'Profile settings' => 'Nastavitve profila',
@@ -216,6 +216,7 @@ return [
     'Your account on {0} has a new password'=>'Vaš račun na {0} ima novo geslo',
     'We have generated a password for you'=>'Za vas smo generirali novo geslo',
     'Your password on {0} has been changed' =>'Sprememba gesla {0}',
+    'Become this user'=>'Prijavi se kot ta uporabnik',
 
 
 ];

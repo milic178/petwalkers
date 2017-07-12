@@ -18,6 +18,7 @@ $config = [
             ],
             //overriding controllers from extension and adding custom code
             'controllerMap' => [
+                'profile'=>'app\controllers\ProfileController',
                 'settings' => 'app\controllers\ProfileSettingsController',
                 'registration' => 'app\controllers\RegisterController',
                 'admin' => 'app\controllers\AdminController',

@@ -219,6 +219,8 @@ return [
     'Your account on {0} has a new password'=>'Votre compte sur {0} a un nouveau mot de passe',
     'We have generated a password for you'=>'Nous avons généré un mot de passe pour vous',
     'Your password on {0} has been changed' =>'Votre mot de passe sur {0} a été changé',
+    'Become this user'=>'Devenez cet utilisateur',
+
 
 
 ];

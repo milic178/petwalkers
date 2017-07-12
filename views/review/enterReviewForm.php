@@ -70,8 +70,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                             'id' => 'enterReview-form',
                                             'action' => 'save-review',
                                             'options' => ['enctype'=>'multipart/form-data'],
-                                            'enableAjaxValidation' => true,
-                                            'enableClientValidation' => false,
+                                            'enableAjaxValidation' => false,
+                                            'enableClientValidation' => true,
                                             'validateOnBlur' => false,
                                 ]); ?>
 

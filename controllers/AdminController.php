@@ -99,18 +99,32 @@ class AdminController extends BaseAdminController
 
         $this->trigger(self::EVENT_BEFORE_PROFILE_UPDATE, $event);
 
-        if ($profile->load(\Yii::$app->request->post()) && $profile->save()) {
-            \Yii::$app->getSession()->setFlash('success',[
-                'type' => 'success',
-                'duration' => 4500,
-                'icon' => 'glyphicon glyphicon-ok-sign',
-                'message' => \Yii::t('user', 'Profile details have been updated'),
-                'title' => \Yii::t('kvdialog','Operation successful!'),
-                'positonY' => 'top',
-                'positonX' => 'right'
-            ]);
-            $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
-            return $this->refresh();
+        $current_image = $profile->avatar_photo;
+
+
+        if ($profile->load(\Yii::$app->request->post())) {
+            $image = $profile->uploadImage();
+
+            if(!empty($image) && $image->size !== 0) :
+                $image->saveAs('uploads/'.$profile->avatar_photo);
+            else:
+                $profile->avatar_photo=$current_image;
+            endif;
+
+            if ($profile->save()):
+
+                \Yii::$app->getSession()->setFlash('success',[
+                    'type' => 'success',
+                    'duration' => 4500,
+                    'icon' => 'glyphicon glyphicon-ok-sign',
+                    'message' => \Yii::t('user', 'Profile details have been updated'),
+                    'title' => \Yii::t('kvdialog','Operation successful!'),
+                    'positonY' => 'top',
+                    'positonX' => 'right'
+                ]);
+                $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
+                return $this->refresh();
+            endif;
         }
 
         return $this->render('_profile', [

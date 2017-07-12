@@ -21,8 +21,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #ffe8e7;
-	background: #E96D65;
+	color: #f5f7e9;
 	font-weight: 300;
 	overflow-x: hidden;
 }
@@ -32,6 +31,7 @@ body {
 	height: auto;
 	margin: 0 auto -60px;
 	padding: 0 0 0px !important;
+	background-color: #5dcc43;;
 }
 
 a {

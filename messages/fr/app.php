@@ -84,8 +84,8 @@ return [
     'User activity'=>'Activité de l\'utilisateur',
     'Social Media Profile'=>'Profil sur les rétes sociaux',
 
-    //Adds
-
+    //advert
+    'Advert'=>'Annonce',
     'Basic info'=>'Informations de base',
     'Adds'=>'Annonces',
     'Slug'=>'Limace',
@@ -171,6 +171,9 @@ return [
 
     'Passwords don\'t match!'=>'Les mots de passe ne correspondent pas!',
     'Repeat password' =>'Répéter le mot de passe',
+    'Notifications {numbNotification}'=>'Notification',
+
+
     // front page
     'I feel like finding pet sitter for'=>'',
     'in'=>'',

@@ -87,7 +87,7 @@ return [
     'User activity'=>'Dejavnost uporbnika',
     'Social Media Profile'=>'Profil na soc. omrežju',
 
-    //Adds
+    //advert
     'Advert'=>'Oglasi',
     'Basic info' =>'Osnovni podatki',
     'Adds'=>'Oglasi',
@@ -172,6 +172,7 @@ return [
 
     'Passwords don\'t match!'=>'Gesli se ne ujemata',
     'Repeat password' =>'Ponovite geslo',
+    'Notifications {numbNotification}'=>'Obvestila',
 
     //front page
     'I feel like finding pet sitter for'=>'Želim najti osebo za',

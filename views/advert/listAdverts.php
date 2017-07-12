@@ -13,12 +13,15 @@ use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use app\assets\AppAsset;
 
 $this->title = Yii::t('app', 'List of adverts');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
+<!-- calling app asset for setting style -->
+<? AppAsset::register($this); ?>
 
 <!-- Displaying modal form for entering review code and rating user -->
 <div>
@@ -49,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </span>
     </div>
 <?php Pjax::begin(); ?>
-<div class="row">
+<div class="row grid-view-style">
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
                     'filterModel' => $searchModel,
