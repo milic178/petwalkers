@@ -4,8 +4,7 @@
 
 
 <?php
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'List of adverts'), 'url' => ['list-adverts']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'News and articles'), 'url' => ['news/index']];
 $this->params['breadcrumbs'][] = $this->title; ?>
 
 <body>
@@ -29,9 +28,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
         </div>
         <div class="col-md-6">
             <h3>
-                <a href="blog-post.html">Blog Post Title</a>
+                <a href="blog-post.html">Why is it important to walk pets?</a>
             </h3>
-            <p>by <a href="#">Start Bootstrap</a>
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
@@ -49,9 +47,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
             </a>
         </div>
         <div class="col-md-6">
-            <h3><a href="blog-post.html">Blog Post Title</a>
+            <h3><a href="blog-post.html">Article about pets</a>
             </h3>
-            <p>by <a href="#">Start Bootstrap</a>
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
@@ -69,9 +66,8 @@ $this->params['breadcrumbs'][] = $this->title; ?>
             </a>
         </div>
         <div class="col-md-6">
-            <h3><a href="blog-post.html">Blog Post Title</a>
+            <h3><a href="blog-post.html">News about walking dogs</a>
             </h3>
-            <p>by <a href="#">Start Bootstrap</a>
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
