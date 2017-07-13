@@ -11,9 +11,9 @@ use app\models\Reviews;
 
 <?= $this->params['breadcrumbs'][] ='' ?>
 <div>
-<h1><?= Yii::t('app','List of reviews waiting for confirmation') ?></h1>
+<h1 class="page-header text-white"><?= Yii::t('app','List of reviews waiting for confirmation') ?></h1>
 
-<p class="bg-info text-white">
+<p class="text-white">
     <?= Yii::t('app','Below is a list of all reviews waiting to be approved for your profile, simply click on review, if you recognize the reviewer confirm else decline it.') ?>
 </p>
 
@@ -96,7 +96,7 @@ echo Dialog::widget(); ?>
     ?>
 <?php Pjax::end(); ?>
 <div style="padding-top: 5%">
-    <h2><?= Yii::t('app','My reviews:') ?></h2>
+    <h2 class="text-white"><?= Yii::t('app','My reviews:') ?></h2>
     <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews(Yii::$app->user->id)]) ?>
 </div>
 

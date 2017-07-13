@@ -86,7 +86,7 @@ return [
     'My pets'=>'Mon animalus',
     'More about walker'=>'Plus info sur promner',
     'Close' =>'Fermer',
-    'Click on my face for more' => 'Preser sur ma face',
+    'Click on my face to see my profile' => 'Preser sur ma face',
     'User activity'=>'Activité de l\'utilisateur',
     'Social Media Profile'=>'Profil sur les rétes sociaux',
 
@@ -112,6 +112,7 @@ return [
     'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Écrivez une brève description de ce que vous offrez aux clients potentiels au maximum 1000 mots!',
     'Select a course'=>'Sélectionnez un cours',
     'Select a animal' =>'Sélectionnez un animal',
+    'Update'=>'Mettre à jour',
 
     'All result shown are for price of maximum {price}€/hour' =>'Tous les résultats affichés sont pour le prix maximum {price} €/heure',
 
@@ -168,6 +169,11 @@ return [
     'Good'=>'Bien',
     'Very Good'=>'Très bon',
     'Extremely Good'=>'Incroyable',
+    'List of reviews waiting for confirmation'=>'Fr',
+    'Valid Until' =>'Fr',
+    'Below is a list of all reviews waiting to be approved for your profile, simply click on review, if you recognize the reviewer confirm else decline it.'
+    =>
+        'Fr',
 
     'Current user did not login to the application!'=>'',
     'The requested page does not exist.'=>'La page demandée n\'existe pas.',
@@ -198,6 +204,8 @@ return [
     'from'=>'Fr',
     'per hour'=>'Fr',
 
+    'Are you sure you want to delete this item?'=>'Fr',
+    'Delete'=>'Fr',
 
 
 ];

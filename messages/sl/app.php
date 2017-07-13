@@ -117,6 +117,7 @@ return [
     'Select a course'=>'Izberi vrsto oglasa',
     'Select a animal' =>'-Izberi žival-',
     'All result shown are for price of maximum {price}€/hour' =>'Prikazani so rezultati z največjo urno postavko {price}€',
+    'Update' =>'Posodobi',
 
     'Any type'=>'Kategorija',
     'Any animal' =>'Žival',
@@ -168,6 +169,11 @@ return [
     'Good'=>'Dobro',
     'Very Good'=>'Zelo dobro',
     'Extremely Good'=>'Izjemno',
+    'List of reviews waiting for confirmation'=>'Seznam ocen, ki čakajo na potrditev',
+    'Valid Until' =>'Velja do',
+    'Below is a list of all reviews waiting to be approved for your profile, simply click on review, if you recognize the reviewer confirm else decline it.'
+    =>
+        'Sodaj se nahaja seznam vseh ocen, ki čakajo na  vašo potrditev. V primeru da prepoznaste osebo in žival katero ste varovali jo potrdite, drugače pa zavrnite.',
 
     'Current user did not login to the application!'=>'Uporabnik še ni bil prijavljen.',
     'The requested page does not exist.'=>'Zahtevana stran ne obstaja.',
@@ -196,6 +202,9 @@ return [
     'for my'=>'za',
     'from'=>'ter plačati',
     'per hour'=>'na uro',
+
+    'Are you sure you want to delete this item?'=>'Ste prepričani, da želite izbrisati ta element?',
+    'Delete'=>'Izbriši',
 
 
 

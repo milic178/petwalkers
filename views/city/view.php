@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="city-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 class="page-header text-white"><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_city], ['class' => 'btn btn-primary']) ?>

@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="city-update">
 
-    <h1><?= Html::encode(Yii::t('app','Update City')) ?></h1>
+    <h1 class="page-header text-white"><?= Html::encode(Yii::t('app','Update City')) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,

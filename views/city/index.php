@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="city-index">
 
-    <h1><?= Html::encode(Yii::t('app', 'List of cities')) ?></h1>
+    <h1 class="page-header text-white"><?= Html::encode(Yii::t('app', 'List of cities')) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>

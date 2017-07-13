@@ -217,6 +217,7 @@ return [
     'We have generated a password for you'=>'Za vas smo generirali novo geslo',
     'Your password on {0} has been changed' =>'Sprememba gesla {0}',
     'Become this user'=>'Prijavi se kot ta uporabnik',
+    'Actions'=>'Dejanja',
 
 
 ];

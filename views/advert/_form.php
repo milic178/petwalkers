@@ -13,7 +13,7 @@ use app\models\Animal;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="advert-form text-left">
+<div class="advert-form text-left text-white">
 
     <?php $form = ActiveForm::begin(); ?>
 
