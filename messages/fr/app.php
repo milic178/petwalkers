@@ -26,7 +26,11 @@ return [
     'How does it work ' =>'Comment ça marche ',
     'About ' =>'À propos de nous ',
     'Help' =>'Aide',
-    'Frequently asked questions'=>'',
+    'Frequently asked questions'=>'Fr',
+    'Success!'=>'Fr!',
+    'Failed!'=>'Fr!',
+    'Email'=>'E-mail',
+    'Create'=>'Créer',
 
 
     //Profile
@@ -104,12 +108,18 @@ return [
     'Write a short description about you 200 words max!'=>'Écrivez une brève description à propos de vous 200 mots maximum!',
     'Animal'=>'Animal',
     'City'=>'Ville',
-    'Enter a number or leave empty for later disscusion'=>'Entrez un numéro ou laissez-vous vide pour une discussion ultérieure',
+    'Enter a hourly rate'=>'Entrez un taux horaire',
     'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Écrivez une brève description de ce que vous offrez aux clients potentiels au maximum 1000 mots!',
     'Select a course'=>'Sélectionnez un cours',
     'Select a animal' =>'Sélectionnez un animal',
 
-    'All result shown are for price of maximum {price} €/hour' =>'Tous les résultats affichés sont pour le prix maximum {price} €/heure',
+    'All result shown are for price of maximum {price}€/hour' =>'Tous les résultats affichés sont pour le prix maximum {price} €/heure',
+
+    'Any type'=>'Fr',
+    'Any animal' =>'Fr',
+    'Any city'=>'Fr',
+
+
 
     //index
     'any type'=>'n\'importe quel type',
@@ -121,7 +131,10 @@ return [
 
 
     //view add
-    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Le code de révision a été généré et est valable pour 2 jours! Veuillez enregistrer le code si vous souhaitez évaluer Pet Walker! Votre code est: ',
+    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is:    ' => 'Le code de révision a été généré et est valable pour 2 jours! Veuillez enregistrer le code si vous souhaitez évaluer Pet Walker! Votre code est: ',
+    'Request walker contact'=>'Fr',
+    'To get walker contant information fill this form' =>'Fr',
+    'Request code' =>'Fr',
 
 
     //errors
@@ -135,6 +148,7 @@ return [
 
     //
     //review
+    'Pet name'=>'Fr',
     'Review code accepted!' =>'Code d\'examen accepté!',
     'Please fill the form below to post your review about user.' =>'Veuillez remplir le formulaire ci-dessous pour poster votre avis sur l\'utilisateur.',
     'Write your experience and satisfaction with walker maximum 200 words!'=>'Écrivez votre expérience et votre satisfaction à l\'égard de 200 mots de randonneur maximum!',
@@ -177,12 +191,12 @@ return [
 
 
     // front page
-    'I feel like finding pet sitter for'=>'',
-    'in'=>'',
-    'any city'=>'',
-    'for my'=>'',
-    'from'=>' ',
-    'per hour'=>'',
+    'I feel like finding pet sitter for'=>'Fr',
+    'in'=>'Fr',
+    'any city'=>'Fr',
+    'for my'=>'Fr',
+    'from'=>'Fr',
+    'per hour'=>'Fr',
 
 
 

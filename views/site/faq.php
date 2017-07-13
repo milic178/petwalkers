@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 </div>
-<h1><?= Yii::t('app','Frequently asked questions') ?></h1>
+<h1 class="text-white  page-header"><?= Yii::t('app','Frequently asked questions') ?></h1>
 <!-- Content Row -->
 <div class="row">
     <div class="col-md-12">
@@ -41,9 +41,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">
-                    <div class="panel-body">
+                    <p class="panel-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
+                    </p>
                 </div>
             </div>
             <!-- /.panel -->
@@ -150,9 +150,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
             </div>
-            <h3 style="text-align: center"><?= Yii::t('app','More questions? Dont hesitate!');?></h3>
+            <h3 class="text-white" style="text-align: center"><?= Yii::t('app','More questions? Don\'t hesitate!');?></h3>
             <div class="col-md-12 text-center">
-                <?= Html::a(Yii::t('app','Contact us'),
+                <?= Html::a(Yii::t('app','Contact us '),
                         ['/site/contact'],
                         [
                             'class'=>'btn btn-success btn-lg',

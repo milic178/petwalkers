@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use yii\bootstrap\Modal;
-$this->title = Yii::t('app','Contact us');
+$this->title = Yii::t('app','Contact us ');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
 </div>
 
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="site-contact text-white">
+    <h1 class="text-white  page-header"><?= Yii::t('app','Contact us ') ?></h1>
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 

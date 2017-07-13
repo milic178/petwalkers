@@ -11,7 +11,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Modal;
 
-$this->title = Yii::t('app','How does it work?');
+$this->title = Yii::t('app','How does it work ');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -33,9 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <!-- Content Row -->
+<h1 class="text-white  page-header"><?= Yii::t('app','How does it work ') ?></h1>
+
 <div class="row">
     <div class="col-lg-12 result_box">
-        <p>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at <a href="http://startbootstrap.com/template-categories/unstyled">http://startbootstrap.com/template-categories/unstyled</a>.
+        <p class="text-white">
+            <?= Yii::t('news','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.') ?>
         </p>
             <?= Html::img(\Yii::$app->params['uploadUrl'].'how.png',[
                 'alt'=>'some',

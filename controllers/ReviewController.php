@@ -205,7 +205,7 @@ class ReviewController extends \yii\web\Controller
 
                 if($model->save()):
                     \Yii::$app->response->format = 'json';
-                    $message = \Yii::t('app','Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ');
+                    $message = \Yii::t('app','Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is:    ');
                     return ['message' =>$message , 'code'=>$model->review_code];
                 else:
                     \Yii::$app->response->format = 'json';

@@ -61,7 +61,7 @@ class Reviews extends \yii\db\ActiveRecord
         return [
             'id_review' => Yii::t('app', 'Id Review'),
             'name' => Yii::t('app', 'Name'),
-            'lastname' => Yii::t('app', 'Last name'),
+            'lastname' => Yii::t('app', 'Last Name'),
             'petname' => Yii::t('app', 'Pet name'),
             'rating' => Yii::t('app', 'Rating'),
             'description' => Yii::t('app', 'Description'),

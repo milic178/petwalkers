@@ -45,7 +45,7 @@ return [
     'Review accepted!'=>'',
     'Review will be shown on your profile.'=>'',
     'Are you sure you want to publish this review?'=>'',
-    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'',
+    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Fr',
     'An email has been sent with instructions for resetting your password!'=>'Un email a été envoyé avec des instructions pour réinitialiser votre mot de passe!',
     'Something went wrong your account has not been confirmed!'=>'Quelque chose s\'est mal passé, votre compte n\'a pas été confirmé!',
 

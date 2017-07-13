@@ -19,9 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 AppAsset::register($this);
 ?>
 
-
-
-
+<!-- meta tags for facebook share -->
 <?php
 Yii::$app->params['og_title']['content'] = $model->title;
 Yii::$app->params['og_description']['content'] = $model->description;
@@ -52,7 +50,7 @@ Dialog::widget([
     'libName' => 'krajeeDialogSuccess',
     'options' => [
         'type' => Dialog::TYPE_SUCCESS,
-        'title' => Yii::t('app', 'Information')
+        'title' => Yii::t('app', 'Success!')
     ],
 ]);
 ?>
@@ -64,15 +62,14 @@ Dialog::widget([
     'libName' => 'krajeeDialogError', // a custom lib name
     'options' => [
         'type' => Dialog::TYPE_DANGER,
-        'title' => Yii::t('app', 'Information')
+        'title' => Yii::t('app', 'Failed!')
     ],
 ]);
 ?>
 
 
 <div>
-    <h1><?= Html::encode($this->title) ?></h1>
-    <br>
+    <h1 class="text-white  page-header"><?= $model->title; ?></h1>
 
 <!-- Displaying user profile popup -->
 
@@ -86,8 +83,8 @@ Dialog::widget([
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
-            <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
-            <em>    <?= Yii::t('app','Click on my face to see my profile')?> </em>
+            <h3 class="text-white"><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
+            <em class="text-white">    <?= Yii::t('app','Click on my face to see my profile')?> </em>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -390,7 +387,7 @@ Dialog::widget([
     </div>
 
 <!-- Displaying user reviews -->
-<h2><?= Yii::t('app','User reviews:') ?></h2>
+<h2 class="text-white"><?= Yii::t('app','User reviews:') ?></h2>
 <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews($profile->user_id)]) ?>
 
 

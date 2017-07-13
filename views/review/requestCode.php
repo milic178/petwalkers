@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
 
                     <?= $form->field($model, 'petname') ?>
 
-                    <?= Html::submitButton(Yii::t('user','Request code'),
+                    <?= Html::submitButton(Yii::t('app','Request code'),
                                 [
                                     'name' => 'request-code-submit-button',
                                     'id'=>'request-code-submit-button',

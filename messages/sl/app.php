@@ -27,7 +27,12 @@ return [
     'About ' =>'O nas ',
     'Help' =>'Pomoč',
     'Frequently asked questions'=>'Najbolj pogosta vprašanja',
-
+    'How does it work?'=>'Kako deluje?',
+    'Success!'=>'Uspešno generirano!',
+    'Failed!'=>'Generiranje ni uspelo!',
+    'Email'=>'E-mail',
+    'More questions? Don\'t hesitate!'=>'Niste našli odgovora? Pišite nam!',
+    'Create'=>'Ustvari',
 
     //Profile
     'First Name'=>'Ime',
@@ -107,11 +112,15 @@ return [
     'Écrivez une brève description à propos de vous 200 mots maximum!'=>'Povzemite oglas s nekaj besedami, 200 je maksimalno št. besed!',
     'Animal'=>'Žival',
     'City'=>'Mesto',
-    'Enter a number or leave empty for later disscusion'=>'Vnesite urno postavko, ali pustite prazno za kasnejši dogovor',
+    'Enter a hourly rate'=>'Vnesite urno postavko',
     'Write a short description about what you offer to potential customers maximum 1000 words!'=>'Napišite kaj ponujate v oglasu, največje možno število znakov je 1000!',
     'Select a course'=>'Izberi vrsto oglasa',
     'Select a animal' =>'-Izberi žival-',
-    'All result shown are for price of maximum {price} €/hour' =>'Prikazani so rezultati z največjo urno postavko {price}€',
+    'All result shown are for price of maximum {price}€/hour' =>'Prikazani so rezultati z največjo urno postavko {price}€',
+
+    'Any type'=>'Kategorija',
+    'Any animal' =>'Žival',
+    'Any city'=>'Mesto',
 
     //index
     'any type'=>'vsak tip',
@@ -122,7 +131,10 @@ return [
 
     // view add
 
-    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is -->    ' => 'Koda je uspešno generirana, njena veljavnost je 2 dni! Vaša koda je -->  ',
+    'Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is:    ' => 'Koda je uspešno generirana, njena veljavnost je 2 dni! Vaša koda je:    ',
+    'Request walker contact'=>'Pridobi kontktne informacije o uporabniku',
+    'To get walker contant information fill this form' =>'Prosimo izpolnite obrazec, za prikaz kontaktih informacij o uporabniku',
+    'Request code' =>'Pridobi kodo',
 
 
     //errors
@@ -131,11 +143,12 @@ return [
     'The above error occurred while the Web server was processing your request.' =>'Pri obdelavi vaše zahteve je prišlo do zgornje napake!',
     'Please contact us if you think this is a server error. Thank you.' =>'Prosimo obrnite se na nas, če menite, da je to napaka strežnika.',
     'Code you have entered has already been used!' => 'Koda, ki ste jo vnesli je bila že uporabljena!',
-    'This user has been already reviewed by person with that name and pet!' =>' Uporabnik je že bill ocenjen s strani nekoga ki ima isto ime in ime ljubljenčka!',
+    'This user has been already reviewed by person with that name and pet!' =>'Uporabnik je že bill ocenjen s strani osebe, ki ima isto ime in ime ljubljenčka!',
     'The user does not exsist or yet has no profile!' =>'Uporabnik ne obstaja ali pa še nima ustvarjenega profila!',
 
 
     //review
+    'Pet name'=>'Ime živali',
     'Review code accepted!' =>'Koda je pravilna!',
     'Please fill the form below to post your review about user.' =>'Prosimo izpolnite obrazec, da lahko objavite vaše mnenje o sprehajalcu.',
     'Write your experience and satisfaction with walker maximum 200 words!'=>'Opišite vašo izkušnjo s sprehajalcem, maksimalno število črk je 200!',
