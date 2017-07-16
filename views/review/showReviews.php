@@ -82,8 +82,8 @@ $this -> title = Yii::t('app','Show reviews');
                                     <?= Html::img('@web/uploads/default_user.jpg', [
                                         'alt'=>'default user',
                                         'class'=>'img-circle',
-                                        'width'=>'10%',
-                                        'height'=>'10%',
+                                        'width'=>'20%',
+                                        'height'=>'20%',
                                     ]);?>
                                 </div>
                             </div>

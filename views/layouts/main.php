@@ -79,9 +79,7 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                    'items' =>
                    [
                         ['label' =>'<i class="fa fa-cogs" aria-hidden="true"></i> '. Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
-                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications {numbNotification}',[
-                               'numbNotification' => Reviews::countReviewsWaiting(),
-                           ]), 'url' => '/review/list-reviews'],
+                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications').' '.Reviews::countReviewsWaiting(), 'url' => '/review/list-reviews'],
                         ['label' =>'<i class="fa fa-sign-out" aria-hidden="true"></i> ' .Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
 
                    ]

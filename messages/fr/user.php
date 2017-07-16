@@ -221,6 +221,7 @@ return [
     'Your password on {0} has been changed' =>'Votre mot de passe sur {0} a été changé',
     'Become this user'=>'Devenez cet utilisateur',
     'Actions'=>'Actes',
+    'Are you sure you want to switch to this user for the rest of this Session?'=>'Êtes-vous sûr de vouloir passer à cet utilisateur pour le reste de cette session?',
 
 
 

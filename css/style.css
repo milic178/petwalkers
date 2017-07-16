@@ -108,3 +108,11 @@ a{
 .summary{
     color: #fff;
 }
+
+.modal-body{
+    background-color: #458e96;
+}
+
+.modal-header{
+    background-color: #458e96;
+}

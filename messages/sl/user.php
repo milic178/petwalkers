@@ -218,6 +218,7 @@ return [
     'Your password on {0} has been changed' =>'Sprememba gesla {0}',
     'Become this user'=>'Prijavi se kot ta uporabnik',
     'Actions'=>'Dejanja',
+    'Are you sure you want to switch to this user for the rest of this Session?'=>'Ali ste prepričani, da se želite prijaviti kot ta uporabnik?'
 
 
 ];

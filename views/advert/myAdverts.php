@@ -24,7 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- showing poopup messages-->
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
-<p>
+
+<p class="text-center">
     <?= Html::button(Yii::t('app', 'Create Advert'), ['value' => Url::to(['advert/create']),
         'class' => 'showModalButton btn btn-success',
         'id'=>'modalCreateAdvertButton']); ?>

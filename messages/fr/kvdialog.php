@@ -18,7 +18,7 @@
  */
 return [
     'Cancel' => 'Annuler',
-    'Confirmation' => 'Avis',
+    'Confirmation' => 'Confirmer',
     'Information' => 'Information',
     'Ok' => 'Ok',
     'Update profile?' =>'Mettre à jour le profil?',
@@ -29,24 +29,25 @@ return [
 
 
     // Popup warnings
-    'You have successfully updated advertisement!'=>'Vous avez mis à jour avec succès l\'annonce!',
+    'You have successfully updated advertisement!'=>'Vous avez mis à jour l\'annonce avec succès!',
     'Operation successful!' =>'Opération réussie!',
     'You are not the owner!'=>'Vous n\'êtes pas le propriétaire!',
-    'You have successfully deleted advertisement!' =>'\'Vous avez supprimé la publicité!\'',
+    'You have successfully deleted advertisement!' =>'\'Vous avez supprimé la publicité avec succès!\'',
     'Request denied'=>'Demande refusée',
 
     //Growl messages
-    'You have already posted advert with this specifics'=>'',
-    'Advert not created'=>'',
-    'You have succesfuly posted advertisment!'=>'',
-    'Add created'=>'',
-    'Review declined!'=>'',
-    'You have declined review for your profile.'=>'',
-    'Review accepted!'=>'',
-    'Review will be shown on your profile.'=>'',
-    'Are you sure you want to publish this review?'=>'',
-    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Fr',
-    'An email has been sent with instructions for resetting your password!'=>'Un email a été envoyé avec des instructions pour réinitialiser votre mot de passe!',
-    'Something went wrong your account has not been confirmed!'=>'Quelque chose s\'est mal passé, votre compte n\'a pas été confirmé!',
+    'You have already posted advert with this specifics'=>'Vous avez déjà posté une annonce identique',
+    'Advert not created'=>'L\'annonce n\'a pas été crée',
+    'You have succesfuly posted advertisment!'=>'Vous avez posté votre annonce avec succès',
+    'Add created'=>'Annonce crée',
+    'Review declined!'=>'Commentaire refusé',
+    'You have declined review for your profile.'=>'Vous avez refusé le commentaire pour votre profil',
+    'Review accepted!'=>'Commentaire accepté!',
+    'Review will be shown on your profile.'=>'Le commentaire sera publié sur votre profil',
+    'Are you sure you want to publish this review?'=>'Êtes-vous sûr se bien vouloir publié ce commentaire?',
+    'You have {n,plural,=1{# advert} other{# adverts}} about to expire in less than 4 days!'=>'Vous avez {n,plural,=1{# annonce} other{# annonces}} expirant dans moins de 4 jours!',
+    'An email has been sent with instructions for resetting your password!'=>'Un email vous a été envoyé avec les instructions pour réinitialiser votre mot de passe!',
+    'Something went wrong your account has not been confirmed!'=>'Une erreur s\'est produite, votre compte n\'a pas été confirmé!',
 
 ];
+

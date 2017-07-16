@@ -193,7 +193,7 @@ return [
 
     'Passwords don\'t match!'=>'Gesli se ne ujemata',
     'Repeat password' =>'Ponovite geslo',
-    'Notifications {numbNotification}'=>'Obvestila',
+    'Notifications'=>'Obvestila',
 
     //front page
     'I feel like finding pet sitter for'=>'Želim najti osebo za',
@@ -205,6 +205,8 @@ return [
 
     'Are you sure you want to delete this item?'=>'Ste prepričani, da želite izbrisati ta element?',
     'Delete'=>'Izbriši',
+    'Approve'=>'Odobri',
+    'Decline'=>'Zavrni',
 
 
 
