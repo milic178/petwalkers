@@ -132,6 +132,17 @@ class SiteController extends Controller
 
 
     /**
+     * Displays privacy page.
+     *
+     * @return string
+     */
+    public function actionPrivacy()
+    {
+        return $this->render('privacy');
+    }
+
+
+    /**
      * Displays How does it work page.
      *
      * @return string

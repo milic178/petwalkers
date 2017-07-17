@@ -44,6 +44,11 @@ echo "<div id='modalContentCreate'></div>";
 Modal::end();
 ?>
 
+<?= date('d-m-Y') ?>
+
+<?php $ba= new yii\db\Expression('NOW()');
+?>
+
 <div class="table-responsive">
 <!-- Displaying gridView with all data-->
 <?=
@@ -52,9 +57,7 @@ Modal::end();
                     'layout'       => "{items}\n{pager}",
                     'rowOptions'   => function ($model) {
                         $url = Url::to(['advert/view', 'id' => $model->id_advert]);
-                        return [
-                            'onclick' => "window.location.href='{$url}'"
-                        ];
+                            return ['onclick' => "window.location.href='{$url}'"];
                     },
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
@@ -83,11 +86,6 @@ Modal::end();
                                     return $dt->format('d-m-Y');
                             },
                             'headerOptions' => ['style' => 'width:10%'],
-                            'contentOptions' => function ($model, $key, $index, $column) {
-                                return ['style' => 'background-color:'
-                                    . ($model->valid_until < new yii\db\Expression('NOW()')
-                                        ? '#ff7272' : '')];
-                            },
                         ],
                         [
                             'attribute' =>   'price',
@@ -128,3 +126,8 @@ Modal::end();
 ?>
 </div>
 
+<div>
+    <p class="text-center text-white">
+        <?= Yii::t('app','Once an advert is created it will be valid for 14 days. Only valid adverts will be displayed. If your advert expires, create a new one.') ?>
+    </p>
+</div>

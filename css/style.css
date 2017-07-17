@@ -116,3 +116,8 @@ a{
 .modal-header{
     background-color: #458e96;
 }
+
+.new-footer{
+    border-top: 3px solid #539fe0;
+    background-color: #f5f5f5;
+}

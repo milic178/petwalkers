@@ -102,7 +102,7 @@ Dialog::widget([
                         <div class="text-center">
                             <?=  Html::img($profile->getImageUrl(), [
                                 'class'=>'img-rounded ',
-                                'width'=>'110px',
+                                'width'=>'100px',
                                 'height'=>'100px',
                                 'title'=>$profile->first_name,
                             ]); ?>

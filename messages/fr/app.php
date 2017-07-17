@@ -209,5 +209,18 @@ return [
     'Approve'=>'Approuver',
     'Decline'=>'Déclin',
 
+    'Once an advert is created it will be valid for 14 days. Only valid adverts will be displayed. If your advert expires, create a new one.'
+    =>
+        'Une fois qu\'une annonce est créée, elle sera valide 14 jours. Seules les annonces valides seront affichées. Si votre annonce expire, créez une nouvelle.',
+
+    'Petwalkers find best care for your pet.'=>'Petwalkers trouver le meilleur soin pour votre animal de compagnie.',
+
+    // footer privacy
+    'Privacy policy'=>'Politique de confidentialité',
+    'All user entries in the forms on the website'=>'Toutes les entrées des formulaires sur le site',
+    'Data entered by the user himself and for which accuracy he / she is responsible. Petwalkers web application is collecting the fallowing user data:'
+    =>
+        'Données saisies par l\'utilisateur lui-même et pour quelle précision il / elle est responsable. L\'application Web Petwalkers collecte les données utilisateur suivantes:'
+
 
 ];

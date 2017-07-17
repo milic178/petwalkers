@@ -208,8 +208,18 @@ return [
     'Approve'=>'Odobri',
     'Decline'=>'Zavrni',
 
+    'Once an advert is created it will be valid for 14 days. Only valid adverts will be displayed. If your advert expires, create a new one.'
+        =>
+            'Ustvarjeni oglasi so veljavni 14 dni. Samo veljavni oglasi bodo objavljeni, če določenemu oglasu poteče veljavnost enostavno ustvarite novega.',
 
+    'Petwalkers find best care for your pet.'=>'Petwalkers najdi najboljšo oskrbo za vašega ljubljenčka.',
 
+    // footer privacy
+    'Privacy policy'=>'Izjava o zasebnosti',
+    'All user entries in the forms on the website'=>'Vse vnose uporabnikov v obrazce na spletni strani',
+    'Data entered by the user himself and for which accuracy he / she is responsible. Petwalkers web application is collecting the fallowing user data:'
+        =>
+            'Podatki, ki jih vnese uporabnik sam in za katerih točnost sam odgovarja. Petwalkers zbira naslednje uporabnikove informacije:'
 
 
 
