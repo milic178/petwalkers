@@ -73,12 +73,12 @@ Dialog::widget([
 
 <!-- Displaying user profile popup -->
 
-    <div>
+    <div class="text-white">
         <div class="text-center">
             <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
                     'class'=>'img-rounded',
-                    'width'=>'110px',
+                    'width'=>'100px',
                     'height'=>'100px',
                     'title'=>$profile->first_name,
                 ]); ?>
@@ -298,7 +298,11 @@ Dialog::widget([
                             </h3>
                         </div>
                         <div class="panel-body text-center">
-                            <?= $model->created ?>
+                            <?php
+                            $date = $model->created;
+                            $dt = new DateTime($date);
+                            echo $dt->format('d-m-Y');
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -313,7 +317,11 @@ Dialog::widget([
                             </h3>
                         </div>
                         <div class="panel-body text-center">
-                            <?= $model->valid_until ?>
+                            <?php
+                                $date = $model->valid_until;
+                                $dt = new DateTime($date);
+                                echo $dt->format('d-m-Y');
+                             ?>
                         </div>
                     </div>
             </div>

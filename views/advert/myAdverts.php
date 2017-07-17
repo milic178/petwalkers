@@ -83,6 +83,11 @@ Modal::end();
                                     return $dt->format('d-m-Y');
                             },
                             'headerOptions' => ['style' => 'width:10%'],
+                            'contentOptions' => function ($model, $key, $index, $column) {
+                                return ['style' => 'background-color:'
+                                    . ($model->valid_until < new yii\db\Expression('NOW()')
+                                        ? '#ff7272' : '')];
+                            },
                         ],
                         [
                             'attribute' =>   'price',

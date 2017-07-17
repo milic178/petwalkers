@@ -14,6 +14,8 @@ use yii\filters\AccessControl;
 use app\models\Profile;
 use yii\data\ActiveDataProvider;
 
+use yii\db\Expression;
+
 /**
  * AdvertController implements the CRUD actions for Advert model.
  */
@@ -67,6 +69,9 @@ class AdvertController extends Controller
     {
         $searchModel = new AdvertSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -311,7 +316,14 @@ class AdvertController extends Controller
                 $searchModel->min_price = 20 ;
             endif;
 
+
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $dataProvider->query->andWhere(['>=','valid_until', new Expression('NOW()')]);
+            $dataProvider->setSort([
+                'attributes' => ['valid_until','price'],
+                'defaultOrder' => ['valid_until' => SORT_DESC]
+            ]);
+
             $dataProvider->pagination->pageSize=20;
             return $this->render('listAdverts', [
                 'searchModel' => $searchModel,
@@ -320,6 +332,12 @@ class AdvertController extends Controller
 
         else:
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $dataProvider->query->andWhere(['>=','valid_until', new Expression('NOW()')]);
+            $dataProvider->setSort([
+                'attributes' => ['valid_until','price'],
+                'defaultOrder' => ['valid_until' => SORT_DESC]
+            ]);
+
             $dataProvider->pagination->pageSize=20;
             return $this->render('listAdverts', [
                 'dataProvider' => $dataProvider,

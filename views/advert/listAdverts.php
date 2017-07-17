@@ -15,6 +15,8 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use app\assets\AppAsset;
 
+use yii\db\Expression;
+
 $this->title = Yii::t('app', 'List of adverts');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -51,6 +53,8 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </span>
     </div>
+
+
 <?php Pjax::begin(); ?>
 <div class="table-responsive">
                 <?= GridView::widget([
@@ -67,14 +71,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         ['class' => 'yii\grid\SerialColumn'],
 
                         //'id_advert',
-                      /*  [
+                        [
                             'attribute' =>  'title',
                             'headerOptions' => ['style' => 'width:15%'],
                         ],
-                      */
+
                         // 'slug',
                         // 'description',
-                        [
+                      /*  [
                             'attribute' =>   'created',
                             'value'=> function ($model){
                                     $date = $model->created;
@@ -83,7 +87,16 @@ $this->params['breadcrumbs'][] = $this->title;
                                     },
                             'headerOptions' => ['style' => 'width:10%'],
                         ],
-                        // 'valid_until',
+                      */
+                        [
+                            'attribute' =>   'valid_until',
+                            'value'=> function ($model){
+                                $date = $model->valid_until;
+                                $dt = new DateTime($date);
+                                return $dt->format('d-m-Y');
+                            },
+                            'headerOptions' => ['style' => 'width:10%'],
+                        ],
                         [
                             'attribute' =>   'price',
                             'headerOptions' => ['style' => 'width:5%'],
@@ -91,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         [
                             'attribute' => 'id_user',
                             'value' => 'idUser.username',
-                            'headerOptions' => ['style' => 'width:15%'],
+                            'headerOptions' => ['style' => 'width:10%'],
                         ],
                         [
                             'attribute' => 'id_type',
@@ -117,7 +130,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          //   'filter'=>
                          //       \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),
                             'filter' => Html::activeDropDownList($searchModel, 'id_city', \yii\helpers\ArrayHelper::map(\app\models\City::find()->all(), 'id_city', 'name'),['class'=>'form-control','prompt' => Yii::t('app','Any city')]),
-                            'headerOptions' => ['style' => 'width:20%'],
+                            'headerOptions' => ['style' => 'width:15%'],
                         ],
                         [
                             'attribute' => 'id_region',

@@ -45,8 +45,7 @@ p{
 
 /* modal content style */
 .modal-content{
-	background-color: #e96d65!important;
-}
+background-color: #458e96 !important;}
 .has-error .help-block{
 	color: #fff!important;
 }
