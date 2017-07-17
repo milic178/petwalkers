@@ -218,9 +218,53 @@ return [
     // footer privacy
     'Privacy policy'=>'Politique de confidentialité',
     'All user entries in the forms on the website'=>'Toutes les entrées des formulaires sur le site',
+
     'Data entered by the user himself and for which accuracy he / she is responsible. Petwalkers web application is collecting the fallowing user data:'
     =>
-        'Données saisies par l\'utilisateur lui-même et pour quelle précision il / elle est responsable. L\'application Web Petwalkers collecte les données utilisateur suivantes:'
+        'Données saisies par l\'utilisateur lui-même et pour quelle précision il / elle est responsable. L\'application Web Petwalkers collecte les données utilisateur suivantes:',
+
+    'Other Information'=>'Autres informations::',
+    'IP addresses from which the user accessed the site'=>'Adresses IP à partir de laquelle l\'utilisateur a accédé au site',
+    'A user identification cookie assigned to the user at the beginning of each session'=>'cookie pour identifier l\'utilisateur que l\'utilisateur est affecté au début de chaque réunion',
+
+    'All of the said data, except for cookies, is stored permanently on Petwalkers. The cookie is stored only for the duration of the session and expires after 30 minutes of inactivity.'
+        =>
+        'cookie pour identifier l\'utilisateur que l\'utilisateur est dodeVsi données mentionnées, à l\'exception du biscuit, le serveur Petwalkers stockées de manière permanente. Un cookie est stocké uniquement pour la durée de la réunion et expire après 30 minutes d\'inactivité. Ne pas stocker dans la base de données.',
+
+    'Transmission of personal data'=>'Partage de renseignements personnels',
+    'Petwalkers provides the following information to Unregistered Website Visitors:'=>'Les visiteurs du site d\'accès Petwalkers pour fournir les informations suivantes:',
+
+    'The data that the individual himself entered into the form on the website (the desired place of arrival and departure, name, middle initials, surname and comment on the entry)'
+        =>
+            'informations fournies par l\'individu lui-même est entré dans le formulaire sur le site (le point d\'arrivée et de départ, nom, prénom initiale, nom et commentaire à l\'entrée)',
+
+    'Petwalkers provides the following information to registered users:'=>'Petwalkers utilisateurs enregistré les informations suivantes:' ,
+    'The information it passes to undeclared visitors, and the user\'s phone number.' =>'informations fournies par les visiteurs d\'accès et le numéro de téléphone de l\'utilisateur.',
+
+    'During the session, Petwalkers will automatically forward the cookie information to the web browser from which the user will be logged into the system. Information that will not be transmitted to third parties or They will be processed only by persons under the direct supervision of the Petwalkers team:'
+        =>
+            'Les données sur piškotu seront Petwalkers pendant toute la durée de la session seront automatiquement transmis à votre navigateur Web à partir duquel l\'utilisateur est connecté dans le système. Les données ne seront pas transmises à des tiers respectivement. Ils traiteront seule personne sous la supervision directe de Petwalkers:',
+
+    'username'=>'Nom d\'utilisateur',
+    'IP-addresses from which the user accessed the site' =>'Adresses IP à partir de laquelle l\'utilisateur a accédé au site',
+    'Petwalkers reserves the right to display the data in an anonymous summary form for the purpose of statistical displays.'=>'Petwalkers se réserve le droit d\'afficher ces données sous forme de résumé anonymisé aux fins des états statistiques.',
+    'Insurance measures'=>'Les mesures de protection',
+
+    'Petwalkers will provide all reasonable steps to ensure that data not intended for public display (registered and unregistered visitors) will not be accessible to third parties or the public.'
+        =>
+            'Petwalkers fournira toutes les mesures raisonnables pour assurer que les données destinés à l\'affichage public (visiteurs enregistrés et non enregistrés) ne seront pas accessibles à des tiers et le public.',
+
+    'Exceptional disclosure of personal information'=>'Extrêmement divulgation des données personnelles',
+
+    'Data collected and processed by Petwalkers will only be disclosed if such an obligation is specified in the law or in good faith that such action is necessary for: proceedings before courts or other state bodies, the protection and the exercise of legitimate interests Petwalkers.'
+        =>
+            'Les données fournies par Petwalkers collecte et processus seront divulgués que si cette obligation est prévue dans la loi ou dans la croyance de bonne foi qu\'une telle action est nécessaire: une procédure devant les tribunaux ou d\'autres organes de l\'Etat, la protection et la réalisation des intérêts légitimes Petwalkers.',
+    'Consent of the user'=>'Le consentement de l\'utilisateur',
+    'By clicking the I agree button, the user acknowledges that he has read the content of these rules and that he agrees to the processing of personal data under the aforementioned conditions. The acceptance of these conditions shall be considered as personal consent of the individual according to Article 8 paragraph 1 of the Personal Data Protection Act.'
+        =>
+            'En cliquant accord, l\'utilisateur confirme qu\'il a lu le contenu de ces règles et d\'accepter le traitement des données personnelles dans les conditions mentionnées ci-dessus. L\'acceptation de ces conditions est considéré comme le consentement personnel de l\'individu en vertu du paragraphe 1 de l\'article 8 de la loi sur la protection des données personnelles.',
+
+    'Read More ' =>'En savoir plus ',
 
 
 ];

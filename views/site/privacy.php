@@ -52,42 +52,49 @@ $this->params['breadcrumbs'][] = $this->title;
             <li><?=Yii::t('app','A user identification cookie assigned to the user at the beginning of each session') ?></li>
         </ul>
 
-        <p><?= Yii::t('app','All of the said data, except for cookies, is stored permanently on Transport.org. The cookie is stored only for the duration of the session and expires after 30 minutes of inactivity.') ?>
+        <p><?= Yii::t('app','All of the said data, except for cookies, is stored permanently on Petwalkers. The cookie is stored only for the duration of the session and expires after 30 minutes of inactivity.') ?>
 
         <h2><?=Yii::t('app','Transmission of personal data') ?></h2>
 
         <p><?=Yii::t('app','Petwalkers provides the following information to Unregistered Website Visitors:') ?></p>
         <ul>
-            <li><?=Yii::t('app','Petwalkers provides the following information to Unregistered Website Visitors:') ?></li>
+            <li><?=Yii::t('app','The data that the individual himself entered into the form on the website (the desired place of arrival and departure, name, middle initials, surname and comment on the entry)') ?></li>
         </ul>
 
-        <p>Prevoz.org prijavljenim uporabnikom posreduje naslednje podatke:</p>
+        <p><?=Yii::t('app','Petwalkers provides the following information to registered users:') ?></p>
         <ul>
-            <li>podatke, ki jih posreduje neprijavljenim obiskovalcem, ter telefonsko številko uporabnika.</li>
+            <li><?=Yii::t('app','The information it passes to undeclared visitors, and the user\'s phone number.') ?></li>
         </ul>
 
-        <p>Podatek o piškotu bo Prevoz.org za čas trajanja seje samodejno posredoval spletnemu brskalniku iz katerega bo uporabnik prijavljen v sistem.</p>
-
-        <p>Podatki, ki ne bodo posredovani tretjim osebam oz. jih bodo obdelovale samo osebe pod neposrednim nadzorom ekipe Prevoz.org:</p>
+        <p>
+            <?=Yii::t('app','During the session, Petwalkers will automatically forward the cookie information to the web browser from which the user will be logged into the system. Information that will not be transmitted to third parties or They will be processed only by persons under the direct supervision of the Petwalkers team:') ?>
+            </p>
         <ul>
-            <li>uporabniško ime</li>
-            <li>naslov e-pošte</li>
-            <li>geslo v šifrirani obliki</li>
-            <li>IP-naslovi, iz katerih je uporabnik dostopal do spletne strani</li>
+            <li><?=Yii::t('app','username') ?></li>
+            <li><?=Yii::t('user','Email') ?></li>
+            <li><?=Yii::t('user','Password') ?></li>
+            <li><?=Yii::t('user','Email') ?></li>
+            <li><?=Yii::t('app','IP-addresses from which the user accessed the site') ?></li>
+
         </ul>
 
-        <p>Prevoz.org si pridržuje pravico, da omenjene podatke prikaže v anonimizirani sumarni obliki z namenom statističnih prikazov.</p>
+        <p><?=Yii::t('app','Petwalkers reserves the right to display the data in an anonymous summary form for the purpose of statistical displays.') ?></p>
 
-        <h3>Ukrepi za zavarovanje</h3>
-        <p>Prevoz.org bo zagotovil vse razumne ukrepe, da podatki, ki niso namenjeni javnemu prikazu (registriranim in neregistriranim obiskovalcem), ne bodo dostopni tretjim osebam in javnosti.</p>
+        <h3><?= Yii::t('app','Insurance measures') ?></h3>
+        <p><?=Yii::t('app','Petwalkers will provide all reasonable steps to ensure that data not intended for public display (registered and unregistered visitors) will not be accessible to third parties or the public.') ?>
+            </p>
 
-        <h3>Izjemno razkritje osebnih podatkov
+        <h3>
+            <?= Yii::t('app','Exceptional disclosure of personal information') ?>
         </h3>
-        <p>Podatki, ki jih Prevoz.org zbira in obdeluje, bodo razkriti samo, če je taka obveznost določena v zakonu, ali v dobri veri, da je tako ukrepanje potrebno za: postopke pred sodišči ali drugimi državnimi organi, zaščito in uresničevanje zakonitih interesov Prevoz.org.</p>
+        <p>
+            <?= Yii::t('app','Data collected and processed by Petwalkers will only be disclosed if such an obligation is specified in the law or in good faith that such action is necessary for: proceedings before courts or other state bodies, the protection and the exercise of legitimate interests Petwalkers.') ?>
+        </p>
 
-        <h3>Privolitev uporabnika</h3>
+        <h2><?= Yii::t('app','Consent of the user') ?></h2>
 
-        <p>S klikom na gumb Strinjam se uporabnik potrjuje, da je prebral vsebino teh pravil in da se strinja z obdelavo osebnih podatkov pod prej navedenimi pogoji. Sprejemanje teh pogojev se šteje za osebno privolitev posameznika po 1. odstavku 8. člena Zakona o varstvu osebnih podatkov.
+        <p>
+            <?= Yii::t('app','By clicking the I agree button, the user acknowledges that he has read the content of these rules and that he agrees to the processing of personal data under the aforementioned conditions. The acceptance of these conditions shall be considered as personal consent of the individual according to Article 8 paragraph 1 of the Personal Data Protection Act.') ?>
         </p>
 
     </div>

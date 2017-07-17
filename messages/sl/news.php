@@ -33,4 +33,8 @@ return [
     =>
         'Slo',
 
+    'Sitters in demand'=>'Povpraševanje po sprehajalcih',
+    'Walking the dog'=>'Sprehajanje psa',
+    'New job opportunities'=>'Nove karijerne priložosti',
+
 ];

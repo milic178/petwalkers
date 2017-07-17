@@ -219,7 +219,46 @@ return [
     'All user entries in the forms on the website'=>'Vse vnose uporabnikov v obrazce na spletni strani',
     'Data entered by the user himself and for which accuracy he / she is responsible. Petwalkers web application is collecting the fallowing user data:'
         =>
-            'Podatki, ki jih vnese uporabnik sam in za katerih točnost sam odgovarja. Petwalkers zbira naslednje uporabnikove informacije:'
+            'Podatki, ki jih vnese uporabnik sam in za katerih točnost sam odgovarja. Petwalkers zbira naslednje uporabnikove informacije:',
+
+    'Other Information'=>'Ostali podatki:',
+    'IP addresses from which the user accessed the site'=>'IP-naslove, iz katerih je uporabnik dostopal do spletne strani',
+    'A user identification cookie assigned to the user at the beginning of each session'=>'piškot za identifikacijo uporabnika, ki je uporabniku dodeljen ob začetku vsake seje',
+    'All of the said data, except for cookies, is stored permanently on Petwalkers. The cookie is stored only for the duration of the session and expires after 30 minutes of inactivity.'
+        =>
+        'Vsi omenjeni podatki, razen piškota, se na strežniku Petwalkers shranjujejo trajno. Piškot se shranjuje samo za čas trajanja seje in poteče po 30 minutah neaktivnosti. Ne shranjuje se v bazo podatkov.',
+    'Transmission of personal data'=>'Posredovanje osebnih podatkov',
+    'Petwalkers provides the following information to Unregistered Website Visitors:'=>'Petwalkers neprijavljenim obiskovalcem spletne strani posreduje naslednje podatke:',
+    'The data that the individual himself entered into the form on the website (the desired place of arrival and departure, name, middle initials, surname and comment on the entry)'
+        =>
+            'podatke, ki jih je posameznik sam vnesel v obrazec na spletni strani (želeni kraj prihoda in odhoda, ime, začetnica srednjega imena, priimek in komentar ob vnosu)',
+    'Petwalkers provides the following information to registered users:'=>'Petwalkers prijavljenim uporabnikom posreduje naslednje podatke:' ,
+    'The information it passes to undeclared visitors, and the user\'s phone number.' =>'podatke, ki jih posreduje neprijavljenim obiskovalcem, ter telefonsko številko uporabnika.',
+    'During the session, Petwalkers will automatically forward the cookie information to the web browser from which the user will be logged into the system. Information that will not be transmitted to third parties or They will be processed only by persons under the direct supervision of the Petwalkers team:'
+        =>
+            'Podatek o piškotu bo Petwalkers za čas trajanja seje samodejno posredoval spletnemu brskalniku iz katerega bo uporabnik prijavljen v sistem. Podatki, ki ne bodo posredovani tretjim osebam oz. jih bodo obdelovale samo osebe pod neposrednim nadzorom ekipe Petwalkers:',
+    'username'=>'uporabniško ime',
+    'IP-addresses from which the user accessed the site' =>'IP-naslovi, iz katerih je uporabnik dostopal do spletne strani',
+    'Petwalkers reserves the right to display the data in an anonymous summary form for the purpose of statistical displays.'=>'Petwalkers si pridržuje pravico, da omenjene podatke prikaže v anonimizirani sumarni obliki z namenom statističnih prikazov.',
+    'Insurance measures'=>'Ukrepi za zavarovanje',
+    'Petwalkers will provide all reasonable steps to ensure that data not intended for public display (registered and unregistered visitors) will not be accessible to third parties or the public.'
+        =>
+            'Petwalkers bo zagotovil vse razumne ukrepe, da podatki, ki niso namenjeni javnemu prikazu (registriranim in neregistriranim obiskovalcem), ne bodo dostopni tretjim osebam in javnosti.',
+    'Exceptional disclosure of personal information'=>'Izjemno razkritje osebnih podatkov',
+    'Data collected and processed by Petwalkers will only be disclosed if such an obligation is specified in the law or in good faith that such action is necessary for: proceedings before courts or other state bodies, the protection and the exercise of legitimate interests Petwalkers.'
+        =>
+            'Podatki, ki jih Petwalkers zbira in obdeluje, bodo razkriti samo, če je taka obveznost določena v zakonu, ali v dobri veri, da je tako ukrepanje potrebno za: postopke pred sodišči ali drugimi državnimi organi, zaščito in uresničevanje zakonitih interesov Petwalkers.',
+    'Consent of the user'=>'Privolitev uporabnika',
+    'By clicking the I agree button, the user acknowledges that he has read the content of these rules and that he agrees to the processing of personal data under the aforementioned conditions. The acceptance of these conditions shall be considered as personal consent of the individual according to Article 8 paragraph 1 of the Personal Data Protection Act.'
+        =>
+            'S klikom na gumb Strinjam se uporabnik potrjuje, da je prebral vsebino teh pravil in da se strinja z obdelavo osebnih podatkov pod prej navedenimi pogoji. Sprejemanje teh pogojev se šteje za osebno privolitev posameznika po 1. odstavku 8. člena Zakona o varstvu osebnih podatkov.',
+
+    'Read More ' =>'Preberi več ',
+
+
+
+
+
 
 
 

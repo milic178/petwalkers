@@ -35,6 +35,10 @@ return [
         'Mémo pour les chercheurs d’emploi : Vous aurez probablement plus de chance de trouver du travail en tant qu’animal-sitter que dans l\’éducation d’enfants dans la décennie à venir. C’est un des messages implicites d’un nouveau rapport du «New York-based Conference Board » qui étudie le changement de la demande des consommateurs, principal facteur économiques des 10 prochaines années.',
 
 
+    'Sitters in demand'=>'Sitters et de la demande',
+    'Walking the dog'=>'Chien de marche',
+    'Happy pets'=>'Animaux heureux',
+    'New job opportunities'=>'Nouvelles opportunités d\'emploi',
 
     //articles
 
