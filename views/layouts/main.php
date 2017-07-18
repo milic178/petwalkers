@@ -95,8 +95,8 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                [
                    ['label' =>Yii::t('app','Questions '). '<i class="fa fa-question" aria-hidden="true"></i> ', 'url' => '/site/faq'],
                    ['label' =>Yii::t('app','How does it work '). '<i class="fa fa-question" aria-hidden="true"></i> ', 'url' => '/site/how'],
-                   ['label' =>Yii::t('app','Contact us '). '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> ', 'url' => '/site/contact'],
                    ['label' => Yii::t('app','About '). '<i class="fa fa-id-card fa-lg" aria-hidden="true"></i> ', 'url' => '/site/about'],
+                   ['label' =>Yii::t('app','Contact us '). '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> ', 'url' => '/site/contact'],
                ]
        ]);
 

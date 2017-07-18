@@ -266,5 +266,7 @@ return [
 
     'Read More ' =>'En savoir plus ',
 
+    'By clicking the Sign up button, you agree to the'=>'En cliquant sur le bouton Inscription, vous acceptez les conditions',
+
 
 ];

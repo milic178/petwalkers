@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
     echo "<div id='modalFormContent'></div>";
     Modal::end();
     ?>
-
+</div>
 
 <body>
 <!-- Page Content -->

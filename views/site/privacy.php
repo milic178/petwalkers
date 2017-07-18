@@ -61,10 +61,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <li><?=Yii::t('app','The data that the individual himself entered into the form on the website (the desired place of arrival and departure, name, middle initials, surname and comment on the entry)') ?></li>
         </ul>
 
-        <p><?=Yii::t('app','Petwalkers provides the following information to registered users:') ?></p>
-        <ul>
-            <li><?=Yii::t('app','The information it passes to undeclared visitors, and the user\'s phone number.') ?></li>
-        </ul>
 
         <p>
             <?=Yii::t('app','During the session, Petwalkers will automatically forward the cookie information to the web browser from which the user will be logged into the system. Information that will not be transmitted to third parties or They will be processed only by persons under the direct supervision of the Petwalkers team:') ?>
@@ -73,7 +69,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <li><?=Yii::t('app','username') ?></li>
             <li><?=Yii::t('user','Email') ?></li>
             <li><?=Yii::t('user','Password') ?></li>
-            <li><?=Yii::t('user','Email') ?></li>
             <li><?=Yii::t('app','IP-addresses from which the user accessed the site') ?></li>
 
         </ul>

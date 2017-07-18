@@ -149,6 +149,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="text-center">
             <?= Html::a(Yii::t('user', 'Already registered? Sign in!'), ['/user/security/login']) ?>
         </p>
+        <p class="text-white">
+            <?= Yii::t('app','By clicking the Sign up button, you agree to the') ?>
+            <a href="/site/privacy">
+                <?= Yii::t('app','Privacy policy') ?>
+            </a>
+        </p>
     </div>
 </div>
 

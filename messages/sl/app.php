@@ -226,12 +226,12 @@ return [
     'A user identification cookie assigned to the user at the beginning of each session'=>'piškot za identifikacijo uporabnika, ki je uporabniku dodeljen ob začetku vsake seje',
     'All of the said data, except for cookies, is stored permanently on Petwalkers. The cookie is stored only for the duration of the session and expires after 30 minutes of inactivity.'
         =>
-        'Vsi omenjeni podatki, razen piškota, se na strežniku Petwalkers shranjujejo trajno. Piškot se shranjuje samo za čas trajanja seje in poteče po 30 minutah neaktivnosti. Ne shranjuje se v bazo podatkov.',
+        'Vsi omenjeni podatki, razen piškota, se na strežniku Petwalkers shranjujejo trajno. Piškot se shranjuje samo za čas trajanja seje in poteče po 30 minutah neaktivnosti.',
     'Transmission of personal data'=>'Posredovanje osebnih podatkov',
     'Petwalkers provides the following information to Unregistered Website Visitors:'=>'Petwalkers neprijavljenim obiskovalcem spletne strani posreduje naslednje podatke:',
     'The data that the individual himself entered into the form on the website (the desired place of arrival and departure, name, middle initials, surname and comment on the entry)'
         =>
-            'podatke, ki jih je posameznik sam vnesel v obrazec na spletni strani (želeni kraj prihoda in odhoda, ime, začetnica srednjega imena, priimek in komentar ob vnosu)',
+            'podatke, ki jih je posameznik sam vnesel v obrazec na spletni strani (komentar ob vnosu, email, telefonsko št, urno postavko)',
     'Petwalkers provides the following information to registered users:'=>'Petwalkers prijavljenim uporabnikom posreduje naslednje podatke:' ,
     'The information it passes to undeclared visitors, and the user\'s phone number.' =>'podatke, ki jih posreduje neprijavljenim obiskovalcem, ter telefonsko številko uporabnika.',
     'During the session, Petwalkers will automatically forward the cookie information to the web browser from which the user will be logged into the system. Information that will not be transmitted to third parties or They will be processed only by persons under the direct supervision of the Petwalkers team:'
@@ -255,7 +255,7 @@ return [
 
     'Read More ' =>'Preberi več ',
 
-
+    'By clicking the Sign up button, you agree to the'=>'S klikom na gumb Registracija se strinjate z',
 
 
 

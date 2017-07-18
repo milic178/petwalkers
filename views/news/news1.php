@@ -122,7 +122,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
                 <?= Yii::t('news','If dog walking is “scheduled” into each day, you’ll feel more responsible for sticking with your program. Plus, your dog will also get used to the routine and remind you when “it’s time!”') ?>
             </li>
             <li>
-                <?= Yii::t('news','Track your progress; you can download a walking progress calendar here.') ?>
+                <?= Yii::t('news','Track your progress') ?>
             </li>
             <li>
                 <?= Yii::t('news','Post a calendar on the refrigerator and add a sticker for each 10 minutes of walking you do each day. This will reinforce your good behavior and make you pause before opening the door to grab a calorie-laden snack!') ?>
