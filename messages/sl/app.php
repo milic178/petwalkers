@@ -149,7 +149,9 @@ return [
 
 
     //review
-    'Pet name'=>'Ime živali',
+    'Your name'=>'Vaše ime',
+    'Your last name'=>'Vaš priimek',
+    'Your pet name'=>'Ime vaše živali',
     'Review code accepted!' =>'Koda je pravilna!',
     'Please fill the form below to post your review about user.' =>'Prosimo izpolnite obrazec, da lahko objavite vaše mnenje o sprehajalcu.',
     'Write your experience and satisfaction with walker maximum 200 words!'=>'Opišite vašo izkušnjo s sprehajalcem, maksimalno število črk je 200!',
@@ -256,6 +258,38 @@ return [
     'Read More ' =>'Preberi več ',
 
     'By clicking the Sign up button, you agree to the'=>'S klikom na gumb Registracija se strinjate z',
+
+
+    ///faq
+    'Why did not my ad appear in the list even if I entered the correct search criteria?'=>'Zakaj moj oglas ni prikazan na seznamu, čeprav sem vnesel pravilne iskalne kriterije?',
+
+    'What is the code given after I chose to contact my pet sitter?'=>'Kaj pomeni koda, ki sem jo prejel ob kontaktiranju sprehajalca?',
+
+    'How does the assessment of sitters work?' => 'Kako deluje ocenjevanje sprehajacev?',
+
+    'Why do I have to accept or decline a review on my profile?' => 'Zakaj moram sprejeti ali zavrniti oceno ki je objavljena na mojem profilu?',
+
+    'Do you have a suggestion for us?' => 'Imate predlog za nas?',
+
+    'How do i write a good and competitive ad for sitting pets?' => 'Kako napišem dober in konkurenčen oglas za varstvo ali sprehod hišnih ljubljenčkov?',
+
+    'One or more of my adds will soon expire and become invalid what do I do?' => 'Ena ali več mojih objav bo kmalu potekela in s tem postala neveljavena, kaj naj storim?',
+
+    'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => 'Ali je spletna stran Petwalkers odgovorna v primeru nesreč med varstvom ali sprehodom živali?',
+
+    'How do I know the petsitters on Petwalkers will take good care of my pet?'=>'Kako naj vem, da bodo sprehajalci na Petwalkersu skrbno skrbeli za mojega hišnega ljubljenčka?',
+
+    'What makes Petwalkers different from other dog walking services and apps?' => 'Zakaj se Petwalkers razlikuje od drugih storitev za varstvo in sprehode hišnih ljubljenčkov?',
+
+    'How much will it cost me to contact sitter i have selected?' => 'Koliko me bo stalo, da kontaktiram uporabnika, ki sem izbral?',
+
+    'Copyright © 2017 Petwalkers. All rights reserved.' => 'Copyright © 2017 Petwalkers. Vse pravice zadržane.',
+
+    'Is Petwalkers responsible for any damage done to me from pets i have been taking care of?' => 'Ali je Petwalkers odgovoren za škodo ki bi nastala pri sprehajanju ali varovanju živali?',
+
+    '' => '',
+
+    '' => '',
 
 
 

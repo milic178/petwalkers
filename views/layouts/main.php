@@ -136,6 +136,11 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                     <i class="fa fa-paw fa-lg" aria-hidden="true"></i> <span class="heading">Petwalkers</span>
                 </h3>
                 <p><?=Yii::t('app','Petwalkers find best care for your pet.') ?></p>
+                <p>
+                    <small>
+                    <?= Yii::t('app','Copyright © 2017 Petwalkers. All rights reserved.') ?>
+                    </small>
+                </p>
             </div>
             <div class="col-sm-12 col-md-3" style="padding-top: 1%">
                 <ul >

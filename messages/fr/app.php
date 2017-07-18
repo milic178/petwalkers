@@ -149,7 +149,9 @@ return [
 
     //
     //review
-    'Pet name'=>'Nom de l\'animal',
+    'Your name'=>'Votre nom',
+    'Your last name'=>'Votre nom de famille',
+    'Your pet name'=>'Votre nom d\'animal de compagnie',
     'Review code accepted!' =>'Code commentaire accepté!',
     'Please fill the form below to post your review about user.' =>'Veuillez remplir le formulaire ci-dessous pour donner votre avis sur l\'utilisateur.',
     'Write your experience and satisfaction with walker maximum 200 words!'=>'Parlez de votre expérience et de votre satisfaction (200 mots max.)',
