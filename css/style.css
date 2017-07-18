@@ -123,3 +123,12 @@ a{
 .footer-links{
     color: #21304e;
 }
+
+.welcome-page{
+    padding: 1%;
+    color: #deec12;
+    font-weight: 400;
+    font-size: 1.5em;
+    background-color: #fff;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}

@@ -188,6 +188,44 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
             </div>
+
+
+            <!-- /.panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13"><?= Yii::t('app','What are my responsibilities as person who looks for sitter?') ?></a>
+                    </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Več možnosti imaš, da boš našel sprehajalca, če boš naredil dober prvi vtis.
+                        Nekateri sprehajalci kot pogoj za opravljeno storitev zahtevajo, da je pes izšolan, vajen povodca in socializiran.
+                        Pozanimajte se ali bo sprehajalec hkrati sprehajal še kakšnega drugega psa. Opozorite sprehajalca na neobičajna vedenja psa na sprehodu, na morebitno pomanjkljivo socializacijo z določenimi psi,
+                        morebitno agresijo, strah, itd. Predstavite mu svojo običajno rutino sprehoda in kaj pričakujete od storitve.
+                        Povprašajte ga o izkušnjah in kvalifikacijah ter morebitnih priporočilih. Odgovorno izberite komu boste zaupali svojega psa!
+                        Če se nekaj dogovoriš, se poskusi dogovora tudi držati. To velja tako za lastnika živali kot za osebo ki jo bo varovala.
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14"><?= Yii::t('app','What are my responsibilities as sitter?') ?></a>
+                    </h4>
+                </div>
+                <div id="collapse14" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        For the time you take care of someone else's pet you are completely responsible for feeding, exercising and taking care of it and protecting it from all harm. If you say you‘re available, make sure you will be. Your rates are a part of your profile, and the client uses that information to book you in the first place, don‘t change them.
+                        Več možnosti imaš, da boš dobil dobro oceno, če boš naredil dober prvi vtis.
+                        Dogovori se za točen čas in kraj odhoda. Kot voznik postavi pravila za zamudnike, da bodo vedeli, kdaj jih boš poklical in koliko časa jih boš čakal.
+                        Priporočamo približno 5 minut.
+                    </div>
+                </div>
+            </div>
+
             <!-- /.panel -->
             <div class="panel panel-default">
                 <div class="panel-heading">
