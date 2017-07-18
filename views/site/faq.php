@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Quite simply, we believe in sending someone into your home who loves your pet as much as you do. We select only the most passionate pet care professionals and have built software that empowers each of them to deliver a premium service with a personal touch. Our walkers enjoy industry-leading pay, medical benefits, 24/7 support, and many other benefits.
+                        To find a sitter for your pet we do not ask you for registration or email or any data. You are free to browse between sitters and select the one which suit you. Quite simply, we believe that your pet deserves someone who loves your pet as much as you do. User performance is rated with reviews and opinions written by community.
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        For the moment all the services of finding a sitter or publishing an advert are free of any charge. This has been my project to improve the community and I intent to keep it free of any charge.
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        That is called a review code composed of random numbers and characters. Every code is valid for 2 days from requesting the contact information. Code is unique identifier for you to leave your oppinion about the service provided by certain sitter.
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Assessment is relying purely on community. Meaning it depends on your satisfaction of the service provided by sitter. We tend to build an awesome community for everyone to enjoy! Inappropriate and verbally offensive reviews will not be tolerated by administrators. Users need to use their real names and data pseudonyms are not accepted.
                     </div>
                 </div>
             </div>
@@ -96,23 +96,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        This is simply a feature to allow genuine reviews to be posted on your profile. If you recognize the peron for who you did a service simply approve it else decline that false review. You will not be able to see the content of review just the name of owner and pet you have provided your service to.
                     </div>
                 </div>
             </div>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><?= Yii::t('app','Why did not my ad appear in the list even if I entered the correct search criteria?') ?></a>
-                    </h4>
-                </div>
-                <div id="collapseSix" class="panel-collapse collapse">
-                    <p class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </p>
-                </div>
-            </div>
             <!-- /.panel -->
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -122,7 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapseSeven" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       Petwalkers service is not responsible for any kind of damage on private or public property.
                     </div>
                 </div>
             </div>
@@ -135,7 +123,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapse8" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Petwalkers service is not responsible for any kind of accident that happens to you while watching over other people pets.
                     </div>
                 </div>
             </div>
@@ -148,10 +136,26 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapse9" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        The community uses reputations built over time to build trust, and ensure that all members respect the Petwalkers spirit of positive community collaboration.
+                        When two members meet in real life to exchange service, they publicly rate each other: before you contact with another member you can read their ratings and benefit from the experience of other members who have met that person.
+                        If you don't feel comfortable around person who is supposed to take care of your pet simply cancel the service and find another one.
                     </div>
                 </div>
             </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><?= Yii::t('app','Why did not my ad appear in the list even if I entered the correct search criteria?') ?></a>
+                    </h4>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse">
+                    <p class="panel-body">
+                        Most certainly your publishing is invalid. Every ad you publish has expiration date which is 14 days. After that it becomes invalid and is not shown in general search. All you need to do is renew the publishing.
+                    </p>
+                </div>
+            </div>
+
             <!-- /.panel -->
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -161,10 +165,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapse10" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Simply create a new ad with same criteria under the Adverts section on the Menu.
                     </div>
                 </div>
             </div>
+
             <!-- /.panel -->
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -174,7 +179,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapse11" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Explaining the features of your services is important, but explaining the benefits for the customer is really what it’s all about.
+                        After all, people are more interested in what they get from your services than what you do.
+                        People scan things quickly. make sure that your advertisement actually grabs and keeps their attention.
+                        You do that with an effective headline. Add a little humor the content, use simple language.
+                        Make sure your profile is updated and nicely written so you can earn credibility and trust.
+                        People are nervous about spending their money. There are too many scammers and low-quality services out there.
                     </div>
                 </div>
             </div>
@@ -187,7 +197,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div id="collapse12" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        We are constantly trying to improve our service to meet your needs. Therefore, we are always listening to your good ideas, suggestions for improvement and new feature requests!
+                        If you have any suggestions about the web application please feel free to contact us!
                     </div>
                 </div>
             </div>
