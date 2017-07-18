@@ -7,10 +7,26 @@
  */
 
 use yii\helpers\Html;
+use yii\bootstrap\Modal;
 
 $this->title = Yii::t('news','Pet walkers to be more in demand than teachers in next decade');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles'), 'url' => ['news/index']]; ?>
 
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+        'clientOptions' => [
+            'backdrop' => 'static'
+        ]
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+    </div>
 
 <body>
 <!-- Page Content -->
@@ -33,14 +49,13 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
         </p>
 
 
-        <div class="text-center">
+        <div>
             <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'new-jobs.png', [
-                'class'=>'img-rounded ',
+                'class'=>'img-responsive center-block',
                 'title'=>Yii::t('news','New job opportunities'),
             ]); ?>
         </div><br>
 
-        <br>
         <p>
             <?= Yii::t('news','A word about the chart. The study projects spending increases based purely on demographics, including the growth of the population. The figures don\'t factor in the impact of rising wages and wealth over the period. As such, the projected 8.1 percent upturn in total household expenditures from 2015 to 2025 understates the increase that will actually happen. It\'s no surprise to see health-care expenditures surging as the number of Americans between the ages of 70 and 84 spikes by 50 percent.') ?>
         </p><br>

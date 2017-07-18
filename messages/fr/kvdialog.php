@@ -34,6 +34,7 @@ return [
     'You are not the owner!'=>'Vous n\'êtes pas le propriétaire!',
     'You have successfully deleted advertisement!' =>'\'Vous avez supprimé la publicité avec succès!\'',
     'Request denied'=>'Demande refusée',
+    
 
     //Growl messages
     'You have already posted advert with this specifics'=>'Vous avez déjà posté une annonce identique',

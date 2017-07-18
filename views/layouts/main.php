@@ -138,19 +138,19 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                 <p><?=Yii::t('app','Petwalkers find best care for your pet.') ?></p>
             </div>
             <div class="col-sm-12 col-md-3" style="padding-top: 1%">
-                <ul>
-                    <li><a href="/site/how"><?= Yii::t('app','How does it work ') ?></a></li>
-                    <li><a href="/site/faq"><?= Yii::t('app','Questions ') ?></a></li>
-                    <li><a href="/site/contact/"><?= Yii::t('app','Contact us ') ?></a></li>
+                <ul >
+                    <li><a class="footer-links"  href="/site/how"><?= Yii::t('app','How does it work ') ?></a></li>
+                    <li><a class="footer-links"  href="/site/faq"><?= Yii::t('app','Questions ') ?></a></li>
+                    <li><a class="footer-links"  href="/site/contact/"><?= Yii::t('app','Contact us ') ?></a></li>
 
                     <br>
                 </ul>
             </div>
             <div class="col-sm-12 col-md-3" style="padding-top: 1%">
-                <ul>
-                    <li><a href="/news/index"><?=  Yii::t('news','News') ?></a></li>
-                    <li><a href="/site/about"><?=  Yii::t('app','About ') ?></a></li>
-                    <li><a href="/site/privacy"><?=  Yii::t('app','Privacy policy') ?></a></li>
+                <ul >
+                    <li><a class="footer-links"  href="/news/index"><?=  Yii::t('news','News') ?></a></li>
+                    <li><a class="footer-links"  href="/site/about"><?=  Yii::t('app','About ') ?></a></li>
+                    <li><a class="footer-links"  href="/site/privacy"><?=  Yii::t('app','Privacy policy') ?></a></li>
                 </ul>
             </div>
         </div>

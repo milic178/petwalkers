@@ -7,10 +7,26 @@
  */
 
 use yii\helpers\Html;
+use yii\bootstrap\Modal;
 
 $this->title = Yii::t('news','Why walking your dog is great exercise?');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles'), 'url' => ['news/index']]; ?>
 
+<!-- Displaying modal form for entering review code and rating user -->
+<div>
+    <?php
+    Modal::begin([
+        'header' => '<h3>'.Yii::t('app','Rate walker').'</h3>',
+        'id'=>'enter-code',
+        'size'=>'modal-sm',
+        'clientOptions' => [
+            'backdrop' => 'static'
+        ]
+    ]);
+    echo "<div id='modalFormContent'></div>";
+    Modal::end();
+    ?>
+</div>
 
 <body>
 <!-- Page Content -->
@@ -28,9 +44,9 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
             <?= Yii::t('news','Having trouble sticking to an exercise program? Research shows that dogs are actually Nature’s perfect personal trainers—loyal, hardworking, energetic and enthusiastic. And, unlike your friends, who may skip an exercise session because of appointments, extra chores or bad weather, dogs never give you an excuse to forego exercising.')?>
         </p>
 
-        <div class="text-center">
+        <div>
             <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'walking-dog.jpg', [
-                'class'=>'img-responsive img-hover',
+                'class'=>'img-responsive center-block',
                 'title'=>Yii::t('news','Walking the dog'),
             ]); ?>
         </div><br>
@@ -49,7 +65,6 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
                 <?= Yii::t('news','Provide good social support when exercising') ?>
             </li>
         </ul>
-        <br>
         <p>
             <?= Yii::t('news','What are the benefits of regular exercise? Dr. Joanna Kruk reviewed medical literature describing the health benefits of exercise. Her research showed that the risk of developing a number of serious health problems is reduced by physical activity and exercise:')?>
         </p>
@@ -79,10 +94,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
             <li>
                 <?= Yii::t('news','30 minutes of moderate-intensity exercise five days per week for adults 18 to 65 years old, plus strengthening exercises two days per week') ?>
             </li>
-            <li>
-                <?= Yii::t('news','30 minutes of moderate-intensity exercise five days per week for adults 18 to 65 years old, plus strengthening exercises two days per week') ?>
-            </li>
-            <li>
+           <li>
                 <?= Yii::t('news','30 minutes of moderate-intensity exercise five days per week, with modifications as needed in seniors over 65 years old, plus flexibility and balance exercises') ?>
             </li>
         </ul>
