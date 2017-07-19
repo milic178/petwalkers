@@ -82,7 +82,11 @@ a:active {
 	color: #b14943;
 	padding: 0 0 0.6em 0.1em;
 }
-
+/* main from css */
+#index-form a:hover{
+    color: #6f7709;
+    text-decoration: none;
+}
 /* Main Content */
 .main {
 	max-width: 100em;
@@ -157,5 +161,19 @@ a:active {
 	.codrops-icon span {
 		display: none;
 	}
+
+}
+
+.jumbotron {
+    padding-top: 15px;
+}
+
+.welcome-page{
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    padding-top: 3%;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5em;
+    background-color: #21304e;
 
 }

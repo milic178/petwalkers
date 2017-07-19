@@ -46,11 +46,21 @@ IndexAsset::register($this);
 
         <h1>
             <i class="fa fa-paw fa-lg" aria-hidden="true"></i>
-            <?= \Yii::t('app', 'Welcome');?>
+            <?php //\Yii::t('app', 'Welcome');?>
+            Petwalkers
         </h1>
+
+        <div class="panel welcome-page">
+            <?= Yii::t('app','Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.') ?>
+        </div>
+
     </div>
-    <div class="container demo-1">
+
+    <div class="container demo-1" id="index-form">
         <div class="main clearfix">
+
+
+
 
             <?php $form = ActiveForm::begin([
                 'id' => 'nl-form',
@@ -103,10 +113,7 @@ IndexAsset::register($this);
 
 <!-- Page Content -->
 <div class="container">
-    <div class="panel welcome-page">
-        Dobrodošli na strani, kjer najdete ponudnike storitve sprehajanja psov.
-        Izberite mesto, kjer želite iskati in poiščite zanesljivo osebo, ki bo poskrbela za vašega psa v času vaše odsotnosti ali nezmožnosti.
-    </div>
+
     <!-- Marketing Icons Section -->
     <div class="row">
         <div class="col-md-4">
@@ -180,18 +187,18 @@ IndexAsset::register($this);
     <!-- Service Tabs -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Service Tabs</h2>
+            <h2 class="page-header"><?= Yii::t('app','How does it work?') ?></h2>
         </div>
         <div class="col-lg-12">
 
             <ul id="myTab" class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-tree"></i> Service One</a>
+                <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <?= Yii::t('app','Step One') ?></a>
                 </li>
-                <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-car"></i> Service Two</a>
+                <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-car"></i> <?= Yii::t('app','Step Two') ?></a>
                 </li>
-                <li class=""><a href="#service-three" data-toggle="tab"><i class="fa fa-support"></i> Service Three</a>
+                <li class=""><a href="#service-three" data-toggle="tab"><i class="fa fa-support"></i> <?= Yii::t('app','Step Three') ?></a>
                 </li>
-                <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-database"></i> Service Four</a>
+                <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-database"></i> <?= Yii::t('app','Step Four') ?></a>
                 </li>
             </ul>
 

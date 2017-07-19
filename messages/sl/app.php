@@ -287,7 +287,9 @@ return [
 
     'Is Petwalkers responsible for any damage done to me from pets i have been taking care of?' => 'Ali je Petwalkers odgovoren za škodo ki bi nastala pri sprehajanju ali varovanju živali?',
 
-    '' => '',
+    'Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.'
+        =>
+            'Dobrodošli tukaj lahko najdete ponudnike storitve varstva hišnih ljubljenčkov. Izberite mesto, tip, in ceno kjer želite in poiščite zanesljivo osebo, ki bo poskrbela za vašega ljubljlenčka v času vaše odsotnosti ali nezmožnosti.',
 
     '' => '',
 
