@@ -110,6 +110,9 @@ IndexAsset::register($this);
     </div>
     <!-- /container -->
 
+    <!-- making space -->
+    <div class="col-xs-12" style="height:50px;"></div>
+    <!-- /.row -->
 
 <!-- Page Content -->
 <div class="container">
@@ -130,7 +133,7 @@ IndexAsset::register($this);
         <div class="col-md-4">
             <div class="panel panel-warning">
                 <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-gift"></i> Free &amp; Open Source</h4>
+                    <h4><i class="glyphicon glyphicon-gift"></i> Free of charge</h4>
                 </div>
                 <div class="panel-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -152,85 +155,25 @@ IndexAsset::register($this);
     </div>
     <!-- /.row -->
 
-
-    <!-- How does it work -->
-    <div class="row">
-        <div class="col-lg-12">
-                <h2 class="page-header">How does it work</h2>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="#">
-                <?= Html::img(\Yii::$app->params['uploadUrl'].'700_450.jpg',[
-                    'alt'=>'some',
-                    'class'=>'img-responsive img-portfolio img-hover'
-                ]);?>
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <?= Html::img(\Yii::$app->params['uploadUrl'].'700_450.jpg',[
-                'alt'=>'some',
-                'class'=>'img-responsive img-portfolio img-hover'
-            ]);?>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <?= Html::img(\Yii::$app->params['uploadUrl'].'700_450.jpg',[
-                    'alt'=>'some',
-                    'class'=>'img-responsive img-portfolio img-hover'
-                ]);?>
-            </a>
-        </div>
-    </div>
+    <!-- making space -->
+    <div class="col-xs-12" style="height:50px;"></div>
     <!-- /.row -->
 
+    <!-- rendering sitter how does it work -->
+    <?= $this->render('/site/howSitterWidget') ?>
 
-    <!-- Service Tabs -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header"><?= Yii::t('app','How does it work?') ?></h2>
-        </div>
-        <div class="col-lg-12">
-
-            <ul id="myTab" class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <?= Yii::t('app','Step One') ?></a>
-                </li>
-                <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-car"></i> <?= Yii::t('app','Step Two') ?></a>
-                </li>
-                <li class=""><a href="#service-three" data-toggle="tab"><i class="fa fa-support"></i> <?= Yii::t('app','Step Three') ?></a>
-                </li>
-                <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-database"></i> <?= Yii::t('app','Step Four') ?></a>
-                </li>
-            </ul>
-
-            <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade active in" id="service-one">
-                    <h4>Service One</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                </div>
-                <div class="tab-pane fade" id="service-two">
-                    <h4>Service Two</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                </div>
-                <div class="tab-pane fade" id="service-three">
-                    <h4>Service Three</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                </div>
-                <div class="tab-pane fade" id="service-four">
-                    <h4>Service Four</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                </div>
+    <!-- Call to Action Section -->
+    <hr>
+    <div class="well">
+        <div class="row" >
+            <div class="col-md-8">
+                <p><?= Yii::t('app','For finding  out more about how to become Sitter or review a specific sitter, please refer to') ?></p>
             </div>
-
+            <div class="col-md-4" >
+                <a class="btn btn-lg btn-default btn-block" href="/site/how"><?= Yii::t('app','How does it work?') ?></a>
+            </div>
         </div>
     </div>
-
-
-
-
 
     <!-- Features Section -->
     <div class="row">
@@ -255,21 +198,11 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /.row -->
-    <hr>
 
 
-    <!-- Call to Action Section -->
-    <div class="well">
-        <div class="row">
-            <div class="col-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-            </div>
-            <div class="col-md-4">
-                <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
-            </div>
-        </div>
-    </div>
-    <hr>
+
+
+
 </div>
 
 
