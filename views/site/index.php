@@ -122,18 +122,8 @@ IndexAsset::register($this);
         <div class="col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-ok"></i> Bootstrap v3.3.7</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-warning">
-                <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-gift"></i> Free of charge</h4>
+                    <h4><i class="glyphicon glyphicon-gift fa-lg"></i><?= Yii::t('app',' Free of charge') ?> </h4>
+
                 </div>
                 <div class="panel-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -144,11 +134,20 @@ IndexAsset::register($this);
         <div class="col-md-4">
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-thumbs-up"></i> Easy to Use</h4>
+                    <h4><i class="glyphicon glyphicon-thumbs-up fa-lg"></i><?= Yii::t('app',' Easy to Use') ?> </h4>
                 </div>
                 <div class="panel-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i><?= Yii::t('app',' Instant contact with sitter') ?></h4>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
                 </div>
             </div>
         </div>

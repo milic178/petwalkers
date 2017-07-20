@@ -19,13 +19,13 @@ $this -> title = Yii::t('app','How does it work?');
 <div class="col-lg-12">
 
     <ul id="myTab" class="nav nav-tabs nav-justified">
-        <li class="active"><a href="#service-one" data-toggle="tab" id="bold-text"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <?= Yii::t('app','Select parameters') ?></a>
+        <li class="active"><a href="#service-one" data-toggle="tab" id="bold-text"><i class="fa fa-hand-o-right fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Select parameters') ?></a>
         </li>
-        <li class=""><a href="#service-two" data-toggle="tab" id="bold-text"><i class="fa fa-list-ol" aria-hidden="true"></i> <?= Yii::t('app','Browse trough results') ?></a>
+        <li class=""><a href="#service-two" data-toggle="tab" id="bold-text"><i class="fa fa-list-ol fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Browse trough results') ?></a>
         </li>
-        <li class=""><a href="#service-three" data-toggle="tab" id="bold-text"><i class="fa fa-info" aria-hidden="true"></i> <?= Yii::t('app','Review advert') ?></a>
+        <li class=""><a href="#service-three" data-toggle="tab" id="bold-text"><i class="fa fa-info fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Inspect advert') ?></a>
         </li>
-        <li class=""><a href="#service-four" data-toggle="tab" id="bold-text"><i class="fa fa-phone" aria-hidden="true"></i> <?= Yii::t('app','Contact walker') ?></a>
+        <li class=""><a href="#service-four" data-toggle="tab" id="bold-text"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Contact walker') ?></a>
         </li>
     </ul>
 

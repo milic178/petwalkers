@@ -107,30 +107,71 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <hr>
 
 
-
-
+<!-- Reviewing sitter -->
 <div class="row">
-    <div class="col-lg-12 result_box">
+    <div class="col-lg-12">
+        <h2 class="text-white"><?= Yii::t('app','Review sitter') ?></h2>
+    </div>
+    <div class="col-lg-12">
 
-            <?= Html::img(\Yii::$app->params['uploadUrl'].'how.png',[
-                'alt'=>'some',
-                'class'=>'img-responsive center-block'
-            ]);?>
+        <ul id="myTab" class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#service-9" data-toggle="tab" id="bold-text"><i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Obtain code') ?></a>
+            </li>
+            <li class=""><a href="#service-10" data-toggle="tab" id="bold-text"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Input code') ?></a>
+            </li>
+            <li class=""><a href="#service-11" data-toggle="tab" id="bold-text"><i class="fa fa-comment fa-lg" aria-hidden="true"></i> <?= Yii::t('app','Write review') ?></a>
+            </li>
+            <li class=""><a href="#service-12" data-toggle="tab" id="bold-text"><i class="fa fa-bullhorn fa-lg" aria-hidden="true"></i></i> <?= Yii::t('app','Make it public') ?></a>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="service-9">
+                <h4></h4>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'code.jpg', [
+                    'class'=>'img-responsive img-hover center-block',
+                    'width'=>'50%',
+                    'height'=>'50%',
+                    'title'=>Yii::t('app','Rate walker'),
+                ]); ?>
+            </div>
+            <div class="tab-pane fade" id="service-10">
+                <h4></h4>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_11.jpg', [
+                    'class'=>'img-responsive img-hover center-block',
+                    'width'=>'70%',
+                    'height'=>'70%',
+                    'title'=>Yii::t('app','Enter code'),
+                ]); ?>
+            </div>
+            <div class="tab-pane fade" id="service-11">
+                <h4></h4>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_12.jpg', [
+                    'class'=>'img-responsive img-hover center-block',
+                    'width'=>'80%',
+                    'height'=>'80%',
+                    'title'=>Yii::t('app','Post review'),
+                ]); ?>
+            </div>
+            <div class="tab-pane fade" id="service-12">
+                <h4></h4>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_13.jpg', [
+                    'class'=>'img-responsive img-hover center-block',
+                    'width'=>'40%',
+                    'height'=>'40%',
+                    'title'=>Yii::t('app','Review submitted'),
+                ]); ?>
+            </div>
+        </div>
+
     </div>
 </div>
-<!-- /.row -->
+
 

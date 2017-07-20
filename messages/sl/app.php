@@ -291,12 +291,43 @@ return [
         =>
             'Dobrodošli tukaj lahko najdete ponudnike storitve varstva hišnih ljubljenčkov. Izberite mesto, tip, in ceno kjer želite in poiščite zanesljivo osebo, ki bo poskrbela za vašega ljubljlenčka v času vaše odsotnosti ali nezmožnosti.',
 
+    'What are my responsibilities as sitter?' => 'Kakšna je moja odgovornost kot sprehajalec živali?',
+
+
+'What are my responsibilities as person who looks for sitter?' =>'Kakšna je moja odgovornost kot lastnik lubljenčka?',
+
+
+// main page
+    ' Free of charge' => 'Zastonj uporaba',
+
+    ' Easy to Use' => 'Preprosta uporaba',
+    ' Instant contact with sitter' => 'Takojšen stik s sprehajalcem',
+    'Finding sitter' => 'Najdite sprehajalca',
+    'Select parameters' => 'Izberite iskalne parametre',
+    'Browse trough results' => 'Preglejte ponudbo',
+    'Inspect advert' => 'Ogledajte oglas',
+    'Contact walker' => 'Kontaktirajte sprehajaca',
+
+    'Becoming sitter' => 'Postati sprehajalec',
+    'Update profile' => 'Posodobite profil',
+    'Publish advert' => 'Objavite oglas',
+    'Sit back and relax' => 'Dokončano! Čas za sporsitev',
+
+    'Review sitter' => 'Ocenite sprehajalca',
+
+    'Obtain code' => 'Pridobite kodo',
+
+    'Input code' => 'Vnestie kodo',
+
+    'Write review' => 'Napišite oceno',
+
+    'Make it public' => 'Objavite oceno',
+
+
+
     '' => '',
-
-
-
-
-
+    '' => '',
+    '' => '',
 
 
 ];

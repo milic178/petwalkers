@@ -270,5 +270,71 @@ return [
 
     'By clicking the Sign up button, you agree to the'=>'En cliquant sur le bouton Inscription, vous acceptez les conditions',
 
+/// NOT TRANSLATED
+
+    ///faq
+    'Why did not my ad appear in the list even if I entered the correct search criteria?'=> '',
+
+    'What is the code given after I chose to contact my pet sitter?'=> '',
+
+    'How does the assessment of sitters work?' =>  '',
+
+    'Why do I have to accept or decline a review on my profile?' =>  '',
+
+    'Do you have a suggestion for us?' =>  '',
+
+    'How do i write a good and competitive ad for sitting pets?' =>  '',
+
+    'One or more of my adds will soon expire and become invalid what do I do?' =>  '',
+
+    'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => '',
+
+    'How do I know the petsitters on Petwalkers will take good care of my pet?'=> '',
+
+    'What makes Petwalkers different from other dog walking services and apps?' =>  '',
+
+    'How much will it cost me to contact sitter i have selected?' =>  '',
+
+    'Copyright © 2017 Petwalkers. All rights reserved.' => '',
+
+    'Is Petwalkers responsible for any damage done to me from pets i have been taking care of?' =>  '',
+
+    'Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.'
+    =>
+        '',
+
+    'What are my responsibilities as sitter?' => '',
+
+
+    'What are my responsibilities as person who looks for sitter?' =>'',
+
+    // main page
+    ' Free of charge' => '',
+
+     ' Easy to Use' => '',
+     ' Instant contact with sitter' => '',
+     'Finding sitter' => '',
+     'Select parameters' => '',
+     'Browse trough results' => '',
+     'Inspect advert' => '',
+     'Contact walker' => '',
+
+     'Becoming sitter' => '',
+     'Update profile' => '',
+     'Publish advert' => '',
+     'Sit back and relax' => '',
+
+    'Review sitter' => '',
+
+    'Obtain code' => '',
+
+    'Input code' => '',
+
+    'Write review' => '',
+
+    'Make it public' => '',
+    '' => '',
+    '' => '',
+    '' => '',
 
 ];
