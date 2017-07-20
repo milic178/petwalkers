@@ -313,7 +313,7 @@ return [
 
      ' Easy to Use' => '',
      ' Instant contact with sitter' => '',
-     'Finding sitter' => '',
+     'Finding a sitter' => '',
      'Select parameters' => '',
      'Browse trough results' => '',
      'Inspect advert' => '',

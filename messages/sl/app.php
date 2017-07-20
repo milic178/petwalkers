@@ -289,7 +289,7 @@ return [
 
     'Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.'
         =>
-            'Dobrodošli tukaj lahko najdete ponudnike storitve varstva hišnih ljubljenčkov. Izberite mesto, tip, in ceno kjer želite in poiščite zanesljivo osebo, ki bo poskrbela za vašega ljubljlenčka v času vaše odsotnosti ali nezmožnosti.',
+            'Aplikacija je namenjena iskanju ponudnikov varstva hišnih ljubljenčkov. Izberite iskalne parametre in poiščite osebo, ki bo poskrbela za vašega ljubljlenčka v času vaše odsotnosti.',
 
     'What are my responsibilities as sitter?' => 'Kakšna je moja odgovornost kot sprehajalec živali?',
 
@@ -298,11 +298,11 @@ return [
 
 
 // main page
-    ' Free of charge' => 'Zastonj uporaba',
+    ' Free of charge' => 'Brezplačna aplikacija',
 
     ' Easy to Use' => 'Preprosta uporaba',
     ' Instant contact with sitter' => 'Takojšen stik s sprehajalcem',
-    'Finding sitter' => 'Najdite sprehajalca',
+    'Finding a sitter' => 'Najdite sprehajalca',
     'Select parameters' => 'Izberite iskalne parametre',
     'Browse trough results' => 'Preglejte ponudbo',
     'Inspect advert' => 'Ogledajte oglas',

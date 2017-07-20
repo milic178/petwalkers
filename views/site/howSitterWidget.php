@@ -14,7 +14,7 @@ $this -> title = Yii::t('app','How does it work?');
 <!-- How does it work? -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="text-white"><?= Yii::t('app','Finding sitter') ?></h2>
+            <h2 class="text-white"><?= Yii::t('app','Finding a sitter') ?></h2>
 </div>
 <div class="col-lg-12">
 

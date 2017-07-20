@@ -56,12 +56,43 @@ IndexAsset::register($this);
 
     </div>
 
+    <!-- Icons for benefits -->
+    <div class="row text-center">
+        <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="glyphicon glyphicon-gift fa-stack-1x fa-inverse"></i>
+                    </span>
+            <h3><?= Yii::t('app',' Free of charge') ?> </h3>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+        <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="glyphicon glyphicon-thumbs-up fa-stack-1x fa-inverse"></i>
+                    </span>
+            <h3 class="service-heading"><?= Yii::t('app',' Easy to Use') ?></h3>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+
+        <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
+                    </span>
+            <h3 class="service-heading"><?= Yii::t('app',' Instant contact with sitter') ?> </h3>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+    </div>
+    <!-- making space -->
+    <div class="col-xs-12" style="height:150px;"></div>
+<hr>
+
+
+    <section id="index-form">
+    <!-- Search form with select parameters for finding sitters  -->
     <div class="container demo-1" id="index-form">
         <div class="main clearfix">
-
-
-
-
             <?php $form = ActiveForm::begin([
                 'id' => 'nl-form',
                 'action' => ['advert/list-adverts'],
@@ -109,7 +140,7 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /container -->
-
+    </section>
     <!-- making space -->
     <div class="col-xs-12" style="height:50px;"></div>
     <!-- /.row -->
@@ -117,46 +148,18 @@ IndexAsset::register($this);
 <!-- Page Content -->
 <div class="container">
 
-    <!-- Marketing Icons Section -->
-    <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-gift fa-lg"></i><?= Yii::t('app',' Free of charge') ?> </h4>
 
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h4><i class="glyphicon glyphicon-thumbs-up fa-lg"></i><?= Yii::t('app',' Easy to Use') ?> </h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-comments-o fa-lg" aria-hidden="true"></i><?= Yii::t('app',' Instant contact with sitter') ?></h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
 
     <!-- making space -->
-    <div class="col-xs-12" style="height:50px;"></div>
+    <div class="row" style="height:50px;"></div>
     <!-- /.row -->
+
+
+<hr>
+    <h2 class="text-center">
+        <?= Yii::t('app','Example of use') ?>
+    </h2>
+
 
     <!-- rendering sitter how does it work -->
     <?= $this->render('/site/howSitterWidget') ?>
@@ -173,6 +176,8 @@ IndexAsset::register($this);
             </div>
         </div>
     </div>
+
+
 
     <!-- Features Section -->
     <div class="row">
@@ -197,8 +202,6 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- /.row -->
-
-
 
 
 
