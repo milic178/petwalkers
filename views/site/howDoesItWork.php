@@ -42,14 +42,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <?= $this->render('/site/howSitterWidget') ?>
 
 
-<hr>
-
 
 
 <!-- Becoming sitter -->
-<div class="row">
+<div class="main clearfix"">
     <div class="col-lg-12">
-        <h2 class="text-white"><?= Yii::t('app','Becoming sitter') ?></h2>
+        <h2 class="text-white text-center padding-bottom"><?= Yii::t('app','Becoming sitter') ?></h2>
     </div>
     <div class="col-lg-12">
 
@@ -69,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_5.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'50%',
                     'height'=>'50%',
                     'title'=>Yii::t('app','Register'),
@@ -79,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_6.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
                     'height'=>'70%',
                     'title'=>Yii::t('app','Update profile'),
@@ -89,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_7.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
                     'height'=>'70%',
                     'title'=>Yii::t('app','Publish advert'),
@@ -107,13 +105,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
-<hr>
 
 
 <!-- Reviewing sitter -->
-<div class="row">
+<div class="main clearfix">
     <div class="col-lg-12">
-        <h2 class="text-white"><?= Yii::t('app','Review sitter') ?></h2>
+        <h2 class="text-white text-center padding-bottom"><?= Yii::t('app','Review sitter') ?></h2>
     </div>
     <div class="col-lg-12">
 
@@ -133,7 +130,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'code.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'50%',
                     'height'=>'50%',
                     'title'=>Yii::t('app','Rate walker'),
@@ -143,7 +140,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_11.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
                     'height'=>'70%',
                     'title'=>Yii::t('app','Enter code'),
@@ -153,7 +150,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_12.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'80%',
                     'height'=>'80%',
                     'title'=>Yii::t('app','Post review'),
@@ -163,7 +160,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_13.jpg', [
-                    'class'=>'img-responsive img-hover center-block',
+                    'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'40%',
                     'height'=>'40%',
                     'title'=>Yii::t('app','Review submitted'),

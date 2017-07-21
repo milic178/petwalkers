@@ -304,7 +304,7 @@ return [
     ' Instant contact with sitter' => 'Takojšen stik s sprehajalcem',
     'Finding a sitter' => 'Najdite sprehajalca',
     'Select parameters' => 'Izberite iskalne parametre',
-    'Browse trough results' => 'Preglejte ponudbo',
+    'See results' => 'Preglejte ponudbo',
     'Inspect advert' => 'Ogledajte oglas',
     'Contact walker' => 'Kontaktirajte sprehajaca',
 

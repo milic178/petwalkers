@@ -38,19 +38,19 @@ IndexAsset::register($this);
     ?>
 </div>
 
-<div class="site-index">
+<div class="header">
 
 <!-- Rendering alert view (displaying growl messages -->
  <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
     <div class="jumbotron">
 
-        <h1>
+        <h1 style="margin-top: 1em;">
             <i class="fa fa-paw fa-lg" aria-hidden="true"></i>
             <?php //\Yii::t('app', 'Welcome');?>
             Petwalkers
         </h1>
 
-        <div class="panel welcome-page">
+        <div class="welcome-page">
             <?= Yii::t('app','Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.') ?>
         </div>
 
@@ -85,13 +85,12 @@ IndexAsset::register($this);
         </div>
     </div>
     <!-- making space -->
-    <div class="col-xs-12" style="height:150px;"></div>
-<hr>
+
+</div>
 
 
-    <section id="index-form">
     <!-- Search form with select parameters for finding sitters  -->
-    <div class="container demo-1" id="index-form">
+    <div class="content-container " id="index-form">
         <div class="main clearfix">
             <?php $form = ActiveForm::begin([
                 'id' => 'nl-form',
@@ -139,73 +138,74 @@ IndexAsset::register($this);
             <?php ActiveForm::end(); ?>
         </div>
     </div>
-    <!-- /container -->
-    </section>
-    <!-- making space -->
-    <div class="col-xs-12" style="height:50px;"></div>
-    <!-- /.row -->
+
+
+
+
 
 <!-- Page Content -->
-<div class="container">
+<div class="content-container ">
 
 
-
-    <!-- making space -->
-    <div class="row" style="height:50px;"></div>
-    <!-- /.row -->
-
-
-<hr>
-    <h2 class="text-center">
-        <?= Yii::t('app','Example of use') ?>
-    </h2>
 
 
     <!-- rendering sitter how does it work -->
     <?= $this->render('/site/howSitterWidget') ?>
 
     <!-- Call to Action Section -->
-    <hr>
-    <div class="well">
-        <div class="row" >
-            <div class="col-md-8">
-                <p><?= Yii::t('app','For finding  out more about how to become Sitter or review a specific sitter, please refer to') ?></p>
-            </div>
-            <div class="col-md-4" >
-                <a class="btn btn-lg btn-default btn-block" href="/site/how"><?= Yii::t('app','How does it work?') ?></a>
+      <div class="col-md-12">
+        <div class="well">
+            <div class="row" >
+                <div class="col-md-8">
+                    <p class="how-main"><?= Yii::t('app','For finding  out more about how to become Sitter or review a specific sitter, please refer to') ?></p>
+                </div>
+                <div class="col-md-4" >
+                    <a class="btn btn-lg btn-default btn-block" href="/site/how"><?= Yii::t('app','How does it work?') ?></a>
+                </div>
             </div>
         </div>
     </div>
 
 
-
-    <!-- Features Section -->
-    <div class="row">
+    <!-- Testimonials -->
         <div class="col-lg-12">
-            <h2 class="page-header">Benefints of finding your pet walker</h2>
+            <h2 class="text-center padding-bottom"><?= Yii::t('app','User testimonials') ?></h2>
         </div>
-        <div class="col-md-6">
-            <p>The Modern Business template by Start Bootstrap includes:</p>
-            <ul>
-                <li><strong>Bootstrap v3.3.7</strong>
-                </li>
-                <li>jQuery v1.11.1</li>
-                <li>Font Awesome v4.2.0</li>
-                <li>Working PHP contact form with validation</li>
-                <li>Unstyled page elements for easy customization</li>
-                <li>17 HTML pages</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <?= Html::img(\Yii::$app->params['uploadUrl'].'dog.png',[
+                'class'=>'center-block'
+            ]);?>
+            <h4 class="text-center">
+                Jaka kaka
+            </h4>
+            <p class="text-white text-center">"Lead Developer"</p>
         </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+        <div class="col-sm-4">
+            <div class="panel-heading text-center">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+            </div>
+            <h4 class="text-center">
+                Jaka kaka
+            </h4>
+            <p class="text-white text-center">"Lead Developer"</p>
+        </div>
+        <div class="col-sm-4">
+            <?= Html::img(\Yii::$app->params['uploadUrl'].'cat.png',[
+                'class'=>'center-block'
+            ]);?>
+            <h4 class="text-center">
+                Jaka kaka
+            </h4>
+            <p class="text-white text-center">"Lead Developer"</p>
         </div>
     </div>
-    <!-- /.row -->
-
-
-
-</div>
 
 
     <script src="js/nlform.js"></script>

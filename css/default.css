@@ -31,7 +31,9 @@ body {
 	height: auto;
 	margin: 0 auto -60px;
 	padding: 0 0 0px !important;
-	background-color: #21304e;
+	//background-color: #21304e;
+	//background: linear-gradient(#21304e,#100d06);
+	background: linear-gradient(#4462a0,#0e1e3e);
 }
 
 a {
@@ -50,7 +52,7 @@ p{
 	color: #fff!important;
 }
 h1{
-	font-size: 5em !important;
+	font-size: 4em !important;
 }
 a:hover,
 a:active {
@@ -90,6 +92,9 @@ a:active {
 /* Main Content */
 .main {
 	max-width: 100em;
+	//background-color: #00aa00;
+	margin-top: 18em;
+	margin-bottom: 18em;
 }
 
 /* To Navigation Style */
@@ -170,10 +175,32 @@ a:active {
 
 .welcome-page{
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    padding-top: 3%;
+    padding-top: 4%;
     color: #fff;
+	margin-top: 3em;
+	margin-bottom: 1.5em;
+    font-size: 1.5em;
+	//background: linear-gradient(#4462a0,#0e1e3e);
 
-    font-size: 1.8em;
-    background-color: #21304e;
+}
 
+
+.well{
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+.header{
+	min-height: 100%;
+	position: relative;
+}
+
+.index-testimonials{
+	margin-top: 18em;
+
+}
+
+.how-main{
+	font-weight: 400;
+	margin-top: 12px;
 }

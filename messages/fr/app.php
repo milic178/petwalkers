@@ -315,7 +315,7 @@ return [
      ' Instant contact with sitter' => '',
      'Finding a sitter' => '',
      'Select parameters' => '',
-     'Browse trough results' => '',
+     'See results' => '',
      'Inspect advert' => '',
      'Contact walker' => '',
 

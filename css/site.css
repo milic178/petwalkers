@@ -8,10 +8,13 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background: linear-gradient(#4462a0,#0e1e3e);
+
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
+    margin-bottom: 5em;
 }
 
 .footer {
@@ -112,4 +115,9 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+.padding-bottom{
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
