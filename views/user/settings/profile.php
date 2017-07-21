@@ -50,7 +50,7 @@ endif;
         //dialog to to confirm updatep profile
         echo
         Dialog::widget([
-            'options' => ['type' => Dialog::TYPE_SUCCESS ],
+            'options' => ['type' => Dialog::TYPE_INFO ],
         ]);
         ?>
 

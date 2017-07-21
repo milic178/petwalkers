@@ -121,3 +121,7 @@ a.desc:after {
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+.btn-warning {
+    background-color: #5cb85c;
+}

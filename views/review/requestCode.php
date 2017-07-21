@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
     <?=Yii::t('app','To get walker contant information fill this form') ?>
     <i class="fa fa-smile-o" aria-hidden="true"></i>
 </p>
-            <div class="panel-body">
+            <div class="panel-body text-white">
 
                 <?php $form = ActiveForm::begin([
                         'id' => 'request-code-form',

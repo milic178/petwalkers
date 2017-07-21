@@ -333,7 +333,7 @@ return [
     'Write review' => '',
 
     'Make it public' => '',
-    '' => '',
+    'You can\'t request review code for your profile!' => 'Vous ne pouvez pas demander un code d\'évaluation pour votre profil!',
     '' => '',
     '' => '',
 

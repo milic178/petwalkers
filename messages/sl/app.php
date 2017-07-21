@@ -323,7 +323,7 @@ return [
 
     'Make it public' => 'Objavite oceno',
 
-
+    'You can\'t request review code for your profile!'=>'Ne morete zahtevati ocenjevlne kode za vaš profil!',
 
     '' => '',
     '' => '',

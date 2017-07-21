@@ -81,8 +81,8 @@ class ReviewController extends \yii\web\Controller
             $model->declined = 1;
                 if($model->save()) :
                    $model->refresh();
-                    \Yii::$app->getSession()->setFlash('info',[
-                        'type' => 'info',
+                    \Yii::$app->getSession()->setFlash('danger',[
+                        'type' => 'danger',
                         'duration' => 5500,
                         'icon' => 'glyphicon glyphicon-info-sign',
                         'message' => Yii::t('kvdialog','You have declined review for your profile.'),
@@ -196,6 +196,11 @@ class ReviewController extends \yii\web\Controller
             if (Reviews::reviewerExsists($name, $lastname, $petname)){
                 throw new UserException (\Yii::t('app','This user has been already reviewed by person with that name and pet!'));
             }
+
+            if(Yii::$app->user->identity->getId() == $id_profile){
+            throw new UserException(\Yii::t('app','You can\'t request review code for your profile!'));
+            }
+
                 $code = \Yii::$app->getSecurity()->generateRandomString(8);
                 $model->review_code = $code;
                 $model->id_profile = $id_profile;

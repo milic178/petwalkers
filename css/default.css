@@ -49,7 +49,7 @@ p{
 .modal-content{
 	background-color: #458e96 !important;}
 .has-error .help-block{
-	color: #fff!important;
+	//color: #fff;
 }
 h1{
 	font-size: 4em !important;

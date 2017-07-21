@@ -109,8 +109,11 @@ a{
     color: #fff;
 }
 
+.bootstrap-dialog .bootstrap-dialog-message{
+    color : #fff;
+}
 .modal-header, .modal-content, .modal-body{
-    background-color: #97c3ce;
+  //  background-color: #4683d2;
 }
 
 
