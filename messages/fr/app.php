@@ -334,7 +334,60 @@ return [
 
     'Make it public' => '',
     'You can\'t request review code for your profile!' => 'Vous ne pouvez pas demander un code d\'évaluation pour votre profil!',
+
+
+    //how
+
+    'To find a sitter simply click on underlined yellow words which represent search parameters. A popup window will appear with different options. Simply chose from type, animal, city and price. When done click on "Find Sitter" button. Results will be displayed based on your search criteria. None of listed parameters are required. Currently our services are available only in certain cities.'
+    =>
+        '',
+
+    'A list of all available sitters with your criteria will be displayed. In the first row of table there are some search parameters which you can always modify. To view a specific advert just click anywhere in that row or on the right side where you will se and EYE icon.'
+    =>
+        '',
+
+    'Advert information is displayed. First we see the sitters profile picture. If we click on it a popup will be show displaying sitters user profile. Name, last name, age, last login time, description and other information will be shown. Below user profile picture we can see shot advert Description. After that some Basic Info about advert is displayed. At end of page we can see user reviews, from other owners who have contacted this sitter. To get user contact information simply click "Contact user" button.'
+    =>
+        '',
+
+    'After you have entered your Name, Last name and Pet\'s name you will be given a review CODE and sitter contact information will be displayed below. CODE is alid for 2 days after it has been obtained. Use the CODE to leave a review for sitter after he has taken care of your pet in order to make other people know how satisfied you were.'
+    =>
+        '',
+
+    'To become pet sitter you will need to Create an FREE account. Simply click on Register which is located in upper menu. After you enter all data required you will receive an email with confirmation link to complete registration.'
+    =>
+        '',
+
+    'After completing registration process your profile will show up. You should enter all the missing data and write something about yourself. It is important to upload a proper profile photo. All information will be publicly displayed so profiles, photos are moderated to maintain trust and respect in the community.'
+    =>
+        '',
+
+    'To create and advert simply click on "Advert" in menu bar after you login. Click on "Create Advert" and popup form will be displayed. After you are done with filing the form press "Create" button and advert will be public. You can edit or delete certain adds from be list shown.'
+    =>
+        '',
+
+    'You adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
+    =>
+        '',
+
+    'To obtain a review CODE you will need to contact a certain sitter. CODE is valid for 2 days meaning that is the time you will have to write a review about your experience with sitter.'
+    =>
+        '',
+
+    'To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.'
+    =>
+        '',
+
+    'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars. When review is approved it will be shown publicly.'
+    =>
+        '',
+
+    'When review is approved it will be shown publicly on sitters profile.'
+    =>
+        '',
+
     '' => '',
-    '' => '',
+
+
 
 ];

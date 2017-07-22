@@ -125,3 +125,11 @@ a.desc:after {
 .btn-warning {
     background-color: #5cb85c;
 }
+
+#lighter-link-color a{
+    color : #00c2ff;
+}
+
+#bigger-font{
+    font-size: large;
+}

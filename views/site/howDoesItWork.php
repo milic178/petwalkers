@@ -62,10 +62,14 @@ $this->params['breadcrumbs'][] = $this->title;
             </li>
         </ul>
 
-        <div id="myTabContent" class="tab-content">
+        <div id="bigger-font" class="tab-content">
             <div class="tab-pane fade active in" id="service-5">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
+
+                    <?= Yii::t('app','To become pet sitter you will need to Create an FREE account. Simply click on Register which is located in upper menu. After you enter all data required you will receive an email with confirmation link to complete registration.') ?>
+
+                </p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_5.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'50%',
@@ -75,7 +79,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-6">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
+
+                    <?= Yii::t('app','After completing registration process your profile will show up. You should enter all the missing data and write something about yourself. It is important to upload a proper profile photo. All information will be publicly displayed so profiles, photos are moderated to maintain trust and respect in the community.')?>
+
+                </p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_6.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
@@ -85,7 +93,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-7">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
+
+                    <?= Yii::t('app','To create and advert simply click on "Advert" in menu bar after you login. Click on "Create Advert" and popup form will be displayed. After you are done with filing the form press "Create" button and advert will be public. You can edit or delete certain adds from be list shown.')?>
+
+                </p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_7.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
@@ -95,8 +107,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-8">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
 
+                    <?= Yii::t('app','You adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.')?>
+
+                </p>
             </div>
         </div>
 
@@ -125,10 +140,14 @@ $this->params['breadcrumbs'][] = $this->title;
             </li>
         </ul>
 
-        <div id="myTabContent" class="tab-content">
+        <div id="bigger-font" class="tab-content">
             <div class="tab-pane fade active in" id="service-9">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
+
+                    <?= Yii::t('app','To obtain a review CODE you will need to contact a certain sitter. CODE is valid for 2 days meaning that is the time you will have to write a review about your experience with sitter.')?>
+
+                </p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'code.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'50%',
@@ -138,7 +157,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-10">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                <p class="text-white">
+
+                    <?= Yii::t('app','To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.')?>
+
+                </p>
                 <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_11.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'70%',
@@ -148,8 +171,12 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-11">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_12.jpg', [
+
+                <p class="text-white">
+
+                    <?= Yii::t('app','If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars.')?>
+
+                </p><?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_12.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'80%',
                     'height'=>'80%',
@@ -158,8 +185,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="tab-pane fade" id="service-12">
                 <h4></h4>
-                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_13.jpg', [
+                <p class="text-white">
+
+                    <?= Yii::t('app','When review is approved it will be shown publicly on sitters profile.')?>
+
+                </p><?=  Html::img(\Yii::$app->params['uploadUrl'] . 'step_13.jpg', [
                     'class'=>'img-responsive img-hover center-block img-rounded',
                     'width'=>'40%',
                     'height'=>'40%',
