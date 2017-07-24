@@ -64,7 +64,9 @@ IndexAsset::register($this);
                         <i class="glyphicon glyphicon-gift fa-stack-1x fa-inverse"></i>
                     </span>
             <h3><?= Yii::t('app',' Free of charge') ?> </h3>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-white">
+                <?= Yii::t('app','Web application is completely free, you can use it without paying for anything.') ?>
+            </p>
         </div>
         <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -72,7 +74,9 @@ IndexAsset::register($this);
                         <i class="glyphicon glyphicon-thumbs-up fa-stack-1x fa-inverse"></i>
                     </span>
             <h3 class="service-heading"><?= Yii::t('app',' Easy to Use') ?></h3>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-white">
+                <?= Yii::t('app','Petwalkers has been developed for users of all ages. Powerful application with user friendly interface.') ?>
+            </p>
         </div>
 
         <div class="col-md-4">
@@ -81,7 +85,9 @@ IndexAsset::register($this);
                         <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
                     </span>
             <h3 class="service-heading"><?= Yii::t('app',' Instant contact with sitter') ?> </h3>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-white">
+                <?= Yii::t('app','Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!') ?>
+            </p>
         </div>
     </div>
     <!-- making space -->

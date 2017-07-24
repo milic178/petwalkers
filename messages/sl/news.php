@@ -168,7 +168,7 @@ return [
     'Petwalkers is a  website for finding a perfect sitter for your little friend. Thus dogs and cats are most popular pets, you can use it for any other, from turtle to elephant. We encourage o review your sitters so people can build an amazing community and have better experience using this platform!'
 
         =>
-        'Petwalkers je spletna aplikacija na kateri boste poiskali najboljšega sprehajalca za vašega kosmatinca. Čeprav so najštevilčnejši psi in mačke kot hišne živali aplikacija lahko uporabljaste tudi za druge živali od želv pa vse do žiraf. Po opravljeni storitvi spodbujamo ocenjevanje uporabnikov, saj tako lahko zgradimo boljšo skupnost in izkuđnjo na tej spletni strani.',
+        'Petwalkers je spletna aplikacija na kateri boste poiskali najboljšega sprehajalca za vašega kosmatinca. Čeprav so najštevilčnejši psi in mačke kot hišne živali aplikacijo lahko uporabljaste tudi za druge hišne ljubljenčke. Po opravljeni storitvi spodbujamo ocenjevanje sprehajalcev, saj tako lahko izboljšamo izkušnjo in skupnost na spletni strani.',
 
     'I realized that in Slovenia we do not have a simple way to coordinate the walking and sitting of pets, especially dogs and cats. With this I got the idea to develop web application and soon it turned out that I had enough knowledge to complete the project. The application would serve as a connecting  bridge between people who have more free time, who love animals and people who are employed or on holiday, and do not have time to walk or take cate of pets.'
         =>

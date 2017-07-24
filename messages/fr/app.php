@@ -289,7 +289,7 @@ return [
 
     'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => '',
 
-    'How do I know the petsitters on Petwalkers will take good care of my pet?'=> '',
+    'How do I know the pet sitters on Petwalkers will take good care of my pet?'=> '',
 
     'What makes Petwalkers different from other dog walking services and apps?' =>  '',
 
@@ -383,6 +383,78 @@ return [
         '',
 
     'When review is approved it will be shown publicly on sitters profile.'
+    =>
+        '',
+
+    'For finding  out more about how to become Sitter or review a specific sitter, please refer to'
+    =>
+        'Pour en savoir plus sur la façon de devenir Sitter ou d\'examiner un sitter spécifique, veuillez vous référer à.',
+
+    'User testimonials'
+    =>
+        'Témoignages d\'utilisateurs',
+
+    'How does it work?' =>'Comment ça marche?',
+
+
+
+    //faq 2
+
+    'To find a sitter for your pet we do not ask you for registration or email or any data. You are free to browse between sitters and select the one which suits you. Quite simply, we believe that your pet deserves someone who loves your pet as much as you do. User performance is rated with reviews and opinions written by community.'
+    =>
+        '',
+
+    'For the moment all the services of finding a sitter or publishing an advert are free of any charge. Main goal of this project is to improve the pet sitting situation and community so I intend to keep it free of any charge.'
+    =>
+        '',
+
+    'That is called a review code composed of random numbers and characters. Every code is valid for 2 days from requesting the contact information. Code is a unique identifier for you to leave opinion about the service provided by certain sitter.'
+    =>
+        '',
+
+    'Assessment is relying purely on community. Meaning it depends on your satisfaction of the service provided by sitter. We tend to build an awesome community for everyone to enjoy! Inappropriate and verbally offensive reviews will not be tolerated by administrators. Users need to use their real names and data pseudonyms are not accepted.'
+    =>
+        '',
+
+    'This is simply a feature to allow genuine reviews to be posted on your profile. If you recognize the peron for whom you did a service simply approve it or decline if you don\'t. You will not be able to see the content of review, just the name of owner and pet you have provided your service to.'
+    =>
+        '',
+
+    'Petwalkers service is not responsible for any kind of damage on private or public property.'
+    =>
+        '',
+
+    'Petwalkers service is not responsible for any kind of accident that happens to you while watching over other people\'s pets.'
+    =>
+        '',
+
+    'The community uses reputations built over time to build trust and ensure that all members respect the Petwalkers spirit of positive community collaboration. When two members meet in real life to exchange service, they publicly rate each other: before you contact another member you can read their ratings and benefit from the experience of other members who have met that person. If you don\'t feel comfortable around person who is supposed to take care of your pet simply cancel the service and find another one.'
+    =>
+        '',
+
+    'Most certainly your publishing is invalid. Every ad you publish has an expiration date which is 14 days. After that it becomes invalid and is not shown in general search. All you need to do is renew the publishing.'
+    =>
+        '',
+
+    'Simply create a new ad with same criteria under the Adverts section on the Menu.'
+    =>
+        '',
+
+
+    'Explaining the features of your services is important, but explaining the benefits for the customer is really what it’s all about. After all, people are more interested in what they get from your services than what you do. People scan things quickly. make sure that your advertisement actually grabs and keeps their attention. You do that with an effective headline. Add a little humor to the content, use simple language. Make sure your profile is updated and nicely written so you can earn credibility and trust. People are nervous about spending their money. There are too many scammers and low-quality services out there.'
+    =>
+        '',
+
+
+    'You have more options to find a sitter if you make a good first impression. Some stters, as a condition for a service, require that the dog is trained and used to the leash and socialized. Find out if the sitter takes care of more pets at same time. Alert the sitter to the unusual behavior of a dog on a walk, possible lack of socialization with certain dogs, possible aggression, fear, etc. Present your usual routine of your walk and what you expect from the service. Ask him about the experiences and qualifications and any recommendations. Be sure to choose who you will trust your dog to!'
+    =>
+        '',
+
+    'For the time you take care of someone else\'s pet you are completely responsible for feeding, exercising and taking care of it and protecting it from all harm. If you say you‘re available, make sure you will be. Your rates are a part of your profile and the client uses that information to book you in the first place, don‘t change them. You have more options to get a good score if you make a good first impression. Make arrangements for the exact time and place of meeting.'
+    =>
+        '',
+
+    'We are constantly trying to improve our service to meet your needs. Therefore, we are always listening to your good ideas, suggestions for improvement and new feature requests! If you have any suggestions about the web application please feel free to contact us!'
     =>
         '',
 

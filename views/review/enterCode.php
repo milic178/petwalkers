@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id' => 'review-code-form'
         ]]);
     ?>
-<p>
+<p id="first-modal">
     <?=Yii::t('app','Enter the code to write a review about your experience with walker you booked') ?>
 </p>
     <?= $form->field($model, 'review_code')->textInput(['maxlength' => true]) ?>

@@ -98,7 +98,7 @@ Dialog::widget([
                             </div>
                         </h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body footer-links">
                         <div class="text-center">
                             <?=  Html::img($profile->getImageUrl(), [
                                 'class'=>'img-rounded ',
@@ -131,7 +131,7 @@ Dialog::widget([
                         </div>
 
                         <hr>
-                        <span class="label label-info"><?=Yii::t('app','About me')?></span>
+                        <span class="label label-info"><?=Yii::t('app','About me')?></span><br><br>
                         <?php if (!empty($profile->about_me)): ?>
                             <p><?= $profile->about_me?></p>
                         <?php endif; ?>

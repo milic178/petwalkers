@@ -9,7 +9,7 @@
  */
 
 return [
-    'Rate walker'=>'Oceni sprehajalca',
+    'Rate walker'=>'Oceni skrbnika',
     'Welcome' => 'Dobrodošli',
     'Heading'=>'Glava',
     'Contact us '=>'Pišite nam ',
@@ -263,9 +263,9 @@ return [
     ///faq
     'Why did not my ad appear in the list even if I entered the correct search criteria?'=>'Zakaj moj oglas ni prikazan na seznamu, čeprav sem vnesel pravilne iskalne kriterije?',
 
-    'What is the code given after I chose to contact my pet sitter?'=>'Kaj pomeni koda, ki sem jo prejel ob kontaktiranju sprehajalca?',
+    'What is the code given after I chose to contact my pet sitter?'=>'Čemu služi koda, ki sem jo prejel ob kontaktiranju sprehajalca?',
 
-    'How does the assessment of sitters work?' => 'Kako deluje ocenjevanje sprehajacev?',
+    'How does the assessment of sitters work?' => 'Kako poteka ocenjevanje skrbnikov?',
 
     'Why do I have to accept or decline a review on my profile?' => 'Zakaj moram sprejeti ali zavrniti oceno ki je objavljena na mojem profilu?',
 
@@ -277,7 +277,7 @@ return [
 
     'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => 'Ali je spletna stran Petwalkers odgovorna v primeru nesreč med varstvom ali sprehodom živali?',
 
-    'How do I know the petsitters on Petwalkers will take good care of my pet?'=>'Kako naj vem, da bodo sprehajalci na Petwalkersu skrbno skrbeli za mojega hišnega ljubljenčka?',
+    'How do I know the pet sitters on Petwalkers will take good care of my pet?'=>'Kako naj vem, da bodo sprehajalci na Petwalkersu odgovorno skrbeli za mojega hišnega ljubljenčka?',
 
     'What makes Petwalkers different from other dog walking services and apps?' => 'Zakaj se Petwalkers razlikuje od drugih storitev za varstvo in sprehode hišnih ljubljenčkov?',
 
@@ -291,10 +291,10 @@ return [
         =>
             'Aplikacija je namenjena iskanju ponudnikov varstva hišnih ljubljenčkov. Izberite iskalne parametre in poiščite osebo, ki bo poskrbela za vašega ljubljlenčka v času vaše odsotnosti.',
 
-    'What are my responsibilities as sitter?' => 'Kakšna je moja odgovornost kot sprehajalec živali?',
+    'What are my responsibilities as sitter?' => 'Kakšno odgovornost imam kot skrbnik živali?',
 
 
-'What are my responsibilities as person who looks for sitter?' =>'Kakšna je moja odgovornost kot lastnik lubljenčka?',
+'What are my responsibilities as person who looks for sitter?' =>'Kakšno odgovornost imam kot lastnik hišnega lubljenčka?',
 
 
 // main page
@@ -366,7 +366,7 @@ return [
 
     'To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.'
     =>
-        'Če želite uporabljati kodo, preprosto kliknite na "Oceni sprehajalca" v zgornjem meniju. Prikazalo se vam bo pojavno okno kjer lahko vnesete KODO. V primeru da ste prijavljeni kot uporabnik na Petwalkers, ne boste mogli oceniti sprehajalce.',
+        'Če želite uporabljati kodo, preprosto kliknite na "Oceni skrbnika" v zgornjem meniju. Prikazalo se vam bo pojavno okno kjer lahko vnesete KODO. V primeru da ste prijavljeni kot uporabnik na Petwalkers, ne boste mogli oceniti sprehajalce.',
 
     'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars.'
     =>
@@ -376,17 +376,77 @@ return [
     =>
         'Ko bo ocena odobrena bo javno prikazana na profilu sprehajalca',
 
-    ''
+    'For finding  out more about how to become Sitter or review a specific sitter, please refer to'
     =>
-        '',
+        'Za več informacij kako postati sprehajalec ali kako oceniti sprehajalca si poglejte.',
 
-    ''
+    'User testimonials'
     =>
-        '',
+        'Pričevanja naših uporabnikov',
 
-    ''
+
+
+
+
+    //faq 2
+
+    'To find a sitter for your pet we do not ask you for registration or email or any data. You are free to browse between sitters and select the one which suits you. Quite simply, we believe that your pet deserves someone who loves your pet as much as you do. User performance is rated with reviews and opinions written by community.'
     =>
-        '',
+        'Najti varstvo za hišnega ljubljenčka ni bilo nikoli lažje, kajti mi ne zahtevamo registracije ali kakršnih koli uporabniških podatkov. Lahko prosto brskate med skrbniki in si izberete tistega, ki vam usreza. Prepričani smo, da si vaš ljubljenček zaluži osebo, katera bo enako skrbela zanj kot bi vi. Delo skrbnika lahko po opravljeni storitvi ocenite in ga s tem pohvalite ali grajate.',
+
+    'For the moment all the services of finding a sitter or publishing an advert are free of any charge. Main goal of this project is to improve the pet sitting situation and community so I intend to keep it free of any charge.'
+        =>
+            'Trenutno sta storitvi objave oglasa in iskanje skrbnikov brazplačni. Cilj tega projekta je izboljšati skupnost in povezati ljudi med seboj.',
+
+    'That is called a review code composed of random numbers and characters. Every code is valid for 2 days from requesting the contact information. Code is a unique identifier for you to leave opinion about the service provided by certain sitter.'
+    =>
+        'To je koda za ocenjevanje uporabnikov, sestavljena iz naključnih številk in črk. Vsaka koda je veljavna 2 dni od pridobitve in je unikatna možnost, s katero lahko izrazite zadovoljstvo s skrbnikom. ',
+
+    'Assessment is relying purely on community. Meaning it depends on your satisfaction of the service provided by sitter. We tend to build an awesome community for everyone to enjoy! Inappropriate and verbally offensive reviews will not be tolerated by administrators. Users need to use their real names and data pseudonyms are not accepted.'
+    =>
+        'Ocenjevanje skrbnikov poteka na podlagi mnenj skupnosti. To pomeni, da je odvisno od vašega zadovoljstva s storitvijo, ki jo zagotavlja skrbnik. Prizadevamo si ustvariti zaupanja vredno skupnost za vse uporabnike aplikacije. Administratorji strani ne dopuščajo neprimernih in verbalno žaljivih ocen. Uporabniki morajo uporabljati svoja prava imena, psevdonimi niso dovoljeni.',
+
+    'This is simply a feature to allow genuine reviews to be posted on your profile. If you recognize the peron for whom you did a service simply approve it or decline if you don\'t. You will not be able to see the content of review, just the name of owner and pet you have provided your service to.'
+    =>
+        'To je preprosta funkcija, ki omogoča objavo pristnih ocene o vaši storitvi. Če prepoznate osebo, za katero ste opravili storitev, njeno oceno odobrite ali zavrnete. Vsebina ocene nebo prikazana. Na vpogled vam je ime lastnika in hišnega ljubljenčka za katerega ste zagotavljal svojo storitev.',
+
+    'Petwalkers service is not responsible for any kind of damage on private or public property.'
+    =>
+        'Storitev Petwalkers ni odgovorna za kakršno koli škodo na zasebni ali javni lastnini.',
+
+    'Petwalkers service is not responsible for any kind of accident that happens to you while watching over other people\'s pets.'
+    =>
+        'Storitev Petwalkers ni odgovorna za kakršno koli nesrečo, ki se vam zgodi med ko skrbite za hišne ljubljenčke.',
+
+    'The community uses reputations built over time to build trust and ensure that all members respect the Petwalkers spirit of positive community collaboration. When two members meet in real life to exchange service, they publicly rate each other: before you contact another member you can read their ratings and benefit from the experience of other members who have met that person. If you don\'t feel comfortable around person who is supposed to take care of your pet simply cancel the service and find another one.'
+    =>
+        'Zaupanje v skupnosti se gradi v daljšem časovnem obdobju, z namenom vspostavljanja ugleda, spoštovanja i duha pozitivnega sodelovanja. Preden se uporabnik in skrbnik srečata pri izmenjavi storitve, uporabnik ima možnost, da prebere ocene ostalih uporabnikov, ki so predhodno najeli določenega skrbnika živali. Če vam skrbnik živali daje občutek negotovosti, preprosto prekličete storitev in izbereta drugega skrbnika.',
+
+    'Most certainly your publishing is invalid. Every ad you publish has an expiration date which is 14 days. After that it becomes invalid and is not shown in general search. All you need to do is renew the publishing.'
+    =>
+        'Zagotovo je vašemu oglasu potekla veljavnost. Vsak oglas ki ga objavite je veljaven 14 dni, po tem zapade. Vse kar morate storiti je ponovno ustvariti oglas.',
+
+    'Simply create a new ad with same criteria under the Adverts section on the Menu.'
+    =>
+        'Preprosto ustvarite nov oglas z enakimi parametri v razdelku »Oglasi« v meniju.',
+
+
+    'Explaining the features of your services is important, but explaining the benefits for the customer is really what it’s all about. After all, people are more interested in what they get from your services than what you do. People scan things quickly. make sure that your advertisement actually grabs and keeps their attention. You do that with an effective headline. Add a little humor to the content, use simple language. Make sure your profile is updated and nicely written so you can earn credibility and trust. People are nervous about spending their money. There are too many scammers and low-quality services out there.'
+    =>
+        'Najpomembneje je, da pojasnite kakšno korist bo imel naročnik vašga oglasa. Ljudi zanima kaj pridobijo z vašo storitvijo. Poskrbite, da vaš oglas privabi naročnikovo pozornost, to dosežete z učinkovitim naslovom. V vsebino dodajte malo humorja, uporabite preprost jezik. Poskrbite, da bo vaš profil posodobljen in zgledno napisan, s tem boste vspodbudili verodostojnost in zaupanje.',
+
+
+    'You have more options to find a sitter if you make a good first impression. Some stters, as a condition for a service, require that the dog is trained and used to the leash and socialized. Find out if the sitter takes care of more pets at same time. Alert the sitter to the unusual behavior of a dog on a walk, possible lack of socialization with certain dogs, possible aggression, fear, etc. Present your usual routine of your walk and what you expect from the service. Ask him about the experiences and qualifications and any recommendations. Be sure to choose who you will trust your dog to!'
+    =>
+        'Z dobrim prvim vtisom imate več možnosti, da najdete primernega skrbnika. Nekateri skrbniki kot pogoj za opravljanje storitve zahtevajo, da je npr. pes šolan, socializiran in vajen povodca. Pozanimajte se ali skrbnik skrbi za več živali naenkrat. Dolžni ste obvestiti skrbnika na nenavadno vedenje živali, morebitno napadalnost, strah itd. Predstavite svojo rutino vašega sprehoda in kaj pričakujete od storitve. Povprašajte skrbnika o izkušnjah in kvalifikacijah ter o vseh priporočilih. Prepričajte se, da izberete osebo kateri lahko popolnoma zaupate svojega ljubljenčka.',
+
+    'For the time you take care of someone else\'s pet you are completely responsible for feeding, exercising and taking care of it and protecting it from all harm. If you say you‘re available, make sure you will be. Your rates are a part of your profile and the client uses that information to book you in the first place, don‘t change them. You have more options to get a good score if you make a good first impression. Make arrangements for the exact time and place of meeting.'
+    =>
+        'Za čas, ko skrbite za hišnega ljubljenčka, ste popolnoma odgovorni za hranjenje, vadbo in zaščito pred vsemi nevarnostmi. Urna postavka je del vašega profila in ena najpomembnejših podatkov za naročnika, zato poskrbite bo konstantna. Dobro oceno si lahko zagotovite z dobrim prvim vtisom. Povprašajte lastnika živali o vseh morebitnih posebnostih. Dogovorite se za točen čas in kraj sestanka.',
+
+    'We are constantly trying to improve our service to meet your needs. Therefore, we are always listening to your good ideas, suggestions for improvement and new feature requests! If you have any suggestions about the web application please feel free to contact us!'
+    =>
+        'Nenehno poskušamo izboljšati naše storitve, da bi odgovorili na vaše potrebe. Zato smo vedno odprti za vaše ideje in možne izboljšave. Če imate predloge za izboljšavo spletne aplikacije, se obrnite na nas!',
 
     ''
     =>
