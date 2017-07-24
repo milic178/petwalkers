@@ -31,7 +31,7 @@ return [
     'Success!'=>'Uspešno generirano!',
     'Failed!'=>'Generiranje ni uspelo!',
     'Email'=>'E-mail',
-    'More questions? Don\'t hesitate!'=>'Niste našli odgovora? Pišite nam!',
+    'More questions? Don\'t hesitate!'=>'Niste našli odgovora?',
     'Create'=>'Ustvari',
 
     //Profile
@@ -301,19 +301,19 @@ return [
     ' Free of charge' => 'Brezplačna aplikacija',
 
     ' Easy to Use' => 'Preprosta uporaba',
-    ' Instant contact with sitter' => 'Takojšen stik s sprehajalcem',
-    'Finding a sitter' => 'Najdite sprehajalca',
+    ' Instant contact with sitter' => 'Takojšen stik s skrbnikom',
+    'Finding a sitter' => 'Najdi skrbnika',
     'Select parameters' => 'Izberite iskalne parametre',
     'See results' => 'Preglejte ponudbo',
     'Inspect advert' => 'Ogledajte oglas',
     'Contact walker' => 'Kontaktirajte sprehajaca',
 
-    'Becoming sitter' => 'Postati sprehajalec',
+    'Becoming sitter' => 'Postani skrbnik',
     'Update profile' => 'Posodobite profil',
     'Publish advert' => 'Objavite oglas',
-    'Sit back and relax' => 'Dokončano! Čas za sporsitev',
+    'Sit back and relax' => 'Dokončano!',
 
-    'Review sitter' => 'Ocenite sprehajalca',
+    'Review sitter' => 'Oceni skrbnika',
 
     'Obtain code' => 'Pridobite kodo',
 
@@ -356,13 +356,13 @@ return [
     =>
         '',
 
-    'You adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
+    'Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
     =>
         '',
 
     'To obtain a review CODE you will need to contact a certain sitter. CODE is valid for 2 days meaning that is the time you will have to write a review about your experience with sitter.'
     =>
-        'Če želite pridobiti KODO, morate kontaktirati želenega sprehajalca. KODA je veljavna 2 dni, kar pomeni, da potem ne boste mogli oceniti določenega sprehajalca.',
+        'Če želite pridobiti KODO, morate kontaktirati želenega skrbnika. KODA je veljavna 2 dni, kar pomeni, da potem ne boste mogli oceniti določenega sprehajalca.',
 
     'To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.'
     =>
@@ -370,11 +370,11 @@ return [
 
     'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars.'
     =>
-        'Če je KODA veljavna in pravilna, lahko oceniste sprehajalca. Napišete kako ste bili zadovoljni s sprehajalcem in ocenite njegovo delo z zvezdicami.',
+        'Če je KODA veljavna in pravilna, lahko ocenite skrbnika. Napišete kako ste bili zadovoljni s sprehajalcem in ocenite njegovo delo z zvezdicami.',
 
     'When review is approved it will be shown publicly on sitters profile.'
     =>
-        'Ko bo ocena odobrena bo javno prikazana na profilu sprehajalca',
+        'Ko bo ocena odobrena bo javno prikazana na skrbnikovem profilu',
 
     'For finding  out more about how to become Sitter or review a specific sitter, please refer to'
     =>

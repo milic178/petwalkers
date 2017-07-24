@@ -366,7 +366,7 @@ return [
     =>
         '',
 
-    'You adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
+    'Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
     =>
         '',
 

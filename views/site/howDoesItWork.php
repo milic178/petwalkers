@@ -109,7 +109,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4></h4>
                 <p class="text-white">
 
-                    <?= Yii::t('app','You adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.')?>
+                    <?= Yii::t('app','Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.')?>
 
                 </p>
             </div>
