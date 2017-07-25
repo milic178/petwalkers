@@ -35,7 +35,7 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap ">
 
        <?php
 
@@ -79,7 +79,7 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                    'items' =>
                    [
                         ['label' =>'<i class="fa fa-cogs" aria-hidden="true"></i> '. Yii::t('app','My Profile'), 'url' => '/user/settings/profile'],
-                        ['label' =>'<i class="fa fa-flag-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications').' '.Reviews::countReviewsWaiting(), 'url' => '/review/list-reviews'],
+                        ['label' =>'<i class="fa fa-bell-o" aria-hidden="true"></i> ' .Yii::t('app','Notifications').' '.Reviews::countReviewsWaiting(), 'url' => '/review/list-reviews'],
                         ['label' =>'<i class="fa fa-sign-out" aria-hidden="true"></i> ' .Yii::t('app','Logout'), 'url' => '/site/logout','linkOptions' => ['data-method' => 'post']],
 
                    ]
@@ -163,7 +163,31 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
 </footer>
 
 
+
+<?= \bizley\cookiemonster\CookieMonster::widget([
+    'box' => [
+        'classButton'=>'cookie-button btn btn-default btn-circle btn-lg',
+        'addOuterStyle'=>
+            [
+                'background-color'=>'#d6e416',
+            ],
+        'addInnerStyle' =>
+            [
+                'font-weight' => 'bold',
+                'font-size' => '18px',
+                'color'=>'#101727',
+                'margin'=>'20px'
+            ],
+
+    ],
+    'content' => [
+        'buttonMessage' => 'I understand',
+
+    ],
+    'mode' => 'bottom'
+]); ?>
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

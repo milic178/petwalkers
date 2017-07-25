@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "414c7c63598763e8d6bb0245ba6ef802",
+    "content-hash": "7afc4843ebacba5f1e1e20d6c69a9cf9",
     "packages": [
+        {
+            "name": "bizley/cookiemonster",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bizley/yii2-cookiemonster.git",
+                "reference": "3832979d98071d26fa81014ce02a6e42391646a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bizley/yii2-cookiemonster/zipball/3832979d98071d26fa81014ce02a6e42391646a3",
+                "reference": "3832979d98071d26fa81014ce02a6e42391646a3",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bizley\\cookiemonster\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Pawel Bizley Brzozowski",
+                    "email": "pb@human-device.com"
+                }
+            ],
+            "description": "Yii extension to manage cookie warning.",
+            "keywords": [
+                "cookie",
+                "cookiemonster",
+                "privacy",
+                "warning",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-05-10T16:39:18+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",

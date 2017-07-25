@@ -309,10 +309,10 @@ return [
     'What are my responsibilities as person who looks for sitter?' =>'',
 
     // main page
-    ' Free of charge' => '',
+    ' Free of charge' => 'Gratuit',
 
-     ' Easy to Use' => '',
-     ' Instant contact with sitter' => '',
+     ' Easy to Use' => 'Facile à utiliser',
+     ' Instant contact with sitter' => 'Contact instantané avec l marcheur',
      'Finding a sitter' => '',
      'Select parameters' => '',
      'See results' => '',
@@ -392,7 +392,7 @@ return [
 
     'User testimonials'
     =>
-        'Témoignages d\'utilisateurs',
+        'Opinions de l\'utilisateur',
 
     'How does it work?' =>'Comment ça marche?',
 
@@ -458,7 +458,65 @@ return [
     =>
         '',
 
-    '' => '',
+
+    'We use cookies on our websites to help us offer you the best online experience. By continuing to use our website, you are agreeing to our use of cookies. Alternatively, you can manage them in your browser settings.'
+    =>
+        'Nous utilisons des cookies sur nos sites Web pour nous aider à vous offrir la meilleure expérience en ligne. En continuant d\'utiliser notre site Web, vous acceptez notre utilisation des cookies. Alternativement, vous pouvez les gérer dans les paramètres de votre navigateur.',
+
+
+    'Web application is completely free, you can use it without paying for anything.'
+    =>
+        'L\'application Web est complètement gratuite, vous pouvez l\'utiliser sans payer quoi que ce soit.',
+
+    'Petwalkers has been developed for users of all ages. Powerful application with user friendly interface.'
+    =>
+        'Petwalkers a été développé pour les utilisateurs de tous âges. Application puissante avec interface conviviale.',
+
+    'Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!'
+    =>
+        'Parcourez les offres et choisissez une sitter. Pas besoin d\'inscription pour trouver une baby-sitter parfaite pour votre animal de compagnie!',
+
+    'I understand'
+        =>
+            'Je comprends',
+
+    'Subject'
+    =>
+        'Assujettir',
+
+    'Verification Code'
+    =>
+        'Code de vérification',
+
+    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'
+    =>
+        'Si vous avez des questions d\'affaires ou d\'autres questions, veuillez remplir le formulaire ci-dessous pour nous contacter. Je vous remercie.',
+
+    'Multilingual'
+    =>
+        'Multilingue',
+
+    'We are available in 3 languages. Currently we support Slovenian, English and French languages.'
+    =>
+        'Nous sommes disponibles en 3 langues. Actuellement, nous soutenons les langues slovène, anglais et français.',
+
+
+    'Send'
+    =>
+        'Envoyer',
+
+    'Thank you for contacting us. We will respond to you as soon as possible.'
+    =>
+        'Merci de nous contacter. Nous vous répondrons dans les plus brefs délais',
+
+
+    ''
+    =>
+        '',
+
+    ''
+    =>
+        '',
 
 
 

@@ -58,7 +58,7 @@ IndexAsset::register($this);
 
     <!-- Icons for benefits -->
     <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="glyphicon glyphicon-gift fa-stack-1x fa-inverse"></i>
@@ -68,7 +68,7 @@ IndexAsset::register($this);
                 <?= Yii::t('app','Web application is completely free, you can use it without paying for anything.') ?>
             </p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="glyphicon glyphicon-thumbs-up fa-stack-1x fa-inverse"></i>
@@ -79,7 +79,19 @@ IndexAsset::register($this);
             </p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+            <h3 class="service-heading"><?= Yii::t('app','Multilingual') ?> </h3>
+            <p class="text-white">
+                <?= Yii::t('app','We are available in 3 languages. Currently we support Slovenian, English and French languages.') ?>
+            </p>
+        </div>
+
+
+        <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
@@ -89,6 +101,8 @@ IndexAsset::register($this);
                 <?= Yii::t('app','Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!') ?>
             </p>
         </div>
+
+
     </div>
     <!-- making space -->
 
@@ -182,11 +196,13 @@ IndexAsset::register($this);
 
     <div class="row">
         <div class="col-sm-4">
-            <?= Html::img(\Yii::$app->params['uploadUrl'].'dog.png',[
-                'class'=>'center-block'
+            <?= Html::img(\Yii::$app->params['uploadUrl'].'gordana.jpg',[
+                'class'=>'center-block img-circle img-responsive',
+                'width'=>'150px',
+                'height'=>'150px',
             ]);?>
             <h4 class="text-center">
-                Jaka kaka
+                Gordana
             </h4>
             <p class="text-white text-center">"Lead Developer"</p>
         </div>
@@ -203,11 +219,13 @@ IndexAsset::register($this);
             <p class="text-white text-center">"Lead Developer"</p>
         </div>
         <div class="col-sm-4">
-            <?= Html::img(\Yii::$app->params['uploadUrl'].'cat.png',[
-                'class'=>'center-block'
+            <?= Html::img(\Yii::$app->params['uploadUrl'].'aneta.jpg',[
+                'class'=>'center-block img-circle img-responsive',
+                'width'=>'150px',
+                'height'=>'150px',
             ]);?>
             <h4 class="text-center">
-                Jaka kaka
+                Aneta
             </h4>
             <p class="text-white text-center">"Lead Developer"</p>
         </div>

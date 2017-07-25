@@ -46,8 +46,8 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
                     'title'=>Yii::t('news','Walking the dog'),
                 ]); ?>
         </div>
-        <div class="col-md-6">
-            <h3 class="p-style">
+        <div class="col-md-6" >
+            <h3 class="p-style" id="news-link">
                 <a href="/news/news-one"><?= Yii::t('news','Why walking your dog is great exercise?') ?></a>
             </h3>
             <p class="text-white">
@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
             ]); ?>
         </div>
         <div class="col-md-6">
-            <h3 class="p-style">
+            <h3 class="p-style" id="news-link">
                 <a href="/news/news-two"><?= Yii::t('news','Pet walkers to be more in demand than teachers in next decade') ?></a>
             </h3>
             <p class="text-white">
@@ -91,7 +91,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('news', 'News and articles')
             ]); ?>
         </div>
         <div class="col-md-6">
-            <h3 class="p-style">
+            <h3 class="p-style" id="news-link">
                 <a href="/news/news-three"><?= Yii::t('news','Pets can benefit from spending time outside') ?></a>
             </h3>
             <p class="text-white">

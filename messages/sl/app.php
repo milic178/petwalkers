@@ -124,10 +124,10 @@ return [
     'Any city'=>'Mesto',
 
     //index
-    'any type'=>'vsak tip',
-    'any region'=>'vseh regijah',
-    'any price'=>'vseh cenah',
-    'any animal'=>'vse živali',
+    'any type'=>'izberi tip',
+    'any region'=>'izberi regijo',
+    'any price'=>'pet tisoč €',
+    'any animal'=>'izberi žival',
     'Find sitter'=>'Najdi sprehajalca',
 
     // view add
@@ -200,7 +200,7 @@ return [
     //front page
     'I feel like finding pet sitter for'=>'Želim najti osebo za',
     'in'=>'v',
-    'any city'=>'mestu',
+    'any city'=>'izberi mesto',
     'for my'=>'za',
     'from'=>'ter plačati',
     'per hour'=>'na uro',
@@ -382,7 +382,7 @@ return [
 
     'User testimonials'
     =>
-        'Pričevanja naših uporabnikov',
+        'Mnenja uporabnikov',
 
 
 
@@ -447,6 +447,60 @@ return [
     'We are constantly trying to improve our service to meet your needs. Therefore, we are always listening to your good ideas, suggestions for improvement and new feature requests! If you have any suggestions about the web application please feel free to contact us!'
     =>
         'Nenehno poskušamo izboljšati naše storitve, da bi odgovorili na vaše potrebe. Zato smo vedno odprti za vaše ideje in možne izboljšave. Če imate predloge za izboljšavo spletne aplikacije, se obrnite na nas!',
+
+
+    'We use cookies on our websites to help us offer you the best online experience. By continuing to use our website, you are agreeing to our use of cookies. Alternatively, you can manage them in your browser settings.'
+        =>
+            'Naš spletni portal uporablja piškotke z namenom zagotavljanja kvalitetne spletne storitve in funkcionalnosti, ki jih brez piškotkov ne bi mogli nuditi.  Piškotke lahko upravljate v nastavitvah brskalnika.',
+
+    'I understand'
+    =>
+        'Sprejmi in nadaljuj',
+
+    'Web application is completely free, you can use it without paying for anything.'
+    =>
+        'Spletna aplikacija je popolnoma brezplačna, lahko jo uporabljate brez kakršnihkoli omejitev.',
+
+    'Petwalkers has been developed for users of all ages. Powerful application with user friendly interface.'
+    =>
+        'Spletna aplikacija je bila razvita za uporabnike vseh starosti. Zmogljiva aplikacija z prijaznim uporabniškim vmesnikom.',
+
+    'Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!'
+    =>
+        'Izbirajte med skrbniki za živali in njihovimi ponudbami. Ni potrebe po kakršnikoli registraciji, da stopite v kontakt s skrbnikom živali.',
+
+    'Subject'
+    =>
+        'Zadeva',
+
+    'Verification Code'
+    =>
+        'Koda za preverjanje',
+
+
+    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'
+    =>
+        'Če imate vprašanja, izpolnite naslednji obrazec, da nas kontaktirate. Hvala vam.',
+
+    'Multilingual'
+    =>
+        'Večjezičnost',
+
+    'We are available in 3 languages. Currently we support Slovenian, English and French languages.'
+    =>
+        'Na voljo smo v treh jezikih. Trenutno podpiramo slovenski, angleški in francoski jezik.',
+
+    'Send'
+    =>
+        'Pošlji',
+
+    'Thank you for contacting us. We will respond to you as soon as possible.'
+    =>
+        'Hvala, ker ste se obrnili na nas.',
+
+    ''
+    =>
+        '',
 
     ''
     =>
