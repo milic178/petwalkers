@@ -126,7 +126,7 @@ return [
     //index
     'any type'=>'izberi tip',
     'any region'=>'izberi regijo',
-    'any price'=>'pet tisoč €',
+    'any price'=>'izberi ceno €',
     'any animal'=>'izberi žival',
     'Find sitter'=>'Najdi sprehajalca',
 
@@ -467,7 +467,7 @@ return [
 
     'Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!'
     =>
-        'Izbirajte med skrbniki za živali in njihovimi ponudbami. Ni potrebe po kakršnikoli registraciji, da stopite v kontakt s skrbnikom živali.',
+        'Izbirajte med skrbniki za živali in njihovimi ponudbami. Ni potrebe po kakršnikoli registraciji, preprosto stopite v kontakt s skrbnikom živali.',
 
     'Subject'
     =>
