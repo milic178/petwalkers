@@ -40,19 +40,21 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 </div>
-    <div class="text-center" style="padding-bottom: 3%">
-    <span class="alert alert-info">
-        <?php
 
-        if (empty($_GET['Advert']['price'])):
-            $value = "50";
-        else:
-            $value = $_GET['Advert']['price'];
-        endif;
-        echo Yii::t('app','All result shown are for price of maximum {price}€/hour',['price'=> $value ]);
-        ?>
-    </span>
-    </div>
+    
+        <div class="text-center" style="padding-bottom: 3%">
+            <div class="alert alert-info">
+                <?php
+
+                if (empty($_GET['Advert']['price'])):
+                    $value = "50";
+                else:
+                    $value = $_GET['Advert']['price'];
+                endif;
+                echo Yii::t('app','All result shown are for price of maximum {price}€/hour',['price'=> $value ]);
+                ?>
+            </div>
+        </div>
 
 
 <?php Pjax::begin(); ?>

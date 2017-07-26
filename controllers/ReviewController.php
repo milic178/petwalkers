@@ -197,7 +197,7 @@ class ReviewController extends \yii\web\Controller
                 throw new UserException (\Yii::t('app','This user has been already reviewed by person with that name and pet!'));
             }
 
-            if(Yii::$app->user->identity->getId() == $id_profile){
+            if(Yii::$app->user->id == $id_profile){
             throw new UserException(\Yii::t('app','You can\'t request review code for your profile!'));
             }
 

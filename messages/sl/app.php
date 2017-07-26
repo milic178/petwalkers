@@ -498,6 +498,28 @@ return [
     =>
         'Hvala, ker ste se obrnili na nas.',
 
+    'Enter a valid age'
+    =>
+        'Vnesite veljavno starost',
+
+    'Must be a valid phone number, no empty spaces or strings'
+    =>
+        'Mora biti veljavna telefonska številka, brez praznih presledkov ali nizov',
+
+    ''
+        =>
+            '',
+
+    ''
+    =>
+        '',
+
+
+    ''
+    =>
+        '',
+
+
     ''
     =>
         '',
@@ -505,6 +527,16 @@ return [
     ''
     =>
         '',
+    ''
+    =>
+        '',
+    ''
+    =>
+        '',
+
+
+
+
 
 
 ];

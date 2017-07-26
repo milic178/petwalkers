@@ -33,6 +33,7 @@ class RegistrationForm extends BaseRegistrationForm
         $rules[] = ['first_name', 'required'];
         $rules[] = ['last_name', 'required'];
         $rules[] = ['telephone', 'required'];
+        $rules[] = ['telephone', 'integer','message' => \Yii::t('app','Must be a valid phone number, no empty spaces or strings')];
         $rules[] = ['repeat_password', 'compare', 'compareAttribute'=>'password', 'skipOnEmpty' => false, 'message'=>\Yii::t('app','Passwords don\'t match!')];
 
         return $rules;

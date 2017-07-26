@@ -23,15 +23,15 @@ class Profile extends BaseProfile
 
     public static function tableName()
     {
-        return 'Profile';
+        return 'profile';
     }
 
     public function rules()
     {
         return [
-            [['user_id','smoker','my_animals','first_time'], 'integer'],
-            [['age'], 'integer', 'min' => 16, 'max'=>85, 'message' => 'Enter a valid age'],
-            [['first_name', 'last_name','telephone','avatar_photo'], 'string', 'max' => 150],
+            [['user_id','smoker','my_animals','first_time','telephone'], 'integer'],
+            [['age'], 'integer', 'min' => 16, 'max'=>85, 'message' => \Yii::t('app','Enter a valid age')],
+            [['first_name', 'last_name','avatar_photo'], 'string', 'max' => 150],
 
             [['avatar_photo','filename'],'safe'],
             [['avatar_photo'], 'file', 'extensions'=>'jpg, gif, png'],
