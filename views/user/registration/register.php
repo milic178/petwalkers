@@ -146,12 +146,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
-        <p class="text-center">
+        <p class="text-center" id="news-link">
             <?= Html::a(Yii::t('user', 'Already registered? Sign in!'), ['/user/security/login']) ?>
         </p>
         <p class="text-white">
             <?= Yii::t('app','By clicking the Sign up button, you agree to the') ?>
-            <a href="/site/privacy">
+            <a href="/site/privacy" id="news-link">
                 <?= Yii::t('app','Privacy policy') ?>
             </a>
         </p>

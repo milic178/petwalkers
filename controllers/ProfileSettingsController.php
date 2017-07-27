@@ -48,8 +48,8 @@ class ProfileSettingsController extends SettingsController
                         'type' => 'success',
                         'duration' => 4500,
                         'icon' => 'glyphicon glyphicon-ok-sign',
-                        'message' => 'Your profile has been updated successfully',
-                        'title' => 'Profile updated',
+                        'message' => \Yii::t('app','Your profile has been updated successfully'),
+                        'title' => \Yii::t('kvdialog','Operation successful!'),
                         'positonY' => 'top',
                         'positonX' => 'right'
                 ]);

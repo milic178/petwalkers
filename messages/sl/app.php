@@ -506,13 +506,13 @@ return [
     =>
         'Mora biti veljavna telefonska številka, brez praznih presledkov ali nizov',
 
-    ''
+    'Confirmation message with further instructions has been sent to your e-mail.'
         =>
-            '',
+            'Sporočiilo z nadaljnjimi navodili je bilo poslano na vaš e-mail.',
 
-    ''
+    'Your account has been created!'
     =>
-        '',
+        'Vaš račun je bil ustvarjen!',
 
 
     ''

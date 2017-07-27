@@ -1,11 +1,11 @@
 <?php
 
 namespace app\models;
-use dektrium\user\models\User as BaseProfile;
+use dektrium\user\models\User as BaseUser;
 use dektrium\user\models\Token;
 use dektrium\user\Module;
 
-class User extends BaseProfile
+class User extends BaseUser
 {
 /*    const ROLE_USER = 10;
     const ROLE_ADMIN = 30;

@@ -72,7 +72,7 @@ return [
     'You can now log in with the following credentials:' => 'Lahko se prijavite s sledečimi podatki.',
     'Your account details have been updated' => 'Vaš račun je posodobljen.',
     'Your account has been connected' => 'Vaš račun je povezan.',
-    'Your account on {0} has been created' => 'Vaš račun bo narejen v {0}',
+    'Your account on {0} has been created' => 'Ustvarili ste račun v aplikaciji {0}',
     'Your confirmation token is invalid or expired' => 'Potrditveni žeton je neveljaven ali potekel',
     'Your email address has been changed' => 'Vaš email je bil spremenjen',
     'Your password has been changed successfully.' => 'Vaše geslo je bilo uspešno spremenjeno',
@@ -158,7 +158,7 @@ return [
     'Gravatar email' => 'Gravatar email',
     'Hello' => 'Pozdravljeni',
     'If you already registered, sign in and connect this account on settings page' => 'V primeru, da ste že registrirani povežite ta račun v nastavitvah!',
-    'If you cannot click the link, please try pasting the text into your browser' => 'Če povezava ni aktivena, jo prilepite v brskalnik',
+    'If you cannot click the link, please try pasting the text into your browser' => 'Če povezava ni aktivna, jo prilepite v brskalnik',
     'If you did not make this request you can ignore this email' => 'Če to ni bila vaša zahteva, ignoriratje sporočilo',
     'In order to complete your registration, please click the link below' => 'Za dokončanje registracije, kliknite na spodnjo povezavo!',
     'In order to complete your request, please click the link below' => 'Za dokončanje zahteve, kliknite na spodnjo povezavo!',
@@ -218,7 +218,8 @@ return [
     'Your password on {0} has been changed' =>'Sprememba gesla {0}',
     'Become this user'=>'Prijavi se kot ta uporabnik',
     'Actions'=>'Dejanja',
-    'Are you sure you want to switch to this user for the rest of this Session?'=>'Ali ste prepričani, da se želite prijaviti kot ta uporabnik?'
+    'Are you sure you want to switch to this user for the rest of this Session?'=>'Ali ste prepričani, da se želite prijaviti kot ta uporabnik?',
+    'The confirmation link is invalid or expired. Please try requesting a new one!'=>'Potrditvena povezava je neveljavna ali potekla. Prosimo, poskusite zahtevati novo!',
 
 
 ];

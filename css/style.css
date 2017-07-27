@@ -113,7 +113,7 @@ a{
     color : #000;
 }
 .modal-header, .modal-content, .modal-body{
-  //  background-color: #4683d2;
+    background-color: #f9f7f7;
 }
 
 
@@ -129,4 +129,8 @@ a{
 
 #bold-text{
     font-weight: bold;
+}
+
+#modalContentCreate{
+  //  background-color: red !important;
 }

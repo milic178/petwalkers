@@ -514,10 +514,21 @@ return [
     =>
         'Entrez un âge valide',
 
+    'Confirmation message with further instructions has been sent to your e-mail.'
+    =>
+        'Le message de confirmation avec d\'autres instructions a été envoyé à votre e-mail.',
+
+    'Your account has been created!'
+    =>
+        'Votre compte a été créé!',
+
     ''
     =>
         '',
 
+    ''
+    =>
+        '',
 
 
 ];

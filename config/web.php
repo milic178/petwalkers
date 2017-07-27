@@ -10,8 +10,8 @@ $config = [
             'modelMap' => [
                 //overriding modules from extension and adding custom code
                  'RegistrationForm' =>'app\models\RegistrationForm',
-                 'profile' => 'app\models\Profile',
-                 'user' => 'app\models\User',
+                 'Profile' => 'app\models\Profile',
+                 'User' => 'app\models\User',
                  'RecoveryForm'=>'app\models\RecoveryForm',
                  'ResendForm'=>'app\models\ResendForm',
                  'SettingsForm'=>'app\models\SettingsForm',

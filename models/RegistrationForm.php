@@ -12,7 +12,7 @@
 
 namespace app\models;
 
-use dektrium\user\models\Profile;
+//use dektrium\user\models\Profile;
 use dektrium\user\models\RegistrationForm as BaseRegistrationForm;
 use dektrium\user\models\User;
 
@@ -91,8 +91,8 @@ class RegistrationForm extends BaseRegistrationForm
             'type' => 'info',
             'duration' => 5500,
             'icon' => 'glyphicon glyphicon-info-sign',
-            'message' => 'Message with further instructions has been sent to your e-mail',
-            'title' => 'Your account has been created!',
+            'message' => \Yii::t('app','Confirmation message with further instructions has been sent to your e-mail.'),
+            'title' => \Yii::t('app','Your account has been created!'),
             'positonY' => 'top',
             'positonX' => 'right'
         ]);

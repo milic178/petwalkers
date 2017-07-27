@@ -222,6 +222,7 @@ return [
     'Become this user'=>'Devenez cet utilisateur',
     'Actions'=>'Actes',
     'Are you sure you want to switch to this user for the rest of this Session?'=>'Êtes-vous sûr de vouloir passer à cet utilisateur pour le reste de cette session?',
+    'The confirmation link is invalid or expired. Please try requesting a new one!' =>'Le lien de confirmation est invalide ou expiré. Essayez d\'en demander une nouvelle!',
 
 
 

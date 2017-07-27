@@ -31,18 +31,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'id'=>'modalCreateAdvertButton']); ?>
 </p>
 
-<!--- Showing popup modal window for creating add -->
-<?php
-Modal::begin([
-    'id'=>'createAdvert',
-    'size'=>'modal-lg',
-    'clientOptions' => [
-        'backdrop' => 'static'
-    ]
-]);
-echo "<div id='modalContentCreate'></div>";
-Modal::end();
-?>
+    <!--- Showing popup modal window for creating add -->
+    <?php
+    Modal::begin([
+        'id'=>'createAdvert',
+        'size'=>'modal-lg',
+        'clientOptions' => [
+            'backdrop' => 'static'
+        ]
+    ]);
+    echo "<div id='modalContentCreate'></div>";
+    Modal::end();
+    ?>
 
 <?= date('d-m-Y') ?>
 
