@@ -11,7 +11,7 @@ $config = [
                 //overriding modules from extension and adding custom code
                  'RegistrationForm' =>'app\models\RegistrationForm',
                  'Profile' => 'app\models\Profile',
-                 'User' => 'app\models\User',
+                 'identityClass' => 'app\models\User',
                  'RecoveryForm'=>'app\models\RecoveryForm',
                  'ResendForm'=>'app\models\ResendForm',
                  'SettingsForm'=>'app\models\SettingsForm',

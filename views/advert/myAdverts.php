@@ -44,10 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
     Modal::end();
     ?>
 
-<?= date('d-m-Y') ?>
 
-<?php $ba= new yii\db\Expression('NOW()');
-?>
 
 <div class="table-responsive">
 <!-- Displaying gridView with all data-->

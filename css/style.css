@@ -113,7 +113,8 @@ a{
     color : #000;
 }
 .modal-header, .modal-content, .modal-body{
-    background-color: #f9f7f7;
+   // background-color: #f9f7f7;
+    background-color: #8ab9dc;
 }
 
 
@@ -133,4 +134,8 @@ a{
 
 #modalContentCreate{
   //  background-color: red !important;
+}
+
+.advert-update{
+    color: white;
 }

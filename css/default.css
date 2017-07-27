@@ -207,5 +207,11 @@ a:active {
 }
 
 #first-modal{
-	color: #fff;	
+	color: #000;
+}
+
+.modal-header, .modal-content, .modal-body{
+	//background-color: black !important;
+	color: black;
+	font-weight: 500 !important;
 }
