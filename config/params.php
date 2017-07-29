@@ -11,7 +11,7 @@ return [
     ],
     'og_title' => ['property' => 'og:title', 'content' => 'title'],
     'og_description' => ['property' => 'og:description', 'content' => 'description'],
-    'og_url' => ['property' => 'og:url', 'content' => '/'],
+    'og_url' => ['property' => 'og:url', 'content' => 'http://petwalkers.poledancegorizia.com'],
     'og_image' => ['property' => 'og:image', 'content' => 'image']
 
 

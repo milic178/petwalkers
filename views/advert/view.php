@@ -23,8 +23,8 @@ AppAsset::register($this);
 <?php
 Yii::$app->params['og_title']['content'] = $model->title;
 Yii::$app->params['og_description']['content'] = $model->description;
-Yii::$app->params['og_url']['content'] = Yii::$app->request->getUrl();
-Yii::$app->params['og_image']['content'] = 'image.jpg';
+Yii::$app->params['og_url']['content'] = Url::home();
+Yii::$app->params['og_image']['content'] = 'http://petwalkers.poledancegorizia.com'.$profile->getImageUrl();
 ?>
 <!-- Displaying modal form for entering review code and rating user -->
 <div>
