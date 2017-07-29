@@ -515,9 +515,9 @@ return [
         'Vaš račun je bil ustvarjen!',
 
 
-    ''
+    'Your profile has been updated successfully'
     =>
-        '',
+        'Vaš profil je bil uspešno posodobljen',
 
 
     ''

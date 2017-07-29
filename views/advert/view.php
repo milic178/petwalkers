@@ -77,9 +77,7 @@ Dialog::widget([
         <div class="text-center">
             <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
-                    'class'=>'img-rounded',
-                    'width'=>'100px',
-                    'height'=>'100px',
+                    'class'=>'img-rounded img-responsive center-block',
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
@@ -101,9 +99,7 @@ Dialog::widget([
                     <div class="modal-body footer-links">
                         <div class="text-center">
                             <?=  Html::img($profile->getImageUrl(), [
-                                'class'=>'img-rounded ',
-                                'width'=>'100px',
-                                'height'=>'100px',
+                                'class'=>'img-rounded img-responsive center-block',
                                 'title'=>$profile->first_name,
                             ]); ?>
                             <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
@@ -111,9 +107,9 @@ Dialog::widget([
                         </div>
                         <hr>
 
-                        <span class="label label-info">
+                        <div class="label label-primary">
                     <?=Yii::t('app','User activity')?>
-                </span>
+                </div>
                         <div class="row text-center">
                             <div class="col-md-12">
                                 <strong><?= Yii::t('user', 'Registration time') ?>:</strong>
@@ -131,14 +127,14 @@ Dialog::widget([
                         </div>
 
                         <hr>
-                        <span class="label label-info"><?=Yii::t('app','About me')?></span><br><br>
+                        <span class="label label-primary"><?=Yii::t('app','About me')?></span><br><br>
                         <?php if (!empty($profile->about_me)): ?>
                             <p><?= $profile->about_me?></p>
                         <?php endif; ?>
 
                         <?php if (!empty($profile->my_animals)): ?>
                             <hr>
-                            <span class="label label-info"><?=Yii::t('app','My pets')?></span>
+                            <span class="label label-primary"><?=Yii::t('app','My pets')?></span>
                             <div>
                                 <br>
                                 <div class="row">

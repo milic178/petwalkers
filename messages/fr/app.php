@@ -522,9 +522,9 @@ return [
     =>
         'Votre compte a été créé!',
 
-    ''
+    'Your profile has been updated successfully'
     =>
-        '',
+        'Votre profil a été mis à jour avec succés',
 
     ''
     =>
