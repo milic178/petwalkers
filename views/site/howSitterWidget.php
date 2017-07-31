@@ -14,7 +14,7 @@ use yii\helpers\Html;
 <!-- How does it work? -->
     <div class="row ">
         <div class="col-lg-12 ">
-            <h2 class="text-white text-center padding-bottom"><?= Yii::t('app','Finding a sitter') ?></h2>
+            <h2 class="text-white text-center padding-bottom">1. <?= Yii::t('app','Finding a sitter') ?></h2>
 </div>
 <div class="col-lg-12" id="lighter-link-color">
 

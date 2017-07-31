@@ -43,7 +43,7 @@ return [
     'About me'=>'O meni',
     'Smoker'=>'Kadim',
     'My animals'=>'Moje živali',
-    'Social networks'=>'Socijalna omrežja',
+    'Social networks'=>'Socialna omrežja',
     'Yes'=>'Da',
     'No'=>'Ne',
     'Url to your social profile (Optional)' =>'Povezava do profila na socijalnem omrežju',
@@ -128,7 +128,7 @@ return [
     'any region'=>'izberi regijo',
     'any price'=>'izberi ceno €',
     'any animal'=>'izberi žival',
-    'Find sitter'=>'Najdi sprehajalca',
+    'Find sitter'=>'Najdi srbnika',
 
     // view add
 
@@ -187,7 +187,7 @@ return [
     'User has yet not been rated by community!'=>'Nihče še ni podal mnenja o izkušnji s tem sprehajalcem!',
     'Show reviews'=>'Prikaži ocene',
     'Random user opinion'=>'Ocena naključnega uporabnika',
-    'Contact user'=>'Kontaktiraj uporabnika',
+    'Contact user'=>'Kontaktiraj skrbnika',
     'List of adverts'=>'Seznam oglasov',
 
     'Thank you! Review has been submitted and will be public when approved by system'=>'Hvala za oddajo! Vaša ocena uporabnika bo javno objavljena, ko jo potrdi sistem.',
@@ -306,7 +306,7 @@ return [
     'Select parameters' => 'Izberite iskalne parametre',
     'See results' => 'Preglejte ponudbo',
     'Inspect advert' => 'Ogledajte oglas',
-    'Contact walker' => 'Kontaktirajte sprehajaca',
+    'Contact walker' => 'Kontaktirajte skrbnika',
 
     'Becoming sitter' => 'Postani skrbnik',
     'Update profile' => 'Posodobite profil',
@@ -330,35 +330,35 @@ return [
 
     'To find a sitter simply click on underlined yellow words which represent search parameters. A popup window will appear with different options. Simply chose from type, animal, city and price. When done click on "Find Sitter" button. Results will be displayed based on your search criteria. None of listed parameters are required. Currently our services are available only in certain cities.'
     =>
-        '',
+        'Če želite najti skrbnika, preprosto kliknite podčrtane rumene besede, ki predstavljajo iskalne parametre. Pojavilo se bo izbirno okno kjer preprosto izberite vrsto varstva, žival, mesto in urno postavko. Po končani izbiri, kliknite na gumb »Najdi skrbnika«. Rezultati bodo prikazani na podlagi vaših iskalnih kriterijev. Vnos iskalnih parametrov ni potreben za prikaz seznama skrbnikov. Trenutno so naše storitve na voljo samo v določenih mestih',
 
     'A list of all available sitters with your criteria will be displayed. In the first row of table there are some search parameters which you can always modify. To view a specific advert just click anywhere in that row or on the right side where you will se and EYE icon.'
     =>
-        '',
+        'V prvi vrstici tabele so prikazani iskalni parametri, ki jih lahko vedno spremenite. Če si želite ogledati določen oglas, preprosto kliknite kjerkoli v določeni vrstici ali na desni strani, kjer je prikazana ikona.',
 
-    'Advert information is displayed. First we see the sitters profile picture. If we click on it a popup will be show displaying sitters user profile. Name, last name, age, last login time, description and other information will be shown. Below user profile picture we can see shot advert Description. After that some Basic Info about advert is displayed. At end of page we can see user reviews, from other owners who have contacted this sitter. To get user contact information simply click "Contact user" button.'
+    'Advert information is displayed. First we see the sitters profile picture. If we click on it a popup will be show displaying sitters user profile. Name, last name, age, last login time, description and other information will be shown. Below user profile picture we can see shot advert Description. After that some Basic Info about advert is displayed. At end of page we can see  user reviews, from other owners who have contacted this sitter. To get user contact information simply click "Contact user" button.'
     =>
-        '',
+        'Prikazani so podatki o oglasu. Najprej vidimo sliko profila skrbnika. Ob kliku na skrbnikovo profilno sliko se bo prikazalo pojavno okno. To vsebuje informacije o skrbnikovem profilu. Prikazani bodo ime, priimek, starost, zadnji čas prijave, opis in druge informacije o skrbniku. Pod sliko profila skrbnika si lahko ogledamo povzetek oglasa. V povzetku oglasa so osnovne imformacije o oglasu. V spodnjem delu strani si lahko ogledate ocene uporabnikov, ki so najeli skrbnika. Če želite pridobiti  kontaktne podatke o skrbniku, preprosto kliknite gumb »Kontaktiraj skrbnika«.',
 
     'After you have entered your Name, Last name and Pet\'s name you will be given a review CODE and sitter contact information will be displayed below. CODE is alid for 2 days after it has been obtained. Use the CODE to leave a review for sitter after he has taken care of your pet in order to make other people know how satisfied you were.'
     =>
-        '',
+        'Pri kontaktiranju skrbnika je potrebno vnesti vaše Ime, Priimek, in ime ljubljenčka. To je potrebno, da preprečimo podvajanje informacij. Ob končanem vnostu, boste prejeli KODO in kontaktne podatke, kateri bodo prikazani spodaj. KODA je veljavna še 2 dni po tem, ko je bila pridobljena. KODA nam služi kot avtentikacija, da lahko po končani soritvi ocenimo skrbnika in njegovo delo. Ta ocena bo javno prikazana na skrbnikovem profilu.',
 
     'To become pet sitter you will need to Create an FREE account. Simply click on Register which is located in upper menu. After you enter all data required you will receive an email with confirmation link to complete registration.'
     =>
-        '',
+        'Če želite postati skrbnik, boste morali ustvariti brezplačni račun. Preprosto kliknite na "Registracija", ki se nahaja v zgornjem meniju. Ko vnesete vse potrebne podatke, boste prejeli e-poštno sporočilo s potrditveno povezavo, brez te je račun neveljaven.',
 
     'After completing registration process your profile will show up. You should enter all the missing data and write something about yourself. It is important to upload a proper profile photo. All information will be publicly displayed so profiles, photos are moderated to maintain trust and respect in the community.'
     =>
-        '',
+        'Ob zaključku registracije bo prikazan vaš profil. Vnesite vse manjkajoče podatke in napišite nekaj o sebi. Naj vaš opis vsebuje osnovne informacije ter zakaj bi nekdo izbral ravno vašo storitev. Pomembno je, da naložite ustrezno fotografijo profila. Vse informacije bodo javno prikazane in moderirane s strani administratorja. Cilj tega je ohraniti zaupanje in spoštovanje v skupnosti.',
 
     'To create and advert simply click on "Advert" in menu bar after you login. Click on "Create Advert" and popup form will be displayed. After you are done with filing the form press "Create" button and advert will be public. You can edit or delete certain adds from be list shown.'
     =>
-        '',
+        'Če želite objaviti oglas, preprosto kliknite »Moji oglasi« v meniju pod »Oglasi«. Za objavo oglasa je potrebno biti prijavljen v aplikacijo. Nato kliknite na »Ustvari oglas« in prikazalo se bo pojavno okno z obrazcem. Ko izpolnite obrazec, pritisnite gumb »Ustvari« in oglas bo javno prikazan. Iz seznama lahko urejate ali brišete določene oglase.',
 
     'Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
     =>
-        '',
+        'Vsi ustvarjeni olasi so nemudoma javno objavljeni na vpogled. Sedaj samo sedite in se sprostite, medtem ko vas bodo stranke kontaktrale.',
 
     'To obtain a review CODE you will need to contact a certain sitter. CODE is valid for 2 days meaning that is the time you will have to write a review about your experience with sitter.'
     =>
@@ -366,7 +366,7 @@ return [
 
     'To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.'
     =>
-        'Če želite uporabljati kodo, preprosto kliknite na "Oceni skrbnika" v zgornjem meniju. Prikazalo se vam bo pojavno okno kjer lahko vnesete KODO. V primeru da ste prijavljeni kot uporabnik na Petwalkers, ne boste mogli oceniti sprehajalce.',
+        'Če želite uporabiti kodo, preprosto kliknite na "Oceni skrbnika" v zgornjem meniju. Prikazalo se vam bo pojavno okno, kjer lahko vnesete KODO. V primeru, da ste prijavljeni kot uporabnik na Petwalkers, ne boste mogli oceniti skrbnike živali.',
 
     'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars.'
     =>
@@ -374,7 +374,7 @@ return [
 
     'When review is approved it will be shown publicly on sitters profile.'
     =>
-        'Ko bo ocena odobrena bo javno prikazana na skrbnikovem profilu',
+        'Po oddanem mnenju in ocene bo ta pregledana s strani administratorja in javno objavljena na skrbnikovem profilu.',
 
     'For finding  out more about how to become Sitter or review a specific sitter, please refer to'
     =>

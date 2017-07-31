@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <!-- Content Row -->
-<h1 class="text-white  page-header"><?= Yii::t('app','How does it work ') ?></h1>
+<h1 class="text-white  page-header"><?= Yii::t('app','How does it work ') ?>?</h1>
 
 
 
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Becoming sitter -->
 <div class="main clearfix"">
     <div class="col-lg-12">
-        <h2 class="text-white text-center padding-bottom"><?= Yii::t('app','Becoming sitter') ?></h2>
+        <h2 class="text-white text-center padding-bottom">2. <?= Yii::t('app','Becoming sitter') ?></h2>
     </div>
     <div class="col-lg-12">
 
@@ -112,6 +112,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= Yii::t('app','Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.')?>
 
                 </p>
+                <?=  Html::img(\Yii::$app->params['uploadUrl'] . 'pet-sitting.jpg', [
+                        'class'=>'img-responsive img-hover center-block img-rounded',
+                        'width'=>'70%',
+                        'height'=>'70%',
+                    ]); ?>
+
             </div>
         </div>
 
@@ -125,7 +131,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Reviewing sitter -->
 <div class="main clearfix">
     <div class="col-lg-12">
-        <h2 class="text-white text-center padding-bottom"><?= Yii::t('app','Review sitter') ?></h2>
+        <h2 class="text-white text-center padding-bottom">3. <?= Yii::t('app','Review sitter') ?></h2>
     </div>
     <div class="col-lg-12">
 

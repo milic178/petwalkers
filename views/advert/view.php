@@ -77,7 +77,8 @@ Dialog::widget([
         <div class="text-center">
             <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
-                    'class'=>'img-rounded img-responsive center-block',
+                    'class'=>'img-rounded center-block',
+                    'width'=>'40%',
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
@@ -99,7 +100,8 @@ Dialog::widget([
                     <div class="modal-body footer-links">
                         <div class="text-center">
                             <?=  Html::img($profile->getImageUrl(), [
-                                'class'=>'img-rounded img-responsive center-block',
+                                'class'=>'img-rounded center-block',
+                                'width'=>'40%',
                                 'title'=>$profile->first_name,
                             ]); ?>
                             <h3><?=$profile->first_name;?> <?=$profile->last_name ?></h3>
@@ -365,33 +367,40 @@ Dialog::widget([
 
 
 <!-- Button for contacting walker -->
-    <div class="row">
-        <div class="col-md-6 col-xs-6">
-            <div class="text-right">
+    <div class="row text-center" style="padding-bottom: 5%">
+        <div class="col-md-12 col-xs-12">
             <?= Html::button(Yii::t('app', 'Contact user'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
-                'class' => 'btn btn-success',
+                'class' => 'btnCont btn-success',
                 'id'=>'contact-walker']); ?>
-            </div>
+        </div>
+    </div><br>
+
+    <div class="row text-center">
+        <div class="col-md-6 col-xs-6">
+                <!-- facebook share meta tag ---->
+                 <div class="pull-right">
+                    <?= FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE,
+                        'settings' =>
+                            [
+                                'size'=>'large',
+                                'layout'=>'button',
+                                'mobile_iframe'=>'false',
+                            ],
+                        'appId'=>'875927969242038'
+
+                    ]); ?>
+                 </div>
+
         </div>
         <div class="col-md-6 col-xs-6">
-            <div class="text-left">
-                <!-- facebook share meta tag ---->
-                <?= FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE,
-                    'settings' =>
-                    [
-                        'size'=>'large',
-                        'layout'=>'button_count',
-                        'mobile_iframe'=>'false',
-                    ],
-                    'appId'=>'875927969242038'
-
-                ]); ?>
-            </div>
+                    <!-- wahtsapp share meta tag ---->
+                <div class="pull-left">
+                    <a href="https://api.whatsapp.com/send?text=<?=Yii::$app->request->absoluteUrl ?>" class="btnWhatsapp btn-success"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"> </i> <?= Yii::t('app','Share Whatsapp')?></a>
+                </div>
         </div>
     </div>
-
 <!-- Displaying user reviews -->
-<h2 class="text-white"><?= Yii::t('app','User reviews:') ?></h2>
+<h2 class="text-white" style="padding-top: 5%"><?= Yii::t('app','User reviews:') ?></h2>
 <?= $this->render('/review/showReviews', ['model' => Reviews::listAllApprovedReviews($profile->user_id)]) ?>
 
 
