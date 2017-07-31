@@ -142,7 +142,7 @@ a{
 
 .btnWhatsapp{
     display: inline-block;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: normal;
@@ -164,9 +164,9 @@ a{
 
 .btnCont{
     display: inline-block;
-    padding: 14px 18px;
+    padding: 0.5em 1em;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
     line-height: 1.42857143;
     text-align: center;
