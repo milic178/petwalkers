@@ -78,7 +78,7 @@ Dialog::widget([
             <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
                 <?=  Html::img($profile->getImageUrl(), [
                     'class'=>'img-rounded center-block',
-                    'width'=>'40%',
+                    'width'=>'30%',
                     'title'=>$profile->first_name,
                 ]); ?>
             </a>
@@ -370,7 +370,7 @@ Dialog::widget([
     <div class="row text-center" style="padding-bottom: 5%">
         <div class="col-md-12 col-xs-12">
             <?= Html::button(Yii::t('app', 'Contact user'), ['value' => Url::to(['review/request-code','id_profile'=>$profile->user_id]),
-                'class' => 'btnCont btn-success',
+                'class' => 'btnCont btn-info',
                 'id'=>'contact-walker']); ?>
         </div>
     </div><br>
@@ -395,7 +395,7 @@ Dialog::widget([
         <div class="col-md-6 col-xs-6">
                     <!-- wahtsapp share meta tag ---->
                 <div class="pull-left">
-                    <a href="https://api.whatsapp.com/send?text=<?=Yii::$app->request->absoluteUrl ?>" class="btnWhatsapp btn-success"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"> </i> <?= Yii::t('app','Share Whatsapp')?></a>
+                    <a href="https://api.whatsapp.com/send?text=<?=Yii::$app->request->absoluteUrl ?>" class="btn btn-sm btn-success"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"> </i> <?= Yii::t('app','Share')?></a>
                 </div>
         </div>
     </div>

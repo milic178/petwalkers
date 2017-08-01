@@ -526,6 +526,13 @@ return [
     =>
         'Votre profil a été mis à jour avec succés',
 
+    'Share'
+    =>
+        'Partager',
+
+    ''
+    =>
+        '',
     ''
     =>
         '',

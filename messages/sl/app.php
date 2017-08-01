@@ -520,9 +520,9 @@ return [
         'Vaš profil je bil uspešno posodobljen',
 
 
-    ''
+    'Share'
     =>
-        '',
+        'Deli',
 
     ''
     =>
