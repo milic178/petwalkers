@@ -9,6 +9,7 @@
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\captcha\Captcha;
 ?>
 <p>
     <?=Yii::t('app','To get walker contant information fill this form') ?>
@@ -26,6 +27,10 @@ use yii\widgets\ActiveForm;
                     <?= $form->field($model, 'lastname') ?>
 
                     <?= $form->field($model, 'petname') ?>
+
+                    <?= $form->field($model, 'captcha')->widget(Captcha::className(), [
+                        'template' => '<div class="row"><div class="col-sm-6">{image}</div><div class="col-sm-6">{input}</div></div>',
+                    ]) ?>
 
                     <?= Html::submitButton(Yii::t('app','Request code'),
                                 [

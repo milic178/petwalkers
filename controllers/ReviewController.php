@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\User;
 use Yii;
 use app\models\Profile;
 use app\models\Reviews;
@@ -184,7 +185,8 @@ class ReviewController extends \yii\web\Controller
      */
     public function actionRequestCode($id_profile)
     {
-
+        $profile = Profile::findOne($id_profile);
+        $user = User::findOne($id_profile);
         $model = new Reviews();
 
         if ($model->load(\Yii::$app->request->post())) {
@@ -211,7 +213,7 @@ class ReviewController extends \yii\web\Controller
                 if($model->save()):
                     \Yii::$app->response->format = 'json';
                     $message = \Yii::t('app','Review code has been generated and is valid for 2 days! Please save the code if you want to review pet walker! Your code is:    ');
-                    return ['message' =>$message , 'code'=>$model->review_code];
+                    return ['message' =>$message , 'code'=>$model->review_code, 'telephone'=>$user->profile->telephone, 'email'=>$user->email] ;
                 else:
                     \Yii::$app->response->format = 'json';
                     $message = \Yii::t('app','Something went wrong we couldt generate your code:    ');

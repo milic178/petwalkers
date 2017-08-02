@@ -186,7 +186,7 @@ return [
     'My rating:'=>'Mon évaluation:',
     'User has yet not been rated by community!'=>'L\'utilisateur n\'a pas encore été évalué par communauté!',
     'Show reviews'=>'Afficher les commentaires',
-    'Random user opinion'=>'Opinion aléatoire des utilisateurs',
+    'Random user opinion'=>'Sitter n\'a pas de commentaires des utilisateurs',
     'Contact user'=>'Contacter le utilisateur',
     'List of adverts'=>'Liste des annonces',
 

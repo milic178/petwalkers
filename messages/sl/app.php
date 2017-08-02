@@ -186,7 +186,7 @@ return [
     'My rating:'=>'Moja ocena:',
     'User has yet not been rated by community!'=>'Nihče še ni podal mnenja o izkušnji s tem sprehajalcem!',
     'Show reviews'=>'Prikaži ocene',
-    'Random user opinion'=>'Ocena naključnega uporabnika',
+    'Random user opinion'=>'Skrbnik še nima ocene uporabnikov',
     'Contact user'=>'Kontaktiraj skrbnika',
     'List of adverts'=>'Seznam oglasov',
 
@@ -480,7 +480,7 @@ return [
 
     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'
     =>
-        'Če imate vprašanja, izpolnite naslednji obrazec, da nas kontaktirate. Hvala vam.',
+        'Za vsa morebitna vprašanja, pripombe in težave s spletno stranjo smo vam na voljo po elektronski pošti.',
 
     'Multilingual'
     =>

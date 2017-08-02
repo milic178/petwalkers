@@ -28,6 +28,8 @@ use yii\db\Expression;
 class Reviews extends \yii\db\ActiveRecord
 {
 
+
+    //public $captcha;
     /**
      * @inheritdoc
      */
@@ -50,6 +52,7 @@ class Reviews extends \yii\db\ActiveRecord
             [['description'], 'string', 'max' => 250],
             [['review_code'], 'string', 'max' => 45],
             [['id_profile'], 'exist', 'skipOnError' => true, 'targetClass' => Profile::className(), 'targetAttribute' => ['id_profile' => 'user_id']],
+            [['captcha'], 'captcha'],
         ];
     }
 
@@ -72,6 +75,7 @@ class Reviews extends \yii\db\ActiveRecord
             'created' => Yii::t('app', 'Created'),
             'valid_until' => Yii::t('app', 'Valid Until'),
             'id_profile' => Yii::t('app', 'Id Profile'),
+            'captcha' => Yii::t('app', 'Verification Code'),
         ];
     }
 

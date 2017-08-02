@@ -342,8 +342,8 @@ Dialog::widget([
                                     <?= $profile->getAttributeLabel('telephone') ?>
                                 </h3>
                             </div>
-                            <div class="panel-body text-center">
-                                <?= $profile->telephone ?>
+                            <div class="panel-body text-center" id="telephoneResponce">
+
                             </div>
                         </div>
                     </div>
@@ -356,8 +356,7 @@ Dialog::widget([
                                     <?= Yii::t('app','Email') ?>
                                 </h3>
                             </div>
-                            <div class="panel-body text-center">
-                                <?= $profile->user->email ?>
+                            <div class="panel-body text-center" id="emailResponce">
                             </div>
                         </div>
                     </div>
@@ -463,6 +462,8 @@ $('body').on('beforeSubmit','#request-code-form', function () {
               console.log(response)
               krajeeDialogSuccess.alert(response.message+response.code)
               $("#userContactInfo").show();
+              $("#emailResponce").append(response.email);
+              $("#telephoneResponce").append(response.telephone);
           
           },
           error: function (response, status) {

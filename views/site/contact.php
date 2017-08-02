@@ -79,8 +79,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-5">
                 <h3><?= Yii::t('app','Contact us ')?></h3>
 
-                <p><i class="glyphicon glyphicon-envelope"></i>
-                    <abbr title="Email"></abbr><a href="mailto:name@example.com"> tscngwin@gmail.com</a>
+                <p id="news-link"><i class="glyphicon glyphicon-envelope"></i>
+                    <abbr title="Email"></abbr><a href="mailto:name@example.com" > tscngwin@gmail.com</a>
                 </p>
                 <p><i class="glyphicon glyphicon-time"></i>
                     <abbr title="Hours"></abbr> 09:00 - 17:00 </p>
