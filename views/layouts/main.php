@@ -158,7 +158,13 @@ $this->registerMetaTag(Yii::$app->params['og_image'], 'og_image');
                     <li><a class="footer-links"  href="/site/privacy"><?=  Yii::t('app','Privacy policy') ?></a></li>
                 </ul>
             </div>
+            <div class="col-sm-12 col-md-1" style="padding-top: 1%">
+                <a target="_blank" href="https://seal.beyondsecurity.com/vulnerability-scanner-verification/petwalkers.poledancegorizia.com" >
+                    <img src="https://seal.beyondsecurity.com/verification-images/petwalkers.poledancegorizia.com/vulnerability-scanner-8.gif" alt="Vulnerability Scanner" border="0" />
+                </a>
+            </div>
         </div>
+
     </div>
 </footer>
 

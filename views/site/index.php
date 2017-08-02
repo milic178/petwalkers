@@ -104,7 +104,6 @@ IndexAsset::register($this);
 
 
     </div>
-    <!-- making space -->
 
 </div>
 
@@ -230,6 +229,7 @@ IndexAsset::register($this);
             <p class="text-white text-center">"Lead Developer"</p>
         </div>
     </div>
+
 
 
     <script src="js/nlform.js"></script>
