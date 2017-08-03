@@ -233,7 +233,7 @@ class ReviewController extends \yii\web\Controller
      */
     public function actionSaveReview(){
 
-        $model = Reviews::codeExsists(\Yii::$app->request->post('Reviews')['revew_code']);
+        $model = Reviews::codeExsists(\Yii::$app->request->post('Reviews')['review_code']);
         $model->description = \Yii::$app->request->post('Reviews')['description'];
         $model->rating = \Yii::$app->request->post('Reviews')['rating'];
         $model->used = 1;
@@ -251,7 +251,7 @@ class ReviewController extends \yii\web\Controller
 
              $this->goHome();
         else:
-            throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details.'));
+            print_r('Fail');  die();
         endif;
 
     }

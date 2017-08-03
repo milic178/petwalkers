@@ -93,7 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ],]
                                 ]); ?>
 
-                                <?= $form->field($review, 'revew_code')->hiddenInput(['value'=>$review->review_code])->label(false); ?>
+                                <?= $form->field($review, 'review_code')->hiddenInput(['value'=>$review->review_code])->label(false); ?>
 
                                 <div class="row">
                                 <div class="col-md-2 pull-right">
