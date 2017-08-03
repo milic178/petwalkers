@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\bootstrap\Modal;
+use yii\captcha\Captcha;
 
 /**
  * @var yii\web\View              $this
@@ -133,6 +134,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]])->passwordInput()
                 ?>
 
+                <?= $form->field($model, 'captcha')->widget(Captcha::className(), [
+                    'template' => '<div class="row"><div class="col-sm-6">{image}</div><div class="col-sm-6">{input}</div></div>',
+                    'captchaAction' => ['/site/captcha']
+                ]) ?>
 
 
 

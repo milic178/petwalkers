@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h3><?= Yii::t('app','Contact us ')?></h3>
 
                 <p id="news-link"><i class="glyphicon glyphicon-envelope"></i>
-                    <abbr title="Email"></abbr><a href="mailto:name@example.com" > tscngwin@gmail.com</a>
+                    <abbr title="Email"></abbr><a href="mailto:petwalkers@petwalkers.poledancegorizia.com" > petwalkers@petwalkers.poledancegorizia.com</a>
                 </p>
                 <p><i class="glyphicon glyphicon-time"></i>
                     <abbr title="Hours"></abbr> 09:00 - 17:00 </p>
