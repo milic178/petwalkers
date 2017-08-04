@@ -11,6 +11,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use kartik\rating\StarRating;
 use kartik\dialog\Dialog;
+use yii\captcha\Captcha;
 
 $this->title = Yii::t('app', 'Review');
 $this->params['breadcrumbs'][] = $this->title;
@@ -95,6 +96,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                 <?= $form->field($review, 'review_code')->hiddenInput(['value'=>$review->review_code])->label(false); ?>
 
+                            <?= $form->field($review, 'captcha')->widget(Captcha::className(), [
+                                'template' => '<div class="row"><div class="col-sm-6">{image}</div><div class="col-sm-6">{input}</div></div>',
+                                'captchaAction' => ['/site/captcha']
+                            ]) ?>
                                 <div class="row">
                                 <div class="col-md-2 pull-right">
                                             <?= Html::button(Yii::t('app', 'Post review'),

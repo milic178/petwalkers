@@ -51,7 +51,17 @@ class ReviewController extends \yii\web\Controller
         ];
     }
 
-
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+            ],
+        ];
+    }
 
     /** Action for listing reviews to be accepted/declined by user
      * @return string
@@ -122,6 +132,7 @@ class ReviewController extends \yii\web\Controller
                 return $this->redirect(['/review/list-reviews']);
 
             else:
+                print_r($model->getErrors());die();
                 throw new UserException(\Yii::t('app','Soemthing went wrong, please contact us with more details'));
             endif;
         endif;
@@ -237,8 +248,10 @@ class ReviewController extends \yii\web\Controller
         $model->description = \Yii::$app->request->post('Reviews')['description'];
         $model->rating = \Yii::$app->request->post('Reviews')['rating'];
         $model->used = 1;
+        $model->captcha = \Yii::$app->request->post('Reviews')['captcha'];
 
-        if( $model->save()):
+
+        if( $model->update()):
             \Yii::$app->getSession()->setFlash('success',[
                 'type' => 'success',
                 'duration' => 7000,
@@ -251,7 +264,7 @@ class ReviewController extends \yii\web\Controller
 
              $this->goHome();
         else:
-            print_r('Fail');  die();
+            throw new UserException (\Yii::t('app', 'Something went wrong, please contact us with more details.'));
         endif;
 
     }

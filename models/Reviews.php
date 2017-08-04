@@ -52,7 +52,10 @@ class Reviews extends \yii\db\ActiveRecord
             [['description'], 'string', 'max' => 250],
             [['review_code'], 'string', 'max' => 45],
             [['id_profile'], 'exist', 'skipOnError' => true, 'targetClass' => Profile::className(), 'targetAttribute' => ['id_profile' => 'user_id']],
-            [['captcha'], 'captcha'],
+            ['captcha', 'captcha', 'when' => function($model) {
+                // validate captcha only for new records
+                return $model->getIsNewRecord();
+            }]
         ];
     }
 
