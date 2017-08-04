@@ -33,8 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
     echo "<div id='modalFormContent'></div>";
     Modal::end();
     ?>
-
-    <?php Pjax::begin(); ?>    <?= GridView::widget([
+<div class="table-responsive">
+    <?php Pjax::begin(); ?>
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -55,4 +56,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
+</div>
 <?php Pjax::end(); ?></div>
