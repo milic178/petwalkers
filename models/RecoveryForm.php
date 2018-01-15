@@ -23,7 +23,7 @@ class RecoveryForm extends BaseRecoveryForm
 
         $user = $this->finder->findUserByEmail($this->email);
 
-        if ($user instanceof User) {
+        if (isset($user)) {
             /** @var Token $token */
             $token = \Yii::createObject([
                 'class' => Token::className(),
@@ -38,19 +38,22 @@ class RecoveryForm extends BaseRecoveryForm
             if (!$this->mailer->sendRecoveryMessage($user, $token)) {
                 return false;
             }
+
+            \Yii::$app->getSession()->setFlash('info',[
+                'type' => 'info',
+                'duration' => 5500,
+                'icon' => 'glyphicon glyphicon-info-sign',
+                'message' => \Yii::t('kvdialog','An email has been sent with instructions for resetting your password!'),
+                'title' => \Yii::t('kvdialog','Information'),
+                'positonY' => 'top',
+                'positonX' => 'right'
+            ]);
+            return true;
+        }
+        else{
+            return false;
         }
 
-        \Yii::$app->getSession()->setFlash('info',[
-            'type' => 'info',
-            'duration' => 5500,
-            'icon' => 'glyphicon glyphicon-info-sign',
-            'message' => \Yii::t('kvdialog','An email has been sent with instructions for resetting your password!'),
-            'title' => \Yii::t('kvdialog','Information'),
-            'positonY' => 'top',
-            'positonX' => 'right'
-        ]);
-
-        return true;
     }
 
     public function resetPassword(Token $token)
