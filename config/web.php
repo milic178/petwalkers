@@ -120,11 +120,12 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'mailer' => [
+         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@app/mailer',
             'useFileTransport' => false,
             'transport' => [
+
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.mailtrap.io',
                 'username' => 'abf86958b8ae08',
@@ -132,6 +133,21 @@ $config = [
                 'port' => '465',
                 'encryption' => 'tls',],
         ],
+
+       /* mailer for MAIL TRAP!
+         * 'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@app/mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'petwalkers.poledancegorizia.com',
+                'username' => 'petwalkers@petwalkers.poledancegorizia.com',
+                'password' => 'raikonen178',
+                'port' => '465   ',
+                'encryption' => 'ssl'],
+        ],*
+         */
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
