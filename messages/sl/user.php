@@ -74,7 +74,7 @@ return [
     'Your account has been connected' => 'Vaš račun je povezan.',
     'Your account on {0} has been created' => 'Ustvarili ste račun v aplikaciji {0}',
     'Your confirmation token is invalid or expired' => 'Potrditveni žeton je neveljaven ali potekel',
-    'Your email address has been changed' => 'Vaš email je bil spremenjen',
+    'Your email address has been changed' => 'Vaš e-mail je bil posodobljen',
     'Your password has been changed successfully.' => 'Vaše geslo je bilo uspešno spremenjeno',
     'Your profile has been updated' => 'Vaš profil je bil posodobljen',
     'Account has successfully been connected' => 'Račun je bil uspešno povezan',

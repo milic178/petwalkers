@@ -86,7 +86,7 @@ class User extends BaseUser
      */
     public function attemptEmailChange($code)
     {
-        // TODO refactor method
+
 
         /** @var Token $token */
         $token = $this->finder->findToken([
@@ -151,7 +151,16 @@ class User extends BaseUser
                     || ($this->flags & self::NEW_EMAIL_CONFIRMED && $this->flags & self::OLD_EMAIL_CONFIRMED)) {
                     $this->email = $this->unconfirmed_email;
                     $this->unconfirmed_email = null;
-                    \Yii::$app->session->setFlash('success', \Yii::t('user', 'Your email address has been changed'));
+                    //\Yii::$app->session->setFlash('success', \Yii::t('user', 'Your email address has been changed'));
+                    \Yii::$app->getSession()->setFlash('success',[
+                        'type' => 'success',
+                        'duration' => 5500,
+                        'icon' => 'glyphicon glyphicon-ok-sign',
+                        'message' => \Yii::t('user','Your email address has been changed'),
+                        'title' => \Yii::t('user','Thank you.'),
+                        'positonY' => 'top',
+                        'positonX' => 'right'
+                    ]);
                 }
                 $this->save(false);
             }
