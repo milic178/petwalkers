@@ -105,7 +105,6 @@ $this -> title = Yii::t('app','Show reviews');
         </div>
     </div>
 </div>
-</div>
 
 
 
