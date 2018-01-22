@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'login',
                         ['inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control', 'tabindex' => '1']]
-                    )->label(Yii::t('user','Username')) ;
+                    )->textInput(['placeholder' => "demoUser"])->label(Yii::t('user','Username')) ;
                     ?>
 
                 <?php endif ?>
@@ -121,5 +121,14 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Connect::widget([
             'baseAuthUrl' => ['/user/security/auth'],
         ]) ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-white">
+                    <?= Yii::t('app','You may login with demoUser / demoUser for testing purposes.') ?>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

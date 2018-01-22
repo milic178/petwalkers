@@ -514,22 +514,21 @@ return [
     =>
         'Vaš račun je bil ustvarjen!',
 
-
     'Your profile has been updated successfully'
     =>
         'Vaš profil je bil uspešno posodobljen',
-
 
     'Share'
     =>
         'Deli',
 
-    ''
+    'You may login with demoUser / demoUser for testing purposes.'
     =>
-        '',
-    ''
+        'Za namene testiranja se lahko prijavite z demoUser / demoUser.',
+
+    'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'
     =>
-        '',
+        'Konfiguracija profila demoUser je zaradi vsebinskih razlogov onemogočena. Vabimo vas, da se registrirate.',
     ''
     =>
         '',

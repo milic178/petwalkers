@@ -9,11 +9,12 @@ namespace app\controllers;
 use app\models\Profile;
 use dektrium\user\controllers\SettingsController;
 use dektrium\user\models\SettingsForm;
+use yii\web\ForbiddenHttpException;
 
 
 class ProfileSettingsController extends SettingsController
 {
-    /** Shows profile settings form.
+    /** Shows profile settings form and updates on submit if user is not demoUser.
      * @return string|\yii\web\Response
      */
     public function actionProfile()
@@ -33,7 +34,8 @@ class ProfileSettingsController extends SettingsController
 
         $current_image = $model->avatar_photo;
 
-        if ($model->load(\Yii::$app->request->post())) {
+        if ($model->load(\Yii::$app->request->post()) && $model->user_id !=72) {
+
             $image = $model->uploadImage();
 
             if(!empty($image) && $image->size !== 0) :
@@ -57,8 +59,11 @@ class ProfileSettingsController extends SettingsController
                 $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
                 return $this->refresh();
             endif;
-
         }
+      
+        elseif ($model->load(\Yii::$app->request->post()) && $model->user_id =72){
+            throw new ForbiddenHttpException(\Yii::t('app', 'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'));
+        };
 
         return $this->render('profile', [
             'model' => $model,
@@ -80,6 +85,11 @@ class ProfileSettingsController extends SettingsController
 
         $this->performAjaxValidation($model);
 
+        // unless it demoUser with id 72
+        $loggedUser = \Yii::$app->user->identity->getId();
+        if ($loggedUser == 72){
+            throw new ForbiddenHttpException(\Yii::t('app', 'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'));
+        }
         $this->trigger(self::EVENT_BEFORE_ACCOUNT_UPDATE, $event);
         if ($model->load(\Yii::$app->request->post()) && $model->save()) {
             \Yii::$app->getSession()->setFlash('success',[
@@ -94,6 +104,7 @@ class ProfileSettingsController extends SettingsController
             $this->trigger(self::EVENT_AFTER_ACCOUNT_UPDATE, $event);
             return $this->refresh();
         }
+
 
         return $this->render('account', [
             'model' => $model,

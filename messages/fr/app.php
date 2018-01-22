@@ -530,12 +530,23 @@ return [
     =>
         'Partager',
 
-    ''
+    'You may login with demoUser / demoUser for testing purposes.'
     =>
-        '',
+        'Vous pouvez vous connecter avec demoUser / demoUser à des fins de test.',
+
+    'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'
+    =>
+        'La configuration du profil demoUser est désactivée pour des raisons de politique. Vous êtes invités à vous inscrire.',
+
     ''
     =>
         '',
 
+    ''
+    =>
+        '',
+    ''
+    =>
+        '',
 
 ];
