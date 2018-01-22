@@ -60,7 +60,7 @@ class ProfileSettingsController extends SettingsController
                 return $this->refresh();
             endif;
         }
-      
+
         elseif ($model->load(\Yii::$app->request->post()) && $model->user_id =72){
             throw new ForbiddenHttpException(\Yii::t('app', 'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'));
         };

@@ -536,7 +536,7 @@ return [
 
     'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'
     =>
-        'La configuration du profil demoUser est désactivée pour des raisons de politique. Vous êtes invités à vous inscrire.',
+        'La configuration du profil demoUser est désactivée pour des raisons de politique d\'utilsation. Vous êtes invités à vous inscrire.',
 
     ''
     =>
