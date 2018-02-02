@@ -34,7 +34,7 @@ class ProfileSettingsController extends SettingsController
 
         $current_image = $model->avatar_photo;
 
-        if ($model->load(\Yii::$app->request->post()) && $model->user_id !=72) {
+        if ($model->load(\Yii::$app->request->post()) && $model->user->username != "demoUser" ) {
 
             $image = $model->uploadImage();
 
@@ -61,7 +61,7 @@ class ProfileSettingsController extends SettingsController
             endif;
         }
 
-        elseif ($model->load(\Yii::$app->request->post()) && $model->user_id =72){
+        elseif ($model->load(\Yii::$app->request->post()) && $model->user->username == "demoUser"){
             throw new ForbiddenHttpException(\Yii::t('app', 'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'));
         };
 

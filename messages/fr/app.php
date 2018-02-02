@@ -86,7 +86,7 @@ return [
     'My pets'=>'Mon animalus',
     'More about walker'=>'Plus info sur promner',
     'Close' =>'Fermer',
-    'Click on my face to see my profile' => 'Preser sur ma face',
+    'Click on my face to see my profile' => 'Cliquez sur ma photo de profil',
     'User activity'=>'Activité de l\'utilisateur',
     'Social Media Profile'=>'Profil sur les rétes sociaux',
 
@@ -273,66 +273,66 @@ return [
 /// NOT TRANSLATED
 
     ///faq
-    'Why did not my ad appear in the list even if I entered the correct search criteria?'=> '',
+    'Why did not my ad appear in the list even if I entered the correct search criteria?'=> 'Pourquoi mon annonce n\'est-elle pas apparue dans la liste de recherche alors que j\'ai entré les mêmes critères? ',
 
-    'What is the code given after I chose to contact my pet sitter?'=> '',
+    'What is the code given after I chose to contact my pet sitter?'=> 'Qu\'est-ce que le code reçu après avoir choisi de contacter mon sitter? ',
 
-    'How does the assessment of sitters work?' =>  '',
+    'How does the assessment of sitters work?' =>  'Comment fonctionnent les évaluations des sitters?',
 
-    'Why do I have to accept or decline a review on my profile?' =>  '',
+    'Why do I have to accept or decline a review on my profile?' =>  'Pourquoi dois-je accepter ou refuser une évaluation sur mon profil?',
 
-    'Do you have a suggestion for us?' =>  '',
+    'Do you have a suggestion for us?' =>  'Avez-vous des suggestion à nous faire?',
 
-    'How do i write a good and competitive ad for sitting pets?' =>  '',
+    'How do i write a good and competitive ad for sitting pets?' =>  'Comment écrire une bonne annonce qui fera la différence? ',
 
-    'One or more of my adds will soon expire and become invalid what do I do?' =>  '',
+    'One or more of my adds will soon expire and become invalid what do I do?' =>  'Une ou plusieurs de mes annonces vont bientôt expirer et devenir invalides, que dois-je faire?',
 
-    'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => '',
+    'Is Petwalkers responsible in case of accidents during the sitting or walking the dog?' => 'Le site Petwalkers est-il responsable en cas d\'accidents pendant une garde ou une promenade?',
 
-    'How do I know the pet sitters on Petwalkers will take good care of my pet?'=> '',
+    'How do I know the pet sitters on Petwalkers will take good care of my pet?'=> 'Comment savoir si les sitters de Petwalkers vont prendre bien soin de mes animaux?',
 
-    'What makes Petwalkers different from other dog walking services and apps?' =>  '',
+    'What makes Petwalkers different from other dog walking services and apps?' =>  'Pourquoi Petwalkers est-il différent des autres services et applications de gardiennage et promenade d\'animaux?',
 
-    'How much will it cost me to contact sitter i have selected?' =>  '',
+    'How much will it cost me to contact sitter i have selected?' =>  'Combien cela va-t-il me coûter de contacter le sitter que j\'ai séléctionné?',
 
-    'Copyright © 2017 Petwalkers. All rights reserved.' => '',
+    'Copyright © 2017 Petwalkers. All rights reserved.' => 'Copyright © 2017 Petwalkers. Tous droits réservés.',
 
-    'Is Petwalkers responsible for any damage done to me from pets i have been taking care of?' =>  '',
+    'Is Petwalkers responsible for any damage done to me from pets i have been taking care of?' =>  'Le site Petwalkers est-il responsable si un animal dont je m\'occupe me blesse?',
 
     'Welcome here you can find pet sitting service. Choose a place, type, and price and browse to find a reliable person who will take care of your pets during your absence or incapacity.'
     =>
-        '',
+        'Bienvenu, ici vous trouverez un service de gardiennage et de promenade pour vos animaux de compagnie. Choisissez un endroit, un type de garde et un prix afin de trouver une personne de confiance à même de s\'occuper de vos compagnons lors de votre absence',
 
-    'What are my responsibilities as sitter?' => '',
+    'What are my responsibilities as sitter?' => 'Quelles sont mes responsabilités en tant que sitter?',
 
 
-    'What are my responsibilities as person who looks for sitter?' =>'',
+    'What are my responsibilities as person who looks for sitter?' =>'Quelles sont mes responsabilités en tant que personne recherchant un sitter?',
 
     // main page
     ' Free of charge' => 'Gratuit',
 
      ' Easy to Use' => 'Facile à utiliser',
-     ' Instant contact with sitter' => 'Contact instantané avec l marcheur',
-     'Finding a sitter' => '',
-     'Select parameters' => '',
-     'See results' => '',
-     'Inspect advert' => '',
-     'Contact walker' => '',
+     ' Instant contact with sitter' => ' Contact instantané avec le sitter',
+     'Finding a sitter' => ' Trouver un sitter',
+     'Select parameters' => ' Séléctionner les paramètres',
+     'See results' => 'Voir les résultats',
+     'Inspect advert' => 'Vérifier l\'annonce',
+     'Contact walker' => 'Contacter le sitter',
 
-     'Becoming sitter' => '',
-     'Update profile' => '',
-     'Publish advert' => '',
-     'Sit back and relax' => '',
+     'Becoming sitter' => 'Devenir un sitter',
+     'Update profile' => 'Mettre à jour mon profil',
+     'Publish advert' => 'Publier l\'annonce',
+     'Sit back and relax' => 'Asseyez-vous et relaxez',
 
-    'Review sitter' => '',
+    'Review sitter' => 'Evaluer un sitter',
 
-    'Obtain code' => '',
+    'Obtain code' => 'Obtenir le code',
 
-    'Input code' => '',
+    'Input code' => 'Taper le code',
 
-    'Write review' => '',
+    'Write review' => 'Evaluez',
 
-    'Make it public' => '',
+    'Make it public' => 'Rendre publique',
     'You can\'t request review code for your profile!' => 'Vous ne pouvez pas demander un code d\'évaluation pour votre profil!',
 
 
@@ -340,55 +340,55 @@ return [
 
     'To find a sitter simply click on underlined yellow words which represent search parameters. A popup window will appear with different options. Simply chose from type, animal, city and price. When done click on "Find Sitter" button. Results will be displayed based on your search criteria. None of listed parameters are required. Currently our services are available only in certain cities.'
     =>
-        '',
+        ' Pour trouver un sitter cliquez simplement sur les mots surlignés en jaune représentants les paramètres à séléctionner. Des options vont apparaître. Il ne vous suffit plus qu\' à séléctionnez celle de votre choix.',
 
     'A list of all available sitters with your criteria will be displayed. In the first row of table there are some search parameters which you can always modify. To view a specific advert just click anywhere in that row or on the right side where you will se and EYE icon.'
     =>
-        '',
+        'Vous trouverez une liste de tous les sitters correspondants à vos critères. Sur la première ligne figurent des paramètres que vous pouvez modifier à tout moment. Pour voir une annonce en détail cliquer n\'importe où dans la ligne or sur le symbole OEIL tout à droite de la ligne.',
 
-    'Advert information is displayed. First we see the sitters profile picture. If we click on it a popup will be show displaying sitters user profile. Name, last name, age, last login time, description and other information will be shown. Below user profile picture we can see shot advert Description. After that some Basic Info about advert is displayed. At end of page we can see user reviews, from other owners who have contacted this sitter. To get user contact information simply click "Contact user" button.'
+    'Advert information is displayed. First we see the sitters profile picture. If we click on it a popup will be show displaying sitters user profile. Name, last name, age, last login time, description and other information will be shown. Below user profile picture we can see shot advert Description. After that some Basic Info about advert is displayed. At end of page we can see  user reviews, from other owners who have contacted this sitter. To get user contact information simply click "Contact user" button.'
     =>
-        '',
+        'Le détail de l\'annonce apparaît. D\' abord la photo de profil du sitter. Cliquez dessus pour faire apparaître son profil, vous verrez le nom, prénom, âge, la dernière connexion, la description et d\'autres informations concernant le sitter.' ,
 
     'After you have entered your Name, Last name and Pet\'s name you will be given a review CODE and sitter contact information will be displayed below. CODE is alid for 2 days after it has been obtained. Use the CODE to leave a review for sitter after he has taken care of your pet in order to make other people know how satisfied you were.'
     =>
-        '',
+        'Après avoir entré votre nom, prénom et le nom de votre animal, vous recevrez un CODE d\'évaluation ainsi que les coordonnées du sitter. Le CODE est valide pendant deux jours après son obtention. Utilisez ce code pour laisser un commentaire sur votre sitter afin de faire savoir aux autres utilisateurs si vous en êtes satisfait. ',
 
     'To become pet sitter you will need to Create an FREE account. Simply click on Register which is located in upper menu. After you enter all data required you will receive an email with confirmation link to complete registration.'
     =>
-        '',
+        'Pour devenir un sitter, c\'est à dire pour vous occuper des animaux des autres utilisateurs qui en font la demande, vous devez créer un compte GRATUIT. Cliquez simplemenr sur créer un compte qui se trouve dans le menu. Après avoir entré les informations demandées vous recevrez un email de conformation contenant un lien afin de finaliser votre inscription.' ,
 
     'After completing registration process your profile will show up. You should enter all the missing data and write something about yourself. It is important to upload a proper profile photo. All information will be publicly displayed so profiles, photos are moderated to maintain trust and respect in the community.'
     =>
-        '',
+        'Après avoir terminé votre inscription vous verrez apparaitre votre profil. Entrez les informations manquantes et écrivez quelque chose à propos de vous. Il est important de télécharger une photo de profil correcte. Toutes les informations que vous donnerez seront publiques et modérées afin de garantir confiance et respect au sein de la communauté.',
 
     'To create and advert simply click on "Advert" in menu bar after you login. Click on "Create Advert" and popup form will be displayed. After you are done with filing the form press "Create" button and advert will be public. You can edit or delete certain adds from be list shown.'
     =>
-        '',
+        'Pour créer une annonce cliquez simplement sur "Annonce" dans la barre de menu après vous être identifié. Cliquez sur "créer une annonce" et une fenêtre apparaitra.  Après avoir complété la fiche de renseignement cliquez sur le bouton "Créer" et votre annonce sera publiée. Vous pouvez éditer ou supprimer une annonce que vous avez crée.',
 
     'Your adverts are live instantly when created. Now just sit back and relax while persons contact you throughout the information your provided under your profile.'
     =>
-        '',
+        'Vos annonces sont en signe immédiatement après leur création. Vous n\'avez plus qu\'à attendre tranquillement que des personnes intéressées vous contactent grâce aux informations que vous avez mises sur votre profil.',
 
     'To obtain a review CODE you will need to contact a certain sitter. CODE is valid for 2 days meaning that is the time you will have to write a review about your experience with sitter.'
     =>
-        '',
+        'Pour obtenir un CODE d\'évaluation vous devez contacter un sitter. Le CODE est valable pendant 2 jours ce qui signifie que c\'est le temps que vous aurez pour écrire une évaluation sur votre expérience avec le sitter.  ',
 
     'To use the CODE simply click on "Rate walker" on top menu. After that popup window will be displayed where you simply paste the CODE. This will not be displayed if you are logged into the website.'
     =>
-        '',
+        'Pour utiliser le CODE cliquez simplement sur "Evaluer un sitter" dans le menu. Une fenêtre apparaitra et vous aurez simplement à coller le CODE. Notez que cette fenêtre n\'apparaitra pas si vous êtes identifiés sur le site.',
 
-    'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars. When review is approved it will be shown publicly.'
+    'If the CODE is valid and accepted you will be able to leave review for certain sitter. Write a hort description about your experience with his service and rate it with stars.'
     =>
-        '',
+        'Si le CODE est valide et accepté vus pourrez laisser une évaluation sur le sitter avec qui vous avez échangé. Ecrivez une courte description à propos de votre expérience et du service du sitter puis mettez une note. Une fois l\'évaluation authentifiée elle sera rendue publique. ',
 
     'When review is approved it will be shown publicly on sitters profile.'
     =>
-        '',
+        'Une fois l\'évaluation authentifiée elle sera publiée sur le profil du sitter',
 
     'For finding  out more about how to become Sitter or review a specific sitter, please refer to'
     =>
-        'Pour en savoir plus sur la façon de devenir Sitter ou d\'examiner un sitter spécifique, veuillez vous référer à.',
+        'Pour en savoir plus sur la façon de devenir Sitter ou d\'examiner un sitter spécifique, veuillez vous adresser à.',
 
     'User testimonials'
     =>
@@ -402,61 +402,62 @@ return [
 
     'To find a sitter for your pet we do not ask you for registration or email or any data. You are free to browse between sitters and select the one which suits you. Quite simply, we believe that your pet deserves someone who loves your pet as much as you do. User performance is rated with reviews and opinions written by community.'
     =>
-        '',
+        'Pour trouver un sitter qui s\'occupera de votre compagnon nous ne vous demandons pas d\'inscrition sur notre site ni aucune information personnelle. Vous êtes libre de consulter les profils des sitters qui vous intéressent et de séléctionner celui ou ceux que vous préférez. Nous pensons que votre animal mérite quelqu\'un qui prendra soin de lui et l\aimera autant que vous. Vous trouverez des notes et commentaires sur les profils des sitters laissés par les autres membres de la communauté ',
 
     'For the moment all the services of finding a sitter or publishing an advert are free of any charge. Main goal of this project is to improve the pet sitting situation and community so I intend to keep it free of any charge.'
     =>
-        '',
+        'Pour le moment tous les services que nous proposont sont gratuits. Le but du projet est d\améliorer le gardiennage d\'animaux entre particuliers et de créer une communauté. J\'entends donc laisser ce site internet gratuit ',
 
     'That is called a review code composed of random numbers and characters. Every code is valid for 2 days from requesting the contact information. Code is a unique identifier for you to leave opinion about the service provided by certain sitter.'
     =>
-        '',
+        'Il s\'agit d\'un code d\'évaluation composé de chiffres et lettres au hasard. Chaque code est valable pendant deux jours à partir du moment où vous faites une demande pour entrer en contact avec un sitter. Le code est un identifiant unique qui vous permet de laisser une note et un commentaire sur votre expérience avec un sitter ',
 
     'Assessment is relying purely on community. Meaning it depends on your satisfaction of the service provided by sitter. We tend to build an awesome community for everyone to enjoy! Inappropriate and verbally offensive reviews will not be tolerated by administrators. Users need to use their real names and data pseudonyms are not accepted.'
     =>
-        '',
+        'Les jugements émis à propos des sitters sont liés uniquement à la communauté Petwalkers. Cela signifit qu\'ils dépendent uniqument de la satisfaction membres de la communauté lors d\'un srvice de gardiennage d\'animaux. Nous avons pour but de créer une commuauté dans laquelle chacun se sente à l\'aise. Les commentaires inapropriés ou insultants ne seront pas tolérés par les administrateurs du site. Les utilisateurs doivent utiliser leurs véritables noms. Les psedonymes ne seront pas acceptés.   ',
 
     'This is simply a feature to allow genuine reviews to be posted on your profile. If you recognize the peron for whom you did a service simply approve it or decline if you don\'t. You will not be able to see the content of review, just the name of owner and pet you have provided your service to.'
     =>
-        '',
+        'Il s\'agit simplement d\'un moyen d\'assurer que les commentaires postés sur le profil des sitters sont authentiques. Si vous reconnaissez la personne à laquelle avec à laquelle vous avez rendu service, approuvez le commentaire. Dans le cas contraire déclinez-le. Vous ne serez pas en mesure de voir ce que contient le commentaire mais simplement le nom de son auteur.',
 
     'Petwalkers service is not responsible for any kind of damage on private or public property.'
     =>
-        '',
+        'Petwalkers n\'est en aucun cas responsabe des dégâts privés ou pubics qui pourraient être causés',
 
     'Petwalkers service is not responsible for any kind of accident that happens to you while watching over other people\'s pets.'
     =>
-        '',
+        'Petwalkers n\est pas responsable en cas d\'accident qui pourraient vous arriver pendant voe vous gardez l\'animal d\'une autre personne.',
 
     'The community uses reputations built over time to build trust and ensure that all members respect the Petwalkers spirit of positive community collaboration. When two members meet in real life to exchange service, they publicly rate each other: before you contact another member you can read their ratings and benefit from the experience of other members who have met that person. If you don\'t feel comfortable around person who is supposed to take care of your pet simply cancel the service and find another one.'
     =>
-        '',
+        'La communauté utilise sa réputation construite avec le temps pour s\'assurer que tous les membres de Petwalkers respectent l\esprit de collaboration communautaire positif de Petwalkers. Lorsque deux membres se rencontrent dans la vie réelle pour un échange de service ils peuvent s\évaluer publiquement. Avant que vous ne contactiez un autre membre vous trouverez des informations sur ses expériences précédentes ainsi qu\'une note publiés par les autres membres du site ayant été en contact avec. Si vous ne vous sentez pas à l\'aise par rapport à la personne sensée s\'occuper de votre compagnon, il vous suffit d\'annuler son service et de trouver quelqu\'un d\'autre.
+		',
 
     'Most certainly your publishing is invalid. Every ad you publish has an expiration date which is 14 days. After that it becomes invalid and is not shown in general search. All you need to do is renew the publishing.'
     =>
-        '',
+        'Votre publication est sûrement invalide. Chaque annonce publiée a une date d\'expiration qui est de 14 jours après sa publication. Passé ce délais elle devient invalide et n\'est plus présentée dans les recherches. Tout ce que vous avez à faire est renouveller l\'annonce.',
 
     'Simply create a new ad with same criteria under the Adverts section on the Menu.'
     =>
-        '',
+        'Créez simplement une nouvelle annonce avec les mêmes critères dans la section Annonces du menu.',
 
 
     'Explaining the features of your services is important, but explaining the benefits for the customer is really what it’s all about. After all, people are more interested in what they get from your services than what you do. People scan things quickly. make sure that your advertisement actually grabs and keeps their attention. You do that with an effective headline. Add a little humor to the content, use simple language. Make sure your profile is updated and nicely written so you can earn credibility and trust. People are nervous about spending their money. There are too many scammers and low-quality services out there.'
     =>
-        '',
+        'Il est important d\'expliquer en quoi consiste vos services, mais il est primordial de montrer au demandeur quels seront ses bénéfices ainsi que ce que vos proposez "en plus". Car après tout les propriétaires d\'animaux de compagnie sont plus intéressés par ce que vous leur proposez que par ce que vous faites. Faites en sorte que votre annonce capte leur attention avec un titre efficace. Ajoutez un peu d\'humour au contenu et utilisez un langage simple. Assurez-vous que votre profil soit mis à jour et présenté correctement afin de gagner en confiance et crédibilité. Rappelez-vous que les gens deviennent rapidement nerveux lorsqu\'il s\'agis du bien-être de leur animaux et de dépenser leur argent. Et on les comprend, on trouve beaucoup de services  douteux ou de mauvaise qualité de nos jours. ',
 
 
     'You have more options to find a sitter if you make a good first impression. Some stters, as a condition for a service, require that the dog is trained and used to the leash and socialized. Find out if the sitter takes care of more pets at same time. Alert the sitter to the unusual behavior of a dog on a walk, possible lack of socialization with certain dogs, possible aggression, fear, etc. Present your usual routine of your walk and what you expect from the service. Ask him about the experiences and qualifications and any recommendations. Be sure to choose who you will trust your dog to!'
     =>
-        '',
+        'Vous aurez plus de chances de trouver un sitter si vous faites une bonne première impression. Certains sitters demandent que le chien soit obéissant, habitué à la laisse ou sociables. Demandez si le sitter s\'occupe de plusieurs animaux en même temps. Prévenez le sitter si votre animal a un comportement peu habituel ou une particularité que ce soit lors des promenades, de la rencontre avec d\'autres animaux. Est-il parfois violent? Apeuré? Présentez au sitter la routine de l\'animal et ce que vous attendzz de ses services. N\'hésitez pas à lui demander quelles ont été ses précédentes expériences et ses recommandations. Assurez-vous de confier votre compagnon à une personne de confiance!',
 
     'For the time you take care of someone else\'s pet you are completely responsible for feeding, exercising and taking care of it and protecting it from all harm. If you say you‘re available, make sure you will be. Your rates are a part of your profile and the client uses that information to book you in the first place, don‘t change them. You have more options to get a good score if you make a good first impression. Make arrangements for the exact time and place of meeting.'
     =>
-        '',
+        'Au moment où vous vous occupez de l\'animal d\'une autre personne, vous êtes entièrement responsable de son alimentation, de ses sorties, de son bien-être et de sa protection. Si vous vous dites disponible, soyez sur de l\'être. Vos notes font partie de votre profil et le client les utilise pour vous réserver ou non. Vous aurez plus d\'options de gardiennage et ferez une bonne première impression si vous êtes bien noté.  Arrangez-vous pour être précis sur le moment et l\'endroit du rendez-vous.',
 
     'We are constantly trying to improve our service to meet your needs. Therefore, we are always listening to your good ideas, suggestions for improvement and new feature requests! If you have any suggestions about the web application please feel free to contact us!'
     =>
-        '',
+        'Nous sommes constamment en train de perfectionner nos services pour répondre à vos besoins. C\'est pourquoi nous sommes toujours à votre écoute si vous voulez faire des suggestions ou nous proposer des idées afin d\'améliorer nos services. Alors n\'hésitez pas, si vous avez une suggestion par rapport à notre site, contactez-nous!  ',
 
 
     'We use cookies on our websites to help us offer you the best online experience. By continuing to use our website, you are agreeing to our use of cookies. Alternatively, you can manage them in your browser settings.'
@@ -538,15 +539,13 @@ return [
     =>
         'La configuration du profil demoUser est désactivée pour des raisons de politique d\'utilsation. Vous êtes invités à vous inscrire.',
 
-    ''
+    'More questions? Don\'t hesitate!'
     =>
-        '',
+        'Plus de questions? N\'hésitez pas!',
 
     ''
     =>
         '',
-    ''
-    =>
-        '',
+
 
 ];

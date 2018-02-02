@@ -167,11 +167,11 @@ return [
     'Petwalkers is a  website for finding a perfect sitter for your little friend. Thus dogs and cats are most popular pets, you can use it for any other, from turtle to elephant. We encourage o review your sitters so people can build an amazing community and have better experience using this platform!'
 
     =>
-        '',
+        'Petwalkers est un site web pour trouver une baby-sitter parfaite pour votre petit ami. Ainsi, les chiens et les chats sont les animaux les plus populaires, vous pouvez l\'utiliser pour tout autre, de la tortue à l\'éléphant. Nous vous encourageons à revoir vos sites afin que les gens puissent construire une communauté incroyable et avoir une meilleure expérience de l\'utilisation de cette plateforme!',
 
     'I realized that in Slovenia we do not have a simple way to coordinate the walking and sitting of pets, especially dogs and cats. With this I got the idea to develop web application and soon it turned out that I had enough knowledge to complete the project. The application would serve as a connecting  bridge between people who have more free time, who love animals and people who are employed or on holiday, and do not have time to walk or take cate of pets.'
     =>
-        '',
+        'Je me suis rendu compte qu\'en Slovénie, nous n\'avons pas de moyen simple de coordonner la marche et la position des animaux de compagnie, en particulier des chiens et des chats. Avec cela j\'ai eu l\'idée de développer une application web et il s\'est avéré que j\'avais assez de connaissances pour terminer le projet. L\'application servirait de pont entre les personnes qui ont plus de temps libre, qui aiment les animaux et les personnes qui sont employées ou en vacances, et n\'ont pas le temps de marcher ou de prendre des animaux de compagnie.',
 
     'For any questions, comments and problems with the website are available to you by e-mail:'
     =>

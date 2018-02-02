@@ -121,11 +121,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Connect::widget([
             'baseAuthUrl' => ['/user/security/auth'],
         ]) ?>
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
                 <div class="text-white">
-                    <?= Yii::t('app','You may login with demoUser / demoUser for testing purposes.') ?>
-
+                  <p class="text-center"> <?= Yii::t('app','You may login with demoUser / demoUser for testing purposes.') ?></p>
                 </div>
             </div>
         </div>

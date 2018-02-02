@@ -194,7 +194,7 @@ IndexAsset::register($this);
 
 
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <?= Html::img(\Yii::$app->params['uploadUrl'].'gordana.jpg',[
                 'class'=>'center-block img-circle img-responsive',
                 'width'=>'150px',
@@ -205,19 +205,19 @@ IndexAsset::register($this);
             </h4>
             <p class="text-white text-center">"Lead Developer"</p>
         </div>
-        <div class="col-sm-4">
-            <div class="panel-heading text-center">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
-                        </span>
-            </div>
-            <h4 class="text-center">
-                Jaka kaka
-            </h4>
-            <p class="text-white text-center">"Lead Developer"</p>
-        </div>
-        <div class="col-sm-4">
+        <!--  <div class="col-sm-4">
+              <div class="panel-heading text-center">
+                          <span class="fa-stack fa-5x">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                          </span>
+         <!-- </div>
+              <h4 class="text-center">
+                  Demo user
+              </h4>
+              <p class="text-white text-center">"Lead Developer"</p>
+              </div> -->
+        <div class="col-sm-6">
             <?= Html::img(\Yii::$app->params['uploadUrl'].'aneta.jpg',[
                 'class'=>'center-block img-circle img-responsive',
                 'width'=>'150px',
