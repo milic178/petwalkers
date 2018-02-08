@@ -312,7 +312,7 @@ return [
     ' Free of charge' => 'Gratuit',
 
      ' Easy to Use' => 'Facile à utiliser',
-     ' Instant contact with sitter' => ' Contact instantané avec le sitter',
+     ' Instant contact' => ' Contact instantané',
      'Finding a sitter' => ' Trouver un sitter',
      'Select parameters' => ' Séléctionner les paramètres',
      'See results' => 'Voir les résultats',
@@ -543,9 +543,28 @@ return [
     =>
         'Plus de questions? N\'hésitez pas!',
 
+    'Pet Owner'
+    =>
+        'Propriétaire d\'animal',
+
+    'Pet Sitter'
+    =>
+        'Gardien d\'animaux',
+
+    'Amazing service free service, I was able to choose and contact sitter that suits me in less than an hour.'
+    =>
+        'Service hors-ligne étonnant, j\'ai pu choisir et contacter un modèle qui me convient en moins d\'une heure.',
+
+    'Since very young I always lived with one or more animals. Recently I discovered the principle of pet sitting and I really appreciated the concept.'
+    =>
+        'Depuis très jeune, j\'ai toujours vécu avec un ou plusieurs animaux. Récemment, j\'ai découvert le principe de l\'animal de compagnie et j\'ai vraiment apprécié le concept.',
     ''
     =>
         '',
+    ''
+    =>
+        '',
+
 
 
 ];

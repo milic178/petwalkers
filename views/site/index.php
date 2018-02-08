@@ -96,7 +96,7 @@ IndexAsset::register($this);
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
                     </span>
-            <h3 class="service-heading"><?= Yii::t('app',' Instant contact with sitter') ?> </h3>
+            <h3 class="service-heading"><?= Yii::t('app',' Instant contact') ?> </h3>
             <p class="text-white">
                 <?= Yii::t('app','Browse trough offers and select a sitter. No need for registration to find a perfect sitter for your pet!') ?>
             </p>
@@ -200,10 +200,11 @@ IndexAsset::register($this);
                 'width'=>'150px',
                 'height'=>'150px',
             ]);?>
-            <h4 class="text-center">
-                Gordana
-            </h4>
-            <p class="text-white text-center">"Lead Developer"</p>
+            <h3 class="text-center">
+                <?= Yii::t('app','Pet Owner') ?>
+            </h3>
+            <h4 class="text-center">Gordana</h4>
+            <p class="text-white text-center"><?= Yii::t('app','Amazing service free service, I was able to choose and contact sitter that suits me in less than an hour.')?></p>
         </div>
         <!--  <div class="col-sm-4">
               <div class="panel-heading text-center">
@@ -223,10 +224,11 @@ IndexAsset::register($this);
                 'width'=>'150px',
                 'height'=>'150px',
             ]);?>
-            <h4 class="text-center">
-                Aneta
-            </h4>
-            <p class="text-white text-center">"Lead Developer"</p>
+            <h3 class="text-center">
+                <?= Yii::t('app','Pet Sitter') ?>
+            </h3>
+            <h4 class="text-center">Aneta</h4>
+            <p class="text-white text-center"><?= Yii::t('app','Since very young I always lived with one or more animals. Recently I discovered the principle of pet sitting and I really appreciated the concept.')?></p>
         </div>
     </div>
 

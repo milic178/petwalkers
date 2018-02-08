@@ -301,7 +301,7 @@ return [
     ' Free of charge' => 'Brezplačna aplikacija',
 
     ' Easy to Use' => 'Preprosta uporaba',
-    ' Instant contact with sitter' => 'Takojšen stik s skrbnikom',
+    ' Instant contact' => 'Takojšen stik',
     'Finding a sitter' => 'Najdi skrbnika',
     'Select parameters' => 'Izberite iskalne parametre',
     'See results' => 'Preglejte ponudbo',
@@ -529,10 +529,24 @@ return [
     'demoUser profile configuration is disabled for policy reasons. You are welcome to register.'
     =>
         'Konfiguracija profila demoUser je zaradi vsebinskih razlogov onemogočena. Vabimo vas, da se registrirate.',
+
+    'Pet Owner'
+    =>
+        'Lastnik živali',
+
+    'Pet Sitter'
+    =>
+        'Sprehajalec živali',
+    'Amazing service free service, I was able to choose and contact sitter that suits me in less than an hour.'
+    =>
+        'Neverjetna brezplačna aplikacija! Z lahkoto sem izbrala in kontaktirala sprehajalca ki mi ustraza v manj kot eni uri.'
+    ,
+    'Since very young I always lived with one or more animals. Recently I discovered the principle of pet sitting and I really appreciated the concept.'
+    =>
+        'Že kot otrok sem bila vedno obdana z domačimi živalmi. Nedavno sem se srečala s konceptom sprehajanja živali v prostem času in ga preprosto vzljubila!',
     ''
     =>
         '',
-
 
 
 
